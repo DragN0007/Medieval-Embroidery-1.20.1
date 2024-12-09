@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "medievalembroidery:fairy_body"
+    },
+    {
+      "item": "medievalembroidery:mortarnpestle"
+    }
+  ],
+  "result": {
+    "item": "medievalembroidery:fairy_dust",
+    "count": 3
+  }
+}

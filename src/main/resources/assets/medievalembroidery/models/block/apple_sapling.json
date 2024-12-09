@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "medievalembroidery:blocks/apple_sapling"
+  }
+}

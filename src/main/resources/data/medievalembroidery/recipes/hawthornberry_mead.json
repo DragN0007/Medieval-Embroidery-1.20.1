@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:honey"
+    },
+    {
+      "tag": "forge:water"
+    },
+    {
+      "item": "medievalembroidery:malted_grain"
+    },
+    {
+      "item": "medievalembroidery:hawthornberry_glaze"
+    }
+  ],
+
+  "result": {
+    "item": "medievalembroidery:hawthorn_mead",
+    "count": 1
+  }
+}

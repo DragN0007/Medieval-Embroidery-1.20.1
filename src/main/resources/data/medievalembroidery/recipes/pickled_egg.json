@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "medievalembroidery:salt_brine"
+    },
+    {
+      "item": "minecraft:egg"
+    }
+  ],
+
+  "result": {
+    "item": "medievalembroidery:pickled_egg",
+    "count": 1
+  }
+}

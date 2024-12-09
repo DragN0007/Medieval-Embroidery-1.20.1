@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:crystals"
+    },
+    {
+      "item": "medievalembroidery:mortarnpestle"
+    }
+  ],
+
+  "result": {
+    "item": "medievalembroidery:crystal_dust",
+    "count": 3
+  }
+}

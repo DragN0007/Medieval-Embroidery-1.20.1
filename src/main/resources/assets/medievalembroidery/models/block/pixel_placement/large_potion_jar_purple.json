@@ -1,0 +1,6 @@
+{
+	"parent": "medievalembroidery:block/pixel_placement/large_potion_jar",
+	"textures": {
+		"potion_color": "medievalembroidery:blocks/pixel_placement/large_potion_jar_purple"
+	}
+}

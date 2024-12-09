@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "medievalembroidery:lemon"
+    }
+  ],
+
+  "result": {
+    "item": "medievalembroidery:lemon_juice",
+    "count": 2
+  }
+}

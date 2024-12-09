@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "medievalembroidery:elderberry"
+    },
+    {
+      "item": "medievalembroidery:elderberry"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:egg"
+    }
+  ],
+  "result": {
+    "item": "medievalembroidery:elderberry_pie"
+  }
+}

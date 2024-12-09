@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:fruits"
+    },
+    {
+      "item": "medievalembroidery:mortarnpestle"
+    }
+  ],
+
+  "result": {
+    "item": "medievalembroidery:fruit_glaze",
+    "count": 2
+  }
+}

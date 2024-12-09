@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:water"
+    },
+    {
+      "item": "medievalembroidery:malted_grain"
+    }
+  ],
+
+  "result": {
+    "item": "medievalembroidery:ale",
+    "count": 1
+  }
+}

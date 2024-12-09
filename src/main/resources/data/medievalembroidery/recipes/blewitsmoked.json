@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "medievalembroidery:blewit"
+  },
+  "result": "medievalembroidery:cooked_blewit",
+  "experience": 0.60,
+  "cookingtime": 160
+}

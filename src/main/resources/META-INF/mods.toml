@@ -1,0 +1,31 @@
+modLoader="javafml"
+loaderVersion="47,)"
+license="All Rights Reserved, DragN0007"
+#issueTrackerURL="https://discord.gg/2WznNTtVac"
+[[mods]]
+modId="medievalembroidery"
+version="${1.0}"
+displayName="Medieval Embroidery"
+logoFile="medievalembroidery_banner.png"
+authors="DragN0007, Evangelix"
+description='''
+A mod that adds spells, potions, medieval decor, and more!
+'''
+[[dependencies.medievalembroidery]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+[[dependencies.medievalembroidery]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1]"
+ordering = "NONE"
+side = "BOTH"
+[[dependencies.medievalembroidery]]
+modId="geckolib"
+mandatory=true
+versionRange = "[4.4.4,)"
+ordering="NONE"
+side="BOTH"

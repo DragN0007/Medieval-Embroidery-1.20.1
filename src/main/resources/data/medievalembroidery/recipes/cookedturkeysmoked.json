@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "medievalembroidery:turkey_leg"
+  },
+  "result": "medievalembroidery:cooked_turkey",
+  "experience": 0.60,
+  "cookingtime": 160
+}

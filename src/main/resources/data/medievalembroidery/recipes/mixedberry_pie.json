@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "medievalembroidery:bilberry"
+    },
+    {
+      "item": "medievalembroidery:cowberry"
+    },
+    {
+      "item": "medievalembroidery:hawthornberry"
+    },
+    {
+      "item": "medievalembroidery:elderberry"
+    },
+    {
+      "item": "medievalembroidery:redcurrant"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:egg"
+    }
+  ],
+  "result": {
+    "item": "medievalembroidery:mixedberry_pie"
+  }
+}

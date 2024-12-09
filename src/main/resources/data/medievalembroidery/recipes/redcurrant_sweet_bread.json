@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "medievalembroidery:redcurrant_glaze"
+    },
+    {
+      "item": "medievalembroidery:sweet_bread_cream"
+    }
+  ],
+
+  "result": {
+    "item": "medievalembroidery:redcurrant_sweet_bread",
+    "count": 1
+  }
+}

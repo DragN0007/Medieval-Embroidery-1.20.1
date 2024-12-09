@@ -1,0 +1,7 @@
+{
+	"parent": "medievalembroidery:block/pixel_placement/utensil",
+	"textures": {
+		"0": "medievalembroidery:blocks/pixel_placement/utensil_metal",
+		"particle": "medievalembroidery:blocks/pixel_placement/utensil_metal"
+	}
+}

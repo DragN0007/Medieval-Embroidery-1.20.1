@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "medievalembroidery:blocks/purple_mage"
+  }
+}

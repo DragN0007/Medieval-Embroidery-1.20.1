@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "medievalembroidery:salt"
+    },
+    {
+      "item": "medievalembroidery:cooked_yak"
+    },
+    {
+      "tag": "forge:herbs"
+    }
+  ],
+
+  "result": {
+    "item": "medievalembroidery:seasoned_yak",
+    "count": 1
+  }
+}

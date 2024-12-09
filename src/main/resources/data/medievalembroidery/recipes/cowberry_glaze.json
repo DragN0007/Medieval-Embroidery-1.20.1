@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "medievalembroidery:cowberry"
+    },
+    {
+      "item": "medievalembroidery:mortarnpestle"
+    }
+  ],
+
+  "result": {
+    "item": "medievalembroidery:cowberry_glaze",
+    "count": 2
+  }
+}

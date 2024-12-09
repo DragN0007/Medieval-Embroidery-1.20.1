@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "medievalembroidery:oyster"
+  },
+  "result": "medievalembroidery:cooked_oyster",
+  "experience": 0.60,
+  "cookingtime": 160
+}

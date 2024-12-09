@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:honey"
+    },
+    {
+      "item": "medievalembroidery:cooked_cornish_hen"
+    }
+  ],
+
+  "result": {
+    "item": "medievalembroidery:honey_cornish_hen",
+    "count": 1
+  }
+}

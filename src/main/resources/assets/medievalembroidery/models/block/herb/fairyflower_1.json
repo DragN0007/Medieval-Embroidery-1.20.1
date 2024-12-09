@@ -1,0 +1,6 @@
+{
+	"parent": "medievalembroidery:block/parent/cross_crop",
+	"textures": {
+		"cross_crop": "medievalembroidery:blocks/fairyflower_1"
+	}
+}

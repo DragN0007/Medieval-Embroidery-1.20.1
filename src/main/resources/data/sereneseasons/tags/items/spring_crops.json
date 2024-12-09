@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    "medievalembroidery:elderberry",
+    "medievalembroidery:cowberry",
+    "medievalembroidery:bilberry",
+    "medievalembroidery:hawthornberry",
+    "medievalembroidery:redcurrant",
+
+    "medievalembroidery:blewit_spores",
+    "medievalembroidery:honey_spores",
+    "medievalembroidery:king_spores",
+    "medievalembroidery:matsutake_spores",
+    "medievalembroidery:porcini_spores",
+    "medievalembroidery:woodschicken_spores",
+
+    "medievalembroidery:bruteflower",
+    "medievalembroidery:henven",
+    "medievalembroidery:cachen",
+    "medievalembroidery:cannaan",
+    "medievalembroidery:fairyflower",
+    "medievalembroidery:grangin",
+    "medievalembroidery:ladyriver",
+
+    "medievalembroidery:apple_seed",
+    "medievalembroidery:lemon_seed",
+    "medievalembroidery:apricot_pit",
+
+    "medievalembroidery:apple_leaves",
+    "medievalembroidery:lemon_leaves",
+    "medievalembroidery:apricot_leaves"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "medievalembroidery:block/fairy_body",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "medievalembroidery:block/fairy_body"
+    },
+    "facing=south": {
+      "model": "medievalembroidery:block/fairy_body",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "medievalembroidery:block/fairy_body",
+      "y": 270
+    }
+  }
+}

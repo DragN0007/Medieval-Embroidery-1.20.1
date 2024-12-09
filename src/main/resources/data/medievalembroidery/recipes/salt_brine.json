@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "medievalembroidery:salt"
+    },
+    {
+      "tag": "forge:water"
+    }
+  ],
+
+  "result": {
+    "item": "medievalembroidery:salt_brine",
+    "count": 2
+  }
+}

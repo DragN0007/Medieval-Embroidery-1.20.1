@@ -1,0 +1,6 @@
+{
+	"parent": "medievalembroidery:block/parent/cross_crop",
+	"textures": {
+		"cross_crop": "medievalembroidery:blocks/king_stage_1"
+	}
+}

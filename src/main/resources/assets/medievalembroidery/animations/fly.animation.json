@@ -1,0 +1,35 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"fly": {
+			"loop": true,
+			"animation_length": 0.75,
+			"bones": {
+				"LightningBug": {
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.375": {
+							"vector": [0, 0.2, 0]
+						},
+						"0.75": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Left": {
+					"rotation": {
+						"vector": [0, 0, "math.sin(query.anim_time * 1800) * 32"]
+					}
+				},
+				"Right": {
+					"rotation": {
+						"vector": [0, 0, "-(math.sin(query.anim_time * 1800) * 32)"]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

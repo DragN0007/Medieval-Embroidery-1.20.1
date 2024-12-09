@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "medievalembroidery:block/food_placed/cornish_hen_placed",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "medievalembroidery:block/food_placed/cornish_hen_placed"
+    },
+    "facing=south": {
+      "model": "medievalembroidery:block/food_placed/cornish_hen_placed",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "medievalembroidery:block/food_placed/cornish_hen_placed",
+      "y": 270
+    }
+  }
+}

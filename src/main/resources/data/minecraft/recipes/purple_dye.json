@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "medievalembroidery:purple_mage"
+    }
+  ],
+  "result": {
+    "item": "minecraft:purple_dye"
+  }
+}

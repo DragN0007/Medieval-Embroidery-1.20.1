@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "medievalembroidery:elk"
+  },
+  "result": "medievalembroidery:cooked_elk",
+  "experience": 0.60,
+  "cookingtime": 200
+}

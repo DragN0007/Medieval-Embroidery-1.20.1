@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "item": "medievalembroidery:sweet_bread"
+    }
+  ],
+
+  "result": {
+    "item": "medievalembroidery:sweet_bread_cream",
+    "count": 1
+  }
+}

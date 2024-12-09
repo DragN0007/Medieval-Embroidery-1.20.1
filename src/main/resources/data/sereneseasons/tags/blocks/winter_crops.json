@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "medievalembroidery:elderberry_bush_crop",
+    "medievalembroidery:cowberry_bush_crop",
+    "medievalembroidery:bilberry_bush_crop",
+    "medievalembroidery:hawthorn_bush_crop",
+    "medievalembroidery:redcurrant_bush_crop",
+
+    "medievalembroidery:bruteflower_plant",
+    "medievalembroidery:virennes_plant"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:honey"
+    },
+    {
+      "item": "medievalembroidery:sweet_bread"
+    }
+  ],
+
+  "result": {
+    "item": "medievalembroidery:sweet_bread_honey",
+    "count": 1
+  }
+}

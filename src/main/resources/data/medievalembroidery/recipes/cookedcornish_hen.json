@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "medievalembroidery:cornish_hen"
+  },
+  "result": "medievalembroidery:cooked_cornish_hen",
+  "experience": 0.60,
+  "cookingtime": 200
+}

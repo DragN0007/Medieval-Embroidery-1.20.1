@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:block/cross",
+	"textures": {
+		"cross": "medievalembroidery:blocks/cannaan_2"
+	}
+}

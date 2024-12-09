@@ -1,0 +1,6 @@
+{
+	"parent": "medievalembroidery:block/pixel_placement/grounded_sword_parent",
+	"textures": {
+		"sword_texture": "medievalembroidery:blocks/pixel_placement/golden_sword_placeable"
+	}
+}

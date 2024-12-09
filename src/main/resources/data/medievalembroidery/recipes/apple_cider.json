@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "medievalembroidery:apple_juice"
+  },
+  "result": "medievalembroidery:apple_cider",
+  "experience": 0.60,
+  "cookingtime": 200
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "medievalembroidery:salt"
+    },
+    {
+      "tag": "forge:vegetables"
+    },
+    {
+      "tag": "forge:vegetables"
+    },
+    {
+      "tag": "forge:herbs"
+    }
+  ],
+
+  "result": {
+    "item": "medievalembroidery:pickled_veggies",
+    "count": 1
+  }
+}

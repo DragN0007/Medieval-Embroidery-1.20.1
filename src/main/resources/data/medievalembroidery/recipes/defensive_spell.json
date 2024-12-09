@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "medievalembroidery:attuned_scroll"
+  },
+  "addition": {
+    "item": "medievalembroidery:protective_crystal_shard"
+  },
+  "result": {
+    "item": "medievalembroidery:defensive_spell"
+  }
+}

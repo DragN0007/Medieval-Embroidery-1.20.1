@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "age=0": {"model": "medievalembroidery:block/bush/meberry_bush_stage0" },
+    "age=1": {"model": "medievalembroidery:block/bush/meberry_bush_stage1" },
+    "age=2": {"model": "medievalembroidery:block/bush/elderberry_bush_stage2" },
+    "age=3": {"model": "medievalembroidery:block/bush/elderberrybush" }
+  }
+}

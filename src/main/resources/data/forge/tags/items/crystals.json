@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:amethyst_shard",
+    "medievalembroidery:assistive_crystal_shard",
+    "medievalembroidery:conjuring_crystal_shard",
+    "medievalembroidery:healing_crystal_shard",
+    "medievalembroidery:protective_crystal_shard",
+    "medievalembroidery:destructive_crystal_shard"
+  ]
+}

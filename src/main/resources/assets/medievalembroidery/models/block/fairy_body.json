@@ -1,0 +1,64 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [8, 8],
+	"textures": {
+		"0": "medievalembroidery:blocks/fairy_body",
+		"particle": "medievalembroidery:blocks/fairy_body"
+	},
+	"elements": [
+		{
+			"from": [7.32527, 0.07723, 7.24885],
+			"to": [8.67473, 1.64386, 8.83745],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [2, 8, 3.5, 10], "texture": "#0"},
+				"east": {"uv": [0, 6, 2, 8], "texture": "#0"},
+				"south": {"uv": [8, 2, 9.5, 4], "texture": "#0"},
+				"west": {"uv": [2, 6, 4, 8], "texture": "#0"},
+				"up": {"uv": [5.5, 10, 4, 8], "texture": "#0"},
+				"down": {"uv": [9.5, 4, 8, 6], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2, 7.75]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2, 7.75]
+		},
+		"firstperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2, 7.75]
+		},
+		"firstperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2, 7.75]
+		},
+		"ground": {
+			"translation": [0, 4.5, 0]
+		},
+		"gui": {
+			"rotation": [30, 225, 0],
+			"translation": [0, 12.5, 0],
+			"scale": [2, 2, 2]
+		}
+	},
+	"groups": [
+		{
+			"name": "VoxelShapes",
+			"origin": [8, 3.549, 8.014],
+			"color": 0,
+			"children": [
+				{
+					"name": "Body",
+					"origin": [8, 3.57224, 8.08859],
+					"color": 0,
+					"children": [0]
+				}
+			]
+		}
+	]
+}

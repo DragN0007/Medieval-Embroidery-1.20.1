@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "medievalembroidery:redcurrant"
+    },
+    {
+      "item": "medievalembroidery:mortarnpestle"
+    }
+  ],
+
+  "result": {
+    "item": "medievalembroidery:redcurrant_glaze",
+    "count": 2
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "medievalembroidery:cowberry",
+    "medievalembroidery:elderberry",
+    "medievalembroidery:redcurrant",
+    "medievalembroidery:hawthornberry",
+    "medievalembroidery:bilberry",
+    "minecraft:sweet_berries"
+  ]
+}

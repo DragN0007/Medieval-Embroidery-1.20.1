@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "medievalembroidery:elderberry_bush_crop",
+    "medievalembroidery:cowberry_bush_crop",
+    "medievalembroidery:bilberry_bush_crop",
+    "medievalembroidery:hawthorn_bush_crop",
+    "medievalembroidery:redcurrant_bush_crop",
+
+    "medievalembroidery:blewit_crop",
+    "medievalembroidery:honey_crop",
+    "medievalembroidery:king_crop",
+    "medievalembroidery:matsutake_crop",
+    "medievalembroidery:oyster_crop",
+    "medievalembroidery:porcini_crop",
+    "medievalembroidery:yellowfoot_crop",
+    "medievalembroidery:woodschicken_crop",
+
+    "medievalembroidery:bruteflower_plant",
+    "medievalembroidery:henven_plant",
+    "medievalembroidery:cachen_plant",
+    "medievalembroidery:cannaan_plant",
+    "medievalembroidery:dragoneye_plant",
+    "medievalembroidery:fairyflower_plant",
+    "medievalembroidery:grangin_plant",
+    "medievalembroidery:ladyriver_plant",
+    "medievalembroidery:sprinnan_plant",
+    "medievalembroidery:virennes_plant"
+  ]
+}

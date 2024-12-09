@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "medievalembroidery:salt"
+    },
+    {
+      "item": "medievalembroidery:cooked_blewit"
+    },
+    {
+      "tag": "forge:herbs"
+    }
+  ],
+
+  "result": {
+    "item": "medievalembroidery:seasoned_blewit",
+    "count": 1
+  }
+}
