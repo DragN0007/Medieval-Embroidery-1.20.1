@@ -1,6 +1,6 @@
 package com.dragn0007_evangelix.medievalembroidery.item.custom;
 
-import com.dragn0007.medievalembroidery.client.render.item.GrimoireRender;
+import com.dragn0007_evangelix.medievalembroidery.client.render.item.GrimoireRender;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;

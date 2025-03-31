@@ -1,6 +1,6 @@
 package com.dragn0007_evangelix.medievalembroidery.world.gen;
 
-import com.dragn0007.medievalembroidery.world.feature.ModPlacedFeatures;
+import com.dragn0007_evangelix.medievalembroidery.world.feature.MEPlacedFeatures;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
@@ -24,37 +24,37 @@ public class MEFlowerGeneration {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.VIOLET_DRAGON_PLACED);
+            base.add(MEPlacedFeatures.VIOLET_DRAGON_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.MOUNTAIN)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.BLUE_DRAGON_PLACED);
+            base.add(MEPlacedFeatures.BLUE_DRAGON_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.HILLS)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.PINK_MAGE_PLACED);
+            base.add(MEPlacedFeatures.PINK_MAGE_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.WET)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.PURPLE_MAGE_PLACED);
+            base.add(MEPlacedFeatures.PURPLE_MAGE_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.HOT)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.FIRE_DAISY_PLACED);
+            base.add(MEPlacedFeatures.FIRE_DAISY_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.FOREST)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.GROUND_VINE_PLACED);
+            base.add(MEPlacedFeatures.GROUND_VINE_PLACED);
         }
 
         //BUSHES
@@ -62,35 +62,35 @@ public class MEFlowerGeneration {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.ELDERBERRY_PLACED);
+            base.add(MEPlacedFeatures.ELDERBERRY_PLACED);
         }
 
         if (types.contains(BiomeDictionary.Type.COLD)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.BILBERRY_PLACED);
+            base.add(MEPlacedFeatures.BILBERRY_PLACED);
         }
 
         if (types.contains(BiomeDictionary.Type.COLD)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.COWBERRY_PLACED);
+            base.add(MEPlacedFeatures.COWBERRY_PLACED);
         }
 
         if (types.contains(BiomeDictionary.Type.COLD)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.HAWTHORN_PLACED);
+            base.add(MEPlacedFeatures.HAWTHORN_PLACED);
         }
 
         if (types.contains(BiomeDictionary.Type.COLD)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.REDCURRANT_PLACED);
+            base.add(MEPlacedFeatures.REDCURRANT_PLACED);
         }
 
 
@@ -99,49 +99,49 @@ public class MEFlowerGeneration {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.BLEWIT_PLACED);
+            base.add(MEPlacedFeatures.BLEWIT_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.FOREST)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.HONEY_PLACED);
+            base.add(MEPlacedFeatures.HONEY_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.SAVANNA)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.KING_PLACED);
+            base.add(MEPlacedFeatures.KING_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.WET)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.MATSUTAKE_PLACED);
+            base.add(MEPlacedFeatures.MATSUTAKE_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.CONIFEROUS)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.OYSTER_PLACED);
+            base.add(MEPlacedFeatures.OYSTER_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.DENSE)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.PORCINI_PLACED);
+            base.add(MEPlacedFeatures.PORCINI_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.FOREST)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.WOODSCHICKEN_PLACED);
+            base.add(MEPlacedFeatures.WOODSCHICKEN_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.PLATEAU)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.YELLOWFOOT_PLACED);
+            base.add(MEPlacedFeatures.YELLOWFOOT_PLACED);
         }
 
 
@@ -150,61 +150,61 @@ public class MEFlowerGeneration {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.HENVEN_PLACED);
+            base.add(MEPlacedFeatures.HENVEN_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.SAVANNA)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.DRAGONEYE_PLACED);
+            base.add(MEPlacedFeatures.DRAGONEYE_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.SWAMP)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.CANNAAN_PLACED);
+            base.add(MEPlacedFeatures.CANNAAN_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.COLD)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.VIRENNES_PLACED);
+            base.add(MEPlacedFeatures.VIRENNES_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.FOREST)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.BRUTEFLOWER_PLACED);
+            base.add(MEPlacedFeatures.BRUTEFLOWER_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.HILLS)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.SPRINNAN_PLACED);
+            base.add(MEPlacedFeatures.SPRINNAN_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.JUNGLE)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.CACHEN_PLACED);
+            base.add(MEPlacedFeatures.CACHEN_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.PLAINS)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.GRANGIN_PLACED);
+            base.add(MEPlacedFeatures.GRANGIN_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.DENSE)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.FAIRYFLOWER_PLACED);
+            base.add(MEPlacedFeatures.FAIRYFLOWER_PLACED);
         }
         if (types.contains(BiomeDictionary.Type.RIVER)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.LADYRIVER_PLACED);
+            base.add(MEPlacedFeatures.LADYRIVER_PLACED);
         }
 
 

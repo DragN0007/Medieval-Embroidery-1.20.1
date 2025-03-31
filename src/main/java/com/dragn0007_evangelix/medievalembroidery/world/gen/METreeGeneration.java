@@ -1,7 +1,7 @@
 package com.dragn0007_evangelix.medievalembroidery.world.gen;
 
 
-import com.dragn0007.medievalembroidery.world.feature.ModPlacedFeatures;
+import com.dragn0007_evangelix.medievalembroidery.world.feature.MEPlacedFeatures;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
@@ -24,21 +24,21 @@ public class METreeGeneration {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-                base.add(ModPlacedFeatures.APPLE_PLACED);
+                base.add(MEPlacedFeatures.APPLE_PLACED);
             }
 
         if (types.contains(BiomeDictionary.Type.HOT)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.APRICOT_PLACED);
+            base.add(MEPlacedFeatures.APRICOT_PLACED);
         }
 
         if (types.contains(BiomeDictionary.Type.FOREST)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.LEMON_PLACED);
+            base.add(MEPlacedFeatures.LEMON_PLACED);
         }
 
 

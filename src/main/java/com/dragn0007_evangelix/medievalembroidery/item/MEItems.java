@@ -1,21 +1,13 @@
 package com.dragn0007_evangelix.medievalembroidery.item;
 
 
-import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
-import com.dragn0007_evangelix.medievalembroidery.entity.EntityTypes;
-import com.dragn0007_evangelix.medievalembroidery.item.custom.*;
-import com.dragn0007_evangelix.medievalembroidery.item.custom.armor.*;
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
-import com.dragn0007_evangelix.medievalembroidery.entity.EntityTypes;
-import com.dragn0007_evangelix.medievalembroidery.item.custom.DragonArmorItem;
-import com.dragn0007_evangelix.medievalembroidery.item.custom.MilkBottleItem;
-import com.dragn0007_evangelix.medievalembroidery.item.custom.MortarAndPestleItem;
+import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
+import com.dragn0007_evangelix.medievalembroidery.item.custom.*;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
-import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -706,78 +698,78 @@ public class MEItems {
 //            () -> new SwordItem(MEItemTier.SPECTRAL, 5, -2.5f,
 //                    new Item.Properties()));
 
-    public static final RegistryObject<Item> YAK_WOOL_HELMET = ITEMS.register("yak_wool_helmet",
-            () -> new ArmorItem(MEArmorTier.YAK_WOOL, EquipmentSlot.HEAD,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> YAK_WOOL_CHESTPLATE = ITEMS.register("yak_wool_chestplate",
-            () -> new ArmorItem(MEArmorTier.YAK_WOOL, EquipmentSlot.CHEST,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> YAK_WOOL_LEGGINGS = ITEMS.register("yak_wool_leggings",
-            () -> new ArmorItem(MEArmorTier.YAK_WOOL, EquipmentSlot.LEGS,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> YAK_WOOL_BOOTS = ITEMS.register("yak_wool_boots",
-            () -> new ArmorItem(MEArmorTier.YAK_WOOL, EquipmentSlot.FEET,
-                    new Item.Properties()));
-
-    public static final RegistryObject<Item> OBSIDIAN_HELMET = ITEMS.register("obsidian_helmet",
-            () -> new ArmorItem(MEArmorTier.OBSIDIAN, EquipmentSlot.HEAD,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> OBSIDIAN_CHESTPLATE = ITEMS.register("obsidian_chestplate",
-            () -> new ArmorItem(MEArmorTier.OBSIDIAN, EquipmentSlot.CHEST,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> OBSIDIAN_LEGGINGS = ITEMS.register("obsidian_leggings",
-            () -> new ArmorItem(MEArmorTier.OBSIDIAN, EquipmentSlot.LEGS,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> OBSIDIAN_BOOTS = ITEMS.register("obsidian_boots",
-            () -> new ArmorItem(MEArmorTier.OBSIDIAN, EquipmentSlot.FEET,
-                    new Item.Properties()));
-
-    public static final RegistryObject<Item> FANGED_ELK_HELMET = ITEMS.register("fanged_elk_helmet",
-            () -> new FangedElkArmorItem(MEArmorTier.FANGED_ELK_SKULL, EquipmentSlot.HEAD,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> FANGED_ELK_HELMET_IRON = ITEMS.register("fanged_elk_helmet_iron",
-            () -> new FangedElkIronArmorItem(ArmorMaterials.IRON, EquipmentSlot.HEAD,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> FANGED_ELK_HELMET_GOLD = ITEMS.register("fanged_elk_helmet_gold",
-            () -> new FangedElkGoldArmorItem(ArmorMaterials.GOLD, EquipmentSlot.HEAD,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> FANGED_ELK_HELMET_DIAMOND = ITEMS.register("fanged_elk_helmet_diamond",
-            () -> new FangedElkDiamondArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.HEAD,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> FANGED_ELK_HELMET_NETHERITE = ITEMS.register("fanged_elk_helmet_netherite",
-            () -> new FangedElkNetheriteArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.HEAD,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> FANGED_ELK_HELMET_OBSIDIAN = ITEMS.register("fanged_elk_helmet_obsidian",
-            () -> new FangedElkObsidianArmorItem(MEArmorTier.OBSIDIAN, EquipmentSlot.HEAD,
-                    new Item.Properties()));
-
-
-    public static final RegistryObject<Item> DIREWOLF_HELMET = ITEMS.register("direwolf_helmet",
-            () -> new DirewolfArmorItem(MEArmorTier.DIREWOLF, EquipmentSlot.HEAD,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> DIREWOLF_CHESTPLATE = ITEMS.register("direwolf_chestplate",
-            () -> new DirewolfArmorItem(MEArmorTier.DIREWOLF, EquipmentSlot.CHEST,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> DIREWOLF_LEGGINGS = ITEMS.register("direwolf_leggings",
-            () -> new DirewolfArmorItem(MEArmorTier.DIREWOLF, EquipmentSlot.LEGS,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> DIREWOLF_BOOTS = ITEMS.register("direwolf_boots",
-            () -> new DirewolfArmorItem(MEArmorTier.DIREWOLF, EquipmentSlot.FEET,
-                    new Item.Properties()));
-
-
-    public static final RegistryObject<Item> BOAR_HELMET = ITEMS.register("boar_helmet",
-            () -> new BoarArmorItem(MEArmorTier.BOAR, EquipmentSlot.HEAD,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> BOAR_CHESTPLATE = ITEMS.register("boar_chestplate",
-            () -> new BoarArmorItem(MEArmorTier.BOAR, EquipmentSlot.CHEST,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> BOAR_LEGGINGS = ITEMS.register("boar_leggings",
-            () -> new BoarArmorItem(MEArmorTier.BOAR, EquipmentSlot.LEGS,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> BOAR_BOOTS = ITEMS.register("boar_boots",
-            () -> new BoarArmorItem(MEArmorTier.BOAR, EquipmentSlot.FEET,
-                    new Item.Properties()));
+//    public static final RegistryObject<Item> YAK_WOOL_HELMET = ITEMS.register("yak_wool_helmet",
+//            () -> new ArmorItem(MEArmorTier.YAK_WOOL, EquipmentSlot.HEAD,
+//                    new Item.Properties()));
+//    public static final RegistryObject<Item> YAK_WOOL_CHESTPLATE = ITEMS.register("yak_wool_chestplate",
+//            () -> new ArmorItem(MEArmorTier.YAK_WOOL, EquipmentSlot.CHEST,
+//                    new Item.Properties()));
+//    public static final RegistryObject<Item> YAK_WOOL_LEGGINGS = ITEMS.register("yak_wool_leggings",
+//            () -> new ArmorItem(MEArmorTier.YAK_WOOL, EquipmentSlot.LEGS,
+//                    new Item.Properties()));
+//    public static final RegistryObject<Item> YAK_WOOL_BOOTS = ITEMS.register("yak_wool_boots",
+//            () -> new ArmorItem(MEArmorTier.YAK_WOOL, EquipmentSlot.FEET,
+//                    new Item.Properties()));
+//
+//    public static final RegistryObject<Item> OBSIDIAN_HELMET = ITEMS.register("obsidian_helmet",
+//            () -> new ArmorItem(MEArmorTier.OBSIDIAN, EquipmentSlot.HEAD,
+//                    new Item.Properties()));
+//    public static final RegistryObject<Item> OBSIDIAN_CHESTPLATE = ITEMS.register("obsidian_chestplate",
+//            () -> new ArmorItem(MEArmorTier.OBSIDIAN, EquipmentSlot.CHEST,
+//                    new Item.Properties()));
+//    public static final RegistryObject<Item> OBSIDIAN_LEGGINGS = ITEMS.register("obsidian_leggings",
+//            () -> new ArmorItem(MEArmorTier.OBSIDIAN, EquipmentSlot.LEGS,
+//                    new Item.Properties()));
+//    public static final RegistryObject<Item> OBSIDIAN_BOOTS = ITEMS.register("obsidian_boots",
+//            () -> new ArmorItem(MEArmorTier.OBSIDIAN, EquipmentSlot.FEET,
+//                    new Item.Properties()));
+//
+//    public static final RegistryObject<Item> FANGED_ELK_HELMET = ITEMS.register("fanged_elk_helmet",
+//            () -> new FangedElkArmorItem(MEArmorTier.FANGED_ELK_SKULL, EquipmentSlot.HEAD,
+//                    new Item.Properties()));
+//    public static final RegistryObject<Item> FANGED_ELK_HELMET_IRON = ITEMS.register("fanged_elk_helmet_iron",
+//            () -> new FangedElkIronArmorItem(ArmorMaterials.IRON, EquipmentSlot.HEAD,
+//                    new Item.Properties()));
+//    public static final RegistryObject<Item> FANGED_ELK_HELMET_GOLD = ITEMS.register("fanged_elk_helmet_gold",
+//            () -> new FangedElkGoldArmorItem(ArmorMaterials.GOLD, EquipmentSlot.HEAD,
+//                    new Item.Properties()));
+//    public static final RegistryObject<Item> FANGED_ELK_HELMET_DIAMOND = ITEMS.register("fanged_elk_helmet_diamond",
+//            () -> new FangedElkDiamondArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.HEAD,
+//                    new Item.Properties()));
+//    public static final RegistryObject<Item> FANGED_ELK_HELMET_NETHERITE = ITEMS.register("fanged_elk_helmet_netherite",
+//            () -> new FangedElkNetheriteArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.HEAD,
+//                    new Item.Properties()));
+//    public static final RegistryObject<Item> FANGED_ELK_HELMET_OBSIDIAN = ITEMS.register("fanged_elk_helmet_obsidian",
+//            () -> new FangedElkObsidianArmorItem(MEArmorTier.OBSIDIAN, EquipmentSlot.HEAD,
+//                    new Item.Properties()));
+//
+//
+//    public static final RegistryObject<Item> DIREWOLF_HELMET = ITEMS.register("direwolf_helmet",
+//            () -> new DirewolfArmorItem(MEArmorTier.DIREWOLF, EquipmentSlot.HEAD,
+//                    new Item.Properties()));
+//    public static final RegistryObject<Item> DIREWOLF_CHESTPLATE = ITEMS.register("direwolf_chestplate",
+//            () -> new DirewolfArmorItem(MEArmorTier.DIREWOLF, EquipmentSlot.CHEST,
+//                    new Item.Properties()));
+//    public static final RegistryObject<Item> DIREWOLF_LEGGINGS = ITEMS.register("direwolf_leggings",
+//            () -> new DirewolfArmorItem(MEArmorTier.DIREWOLF, EquipmentSlot.LEGS,
+//                    new Item.Properties()));
+//    public static final RegistryObject<Item> DIREWOLF_BOOTS = ITEMS.register("direwolf_boots",
+//            () -> new DirewolfArmorItem(MEArmorTier.DIREWOLF, EquipmentSlot.FEET,
+//                    new Item.Properties()));
+//
+//
+//    public static final RegistryObject<Item> BOAR_HELMET = ITEMS.register("boar_helmet",
+//            () -> new BoarArmorItem(MEArmorTier.BOAR, EquipmentSlot.HEAD,
+//                    new Item.Properties()));
+//    public static final RegistryObject<Item> BOAR_CHESTPLATE = ITEMS.register("boar_chestplate",
+//            () -> new BoarArmorItem(MEArmorTier.BOAR, EquipmentSlot.CHEST,
+//                    new Item.Properties()));
+//    public static final RegistryObject<Item> BOAR_LEGGINGS = ITEMS.register("boar_leggings",
+//            () -> new BoarArmorItem(MEArmorTier.BOAR, EquipmentSlot.LEGS,
+//                    new Item.Properties()));
+//    public static final RegistryObject<Item> BOAR_BOOTS = ITEMS.register("boar_boots",
+//            () -> new BoarArmorItem(MEArmorTier.BOAR, EquipmentSlot.FEET,
+//                    new Item.Properties()));
 
 
 

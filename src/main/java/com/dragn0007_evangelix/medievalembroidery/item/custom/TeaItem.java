@@ -1,6 +1,6 @@
 package com.dragn0007_evangelix.medievalembroidery.item.custom;
 
-import com.dragn0007.medievalembroidery.item.MEItemGroup;
+import com.dragn0007_evangelix.medievalembroidery.item.MEItemGroup;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;

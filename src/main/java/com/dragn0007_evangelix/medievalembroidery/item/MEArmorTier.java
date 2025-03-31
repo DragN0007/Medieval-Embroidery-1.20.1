@@ -1,6 +1,6 @@
 package com.dragn0007_evangelix.medievalembroidery.item;
 
-import com.dragn0007.medievalembroidery.MedievalEmbroideryMain;
+import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.LazyLoadedValue;
@@ -75,7 +75,7 @@ public enum MEArmorTier implements ArmorMaterial {
 
     @OnlyIn(Dist.CLIENT)
     public String getName() {
-        return MedievalEmbroideryMain.MODID + ":" + this.name;
+        return MedievalEmbroidery.MODID + ":" + this.name;
     }
 
     public float getToughness() {

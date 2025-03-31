@@ -1,12 +1,11 @@
 package com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Vector3f;
+import com.mojang.math.Axis;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.block.BlockRenderDispatcher;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
-import net.minecraftforge.client.model.data.EmptyModelData;
 
 public class PixelPlacerEntityRenderer implements BlockEntityRenderer<PixelPlacerEntity> {
 
@@ -22,8 +21,8 @@ public class PixelPlacerEntityRenderer implements BlockEntityRenderer<PixelPlace
             poseStack.pushPose();
 
             poseStack.translate(data.pos.x, data.pos.y, data.pos.z);
-            poseStack.mulPose(Vector3f.YP.rotationDegrees(data.dir.toYRot()));
-            blockRenderDispatcher.renderSingleBlock(data.pixelPlacer.defaultBlockState(), poseStack, buffer, combinedLight, combinedOverlay, EmptyModelData.INSTANCE);
+            poseStack.mulPose(Axis.YP.rotationDegrees(data.dir.toYRot()));
+            blockRenderDispatcher.renderSingleBlock(data.pixelPlacer.defaultBlockState(), poseStack, buffer, combinedLight, combinedOverlay);
 
             poseStack.popPose();
         });

@@ -1,7 +1,7 @@
 package com.dragn0007_evangelix.medievalembroidery.client.model.item;
 
-import com.dragn0007.medievalembroidery.client.MEResources;
-import com.dragn0007.medievalembroidery.item.custom.GrimoireItem;
+import com.dragn0007_evangelix.medievalembroidery.client.MEResources;
+import com.dragn0007_evangelix.medievalembroidery.item.custom.GrimoireItem;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 

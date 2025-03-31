@@ -1,10 +1,10 @@
 package com.dragn0007_evangelix.medievalembroidery.block.pixel_placement;
 
-import com.dragn0007.medievalembroidery.block.pixel_placement.util.PixelPlacer;
+import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util.PixelPlacer;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
@@ -17,7 +17,7 @@ public class HerbJar extends PixelPlacer {
     );
 
     public HerbJar() {
-        super(Properties.of(Material.AIR).sound(SoundType.GLASS).noOcclusion());
+        super(Properties.copy(Blocks.GLASS).sound(SoundType.GLASS).noOcclusion().instabreak());
     }
 
     @Override

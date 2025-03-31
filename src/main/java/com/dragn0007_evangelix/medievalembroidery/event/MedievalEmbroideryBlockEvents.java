@@ -1,9 +1,9 @@
 package com.dragn0007_evangelix.medievalembroidery.event;
 
-import com.dragn0007.medievalembroidery.MedievalEmbroideryMain;
-import com.dragn0007.medievalembroidery.block.MEBlocks;
-import com.dragn0007.medievalembroidery.block.MEBlocksDataGen;
-import com.dragn0007.medievalembroidery.block.pixel_placement.util.PixelPlacerEntityRenderer;
+import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
+import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
+import com.dragn0007_evangelix.medievalembroidery.block.MEBlocksDataGen;
+import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util.PixelPlacerEntityRenderer;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 
-@Mod.EventBusSubscriber(modid = MedievalEmbroideryMain.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = MedievalEmbroidery.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MedievalEmbroideryBlockEvents {
 
     @SubscribeEvent
@@ -44,7 +44,7 @@ public class MedievalEmbroideryBlockEvents {
         ItemBlockRenderTypes.setRenderLayer(MEBlocks.PROTECTIVE_CRYSTAL_ORE.get(), RenderType.translucent());
 
         // decor
-        ResourceLocation resourceLocation = new ResourceLocation(MedievalEmbroideryMain.MODID, "null");
+        ResourceLocation resourceLocation = new ResourceLocation(MedievalEmbroidery.MODID, "null");
         ItemBlockRenderTypes.setRenderLayer(MEBlocks.PIXEL_PLACER_CONTAINER.get(), RenderType.lineStrip());
 
 //        ItemBlockRenderTypes.setRenderLayer(MEBlocks.BIG_TAVERNTABLE.get(), RenderType.cutout());

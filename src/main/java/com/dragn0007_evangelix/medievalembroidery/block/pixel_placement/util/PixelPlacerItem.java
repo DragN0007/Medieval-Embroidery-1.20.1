@@ -1,6 +1,6 @@
 package com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util;
 
-import com.dragn0007.medievalembroidery.block.MEBlocks;
+import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
 import net.minecraft.sounds.SoundSource;

@@ -1,6 +1,6 @@
 package com.dragn0007_evangelix.medievalembroidery.block.custom.crop.herb;
 
-import com.dragn0007.medievalembroidery.item.MEItems;
+import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;

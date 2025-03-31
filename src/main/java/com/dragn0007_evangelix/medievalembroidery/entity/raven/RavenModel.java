@@ -1,13 +1,13 @@
 package com.dragn0007_evangelix.medievalembroidery.entity.raven;
 
-import com.dragn0007.medievalembroidery.MedievalEmbroideryMain;
+import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class RavenModel extends AnimatedGeoModel<Raven> {
 
     public enum Variant {
-        A (new ResourceLocation(MedievalEmbroideryMain.MODID, "textures/entities/raven.png")
+        A (new ResourceLocation(MedievalEmbroidery.MODID, "textures/entities/raven.png")
         );
 
         public final ResourceLocation resourceLocation;
@@ -19,8 +19,8 @@ public class RavenModel extends AnimatedGeoModel<Raven> {
         }
     }
 
-    public static final ResourceLocation MODEL = new ResourceLocation (MedievalEmbroideryMain.MODID, "geo/raven.geo.json");
-    public static final ResourceLocation ANIMATION = new ResourceLocation (MedievalEmbroideryMain.MODID, "animations/raven.animation.json");
+    public static final ResourceLocation MODEL = new ResourceLocation (MedievalEmbroidery.MODID, "geo/raven.geo.json");
+    public static final ResourceLocation ANIMATION = new ResourceLocation (MedievalEmbroidery.MODID, "animations/raven.animation.json");
 
     @Override
     public ResourceLocation getModelLocation(Raven object) {

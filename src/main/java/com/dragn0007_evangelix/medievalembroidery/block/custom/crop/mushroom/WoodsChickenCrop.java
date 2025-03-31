@@ -1,6 +1,6 @@
 package com.dragn0007_evangelix.medievalembroidery.block.custom.crop.mushroom;
 
-import com.dragn0007.medievalembroidery.item.MEItems;
+import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;

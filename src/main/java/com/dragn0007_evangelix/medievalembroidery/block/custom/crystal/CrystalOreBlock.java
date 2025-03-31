@@ -1,16 +1,15 @@
 package com.dragn0007_evangelix.medievalembroidery.block.custom.crystal;
 
-import com.mojang.math.Vector3f;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RedStoneOreBlock;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.Vec3;
+import org.joml.Vector3f;
 
 import java.util.Random;
 
@@ -18,7 +17,7 @@ public class CrystalOreBlock extends RedStoneOreBlock {
     private final DustParticleOptions particle;
 
     public CrystalOreBlock(int color) {
-        super(Properties.of(Material.STONE).sound(SoundType.AMETHYST).requiresCorrectToolForDrops().randomTicks()
+        super(Properties.copy(Blocks.STONE).sound(SoundType.AMETHYST).requiresCorrectToolForDrops().randomTicks()
                 .lightLevel((blockState) -> blockState.getValue(LIT) ? 9 : 0).strength(3.0F));
 
         particle = new DustParticleOptions(new Vector3f(Vec3.fromRGB24(color)), 1.0F);

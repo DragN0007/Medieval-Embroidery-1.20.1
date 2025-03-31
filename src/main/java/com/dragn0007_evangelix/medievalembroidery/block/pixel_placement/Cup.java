@@ -1,6 +1,6 @@
 package com.dragn0007_evangelix.medievalembroidery.block.pixel_placement;
 
-import com.dragn0007.medievalembroidery.block.pixel_placement.util.PixelPlacer;
+import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util.PixelPlacer;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.shapes.Shapes;

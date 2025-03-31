@@ -1,6 +1,6 @@
 package com.dragn0007_evangelix.medievalembroidery.item.custom.armor;
 
-import com.dragn0007.medievalembroidery.item.MEArmorTier;
+import com.dragn0007_evangelix.medievalembroidery.item.MEArmorTier;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;

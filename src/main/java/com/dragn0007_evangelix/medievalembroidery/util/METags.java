@@ -1,6 +1,5 @@
 package com.dragn0007_evangelix.medievalembroidery.util;
 
-import com.dragn0007.medievalembroidery.MedievalEmbroideryMain;
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;

@@ -1,32 +1,32 @@
 package com.dragn0007_evangelix.medievalembroidery.event;
 
-import com.dragn0007.medievalembroidery.MedievalEmbroideryMain;
-import com.dragn0007.medievalembroidery.entity.EntityTypes;
-import com.dragn0007.medievalembroidery.entity.butterfly.ButterflyEntity;
-import com.dragn0007.medievalembroidery.entity.butterfly.ButterflyRender;
-import com.dragn0007.medievalembroidery.entity.crestedlizard.CrestedLizardRender;
-import com.dragn0007.medievalembroidery.entity.direwolf.DireWolf;
-import com.dragn0007.medievalembroidery.entity.direwolf.DireWolfRender;
-import com.dragn0007.medievalembroidery.entity.fairy.Fairy;
-import com.dragn0007.medievalembroidery.entity.fairy.FairyRender;
-import com.dragn0007.medievalembroidery.entity.fangedelk.FangedElk;
-import com.dragn0007.medievalembroidery.entity.fangedelk.FangedElkRender;
-import com.dragn0007.medievalembroidery.entity.gamehen.GameHenEntity;
-import com.dragn0007.medievalembroidery.entity.gamehen.GameHenRender;
-import com.dragn0007.medievalembroidery.entity.lightningbug.LightningBugEntity;
-import com.dragn0007.medievalembroidery.entity.lightningbug.LightningBugRender;
-import com.dragn0007.medievalembroidery.entity.mammoth.Mammoth;
-import com.dragn0007.medievalembroidery.entity.mammoth.MammothRender;
-import com.dragn0007.medievalembroidery.entity.raven.Raven;
-import com.dragn0007.medievalembroidery.entity.raven.RavenRender;
-import com.dragn0007.medievalembroidery.entity.swampyak.SwampYak;
-import com.dragn0007.medievalembroidery.entity.swampyak.SwampYakRender;
-import com.dragn0007.medievalembroidery.entity.swampyak.SwampYakScreen;
-import com.dragn0007.medievalembroidery.entity.turkey.TurkeyEntity;
-import com.dragn0007.medievalembroidery.entity.turkey.TurkeyRender;
-import com.dragn0007.medievalembroidery.entity.woollyboar.WoollyBoar;
-import com.dragn0007.medievalembroidery.entity.woollyboar.WoollyBoarRender;
-import com.dragn0007.medievalembroidery.gui.MEMenuTypes;
+import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
+import com.dragn0007_evangelix.medievalembroidery.entity.EntityTypes;
+import com.dragn0007_evangelix.medievalembroidery.entity.butterfly.ButterflyEntity;
+import com.dragn0007_evangelix.medievalembroidery.entity.butterfly.ButterflyRender;
+import com.dragn0007_evangelix.medievalembroidery.entity.crestedlizard.CrestedLizardRender;
+import com.dragn0007_evangelix.medievalembroidery.entity.direwolf.DireWolf;
+import com.dragn0007_evangelix.medievalembroidery.entity.direwolf.DireWolfRender;
+import com.dragn0007_evangelix.medievalembroidery.entity.fairy.Fairy;
+import com.dragn0007_evangelix.medievalembroidery.entity.fairy.FairyRender;
+import com.dragn0007_evangelix.medievalembroidery.entity.fangedelk.FangedElk;
+import com.dragn0007_evangelix.medievalembroidery.entity.fangedelk.FangedElkRender;
+import com.dragn0007_evangelix.medievalembroidery.entity.gamehen.GameHenEntity;
+import com.dragn0007_evangelix.medievalembroidery.entity.gamehen.GameHenRender;
+import com.dragn0007_evangelix.medievalembroidery.entity.lightningbug.LightningBugEntity;
+import com.dragn0007_evangelix.medievalembroidery.entity.lightningbug.LightningBugRender;
+import com.dragn0007_evangelix.medievalembroidery.entity.mammoth.Mammoth;
+import com.dragn0007_evangelix.medievalembroidery.entity.mammoth.MammothRender;
+import com.dragn0007_evangelix.medievalembroidery.entity.raven.Raven;
+import com.dragn0007_evangelix.medievalembroidery.entity.raven.RavenRender;
+import com.dragn0007_evangelix.medievalembroidery.entity.swampyak.SwampYak;
+import com.dragn0007_evangelix.medievalembroidery.entity.swampyak.SwampYakRender;
+import com.dragn0007_evangelix.medievalembroidery.entity.swampyak.SwampYakScreen;
+import com.dragn0007_evangelix.medievalembroidery.entity.turkey.TurkeyEntity;
+import com.dragn0007_evangelix.medievalembroidery.entity.turkey.TurkeyRender;
+import com.dragn0007_evangelix.medievalembroidery.entity.woollyboar.WoollyBoar;
+import com.dragn0007_evangelix.medievalembroidery.entity.woollyboar.WoollyBoarRender;
+import com.dragn0007_evangelix.medievalembroidery.gui.MEMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.entity.SpawnPlacements;
@@ -38,7 +38,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 
-@Mod.EventBusSubscriber(modid = MedievalEmbroideryMain.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = MedievalEmbroidery.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MedievalEmbroideryEntityEvents {
 
     @SubscribeEvent

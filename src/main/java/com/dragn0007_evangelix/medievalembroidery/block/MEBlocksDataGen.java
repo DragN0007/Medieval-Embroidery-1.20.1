@@ -1,12 +1,12 @@
 package com.dragn0007_evangelix.medievalembroidery.block;
 
-import com.dragn0007.medievalembroidery.MedievalEmbroideryMain;
-import com.dragn0007.medievalembroidery.block.custom.decorvox.FairyBody;
-import com.dragn0007.medievalembroidery.block.custom.decorvox.MedTavernTable;
-import com.dragn0007.medievalembroidery.block.custom.decorvox.SmlTavernTable;
-import com.dragn0007.medievalembroidery.block.decorvox.FancyPane;
-import com.dragn0007.medievalembroidery.item.MEItemGroup;
-import com.dragn0007.medievalembroidery.item.MEItems;
+import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
+import com.dragn0007_evangelix.medievalembroidery.block.custom.decorvox.FairyBody;
+import com.dragn0007_evangelix.medievalembroidery.block.custom.decorvox.MedTavernTable;
+import com.dragn0007_evangelix.medievalembroidery.block.custom.decorvox.SmlTavernTable;
+import com.dragn0007_evangelix.medievalembroidery.block.decorvox.FancyPane;
+import com.dragn0007_evangelix.medievalembroidery.item.MEItemGroup;
+import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -21,7 +21,7 @@ import java.util.function.Supplier;
 
 public class MEBlocksDataGen {
     public static final DeferredRegister<Block> BLOCKS
-            = DeferredRegister.create(ForgeRegistries.BLOCKS, MedievalEmbroideryMain.MODID);
+            = DeferredRegister.create(ForgeRegistries.BLOCKS, MedievalEmbroidery.MODID);
 
 
     public static final RegistryObject<MedTavernTable> MED_TAVERNTABLE = registerBlock("med_taverntable",

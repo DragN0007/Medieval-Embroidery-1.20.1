@@ -1,7 +1,7 @@
 package com.dragn0007_evangelix.medievalembroidery.world.gen;
 
-import com.dragn0007.medievalembroidery.entity.EntityTypes;
-import com.dragn0007.medievalembroidery.util.config.MedievalEmbroideryCommonConfig;
+import com.dragn0007_evangelix.medievalembroidery.entity.EntityTypes;
+import com.dragn0007_evangelix.medievalembroidery.util.config.MedievalEmbroideryCommonConfig;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.biome.Biome;

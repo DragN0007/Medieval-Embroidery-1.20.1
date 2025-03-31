@@ -5,11 +5,11 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
@@ -22,7 +22,7 @@ public class DecorRotator extends HorizontalDirectionalBlock {
 
     //Rotation & Properties
     public DecorRotator(VoxelShape north, VoxelShape east, VoxelShape south, VoxelShape west) {
-        super (Properties.of(Material.WOOD).sound(SoundType.WOOD));
+        super (Properties.copy(Blocks.OAK_PLANKS).sound(SoundType.WOOD));
 
         NORTH = north;
         EAST = east;

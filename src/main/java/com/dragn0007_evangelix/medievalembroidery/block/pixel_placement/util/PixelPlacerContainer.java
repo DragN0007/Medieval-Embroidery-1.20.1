@@ -14,38 +14,33 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.material.FluidState;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
-import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.EntityCollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.client.IBlockRenderProperties;
+import net.minecraftforge.client.extensions.common.IClientBlockExtensions;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Consumer;
 
 public class PixelPlacerContainer extends Block implements EntityBlock {
 
-    private static final Material MATERIAL = new Material(MaterialColor.NONE, false, false, false, false, false, false, PushReaction.DESTROY);
-
-
     public PixelPlacerContainer() {
-        super(Properties.of(MATERIAL));
+        super(Properties.of().noLootTable());
     }
 
     @Override
-    public void initializeClient(Consumer<IBlockRenderProperties> consumer) {
-        consumer.accept(new IBlockRenderProperties() {
+    public void initializeClient(Consumer<IClientBlockExtensions> consumer) {
+        consumer.accept(new IClientBlockExtensions() {
             @Override
             public boolean addHitEffects(BlockState state, Level level, HitResult target, ParticleEngine manager) {
                 return true;
             }
         });
-    }
 
+        super.initializeClient(consumer);
+    }
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter blockGetter, BlockPos pos, CollisionContext context) {
         if(context instanceof EntityCollisionContext) {
@@ -67,7 +62,7 @@ public class PixelPlacerContainer extends Block implements EntityBlock {
         PixelPlacerEntity pixelPlacerEntity = (PixelPlacerEntity) level.getBlockEntity(pos);
         PixelPlacerData data = pixelPlacerEntity.getClosestPixelPlacer(player);
         if(data != null) {
-            BlockPos offset = pos.offset(data.pos.x, data.pos.y, data.pos.z);
+            BlockPos offset = pos.offset((int) data.pos.x, (int) data.pos.y, (int) data.pos.z);
             level.gameEvent(player, GameEvent.BLOCK_DESTROY, pos);
 
             if (level.isClientSide) {

@@ -1,7 +1,7 @@
 package com.dragn0007_evangelix.medievalembroidery.item;
 
 
-import com.dragn0007.medievalembroidery.block.MEBlocks;
+import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 

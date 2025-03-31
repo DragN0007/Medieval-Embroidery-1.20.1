@@ -1,9 +1,9 @@
 package com.dragn0007_evangelix.medievalembroidery.event;
 
-import com.dragn0007.medievalembroidery.MedievalEmbroideryMain;
-import com.dragn0007.medievalembroidery.magic.particle.MEParticleRegistry;
-import com.dragn0007.medievalembroidery.magic.particle.spells.SpellFireParticles;
-import com.dragn0007.medievalembroidery.magic.particle.spells.SpellIceParticles;
+import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
+import com.dragn0007_evangelix.medievalembroidery.magic.particle.MEParticleRegistry;
+import com.dragn0007_evangelix.medievalembroidery.magic.particle.spells.SpellFireParticles;
+import com.dragn0007_evangelix.medievalembroidery.magic.particle.spells.SpellIceParticles;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 
-@Mod.EventBusSubscriber(modid = MedievalEmbroideryMain.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = MedievalEmbroidery.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MedievalEmbroideryMagicEvents {
 
     @SubscribeEvent

@@ -1,7 +1,7 @@
 package com.dragn0007_evangelix.medievalembroidery.block.leaves;
 
-import com.dragn0007.medievalembroidery.block.leaves.base.FruitLeaves;
-import com.dragn0007.medievalembroidery.item.MEItems;
+import com.dragn0007_evangelix.medievalembroidery.block.leaves.base.FruitLeaves;
+import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;

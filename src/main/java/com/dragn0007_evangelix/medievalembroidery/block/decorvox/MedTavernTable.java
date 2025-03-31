@@ -1,6 +1,6 @@
 package com.dragn0007_evangelix.medievalembroidery.block.decorvox;
 
-import com.dragn0007.medievalembroidery.block.custom.DecorRotator;
+import com.dragn0007_evangelix.medievalembroidery.block.custom.DecorRotator;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.Shapes;

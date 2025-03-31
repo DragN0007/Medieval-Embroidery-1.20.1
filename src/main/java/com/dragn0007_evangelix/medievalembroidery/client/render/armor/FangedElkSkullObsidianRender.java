@@ -1,7 +1,7 @@
 package com.dragn0007_evangelix.medievalembroidery.client.render.armor;
 
-import com.dragn0007.medievalembroidery.client.model.armor.FangedElkSkullObsidianModel;
-import com.dragn0007.medievalembroidery.item.custom.armor.FangedElkObsidianArmorItem;
+import com.dragn0007_evangelix.medievalembroidery.client.model.armor.FangedElkSkullObsidianModel;
+import com.dragn0007_evangelix.medievalembroidery.item.custom.armor.FangedElkObsidianArmorItem;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
 public class FangedElkSkullObsidianRender extends GeoArmorRenderer<FangedElkObsidianArmorItem> {

@@ -1,7 +1,7 @@
 package com.dragn0007_evangelix.medievalembroidery.client.render.armor;
 
-import com.dragn0007.medievalembroidery.client.model.armor.BoarFurArmorModel;
-import com.dragn0007.medievalembroidery.item.custom.armor.BoarArmorItem;
+import com.dragn0007_evangelix.medievalembroidery.client.model.armor.BoarFurArmorModel;
+import com.dragn0007_evangelix.medievalembroidery.item.custom.armor.BoarArmorItem;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
 public class BoarFurArmorRender extends GeoArmorRenderer<BoarArmorItem> {

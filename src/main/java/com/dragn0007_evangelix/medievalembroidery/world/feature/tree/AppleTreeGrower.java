@@ -1,6 +1,6 @@
 package com.dragn0007_evangelix.medievalembroidery.world.feature.tree;
 
-import com.dragn0007.medievalembroidery.world.feature.ModConfigFeatures;
+import com.dragn0007_evangelix.medievalembroidery.world.feature.MEConfigFeatures;
 import net.minecraft.core.Holder;
 import net.minecraft.world.level.block.grower.AbstractTreeGrower;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -12,6 +12,6 @@ public class AppleTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected Holder<? extends ConfiguredFeature<?, ?>> getConfiguredFeature(Random p_204307_, boolean p_204308_) {
-        return ModConfigFeatures.APPLE;
+        return MEConfigFeatures.APPLE;
     }
 }

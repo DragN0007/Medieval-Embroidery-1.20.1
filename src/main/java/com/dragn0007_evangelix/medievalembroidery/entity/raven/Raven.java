@@ -1,7 +1,7 @@
 package com.dragn0007_evangelix.medievalembroidery.entity.raven;
 
-import com.dragn0007.medievalembroidery.entity.EntityTypes;
-import com.dragn0007.medievalembroidery.util.METags;
+import com.dragn0007_evangelix.medievalembroidery.entity.EntityTypes;
+import com.dragn0007_evangelix.medievalembroidery.util.METags;
 import com.google.common.collect.Sets;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;

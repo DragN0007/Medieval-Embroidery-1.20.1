@@ -1,8 +1,8 @@
 package com.dragn0007_evangelix.medievalembroidery.world.feature;
 
 
-import com.dragn0007.medievalembroidery.block.MEBlocks;
-import com.dragn0007.medievalembroidery.util.config.MedievalEmbroideryCommonConfig;
+import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
+import com.dragn0007_evangelix.medievalembroidery.util.config.MedievalEmbroideryCommonConfig;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
@@ -21,7 +21,7 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 import java.util.List;
 
-public class ModConfigFeatures {
+public class MEConfigFeatures {
 
 
     //TREE
