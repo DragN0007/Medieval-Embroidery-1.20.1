@@ -5,13 +5,11 @@ import com.dragn0007_evangelix.medievalembroidery.block.custom.decorvox.FairyBod
 import com.dragn0007_evangelix.medievalembroidery.block.custom.decorvox.MedTavernTable;
 import com.dragn0007_evangelix.medievalembroidery.block.custom.decorvox.SmlTavernTable;
 import com.dragn0007_evangelix.medievalembroidery.block.decorvox.FancyPane;
-import com.dragn0007_evangelix.medievalembroidery.item.MEItemGroup;
 import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -76,74 +74,74 @@ public class MEBlocksDataGen {
 
 
     public static final RegistryObject<Block> BEIGE_BRICKS = registerBlock("beige_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> BLACK_BRICKS = registerBlock("black_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> BLUE_BRICKS = registerBlock("blue_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> BROWN_BRICKS = registerBlock("brown_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> FADED_BRICKS = registerBlock("faded_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> GREEN_BRICKS = registerBlock("green_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> GREY_BRICKS = registerBlock("grey_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> MAROON_BRICKS = registerBlock("maroon_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> NAVY_BRICKS = registerBlock("navy_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> ORANGE_BRICKS = registerBlock("orange_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> PALE_BLUE_BRICKS = registerBlock("pale_blue_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> PINK_BRICKS = registerBlock("pink_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> PURPLE_BRICKS = registerBlock("purple_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> RED_BRICKS = registerBlock("red_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> SWAMPY_BRICKS = registerBlock("swampy_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> WHITE_BRICKS = registerBlock("white_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> YELLOW_BRICKS = registerBlock("yellow_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
 
     public static final RegistryObject<Block> BEIGE_BRICKS_MOSSY = registerBlock("beige_bricks_mossy",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> BLACK_BRICKS_MOSSY = registerBlock("black_bricks_mossy",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> BLUE_BRICKS_MOSSY = registerBlock("blue_bricks_mossy",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> BROWN_BRICKS_MOSSY = registerBlock("brown_bricks_mossy",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> FADED_BRICKS_MOSSY = registerBlock("faded_bricks_mossy",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> GREEN_BRICKS_MOSSY = registerBlock("green_bricks_mossy",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> GREY_BRICKS_MOSSY = registerBlock("grey_bricks_mossy",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> MAROON_BRICKS_MOSSY = registerBlock("maroon_bricks_mossy",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> NAVY_BRICKS_MOSSY = registerBlock("navy_bricks_mossy",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> ORANGE_BRICKS_MOSSY = registerBlock("orange_bricks_mossy",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> PALE_BLUE_BRICKS_MOSSY = registerBlock("pale_blue_bricks_mossy",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> PINK_BRICKS_MOSSY = registerBlock("pink_bricks_mossy",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> PURPLE_BRICKS_MOSSY = registerBlock("purple_bricks_mossy",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> RED_BRICKS_MOSSY = registerBlock("red_bricks_mossy",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> SWAMPY_BRICKS_MOSSY = registerBlock("swampy_bricks_mossy",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> WHITE_BRICKS_MOSSY = registerBlock("white_bricks_mossy",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> YELLOW_BRICKS_MOSSY = registerBlock("yellow_bricks_mossy",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
 
     public static final RegistryObject<Block> BEIGE_BRICKS_STAIRS = registerBlock("beige_bricks_stairs",
             () -> new StairBlock(BEIGE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BRICKS)));
@@ -216,74 +214,74 @@ public class MEBlocksDataGen {
             () -> new StairBlock(YELLOW_BRICKS_MOSSY.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BRICKS)));
 
     public static final RegistryObject<Block> BEIGE_BRICKS_SLAB = registerBlock("beige_bricks_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> BLACK_BRICKS_SLAB = registerBlock("black_bricks_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> BLUE_BRICKS_SLAB = registerBlock("blue_bricks_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> BROWN_BRICKS_SLAB = registerBlock("brown_bricks_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> FADED_BRICKS_SLAB = registerBlock("faded_bricks_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> GREEN_BRICKS_SLAB = registerBlock("green_bricks_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> GREY_BRICKS_SLAB = registerBlock("grey_bricks_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> MAROON_BRICKS_SLAB = registerBlock("maroon_bricks_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> NAVY_BRICKS_SLAB = registerBlock("navy_bricks_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> ORANGE_BRICKS_SLAB = registerBlock("orange_bricks_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> PALE_BLUE_BRICKS_SLAB = registerBlock("pale_blue_bricks_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> PINK_BRICKS_SLAB = registerBlock("pink_bricks_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> PURPLE_BRICKS_SLAB = registerBlock("purple_bricks_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> RED_BRICKS_SLAB = registerBlock("red_bricks_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> SWAMPY_BRICKS_SLAB = registerBlock("swampy_bricks_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> WHITE_BRICKS_SLAB = registerBlock("white_bricks_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> YELLOW_BRICKS_SLAB = registerBlock("yellow_bricks_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
 
     public static final RegistryObject<Block> BEIGE_BRICKS_SLAB_MOSSY = registerBlock("beige_bricks_slab_mossy",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> BLACK_BRICKS_SLAB_MOSSY = registerBlock("black_bricks_slab_mossy",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> BLUE_BRICKS_SLAB_MOSSY = registerBlock("blue_bricks_slab_mossy",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> BROWN_BRICKS_SLAB_MOSSY = registerBlock("brown_bricks_slab_mossy",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> FADED_BRICKS_SLAB_MOSSY = registerBlock("faded_bricks_slab_mossy",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> GREEN_BRICKS_SLAB_MOSSY = registerBlock("green_bricks_slab_mossy",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> GREY_BRICKS_SLAB_MOSSY = registerBlock("grey_bricks_slab_mossy",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> MAROON_BRICKS_SLAB_MOSSY = registerBlock("maroon_bricks_slab_mossy",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> NAVY_BRICKS_SLAB_MOSSY = registerBlock("navy_bricks_slab_mossy",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> ORANGE_BRICKS_SLAB_MOSSY = registerBlock("orange_bricks_slab_mossy",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> PALE_BLUE_BRICKS_SLAB_MOSSY = registerBlock("pale_blue_bricks_slab_mossy",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> PINK_BRICKS_SLAB_MOSSY = registerBlock("pink_bricks_slab_mossy",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> PURPLE_BRICKS_SLAB_MOSSY = registerBlock("purple_bricks_slab_mossy",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> RED_BRICKS_SLAB_MOSSY = registerBlock("red_bricks_slab_mossy",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> SWAMPY_BRICKS_SLAB_MOSSY = registerBlock("swampy_bricks_slab_mossy",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> WHITE_BRICKS_SLAB_MOSSY = registerBlock("white_bricks_slab_mossy",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> YELLOW_BRICKS_SLAB_MOSSY = registerBlock("yellow_bricks_slab_mossy",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     
     protected static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
@@ -292,7 +290,7 @@ public class MEBlocksDataGen {
     }
     protected static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
         MEItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().tab(MEItemGroup.DECOR_GROUP)));
+                new Item.Properties()));
     }
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

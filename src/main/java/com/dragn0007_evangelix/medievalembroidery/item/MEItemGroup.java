@@ -1,66 +1,79 @@
 package com.dragn0007_evangelix.medievalembroidery.item;
 
-
+import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
 import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
 
 public class MEItemGroup {
 
-    public static final CreativeModeTab DECOR_GROUP = new CreativeModeTab("decormodtab")
-    {
-        @Override
-        public ItemStack makeIcon() {
-            return new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get());
-        }
-    };
-    public static final CreativeModeTab HERB_GROUP = new CreativeModeTab("herbmodtab")
-    {
-        @Override
-        public ItemStack makeIcon() {
-            return new ItemStack(MEItems.HENVEN.get());
-        }
-    };
-    public static final CreativeModeTab FOOD_GROUP = new CreativeModeTab("foodmodtab")
-    {
-        @Override
-        public ItemStack makeIcon() {
-            return new ItemStack(MEItems.ELDERBERRY_PIE.get());
-        }
-    };
-//    public static final CreativeModeTab POTION_GROUP = new CreativeModeTab("potionmodtab")
-//    {
-//        @Override
-//        public ItemStack makeIcon() {
-//            return new ItemStack(MEItems.DRAGONPOTION.get());
-//        }
-//    };
-    public static final CreativeModeTab ENTITY_GROUP = new CreativeModeTab("entitymodtab")
-    {
-        @Override
-        public ItemStack makeIcon() {
-            return new ItemStack(MEItems.TURKEY_SPAWN_EGG.get());
-        }
-    };
-    public static final CreativeModeTab MAGIC_GROUP = new CreativeModeTab("magicmodtab")
-    {
-        @Override
-        public ItemStack makeIcon() {
-            return new ItemStack(MEItems.ATTUNED_SCROLL.get());
-        }
-    };
-    public static final CreativeModeTab EQUIPMENT_GROUP = new CreativeModeTab("equipmentmodtab")
-    {
-        @Override
-        public ItemStack makeIcon() {
-            return new ItemStack(MEItems.OBSIDIAN_AXE.get());
-        }
-    };
-    public static final CreativeModeTab DRAGON_GROUP = new CreativeModeTab("dragonmodtab")
-    {
-        @Override
-        public ItemStack makeIcon() {
-            return new ItemStack(MEItems.OBSIDIAN_DRAGON_ARMOR.get());
-        }
-    };
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MedievalEmbroidery.MODID);
+
+    public static final RegistryObject<CreativeModeTab> DECOR_GROUP = CREATIVE_MODE_TABS.register("decormodtab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.decormodtab"))
+                    .displayItems((displayParameters, output) -> {
+
+
+                    }).build());
+
+    public static final RegistryObject<CreativeModeTab> HERB_GROUP = CREATIVE_MODE_TABS.register("herbmodtab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.herbmodtab"))
+                    .displayItems((displayParameters, output) -> {
+
+
+                    }).build());
+
+    public static final RegistryObject<CreativeModeTab> FOOD_GROUP = CREATIVE_MODE_TABS.register("foodmodtab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.foodmodtab"))
+                    .displayItems((displayParameters, output) -> {
+
+
+                    }).build());
+
+    public static final RegistryObject<CreativeModeTab> POTION_GROUP = CREATIVE_MODE_TABS.register("potionmodtab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.potionmodtab"))
+                    .displayItems((displayParameters, output) -> {
+
+
+                    }).build());
+
+    public static final RegistryObject<CreativeModeTab> ENTITY_GROUP = CREATIVE_MODE_TABS.register("entitymodtab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.entitymodtab"))
+                    .displayItems((displayParameters, output) -> {
+
+
+                    }).build());
+
+    public static final RegistryObject<CreativeModeTab> MAGIC_GROUP = CREATIVE_MODE_TABS.register("magicmodtab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.magicmodtab"))
+                    .displayItems((displayParameters, output) -> {
+
+
+                    }).build());
+
+    public static final RegistryObject<CreativeModeTab> EQUIPMENT_GROUP = CREATIVE_MODE_TABS.register("equipmentmodtab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.equipmentmodtab"))
+                    .displayItems((displayParameters, output) -> {
+
+
+                    }).build());
+
+    public static final RegistryObject<CreativeModeTab> DRAGON_GROUP = CREATIVE_MODE_TABS.register("dragonmodtab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.dragonmodtab"))
+                    .displayItems((displayParameters, output) -> {
+
+
+                    }).build());
+
+
+
+    public static void register(IEventBus eventBus) {
+        CREATIVE_MODE_TABS.register(eventBus);
+    }
 }

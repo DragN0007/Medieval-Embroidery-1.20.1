@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smoking",
-  "ingredient": {
-    "item": "medievalembroidery:yak"
-  },
-  "result": "medievalembroidery:cooked_yak",
-  "experience": 0.60,
-  "cookingtime": 160
-}

@@ -1,6 +1,5 @@
 package com.dragn0007_evangelix.medievalembroidery.item.custom;
 
-import com.dragn0007_evangelix.medievalembroidery.item.MEItemGroup;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
@@ -17,7 +16,7 @@ public class MEAlcoholItem extends Item {
     public MobEffectInstance[] effectInstances;
 
     public MEAlcoholItem(MobEffectInstance... effectInstances) {
-        super(new Properties().craftRemainder(Items.GLASS_BOTTLE).craftRemainder(Items.GLASS_BOTTLE).tab(MEItemGroup.FOOD_GROUP));
+        super(new Properties().craftRemainder(Items.GLASS_BOTTLE).craftRemainder(Items.GLASS_BOTTLE));
         this.effectInstances = effectInstances;
     }
 

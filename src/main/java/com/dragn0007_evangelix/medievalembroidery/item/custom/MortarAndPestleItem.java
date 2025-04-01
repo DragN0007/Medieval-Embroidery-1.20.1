@@ -7,12 +7,14 @@ public class MortarAndPestleItem extends Item {
     public MortarAndPestleItem(Properties properties) {
         super(properties);
     }
+
     @Override
-    public boolean hasContainerItem(ItemStack itemStack) {
+    public boolean hasCraftingRemainingItem() {
         return true;
     }
+
     @Override
-    public ItemStack getContainerItem(ItemStack itemStack) {
+    public ItemStack getCraftingRemainingItem(ItemStack itemStack) {
         return itemStack.copy();
     }
 }

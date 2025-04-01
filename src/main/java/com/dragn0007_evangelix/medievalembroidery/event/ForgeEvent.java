@@ -8,9 +8,11 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -26,24 +28,41 @@ public class ForgeEvent {
         Level level = event.getLevel();
         BlockPos pos = event.getPos();
         BlockState state = level.getBlockState(pos);
-        InteractionHand hand = event.getHand();
-        Player player = event.getPlayer();
-        player.swing(hand);
-        ItemStack itemStack = player.getItemInHand(hand);
 
-        if(state.getBlock() instanceof CropBlock cropBlock && level instanceof ServerLevel serverLevel) {
-            IntegerProperty property = cropBlock.getAgeProperty();
-            int maxAge = cropBlock.getMaxAge();
+        Property<Integer> property = getCropProperty(state, "age");
 
-            if(itemStack.isEmpty() && state.getValue(property) == maxAge) {
+        if (property != null && level instanceof ServerLevel serverLevel) {
+            int maxAge = getMaxAge(state.getBlock());
+
+            InteractionHand hand = event.getHand();
+            Player player = event.getEntity();
+            ItemStack itemStack = player.getItemInHand(hand);
+
+            if (itemStack.isEmpty() && state.getValue(property) == maxAge) {
                 level.setBlockAndUpdate(pos, state.setValue(property, 0));
 
-                cropBlock.getDrops(state, serverLevel, pos, null).forEach(stack -> {
+                state.getBlock().getDrops(state, serverLevel, pos, null).forEach(stack -> {
                     serverLevel.addFreshEntity(new ItemEntity(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, stack));
                 });
-
-                event.setCanceled(true);
             }
         }
     }
+    private static Property<Integer> getCropProperty(BlockState state, String propertyName) {
+        Block block = state.getBlock();
+        if (block instanceof CropBlock cropBlock) {
+            for (Property<?> prop : state.getProperties()) {
+                if (prop instanceof IntegerProperty && prop.getName().equals(propertyName)) {
+                    return (Property<Integer>) prop;
+                }
+            }
+        }
+        return null;
+    }
+    private static int getMaxAge(Block block) {
+        if (block instanceof CropBlock cropBlock) {
+            return cropBlock.getMaxAge();
+        }
+        return 7;
+    }
+
 }

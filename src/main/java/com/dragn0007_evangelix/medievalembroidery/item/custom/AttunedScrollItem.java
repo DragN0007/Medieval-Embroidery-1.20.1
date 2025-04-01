@@ -1,8 +1,8 @@
 package com.dragn0007_evangelix.medievalembroidery.item.custom;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -18,9 +18,9 @@ public class AttunedScrollItem extends Item {
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if(Screen.hasShiftDown()) {
-            pTooltipComponents.add(new TranslatableComponent("tooltip.medievalembroidery.attuned_scroll.tooltip.shift"));
+            pTooltipComponents.add(Component.translatable("tooltip.medievalembroidery.scroll.shift.tooltip").withStyle(ChatFormatting.GOLD));
         } else {
-            pTooltipComponents.add(new TranslatableComponent("tooltip.medievalembroidery.attuned_scroll.tooltip"));
+            pTooltipComponents.add(Component.translatable("tooltip.medievalembroidery.scroll.tooltip").withStyle(ChatFormatting.GRAY));
         }
     }
 }

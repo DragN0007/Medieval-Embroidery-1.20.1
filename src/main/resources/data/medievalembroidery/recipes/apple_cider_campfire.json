@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:campfire_cooking",
-  "ingredient": {
-    "item": "medievalembroidery:apple_juice"
-  },
-  "result": "medievalembroidery:apple_cider",
-  "experience": 0.80,
-  "cookingtime": 500
-}

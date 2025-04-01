@@ -1,6 +1,5 @@
 package com.dragn0007_evangelix.medievalembroidery.item.custom;
 
-import com.dragn0007_evangelix.medievalembroidery.item.MEItemGroup;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
@@ -20,7 +19,7 @@ public class TeaItem extends Item {
     public MobEffectInstance[] effectInstances;
 
     public TeaItem(MobEffectInstance... effectInstances) {
-        super(new Properties().food(new FoodProperties.Builder().nutrition(10).saturationMod(1).build()).tab(MEItemGroup.FOOD_GROUP));
+        super(new Properties().food(new FoodProperties.Builder().nutrition(10).saturationMod(1).build()));
         this.effectInstances = effectInstances;
     }
 

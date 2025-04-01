@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smoking",
-  "ingredient": {
-    "item": "medievalembroidery:woodschicken"
-  },
-  "result": "medievalembroidery:cooked_woodschicken",
-  "experience": 0.60,
-  "cookingtime": 160
-}

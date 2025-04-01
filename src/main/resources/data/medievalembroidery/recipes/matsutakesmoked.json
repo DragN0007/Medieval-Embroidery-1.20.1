@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smoking",
-  "ingredient": {
-    "item": "medievalembroidery:matsutake"
-  },
-  "result": "medievalembroidery:cooked_matsutake",
-  "experience": 0.60,
-  "cookingtime": 160
-}

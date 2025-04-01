@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smoking",
-  "ingredient": {
-    "item": "medievalembroidery:yellowfoot"
-  },
-  "result": "medievalembroidery:cooked_yellowfoot",
-  "experience": 0.60,
-  "cookingtime": 160
-}
