@@ -1,7 +1,6 @@
 package com.dragn0007_evangelix.medievalembroidery;
 
 import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
-import com.dragn0007_evangelix.medievalembroidery.block.MEBlocksDataGen;
 import com.dragn0007_evangelix.medievalembroidery.entity.EntityTypes;
 import com.dragn0007_evangelix.medievalembroidery.gui.MEMenuTypes;
 import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
@@ -29,7 +28,6 @@ public class MedievalEmbroidery
 
         MEItems.register(eventBus);
         MEBlocks.register(eventBus);
-        MEBlocksDataGen.register(eventBus);
         EntityTypes.ENTITY_TYPES.register(eventBus);
         MEMenuTypes.register(eventBus);
 
