@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "medievalembroidery:block/framed_glass_pane_10"
+  }
+}

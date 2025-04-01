@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "medievalembroidery:orange_bricks_mossy"
+    }
+  },
+  "pattern": [
+    "AAA"
+  ],
+  "result": {
+    "count": 6,
+    "item": "medievalembroidery:orange_bricks_slab_mossy"
+  },
+  "show_notification": true
+}

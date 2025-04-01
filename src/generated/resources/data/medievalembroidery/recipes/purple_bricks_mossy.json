@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:bricks"
+    },
+    "B": {
+      "item": "minecraft:purple_dye"
+    },
+    "D": {
+      "item": "minecraft:vine"
+    }
+  },
+  "pattern": [
+    "   ",
+    " AB",
+    " D "
+  ],
+  "result": {
+    "count": 4,
+    "item": "medievalembroidery:purple_bricks_mossy"
+  },
+  "show_notification": true
+}

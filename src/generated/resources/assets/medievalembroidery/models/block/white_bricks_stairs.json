@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "medievalembroidery:block/white_bricks",
+    "side": "medievalembroidery:block/white_bricks",
+    "top": "medievalembroidery:block/white_bricks"
+  }
+}

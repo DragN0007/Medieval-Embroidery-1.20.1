@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "medievalembroidery:block/blue_dragon"
+  }
+}

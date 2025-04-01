@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    " A ",
+    "AAA",
+    "AAA"
+  ],
+  "result": {
+    "item": "medievalembroidery:pixel_placement/herb_jar"
+  },
+  "show_notification": true
+}

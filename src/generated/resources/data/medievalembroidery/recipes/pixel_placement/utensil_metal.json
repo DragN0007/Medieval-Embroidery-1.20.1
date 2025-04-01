@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "AAA",
+    " A ",
+    " A "
+  ],
+  "result": {
+    "item": "medievalembroidery:pixel_placement/utensil_metal"
+  },
+  "show_notification": true
+}

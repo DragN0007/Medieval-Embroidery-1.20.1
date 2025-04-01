@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:bricks"
+    },
+    "B": {
+      "item": "minecraft:white_dye"
+    }
+  },
+  "pattern": [
+    "   ",
+    " AB",
+    "   "
+  ],
+  "result": {
+    "count": 4,
+    "item": "medievalembroidery:white_bricks"
+  },
+  "show_notification": true
+}

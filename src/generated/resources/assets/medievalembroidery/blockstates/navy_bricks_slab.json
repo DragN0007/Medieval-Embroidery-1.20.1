@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "medievalembroidery:block/navy_bricks_slab"
+    },
+    "type=double": {
+      "model": "medievalembroidery:block/navy_bricks"
+    },
+    "type=top": {
+      "model": "medievalembroidery:block/navy_bricks_slab_top"
+    }
+  }
+}

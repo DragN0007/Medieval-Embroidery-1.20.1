@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "medievalembroidery:block/grey_bricks_mossy"
+  }
+}

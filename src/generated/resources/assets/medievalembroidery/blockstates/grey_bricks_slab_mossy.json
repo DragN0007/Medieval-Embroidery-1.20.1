@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "medievalembroidery:block/grey_bricks_slab_mossy"
+    },
+    "type=double": {
+      "model": "medievalembroidery:block/grey_bricks_mossy"
+    },
+    "type=top": {
+      "model": "medievalembroidery:block/grey_bricks_slab_mossy_top"
+    }
+  }
+}

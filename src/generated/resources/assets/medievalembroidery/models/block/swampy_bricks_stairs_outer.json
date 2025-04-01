@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "medievalembroidery:block/swampy_bricks",
+    "side": "medievalembroidery:block/swampy_bricks",
+    "top": "medievalembroidery:block/swampy_bricks"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "medievalembroidery:block/orange_bricks_mossy",
+    "side": "medievalembroidery:block/orange_bricks_mossy",
+    "top": "medievalembroidery:block/orange_bricks_mossy"
+  }
+}

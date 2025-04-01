@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:bricks"
+    },
+    "B": {
+      "item": "minecraft:red_dye"
+    },
+    "C": {
+      "item": "minecraft:brown_dye"
+    },
+    "D": {
+      "item": "minecraft:vine"
+    }
+  },
+  "pattern": [
+    "   ",
+    " AB",
+    " DC"
+  ],
+  "result": {
+    "count": 4,
+    "item": "medievalembroidery:maroon_bricks_mossy"
+  },
+  "show_notification": true
+}

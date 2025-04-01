@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:glass"
+    },
+    "B": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    "BAB",
+    "ABA",
+    "BAB"
+  ],
+  "result": {
+    "count": 4,
+    "item": "medievalembroidery:framed_glass_8"
+  },
+  "show_notification": true
+}

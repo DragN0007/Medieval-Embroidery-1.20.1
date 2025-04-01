@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "medievalembroidery:yellow_bricks_stairs_mossy"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "medievalembroidery:blocks/yellow_bricks_stairs_mossy"
+}

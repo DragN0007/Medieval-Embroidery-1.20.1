@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "medievalembroidery:block/pale_blue_bricks",
+    "side": "medievalembroidery:block/pale_blue_bricks",
+    "top": "medievalembroidery:block/pale_blue_bricks"
+  }
+}

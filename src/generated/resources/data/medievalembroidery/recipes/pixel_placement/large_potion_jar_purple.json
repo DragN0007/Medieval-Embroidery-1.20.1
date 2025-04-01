@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:glass_bottle"
+    },
+    "B": {
+      "item": "minecraft:purple_dye"
+    }
+  },
+  "pattern": [
+    "B",
+    "B",
+    "A"
+  ],
+  "result": {
+    "item": "medievalembroidery:pixel_placement/large_potion_jar_purple"
+  },
+  "show_notification": true
+}

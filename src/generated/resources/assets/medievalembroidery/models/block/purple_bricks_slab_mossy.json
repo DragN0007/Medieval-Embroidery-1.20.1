@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "medievalembroidery:block/purple_bricks_mossy",
+    "side": "medievalembroidery:block/purple_bricks_mossy",
+    "top": "medievalembroidery:block/purple_bricks_mossy"
+  }
+}
