@@ -38,7 +38,7 @@ public class MedievalEmbroidery
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    public static final EntityDataSerializer<ResourceLocation> RESOURCE_MECATION = new EntityDataSerializer<>() {
+    public static final EntityDataSerializer<ResourceLocation> RESOURCE_LOCATION = new EntityDataSerializer<>() {
         @Override
         public void write(FriendlyByteBuf buf, ResourceLocation resourceLocation) {
             buf.writeResourceLocation(resourceLocation);
@@ -56,6 +56,6 @@ public class MedievalEmbroidery
     };
 
     static {
-        EntityDataSerializers.registerSerializer(RESOURCE_MECATION);
+        EntityDataSerializers.registerSerializer(RESOURCE_LOCATION);
     }
 }
