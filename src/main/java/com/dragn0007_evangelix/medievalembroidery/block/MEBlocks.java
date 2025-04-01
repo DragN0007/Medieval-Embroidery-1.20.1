@@ -1,7 +1,6 @@
 package com.dragn0007_evangelix.medievalembroidery.block;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
-import com.dragn0007_evangelix.medievalembroidery.block.custom.FungiRotator;
 import com.dragn0007_evangelix.medievalembroidery.block.custom.crystal.CrystalOreBlock;
 import com.dragn0007_evangelix.medievalembroidery.block.custom.placedfood.PlatedFood;
 import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.*;
@@ -10,10 +9,10 @@ import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util.Pix
 import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util.PixelPlacerEntity;
 import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util.PixelPlacerItem;
 import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -122,50 +121,6 @@ public class MEBlocks {
     public static final RegistryObject<PixelPlacerContainer> PIXEL_PLACER_CONTAINER = BLOCKS.register("pixel_placer_container", PixelPlacerContainer::new);
     public static final RegistryObject<BlockEntityType<PixelPlacerEntity>> PIXEL_PLACER_ENTITY = BLOCK_ENTITIES.register("pixel_placer_container",
             () -> BlockEntityType.Builder.of(PixelPlacerEntity::new, PIXEL_PLACER_CONTAINER.get()).build(null));
-
-
-
-    //Fungi
-    public static final RegistryObject<FungiRotator> BLEWIT = registerBlockWithoutItem("blewit",
-            () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
-    public static final RegistryObject<FungiRotator> HONEY = registerBlockWithoutItem("honey",
-            () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
-    public static final RegistryObject<FungiRotator> KING = registerBlockWithoutItem("king",
-            () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
-    public static final RegistryObject<FungiRotator> MATSUTAKE = registerBlockWithoutItem("matsutake",
-            () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
-    public static final RegistryObject<FungiRotator> OYSTER = registerBlockWithoutItem("oyster",
-            () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
-    public static final RegistryObject<FungiRotator> PORCINI = registerBlockWithoutItem("porcini",
-            () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
-    public static final RegistryObject<FungiRotator> YELLOWFOOT = registerBlockWithoutItem("yellowfoot",
-            () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
-    public static final RegistryObject<FungiRotator> WOODSCHICKEN = registerBlockWithoutItem("woodschicken",
-            () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
-
-    public static final RegistryObject<Block> BLUE_DRAGON = registerPlantBlock("blue_dragon",
-            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
-    public static final RegistryObject<Block> VIOLET_DRAGON = registerPlantBlock("violet_dragon",
-            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
-    public static final RegistryObject<Block> PINK_MAGE = registerPlantBlock("pink_mage",
-            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
-    public static final RegistryObject<Block> PURPLE_MAGE = registerPlantBlock("purple_mage",
-            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
-    public static final RegistryObject<Block> FIRE_DAISY = registerPlantBlock("fire_daisy",
-            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
-    public static final RegistryObject<Block> GROUND_VINE = registerPlantBlock("ground_vine",
-            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
-
-    public static final RegistryObject<Block> POTTED_BLUE_DRAGON = registerBlockWithoutItem("potted_blue_dragon",
-            () -> new FlowerPotBlock(null, MEBlocks.BLUE_DRAGON, BlockBehaviour.Properties.copy(Blocks.POPPY).noCollission()));
-    public static final RegistryObject<Block> POTTED_VIOLET_DRAGON = registerBlockWithoutItem("potted_violet_dragon",
-            () -> new FlowerPotBlock(null, MEBlocks.VIOLET_DRAGON, BlockBehaviour.Properties.copy(Blocks.POPPY).noCollission()));
-    public static final RegistryObject<Block> POTTED_PINK_MAGE = registerBlockWithoutItem("potted_pink_mage",
-            () -> new FlowerPotBlock(null, MEBlocks.PINK_MAGE, BlockBehaviour.Properties.copy(Blocks.POPPY).noCollission()));
-    public static final RegistryObject<Block> POTTED_PURPLE_MAGE = registerBlockWithoutItem("potted_purple_mage",
-            () -> new FlowerPotBlock(null, MEBlocks.PURPLE_MAGE, BlockBehaviour.Properties.copy(Blocks.POPPY).noCollission()));
-    public static final RegistryObject<Block> POTTED_FIRE_DAISY = registerBlockWithoutItem("potted_fire_daisy",
-            () -> new FlowerPotBlock(null, MEBlocks.FIRE_DAISY, BlockBehaviour.Properties.copy(Blocks.POPPY).noCollission()));
 
 
 

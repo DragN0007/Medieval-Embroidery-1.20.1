@@ -5,7 +5,7 @@ import com.dragn0007_evangelix.medievalembroidery.block.MEBlocksDataGen;
 import com.dragn0007_evangelix.medievalembroidery.entity.EntityTypes;
 import com.dragn0007_evangelix.medievalembroidery.gui.MEMenuTypes;
 import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
-import com.dragn0007_evangelix.medievalembroidery.util.config.MedievalEmbroideryCommonConfig;
+import com.dragn0007_evangelix.medievalembroidery.util.MedievalEmbroideryCommonConfig;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.syncher.EntityDataSerializer;
 import net.minecraft.network.syncher.EntityDataSerializers;

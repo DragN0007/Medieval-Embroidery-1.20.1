@@ -1,8 +1,6 @@
 package com.dragn0007_evangelix.medievalembroidery.datagen;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
-import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
-import com.dragn0007_evangelix.medievalembroidery.block.MEBlocksDataGen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -20,20 +18,7 @@ public class MEItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        simpleSpriteBlockItem(MEBlocks.VIOLET_DRAGON);
-        simpleSpriteBlockItem(MEBlocks.BLUE_DRAGON);
-        simpleSpriteBlockItem(MEBlocks.FIRE_DAISY);
 
-        simpleSpriteBlockItem(MEBlocksDataGen.FRAMED_GLASS_PANE_1);
-        simpleSpriteBlockItem(MEBlocksDataGen.FRAMED_GLASS_PANE_2);
-        simpleSpriteBlockItem(MEBlocksDataGen.FRAMED_GLASS_PANE_3);
-        simpleSpriteBlockItem(MEBlocksDataGen.FRAMED_GLASS_PANE_4);
-        simpleSpriteBlockItem(MEBlocksDataGen.FRAMED_GLASS_PANE_5);
-        simpleSpriteBlockItem(MEBlocksDataGen.FRAMED_GLASS_PANE_6);
-        simpleSpriteBlockItem(MEBlocksDataGen.FRAMED_GLASS_PANE_7);
-        simpleSpriteBlockItem(MEBlocksDataGen.FRAMED_GLASS_PANE_8);
-        simpleSpriteBlockItem(MEBlocksDataGen.FRAMED_GLASS_PANE_9);
-        simpleSpriteBlockItem(MEBlocksDataGen.FRAMED_GLASS_PANE_10);
     }
 
      private ItemModelBuilder simpleSpriteBlockItem(RegistryObject<Block> block) {
