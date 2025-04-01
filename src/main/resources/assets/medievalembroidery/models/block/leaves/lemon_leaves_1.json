@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "medievalembroidery:blocks/lemon_leaves_empty"
-  }
-}

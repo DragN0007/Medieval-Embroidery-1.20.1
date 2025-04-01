@@ -1,6 +1,0 @@
-{
-  "parent": "medievalembroidery:block/parent/offset_pane",
-  "textures": {
-    "offset_pane": "medievalembroidery:block/framed_glass_3"
-  }
-}

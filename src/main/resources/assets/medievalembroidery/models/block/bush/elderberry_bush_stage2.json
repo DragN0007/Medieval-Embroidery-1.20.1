@@ -1,6 +1,0 @@
-{
-	"parent": "medievalembroidery:block/parent/cross_crop",
-	"textures": {
-		"cross_crop": "medievalembroidery:blocks/elderberry_bush_stage2"
-	}
-}

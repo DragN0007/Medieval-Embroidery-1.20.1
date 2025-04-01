@@ -1,7 +1,0 @@
-{
-	"parent": "medievalembroidery:block/pixel_placement/cup",
-	"textures": {
-		"0": "medievalembroidery:blocks/pixel_placement/cup_clay",
-		"particle": "medievalembroidery:blocks/pixel_placement/cup_clay"
-	}
-}
