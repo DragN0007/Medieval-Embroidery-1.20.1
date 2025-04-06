@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:book"
+    },
+    "B": {
+      "item": "minecraft:paper"
+    }
+  },
+  "pattern": [
+    "B",
+    "A"
+  ],
+  "result": {
+    "item": "medievalembroidery:open_book"
+  },
+  "show_notification": true
+}

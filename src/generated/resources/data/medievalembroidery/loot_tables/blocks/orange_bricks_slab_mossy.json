@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "medievalembroidery:orange_bricks_slab_mossy"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "medievalembroidery:blocks/orange_bricks_slab_mossy"
+}

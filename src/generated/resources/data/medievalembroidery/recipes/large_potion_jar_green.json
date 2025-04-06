@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:glass_bottle"
+    },
+    "B": {
+      "item": "minecraft:green_dye"
+    }
+  },
+  "pattern": [
+    "B",
+    "B",
+    "A"
+  ],
+  "result": {
+    "item": "medievalembroidery:large_potion_jar_green"
+  },
+  "show_notification": true
+}

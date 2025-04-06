@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:clay"
+    }
+  },
+  "pattern": [
+    "   ",
+    "A A",
+    "AAA"
+  ],
+  "result": {
+    "item": "medievalembroidery:cup_clay"
+  },
+  "show_notification": true
+}
