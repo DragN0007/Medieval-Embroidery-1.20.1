@@ -208,12 +208,12 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
                 .save(pFinishedRecipeConsumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, PixelPlacementBlocks.UTENSIL_METAL.get())
-                .define('A', Items.IRON_INGOT)
+                .define('A', Items.IRON_NUGGET)
                 .pattern("AAA")
                 .pattern(" A ")
                 .pattern(" A ")
                 .unlockedBy("has_uten_metal", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.IRON_INGOT).build()))
+                        .of(Items.IRON_NUGGET).build()))
                 .save(pFinishedRecipeConsumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, PixelPlacementBlocks.UTENSIL_WOODEN.get())
@@ -227,7 +227,7 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, PixelPlacementBlocks.TANKARD.get())
                 .define('A', Items.SPRUCE_PLANKS)
-                .define('B', Items.IRON_INGOT)
+                .define('B', Items.IRON_NUGGET)
                 .pattern("A A")
                 .pattern("A B")
                 .pattern("AAA")
@@ -245,21 +245,21 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
                 .save(pFinishedRecipeConsumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, PixelPlacementBlocks.CUP_METAL.get())
-                .define('A', Items.IRON_INGOT)
+                .define('A', Items.IRON_NUGGET)
                 .pattern("   ")
                 .pattern("A A")
                 .pattern("AAA")
                 .unlockedBy("has_cup_metal", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.IRON_INGOT).build()))
+                        .of(Items.IRON_NUGGET).build()))
                 .save(pFinishedRecipeConsumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, PixelPlacementBlocks.GOBLET.get())
-                .define('A', Items.IRON_INGOT)
+                .define('A', Items.IRON_NUGGET)
                 .pattern("A A")
                 .pattern("AAA")
                 .pattern(" A ")
                 .unlockedBy("has_goblet", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.IRON_INGOT).build()))
+                        .of(Items.IRON_NUGGET).build()))
                 .save(pFinishedRecipeConsumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.YELLOW_BRICKS_SLAB.get(), 6)
