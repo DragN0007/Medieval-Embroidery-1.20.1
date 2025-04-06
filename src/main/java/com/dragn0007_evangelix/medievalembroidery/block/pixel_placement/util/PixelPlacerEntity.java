@@ -1,6 +1,7 @@
 package com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util;
 
 import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
+import com.dragn0007_evangelix.medievalembroidery.block.PixelPlacementBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -25,7 +26,7 @@ public class PixelPlacerEntity extends BlockEntity {
     public final List<PixelPlacerData> pixelPlacerData = new ArrayList<>();
 
     public PixelPlacerEntity(BlockPos pos, BlockState state) {
-        super(MEBlocks.PIXEL_PLACER_ENTITY.get(), pos, state);
+        super(PixelPlacementBlocks.PIXEL_PLACER_ENTITY.get(), pos, state);
     }
 
     public void addPixelPlacer(Vec3 pos, Direction dir, PixelPlacer pixelPlacer) {

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "medievalembroidery:block/food_placed/sweet_bread",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "medievalembroidery:block/food_placed/sweet_bread"
+    },
+    "facing=south": {
+      "model": "medievalembroidery:block/food_placed/sweet_bread",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "medievalembroidery:block/food_placed/sweet_bread",
+      "y": 270
+    }
+  }
+}

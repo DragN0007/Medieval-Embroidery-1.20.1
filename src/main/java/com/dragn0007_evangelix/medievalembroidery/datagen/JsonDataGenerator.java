@@ -1,6 +1,7 @@
 package com.dragn0007_evangelix.medievalembroidery.datagen;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
+import com.dragn0007_evangelix.medievalembroidery.datagen.biglooter.MELootTableProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -20,12 +21,10 @@ public class JsonDataGenerator {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
-        generator.addProvider(event.includeServer(), new MERecipeMaker(packOutput));
         generator.addProvider(event.includeServer(), MELootTableProvider.create(packOutput));
-
+        generator.addProvider(event.includeServer(), new MERecipeMaker(packOutput));
         generator.addProvider(event.includeClient(), new MEBlockstateProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new MEItemModelProvider(packOutput, existingFileHelper));
-
         generator.addProvider(event.includeServer(), new MEWorldGenerator(packOutput, lookupProvider));
     }
 }

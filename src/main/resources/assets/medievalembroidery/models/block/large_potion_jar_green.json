@@ -1,0 +1,6 @@
+{
+	"parent": "medievalembroidery:block/large_potion_jar",
+	"textures": {
+		"potion_color": "medievalembroidery:block/large_potion_jar_green"
+	}
+}

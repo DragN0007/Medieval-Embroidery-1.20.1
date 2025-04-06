@@ -35,7 +35,7 @@
   "entity.medievalembroidery.mammoth_entity": "Mammoth",
 
 
-  "item.medievalembroidery.mortarnpestle": "Mortar & Pestle",
+  "item.medievalembroidery.mortar_and_pestle": "Mortar & Pestle",
 
 
   "block.medievalembroidery.apple_leaves": "Apple Leaves",
@@ -98,22 +98,17 @@
   "block.medievalembroidery.redcurrantbush": "Red Currant Bush",
   "item.medievalembroidery.redcurrant": "Red Currant",
 
-  "block.medievalembroidery.elderberry_bush_crop": "Elderberry Bush",
-  "block.medievalembroidery.bilberry_bush_crop": "Bilberry Bush",
-  "block.medievalembroidery.hawthorn_bush_crop": "Hawthorn Bush",
-  "block.medievalembroidery.cowberry_bush_crop": "Cowberry Bush",
-  "block.medievalembroidery.redcurrant_bush_crop": "Red Currant Bush",
-
   "item.medievalembroidery.elderberry_glaze": "Elderberry Glaze",
   "item.medievalembroidery.bilberry_glaze": "Bilberry Glaze",
-  "item.medievalembroidery.hawthornberry_glaze": "Hawthorn Berry Glaze",
+  "item.medievalembroidery.hawthorn_glaze": "Hawthorn Glaze",
   "item.medievalembroidery.cowberry_glaze": "Cowberry Glaze",
   "item.medievalembroidery.redcurrant_glaze": "Red Currant Glaze",
-  "item.medievalembroidery.elderberry_sweet_bread": "Elderberry Sweet Bread",
-  "item.medievalembroidery.bilberry_sweet_bread": "Bilberry Sweet Bread",
-  "item.medievalembroidery.hawthornberry_sweet_bread": "Hawthorn Berry Sweet Bread",
-  "item.medievalembroidery.cowberry_sweet_bread": "Cowberry Sweet Bread",
-  "item.medievalembroidery.redcurrant_sweet_bread": "Red Currant Sweet Bread",
+  "item.medievalembroidery.elderberry_sweet_bread_cream": "Elderberry Sweet Bread",
+  "item.medievalembroidery.bilberry_sweet_bread_cream": "Bilberry Sweet Bread",
+  "item.medievalembroidery.hawthorn_sweet_bread_cream": "Hawthorn Sweet Bread",
+  "item.medievalembroidery.cowberry_sweet_bread_cream": "Cowberry Sweet Bread",
+  "item.medievalembroidery.redcurrant_sweet_bread_cream": "Red Currant Sweet Bread",
+  "item.medievalembroidery.fruit_sweet_bread_cream": "Fruit Sweet Bread",
 
 
   "item.medievalembroidery.firestone": "Firestone",
@@ -194,8 +189,8 @@
   "item.medievalembroidery.oyster": "Oyster Mushroom",
   "block.medievalembroidery.porcini": "Porcini Mushroom",
   "item.medievalembroidery.porcini": "Porcini Mushroom",
-  "block.medievalembroidery.woodschicken": "Chicken of the Woods Mushroom",
-  "item.medievalembroidery.woodschicken": "Chicken of the Woods Mushroom",
+  "block.medievalembroidery.woods_chicken": "Chicken of the Woods Mushroom",
+  "item.medievalembroidery.woods_chicken": "Chicken of the Woods Mushroom",
   "block.medievalembroidery.yellowfoot": "Yellow Foot Mushroom",
   "item.medievalembroidery.yellowfoot": "Yellow Foot Mushroom",
 
@@ -205,7 +200,7 @@
   "block.medievalembroidery.matsutake_crop": "Matsutake Mushroom",
   "block.medievalembroidery.oyster_crop": "Oyster Mushroom",
   "block.medievalembroidery.porcini_crop": "Porcini Mushroom",
-  "block.medievalembroidery.woodschicken_crop": "Chicken of the Woods Mushroom",
+  "block.medievalembroidery.woods_chicken_crop": "Chicken of the Woods Mushroom",
   "block.medievalembroidery.yellowfoot_crop": "Yellow Foot Mushroom",
 
   "item.medievalembroidery.blewit_spores": "Blewit Mushroom Spores",
@@ -214,7 +209,7 @@
   "item.medievalembroidery.matsutake_spores": "Matsutake Mushroom Spores",
   "item.medievalembroidery.oyster_spores": "Oyster Mushroom Spores",
   "item.medievalembroidery.porcini_spores": "Porcini Mushroom Spores",
-  "item.medievalembroidery.woodschicken_spores": "Chicken of the Woods Mushroom Spores",
+  "item.medievalembroidery.woods_chicken_spores": "Chicken of the Woods Mushroom Spores",
   "item.medievalembroidery.yellowfoot_spores": "Yellow Foot Mushroom Spores",
 
   "item.medievalembroidery.cooked_blewit": "Cooked Blewit Mushroom",
@@ -223,7 +218,7 @@
   "item.medievalembroidery.cooked_matsutake": "Cooked Matsutake Mushroom",
   "item.medievalembroidery.cooked_oyster": "Cooked Oyster Mushroom",
   "item.medievalembroidery.cooked_porcini": "Cooked Porcini Mushroom",
-  "item.medievalembroidery.cooked_woodschicken": "Cooked Chicken of the Woods Mushroom",
+  "item.medievalembroidery.cooked_woods_chicken": "Cooked Chicken of the Woods Mushroom",
   "item.medievalembroidery.cooked_yellowfoot": "Cooked Yellow Foot Mushroom",
   "item.medievalembroidery.seasoned_blewit": "Seasoned Blewit Mushroom",
   "item.medievalembroidery.seasoned_honey": "Seasoned Honey Mushroom",
@@ -281,23 +276,23 @@
   "block.medievalembroidery.potted_fire_daisy": "Potted Fire Daisy",
 
 
-  "item.medievalembroidery.dragonpotion": "Potion of the Dragon",
-  "item.medievalembroidery.deerpotion": "Potion of the Deer",
-  "item.medievalembroidery.butterflypotion": "Potion of the Butterfly",
+  "item.medievalembroidery.dragon_potion": "Potion of the Dragon",
+  "item.medievalembroidery.deer_potion": "Potion of the Deer",
+  "item.medievalembroidery.butterfly_potion": "Potion of the Butterfly",
   "item.medievalembroidery.elkpotion": "Potion of the Elk",
-  "item.medievalembroidery.seastriderpotion": "Potion of the Sea Strider",
-  "item.medievalembroidery.spottingpotion": "Potion of Spotting",
-  "item.medievalembroidery.warmthpotion": "Potion of Warmth",
-  "item.medievalembroidery.harvestingpotion": "Potion of Harvesting",
-  "item.medievalembroidery.hastepotion": "Potion of Haste",
-  "item.medievalembroidery.luckpotion": "Potion of Luck",
-  "item.medievalembroidery.flyingpotion": "Potion of Flying",
-  "item.medievalembroidery.kindnesspotion": "Potion of Kindness",
+  "item.medievalembroidery.sea_strider_potion": "Potion of the Sea Strider",
+  "item.medievalembroidery.spotting_potion": "Potion of Spotting",
+  "item.medievalembroidery.warmth_potion": "Potion of Warmth",
+  "item.medievalembroidery.harvesting_potion": "Potion of Harvesting",
+  "item.medievalembroidery.haste_potion": "Potion of Haste",
+  "item.medievalembroidery.luck_potion": "Potion of Luck",
+  "item.medievalembroidery.flying_potion": "Potion of Flying",
+  "item.medievalembroidery.kindness_potion": "Potion of Kindness",
 
 
   "item.medievalembroidery.elderberry_pie": "Elderberry Pie",
   "item.medievalembroidery.bilberry_pie": "Bilberry Pie",
-  "item.medievalembroidery.hawthornberry_pie": "Hawthorn Berry Pie",
+  "item.medievalembroidery.hawthorn_pie": "Hawthorn Berry Pie",
   "item.medievalembroidery.cowberry_pie": "Cowberry Pie",
   "item.medievalembroidery.redcurrant_pie": "Red Currant Pie",
   "item.medievalembroidery.mixedberry_pie": "Mixed Berry Pie",

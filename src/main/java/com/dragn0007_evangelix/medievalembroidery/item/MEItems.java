@@ -70,7 +70,7 @@ public class MEItems {
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(16).saturationMod(1).build())));
     public static final RegistryObject<Item> REDCURRANT_PIE = ITEMS.register("redcurrant_pie",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(16).saturationMod(1).build())));
-    public static final RegistryObject<Item> HAWTHORNBERRY_PIE = ITEMS.register("hawthornberry_pie",
+    public static final RegistryObject<Item> HAWTHORN_PIE = ITEMS.register("hawthorn_pie",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(16).saturationMod(1).build())));
     public static final RegistryObject<Item> MIXEDBERRY_PIE = ITEMS.register("mixedberry_pie",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(24).saturationMod(1).build())));
@@ -82,21 +82,21 @@ public class MEItems {
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationMod(1).build())));
     public static final RegistryObject<Item> REDCURRANT_GLAZE = ITEMS.register("redcurrant_glaze",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationMod(1).build())));
-    public static final RegistryObject<Item> HAWTHORNBERRY_GLAZE = ITEMS.register("hawthornberry_glaze",
+    public static final RegistryObject<Item> HAWTHORN_GLAZE = ITEMS.register("hawthorn_glaze",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationMod(1).build())));
     public static final RegistryObject<Item> FRUIT_GLAZE = ITEMS.register("fruit_glaze",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationMod(1).build())));
-    public static final RegistryObject<Item> ELDERBERRY_SWEET_BREAD = ITEMS.register("elderberry_sweet_bread",
+    public static final RegistryObject<Item> ELDERBERRY_SWEET_BREAD_CREAM = ITEMS.register("elderberry_sweet_bread_cream",
             () -> new ItemNameBlockItem(MEBlocks.SWEET_BREAD_ELDERBERRY.get(), (new Item.Properties().food(new FoodProperties.Builder().nutrition(10).saturationMod(1).build()))));
-    public static final RegistryObject<Item> BILBERRY_SWEET_BREAD = ITEMS.register("bilberry_sweet_bread",
+    public static final RegistryObject<Item> BILBERRY_SWEET_BREAD_CREAM = ITEMS.register("bilberry_sweet_bread_cream",
             () -> new ItemNameBlockItem(MEBlocks.SWEET_BREAD_BILBERRY.get(), (new Item.Properties().food(new FoodProperties.Builder().nutrition(10).saturationMod(1).build()))));
-    public static final RegistryObject<Item> COWBERRY_SWEET_BREAD = ITEMS.register("cowberry_sweet_bread",
+    public static final RegistryObject<Item> COWBERRY_SWEET_BREAD_CREAM = ITEMS.register("cowberry_sweet_bread_cream",
             () -> new ItemNameBlockItem(MEBlocks.SWEET_BREAD_COWBERRY.get(), (new Item.Properties().food(new FoodProperties.Builder().nutrition(10).saturationMod(1).build()))));
-    public static final RegistryObject<Item> REDCURRANT_SWEET_BREAD = ITEMS.register("redcurrant_sweet_bread",
+    public static final RegistryObject<Item> REDCURRANT_SWEET_BREAD_CREAM = ITEMS.register("redcurrant_sweet_bread_cream",
             () -> new ItemNameBlockItem(MEBlocks.SWEET_BREAD_REDCURRANT.get(), (new Item.Properties().food(new FoodProperties.Builder().nutrition(10).saturationMod(1).build()))));
-    public static final RegistryObject<Item> HAWTHORNBERRY_SWEET_BREAD = ITEMS.register("hawthornberry_sweet_bread",
+    public static final RegistryObject<Item> HAWTHORN_SWEET_BREAD_CREAM = ITEMS.register("hawthorn_sweet_bread_cream",
             () -> new ItemNameBlockItem(MEBlocks.SWEET_BREAD_HAWTHORN.get(), (new Item.Properties().food(new FoodProperties.Builder().nutrition(10).saturationMod(1).build()))));
-    public static final RegistryObject<Item> FRUIT_SWEET_BREAD = ITEMS.register("fruit_sweet_bread",
+    public static final RegistryObject<Item> FRUIT_SWEET_BREAD_CREAM = ITEMS.register("fruit_sweet_bread_cream",
             () -> new ItemNameBlockItem(MEBlocks.SWEET_BREAD_FRUIT.get(), (new Item.Properties().food(new FoodProperties.Builder().nutrition(10).saturationMod(1).build()))));
 
 

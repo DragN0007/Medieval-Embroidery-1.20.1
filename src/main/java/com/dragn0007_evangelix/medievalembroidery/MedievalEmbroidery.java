@@ -1,8 +1,10 @@
 package com.dragn0007_evangelix.medievalembroidery;
 
 import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
+import com.dragn0007_evangelix.medievalembroidery.block.PixelPlacementBlocks;
 import com.dragn0007_evangelix.medievalembroidery.entity.EntityTypes;
 import com.dragn0007_evangelix.medievalembroidery.gui.MEMenuTypes;
+import com.dragn0007_evangelix.medievalembroidery.item.MEItemGroup;
 import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
 import com.dragn0007_evangelix.medievalembroidery.util.MedievalEmbroideryCommonConfig;
 import net.minecraft.network.FriendlyByteBuf;
@@ -27,7 +29,9 @@ public class MedievalEmbroidery
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         MEItems.register(eventBus);
+        MEItemGroup.register(eventBus);
         MEBlocks.register(eventBus);
+        PixelPlacementBlocks.register(eventBus);
         EntityTypes.ENTITY_TYPES.register(eventBus);
         MEMenuTypes.register(eventBus);
 

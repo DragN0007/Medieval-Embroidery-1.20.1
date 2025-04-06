@@ -84,8 +84,13 @@ repositories {
             includeGroupByRegex("software\\.bernie.*")
             includeGroup("com.eliotlash.mclib")
         }
+
         maven {
             url 'https://www.cursemaven.com'
+        }
+
+        maven {
+            url 'https://maven.blamejared.com'
         }
     }
 }
@@ -93,6 +98,15 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:1.20.1-47.2.0" // 47.2.0 is Recommended
     implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.20.1:4.4.4')
+
+    compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-84.1-FORGE:api")
+    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-84.1-FORGE")
+
+    //compat & testing stuff
+    implementation fg.deobf("curse.maven:jade-324717:5876199")
+    implementation fg.deobf("curse.maven:xaeros-minimap-263420:6012833")
+    implementation fg.deobf("curse.maven:jei-238222:6075247")
+    implementation fg.deobf("curse.maven:worldedit-225608:4586218")
 }
 
 tasks.named('processResources', ProcessResources).configure {

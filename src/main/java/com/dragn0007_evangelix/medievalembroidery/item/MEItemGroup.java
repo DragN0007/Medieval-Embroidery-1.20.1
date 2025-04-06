@@ -2,6 +2,7 @@ package com.dragn0007_evangelix.medievalembroidery.item;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
 import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
+import com.dragn0007_evangelix.medievalembroidery.block.PixelPlacementBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -19,6 +20,12 @@ public class MEItemGroup {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.decormodtab"))
                     .displayItems((displayParameters, output) -> {
 
+                        output.accept(MEBlocks.ASSISTIVE_CRYSTAL_ORE.get());
+                        output.accept(MEBlocks.CONJURING_CRYSTAL_ORE.get());
+                        output.accept(MEBlocks.DESTRUCTIVE_CRYSTAL_ORE.get());
+                        output.accept(MEBlocks.HEALING_CRYSTAL_ORE.get());
+                        output.accept(MEBlocks.PROTECTIVE_CRYSTAL_ORE.get());
+
                         output.accept(MEBlocks.FIRESTONE_ORE.get());
                         output.accept(MEBlocks.FIRESTONE_BLOCK.get());
                         output.accept(MEBlocks.SEASTONE_ORE.get());
@@ -35,6 +42,131 @@ public class MEItemGroup {
                         output.accept(MEBlocks.SKYSTONE_BLOCK.get());
                         output.accept(MEBlocks.SALT_ORE.get());
 
+                        output.accept(PixelPlacementBlocks.BOOK_CLOSED.get());
+                        output.accept(PixelPlacementBlocks.OPEN_BOOK_FLAT.get());
+                        output.accept(PixelPlacementBlocks.OPEN_BOOK.get());
+                        output.accept(PixelPlacementBlocks.CUP_CLAY.get());
+                        output.accept(PixelPlacementBlocks.CUP_METAL.get());
+                        output.accept(PixelPlacementBlocks.GOBLET.get());
+                        output.accept(PixelPlacementBlocks.TANKARD.get());
+                        output.accept(PixelPlacementBlocks.HERB_JAR.get());
+                        output.accept(PixelPlacementBlocks.LARGE_POTION_JAR_CYAN.get());
+                        output.accept(PixelPlacementBlocks.LARGE_POTION_JAR_GREEN.get());
+                        output.accept(PixelPlacementBlocks.LARGE_POTION_JAR_PINK.get());
+                        output.accept(PixelPlacementBlocks.LARGE_POTION_JAR_PINK.get());
+                        output.accept(PixelPlacementBlocks.LARGE_POTION_JAR_RED.get());
+                        output.accept(PixelPlacementBlocks.UTENSIL_METAL.get());
+                        output.accept(PixelPlacementBlocks.UTENSIL_WOODEN.get());
+                        output.accept(PixelPlacementBlocks.PLATE.get());
+                        output.accept(PixelPlacementBlocks.IRON_GROUNDED_SWORD.get());
+                        output.accept(PixelPlacementBlocks.GOLDEN_GROUNDED_SWORD.get());
+                        output.accept(PixelPlacementBlocks.DIAMOND_GROUNDED_SWORD.get());
+                        output.accept(PixelPlacementBlocks.NETHERITE_GROUNDED_SWORD.get());
+                        output.accept(PixelPlacementBlocks.OBSIDIAN_GROUNDED_SWORD.get());
+
+                        output.accept(MEBlocks.BEIGE_BRICKS.get());
+                        output.accept(MEBlocks.BLACK_BRICKS.get());
+                        output.accept(MEBlocks.BLUE_BRICKS.get());
+                        output.accept(MEBlocks.BROWN_BRICKS.get());
+                        output.accept(MEBlocks.FADED_BRICKS.get());
+                        output.accept(MEBlocks.GREEN_BRICKS.get());
+                        output.accept(MEBlocks.GREY_BRICKS.get());
+                        output.accept(MEBlocks.MAROON_BRICKS.get());
+                        output.accept(MEBlocks.NAVY_BRICKS.get());
+                        output.accept(MEBlocks.ORANGE_BRICKS.get());
+                        output.accept(MEBlocks.PALE_BLUE_BRICKS.get());
+                        output.accept(MEBlocks.PINK_BRICKS.get());
+                        output.accept(MEBlocks.PURPLE_BRICKS.get());
+                        output.accept(MEBlocks.RED_BRICKS.get());
+                        output.accept(MEBlocks.SWAMPY_BRICKS.get());
+                        output.accept(MEBlocks.WHITE_BRICKS.get());
+                        output.accept(MEBlocks.YELLOW_BRICKS.get());
+                        output.accept(MEBlocks.BEIGE_BRICKS_MOSSY.get());
+                        output.accept(MEBlocks.BLACK_BRICKS_MOSSY.get());
+                        output.accept(MEBlocks.BLUE_BRICKS_MOSSY.get());
+                        output.accept(MEBlocks.BROWN_BRICKS_MOSSY.get());
+                        output.accept(MEBlocks.FADED_BRICKS_MOSSY.get());
+                        output.accept(MEBlocks.GREEN_BRICKS_MOSSY.get());
+                        output.accept(MEBlocks.GREY_BRICKS_MOSSY.get());
+                        output.accept(MEBlocks.MAROON_BRICKS_MOSSY.get());
+                        output.accept(MEBlocks.NAVY_BRICKS_MOSSY.get());
+                        output.accept(MEBlocks.ORANGE_BRICKS_MOSSY.get());
+                        output.accept(MEBlocks.PALE_BLUE_BRICKS_MOSSY.get());
+                        output.accept(MEBlocks.PINK_BRICKS_MOSSY.get());
+                        output.accept(MEBlocks.PURPLE_BRICKS_MOSSY.get());
+                        output.accept(MEBlocks.RED_BRICKS_MOSSY.get());
+                        output.accept(MEBlocks.SWAMPY_BRICKS_MOSSY.get());
+                        output.accept(MEBlocks.WHITE_BRICKS_MOSSY.get());
+                        output.accept(MEBlocks.YELLOW_BRICKS_MOSSY.get());
+                        output.accept(MEBlocks.BEIGE_BRICKS_STAIRS.get());
+                        output.accept(MEBlocks.BLACK_BRICKS_STAIRS.get());
+                        output.accept(MEBlocks.BLUE_BRICKS_STAIRS.get());
+                        output.accept(MEBlocks.BROWN_BRICKS_STAIRS.get());
+                        output.accept(MEBlocks.FADED_BRICKS_STAIRS.get());
+                        output.accept(MEBlocks.GREEN_BRICKS_STAIRS.get());
+                        output.accept(MEBlocks.GREY_BRICKS_STAIRS.get());
+                        output.accept(MEBlocks.MAROON_BRICKS_STAIRS.get());
+                        output.accept(MEBlocks.NAVY_BRICKS_STAIRS.get());
+                        output.accept(MEBlocks.ORANGE_BRICKS_STAIRS.get());
+                        output.accept(MEBlocks.PALE_BLUE_BRICKS_STAIRS.get());
+                        output.accept(MEBlocks.PINK_BRICKS_STAIRS.get());
+                        output.accept(MEBlocks.PURPLE_BRICKS_STAIRS.get());
+                        output.accept(MEBlocks.RED_BRICKS_STAIRS.get());
+                        output.accept(MEBlocks.SWAMPY_BRICKS_STAIRS.get());
+                        output.accept(MEBlocks.WHITE_BRICKS_STAIRS.get());
+                        output.accept(MEBlocks.YELLOW_BRICKS_STAIRS.get());
+                        output.accept(MEBlocks.BEIGE_BRICKS_STAIRS_MOSSY.get());
+                        output.accept(MEBlocks.BLACK_BRICKS_STAIRS_MOSSY.get());
+                        output.accept(MEBlocks.BLUE_BRICKS_STAIRS_MOSSY.get());
+                        output.accept(MEBlocks.BROWN_BRICKS_STAIRS_MOSSY.get());
+                        output.accept(MEBlocks.FADED_BRICKS_STAIRS_MOSSY.get());
+                        output.accept(MEBlocks.GREEN_BRICKS_STAIRS_MOSSY.get());
+                        output.accept(MEBlocks.GREY_BRICKS_STAIRS_MOSSY.get());
+                        output.accept(MEBlocks.MAROON_BRICKS_STAIRS_MOSSY.get());
+                        output.accept(MEBlocks.NAVY_BRICKS_STAIRS_MOSSY.get());
+                        output.accept(MEBlocks.ORANGE_BRICKS_STAIRS_MOSSY.get());
+                        output.accept(MEBlocks.PALE_BLUE_BRICKS_STAIRS_MOSSY.get());
+                        output.accept(MEBlocks.PINK_BRICKS_STAIRS_MOSSY.get());
+                        output.accept(MEBlocks.PURPLE_BRICKS_STAIRS_MOSSY.get());
+                        output.accept(MEBlocks.RED_BRICKS_STAIRS_MOSSY.get());
+                        output.accept(MEBlocks.SWAMPY_BRICKS_STAIRS_MOSSY.get());
+                        output.accept(MEBlocks.WHITE_BRICKS_STAIRS_MOSSY.get());
+                        output.accept(MEBlocks.YELLOW_BRICKS_STAIRS_MOSSY.get());
+                        output.accept(MEBlocks.BEIGE_BRICKS_SLAB.get());
+                        output.accept(MEBlocks.BLACK_BRICKS_SLAB.get());
+                        output.accept(MEBlocks.BLUE_BRICKS_SLAB.get());
+                        output.accept(MEBlocks.BROWN_BRICKS_SLAB.get());
+                        output.accept(MEBlocks.FADED_BRICKS_SLAB.get());
+                        output.accept(MEBlocks.GREEN_BRICKS_SLAB.get());
+                        output.accept(MEBlocks.GREY_BRICKS_SLAB.get());
+                        output.accept(MEBlocks.MAROON_BRICKS_SLAB.get());
+                        output.accept(MEBlocks.NAVY_BRICKS_SLAB.get());
+                        output.accept(MEBlocks.ORANGE_BRICKS_SLAB.get());
+                        output.accept(MEBlocks.PALE_BLUE_BRICKS_SLAB.get());
+                        output.accept(MEBlocks.PINK_BRICKS_SLAB.get());
+                        output.accept(MEBlocks.PURPLE_BRICKS_SLAB.get());
+                        output.accept(MEBlocks.RED_BRICKS_SLAB.get());
+                        output.accept(MEBlocks.SWAMPY_BRICKS_SLAB.get());
+                        output.accept(MEBlocks.WHITE_BRICKS_SLAB.get());
+                        output.accept(MEBlocks.YELLOW_BRICKS_SLAB.get());
+                        output.accept(MEBlocks.BEIGE_BRICKS_SLAB_MOSSY.get());
+                        output.accept(MEBlocks.BLACK_BRICKS_SLAB_MOSSY.get());
+                        output.accept(MEBlocks.BLUE_BRICKS_SLAB_MOSSY.get());
+                        output.accept(MEBlocks.BROWN_BRICKS_SLAB_MOSSY.get());
+                        output.accept(MEBlocks.FADED_BRICKS_SLAB_MOSSY.get());
+                        output.accept(MEBlocks.GREEN_BRICKS_SLAB_MOSSY.get());
+                        output.accept(MEBlocks.GREY_BRICKS_SLAB_MOSSY.get());
+                        output.accept(MEBlocks.MAROON_BRICKS_SLAB_MOSSY.get());
+                        output.accept(MEBlocks.NAVY_BRICKS_SLAB_MOSSY.get());
+                        output.accept(MEBlocks.ORANGE_BRICKS_SLAB_MOSSY.get());
+                        output.accept(MEBlocks.PALE_BLUE_BRICKS_SLAB_MOSSY.get());
+                        output.accept(MEBlocks.PINK_BRICKS_SLAB_MOSSY.get());
+                        output.accept(MEBlocks.PURPLE_BRICKS_SLAB_MOSSY.get());
+                        output.accept(MEBlocks.RED_BRICKS_SLAB_MOSSY.get());
+                        output.accept(MEBlocks.SWAMPY_BRICKS_SLAB_MOSSY.get());
+                        output.accept(MEBlocks.WHITE_BRICKS_SLAB_MOSSY.get());
+                        output.accept(MEBlocks.YELLOW_BRICKS_SLAB_MOSSY.get());
+
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> HERB_GROUP = CREATIVE_MODE_TABS.register("herbmodtab",
@@ -45,17 +177,32 @@ public class MEItemGroup {
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> FOOD_GROUP = CREATIVE_MODE_TABS.register("foodmodtab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEItems.REDCURRANT_SWEET_BREAD.get())).title(Component.translatable("itemGroup.foodmodtab"))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEItems.REDCURRANT_SWEET_BREAD_CREAM.get())).title(Component.translatable("itemGroup.foodmodtab"))
                     .displayItems((displayParameters, output) -> {
-
-                        output.accept(MEItems.FIRESTONE.get());
-                        output.accept(MEItems.SEASTONE.get());
-                        output.accept(MEItems.FROSTSTONE.get());
-                        output.accept(MEItems.MOSSTONE.get());
-                        output.accept(MEItems.ASTROSTONE.get());
-                        output.accept(MEItems.DEPTHSTONE.get());
-                        output.accept(MEItems.SKYSTONE.get());
+                        
                         output.accept(MEItems.SALT.get());
+
+                        output.accept(MEItems.SWEET_BREAD.get());
+                        output.accept(MEItems.SWEET_BREAD_CREAM.get());
+                        output.accept(MEItems.SWEET_BREAD_HONEY.get());
+                        output.accept(MEItems.BILBERRY_SWEET_BREAD_CREAM.get());
+                        output.accept(MEItems.COWBERRY_SWEET_BREAD_CREAM.get());
+                        output.accept(MEItems.ELDERBERRY_SWEET_BREAD_CREAM.get());
+                        output.accept(MEItems.HAWTHORN_SWEET_BREAD_CREAM.get());
+                        output.accept(MEItems.REDCURRANT_SWEET_BREAD_CREAM.get());
+                        output.accept(MEItems.FRUIT_SWEET_BREAD_CREAM.get());
+                        output.accept(MEItems.BILBERRY_GLAZE.get());
+                        output.accept(MEItems.COWBERRY_GLAZE.get());
+                        output.accept(MEItems.ELDERBERRY_GLAZE.get());
+                        output.accept(MEItems.HAWTHORN_GLAZE.get());
+                        output.accept(MEItems.REDCURRANT_GLAZE.get());
+                        output.accept(MEItems.FRUIT_GLAZE.get());
+                        output.accept(MEItems.BILBERRY_PIE.get());
+                        output.accept(MEItems.COWBERRY_PIE.get());
+                        output.accept(MEItems.ELDERBERRY_PIE.get());
+                        output.accept(MEItems.HAWTHORN_PIE.get());
+                        output.accept(MEItems.REDCURRANT_PIE.get());
+                        output.accept(MEItems.MIXEDBERRY_PIE.get());
 
                     }).build());
 

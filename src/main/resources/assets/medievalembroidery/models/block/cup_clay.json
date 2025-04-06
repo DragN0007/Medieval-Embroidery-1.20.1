@@ -1,0 +1,7 @@
+{
+	"parent": "medievalembroidery:block/cup",
+	"textures": {
+		"0": "medievalembroidery:block/cup_clay",
+		"particle": "medievalembroidery:block/cup_clay"
+	}
+}

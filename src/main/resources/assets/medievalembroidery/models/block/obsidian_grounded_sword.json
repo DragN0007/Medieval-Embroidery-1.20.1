@@ -1,0 +1,6 @@
+{
+	"parent": "medievalembroidery:block/grounded_sword_parent",
+	"textures": {
+		"sword_texture": "medievalembroidery:block/obsidian_sword_placeable"
+	}
+}

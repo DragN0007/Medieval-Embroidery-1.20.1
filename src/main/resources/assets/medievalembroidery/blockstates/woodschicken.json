@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "medievalembroidery:block/fungi/woodschicken",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "medievalembroidery:block/fungi/woodschicken"
+    },
+    "facing=south": {
+      "model": "medievalembroidery:block/fungi/woodschicken",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "medievalembroidery:block/fungi/woodschicken",
+      "y": 270
+    }
+  }
+}
