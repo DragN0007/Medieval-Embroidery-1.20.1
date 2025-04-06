@@ -2,10 +2,12 @@ package com.dragn0007_evangelix.medievalembroidery.datagen;
 
 import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
 import com.dragn0007_evangelix.medievalembroidery.block.PixelPlacementBlocks;
+import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.function.Consumer;
@@ -17,6 +19,70 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
 
     @Override
     public void buildRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer) {
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.ASTROSTONE_BLOCK.get())
+                .define('A', MEItems.ASTROSTONE.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .unlockedBy("has_gem", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.ASTROSTONE.get())
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.FIRESTONE_BLOCK.get())
+                .define('A', MEItems.FIRESTONE.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .unlockedBy("has_gem", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.FIRESTONE.get())
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.DEPTHSTONE_BLOCK.get())
+                .define('A', MEItems.DEPTHSTONE.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .unlockedBy("has_gem", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.DEPTHSTONE.get())
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.FROSTSTONE_BLOCK.get())
+                .define('A', MEItems.FROSTSTONE.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .unlockedBy("has_gem", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.FROSTSTONE.get())
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.SKYSTONE_BLOCK.get())
+                .define('A', MEItems.SKYSTONE.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .unlockedBy("has_gem", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.SKYSTONE.get())
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.MOSSTONE_BLOCK.get())
+                .define('A', MEItems.MOSSTONE.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .unlockedBy("has_gem", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.MOSSTONE.get())
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.SEASTONE_BLOCK.get())
+                .define('A', MEItems.SEASTONE.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .unlockedBy("has_gem", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.SEASTONE.get())
+                        .build())).save(pFinishedRecipeConsumer);
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, PixelPlacementBlocks.IRON_GROUNDED_SWORD.get())
                 .requires(Items.IRON_SWORD)
@@ -194,6 +260,694 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
                 .pattern(" A ")
                 .unlockedBy("has_goblet", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.IRON_INGOT).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.YELLOW_BRICKS_SLAB.get(), 6)
+                .define('A', MEBlocks.YELLOW_BRICKS.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.WHITE_BRICKS_SLAB.get(), 6)
+                .define('A', MEBlocks.WHITE_BRICKS.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.SWAMPY_BRICKS_SLAB.get(), 6)
+                .define('A', MEBlocks.SWAMPY_BRICKS.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.RED_BRICKS_SLAB.get(), 6)
+                .define('A', MEBlocks.RED_BRICKS.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.PURPLE_BRICKS_SLAB.get(), 6)
+                .define('A', MEBlocks.PURPLE_BRICKS.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.PINK_BRICKS_SLAB.get(), 6)
+                .define('A', MEBlocks.PINK_BRICKS.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.PALE_BLUE_BRICKS_SLAB.get(), 6)
+                .define('A', MEBlocks.PALE_BLUE_BRICKS.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.ORANGE_BRICKS_SLAB.get(), 6)
+                .define('A', MEBlocks.ORANGE_BRICKS.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.NAVY_BRICKS_SLAB.get(), 6)
+                .define('A', MEBlocks.NAVY_BRICKS.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.MAROON_BRICKS_SLAB.get(), 6)
+                .define('A', MEBlocks.MAROON_BRICKS.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.GREY_BRICKS_SLAB.get(), 6)
+                .define('A', MEBlocks.GREY_BRICKS.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.GREEN_BRICKS_SLAB.get(), 6)
+                .define('A', MEBlocks.GREEN_BRICKS.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.FADED_BRICKS_SLAB.get(), 6)
+                .define('A', MEBlocks.FADED_BRICKS.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.BROWN_BRICKS_SLAB.get(), 6)
+                .define('A', MEBlocks.BROWN_BRICKS.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.BLUE_BRICKS_SLAB.get(), 6)
+                .define('A', MEBlocks.BLUE_BRICKS.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.BLACK_BRICKS_SLAB.get(), 6)
+                .define('A', MEBlocks.BLACK_BRICKS.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.BEIGE_BRICKS_SLAB.get(), 6)
+                .define('A', MEBlocks.BEIGE_BRICKS.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.YELLOW_BRICKS_SLAB_MOSSY.get(), 6)
+                .define('A', MEBlocks.YELLOW_BRICKS_MOSSY.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.WHITE_BRICKS_SLAB_MOSSY.get(), 6)
+                .define('A', MEBlocks.WHITE_BRICKS_MOSSY.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.SWAMPY_BRICKS_SLAB_MOSSY.get(), 6)
+                .define('A', MEBlocks.SWAMPY_BRICKS_MOSSY.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.RED_BRICKS_SLAB_MOSSY.get(), 6)
+                .define('A', MEBlocks.RED_BRICKS_MOSSY.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.PURPLE_BRICKS_SLAB_MOSSY.get(), 6)
+                .define('A', MEBlocks.PURPLE_BRICKS_MOSSY.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.PINK_BRICKS_SLAB_MOSSY.get(), 6)
+                .define('A', MEBlocks.PINK_BRICKS_MOSSY.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.PALE_BLUE_BRICKS_SLAB_MOSSY.get(), 6)
+                .define('A', MEBlocks.PALE_BLUE_BRICKS_MOSSY.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.ORANGE_BRICKS_SLAB_MOSSY.get(), 6)
+                .define('A', MEBlocks.ORANGE_BRICKS_MOSSY.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.NAVY_BRICKS_SLAB_MOSSY.get(), 6)
+                .define('A', MEBlocks.NAVY_BRICKS_MOSSY.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.MAROON_BRICKS_SLAB_MOSSY.get(), 6)
+                .define('A', MEBlocks.MAROON_BRICKS_MOSSY.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.GREY_BRICKS_SLAB_MOSSY.get(), 6)
+                .define('A', MEBlocks.GREY_BRICKS_MOSSY.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.GREEN_BRICKS_SLAB_MOSSY.get(), 6)
+                .define('A', MEBlocks.GREEN_BRICKS_MOSSY.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.FADED_BRICKS_SLAB_MOSSY.get(), 6)
+                .define('A', MEBlocks.FADED_BRICKS_MOSSY.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.BROWN_BRICKS_SLAB_MOSSY.get(), 6)
+                .define('A', MEBlocks.BROWN_BRICKS_MOSSY.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.BLUE_BRICKS_SLAB_MOSSY.get(), 6)
+                .define('A', MEBlocks.BLUE_BRICKS_MOSSY.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.BLACK_BRICKS_SLAB_MOSSY.get(), 6)
+                .define('A', MEBlocks.BLACK_BRICKS_MOSSY.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.BEIGE_BRICKS_SLAB_MOSSY.get(), 6)
+                .define('A', MEBlocks.BEIGE_BRICKS_MOSSY.get())
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.YELLOW_BRICKS_STAIRS.get(), 4)
+                .define('A', MEBlocks.YELLOW_BRICKS.get())
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.WHITE_BRICKS_STAIRS.get(), 4)
+                .define('A', MEBlocks.WHITE_BRICKS.get())
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.SWAMPY_BRICKS_STAIRS.get(), 4)
+                .define('A', MEBlocks.SWAMPY_BRICKS.get())
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.RED_BRICKS_STAIRS.get(), 4)
+                .define('A', MEBlocks.RED_BRICKS.get())
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.PURPLE_BRICKS_STAIRS.get(), 4)
+                .define('A', MEBlocks.PURPLE_BRICKS.get())
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.PINK_BRICKS_STAIRS.get(), 4)
+                .define('A', MEBlocks.PINK_BRICKS.get())
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.PALE_BLUE_BRICKS_STAIRS.get(), 4)
+                .define('A', MEBlocks.PALE_BLUE_BRICKS.get())
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.ORANGE_BRICKS_STAIRS.get(), 4)
+                .define('A', MEBlocks.ORANGE_BRICKS.get())
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.NAVY_BRICKS_STAIRS.get(), 4)
+                .define('A', MEBlocks.NAVY_BRICKS.get())
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.MAROON_BRICKS_STAIRS.get(), 4)
+                .define('A', MEBlocks.MAROON_BRICKS.get())
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.GREY_BRICKS_STAIRS.get(), 4)
+                .define('A', MEBlocks.GREY_BRICKS.get())
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.GREEN_BRICKS_STAIRS.get(), 4)
+                .define('A', MEBlocks.GREEN_BRICKS.get())
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.FADED_BRICKS_STAIRS.get(), 4)
+                .define('A', MEBlocks.FADED_BRICKS.get())
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.BROWN_BRICKS_STAIRS.get(), 4)
+                .define('A', MEBlocks.BROWN_BRICKS.get())
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.BLUE_BRICKS_STAIRS.get(), 4)
+                .define('A', MEBlocks.BLUE_BRICKS.get())
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.BLACK_BRICKS_STAIRS.get(), 4)
+                .define('A', MEBlocks.BLACK_BRICKS.get())
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.BEIGE_BRICKS_STAIRS.get(), 4)
+                .define('A', MEBlocks.BEIGE_BRICKS.get())
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEBlocks.YELLOW_BRICKS_MOSSY.get())
+                .requires(MEBlocks.YELLOW_BRICKS.get())
+                .requires(Items.VINE)
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEBlocks.WHITE_BRICKS_MOSSY.get())
+                .requires(MEBlocks.WHITE_BRICKS.get())
+                .requires(Items.VINE)
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEBlocks.SWAMPY_BRICKS_MOSSY.get())
+                .requires(MEBlocks.SWAMPY_BRICKS.get())
+                .requires(Items.VINE)
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEBlocks.RED_BRICKS_MOSSY.get())
+                .requires(MEBlocks.RED_BRICKS.get())
+                .requires(Items.VINE)
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEBlocks.PURPLE_BRICKS_MOSSY.get())
+                .requires(MEBlocks.PURPLE_BRICKS.get())
+                .requires(Items.VINE)
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEBlocks.PINK_BRICKS_MOSSY.get())
+                .requires(MEBlocks.PINK_BRICKS.get())
+                .requires(Items.VINE)
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEBlocks.PALE_BLUE_BRICKS_MOSSY.get())
+                .requires(MEBlocks.PALE_BLUE_BRICKS.get())
+                .requires(Items.VINE)
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEBlocks.ORANGE_BRICKS_MOSSY.get())
+                .requires(MEBlocks.ORANGE_BRICKS.get())
+                .requires(Items.VINE)
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEBlocks.NAVY_BRICKS_MOSSY.get())
+                .requires(MEBlocks.NAVY_BRICKS.get())
+                .requires(Items.VINE)
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEBlocks.MAROON_BRICKS_MOSSY.get())
+                .requires(MEBlocks.MAROON_BRICKS.get())
+                .requires(Items.VINE)
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEBlocks.GREY_BRICKS_MOSSY.get())
+                .requires(MEBlocks.GREY_BRICKS.get())
+                .requires(Items.VINE)
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEBlocks.GREEN_BRICKS_MOSSY.get())
+                .requires(MEBlocks.GREEN_BRICKS.get())
+                .requires(Items.VINE)
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEBlocks.FADED_BRICKS_MOSSY.get())
+                .requires(MEBlocks.FADED_BRICKS.get())
+                .requires(Items.VINE)
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEBlocks.BROWN_BRICKS_MOSSY.get())
+                .requires(MEBlocks.BROWN_BRICKS.get())
+                .requires(Items.VINE)
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEBlocks.BLACK_BRICKS_MOSSY.get())
+                .requires(MEBlocks.BLACK_BRICKS.get())
+                .requires(Items.VINE)
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEBlocks.BLUE_BRICKS_MOSSY.get())
+                .requires(MEBlocks.BLUE_BRICKS.get())
+                .requires(Items.VINE)
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEBlocks.BEIGE_BRICKS_MOSSY.get())
+                .requires(MEBlocks.BEIGE_BRICKS.get())
+                .requires(Items.VINE)
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.YELLOW_BRICKS.get(), 8)
+                .define('A', Blocks.BRICKS)
+                .define('B', Items.YELLOW_DYE)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.WHITE_BRICKS.get(), 8)
+                .define('A', Blocks.BRICKS)
+                .define('B', Items.WHITE_DYE)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.SWAMPY_BRICKS.get(), 8)
+                .define('A', Blocks.BRICKS)
+                .define('B', Items.VINE)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.RED_BRICKS.get(), 8)
+                .define('A', Blocks.BRICKS)
+                .define('B', Items.RED_DYE)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.PURPLE_BRICKS.get(), 8)
+                .define('A', Blocks.BRICKS)
+                .define('B', Items.PURPLE_DYE)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.PINK_BRICKS.get(), 8)
+                .define('A', Blocks.BRICKS)
+                .define('B', Items.PINK_DYE)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.PALE_BLUE_BRICKS.get(), 8)
+                .define('A', Blocks.BRICKS)
+                .define('B', Items.LIGHT_BLUE_DYE)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.ORANGE_BRICKS.get(), 8)
+                .define('A', Blocks.BRICKS)
+                .define('B', Items.ORANGE_DYE)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.NAVY_BRICKS.get(), 8)
+                .define('A', Blocks.BRICKS)
+                .define('B', Items.LAPIS_LAZULI)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.MAROON_BRICKS.get(), 8)
+                .define('A', Blocks.BRICKS)
+                .define('B', Items.RED_DYE)
+                .define('C', Items.BROWN_DYE)
+                .pattern("BBB")
+                .pattern("CAB")
+                .pattern("CCC")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.GREY_BRICKS.get(), 8)
+                .define('A', Blocks.BRICKS)
+                .define('B', Items.GRAY_DYE)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.GREEN_BRICKS.get(), 8)
+                .define('A', Blocks.BRICKS)
+                .define('B', Items.GREEN_DYE)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.FADED_BRICKS.get(), 8)
+                .define('A', Blocks.BRICKS)
+                .define('B', Items.DIRT)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.BROWN_BRICKS.get(), 8)
+                .define('A', Blocks.BRICKS)
+                .define('B', Items.BROWN_DYE)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.BLACK_BRICKS.get(), 8)
+                .define('A', Blocks.BRICKS)
+                .define('B', Items.BLACK_DYE)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.BLUE_BRICKS.get(), 8)
+                .define('A', Blocks.BRICKS)
+                .define('B', Items.BLUE_DYE)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.BEIGE_BRICKS.get(), 8)
+                .define('A', Blocks.BRICKS)
+                .define('B', Blocks.SAND)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.BRICKS).build()))
                 .save(pFinishedRecipeConsumer);
     }
 

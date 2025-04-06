@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "medievalembroidery:pale_blue_bricks"
+    }
+  },
+  "pattern": [
+    "AAA"
+  ],
+  "result": {
+    "count": 6,
+    "item": "medievalembroidery:pale_blue_bricks_slab"
+  },
+  "show_notification": true
+}
