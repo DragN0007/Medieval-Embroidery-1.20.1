@@ -1,6 +1,7 @@
 package com.dragn0007_evangelix.medievalembroidery.datagen;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
+import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -18,7 +19,45 @@ public class MEItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        simpleItem(MEItems.MORTAR_AND_PESTLE);
 
+        simpleItem(MEItems.FIRESTONE);
+        simpleItem(MEItems.SEASTONE);
+        simpleItem(MEItems.FROSTSTONE);
+        simpleItem(MEItems.MOSSTONE);
+        simpleItem(MEItems.ASTROSTONE);
+        simpleItem(MEItems.DEPTHSTONE);
+        simpleItem(MEItems.SKYSTONE);
+        simpleItem(MEItems.SALT);
+        simpleItem(MEItems.CRYSTAL_DUST);
+
+        simpleItem(MEItems.ASSISTIVE_CRYSTAL_SHARD);
+        simpleItem(MEItems.CONJURING_CRYSTAL_SHARD);
+        simpleItem(MEItems.DESTRUCTIVE_CRYSTAL_SHARD);
+        simpleItem(MEItems.HEALING_CRYSTAL_SHARD);
+        simpleItem(MEItems.PROTECTIVE_CRYSTAL_SHARD);
+
+        simpleItem(MEItems.SWEET_BREAD);
+        simpleItem(MEItems.SWEET_BREAD_CREAM);
+        simpleItem(MEItems.SWEET_BREAD_HONEY);
+        simpleItem(MEItems.BILBERRY_SWEET_BREAD);
+        simpleItem(MEItems.COWBERRY_SWEET_BREAD);
+        simpleItem(MEItems.ELDERBERRY_SWEET_BREAD);
+        simpleItem(MEItems.HAWTHORNBERRY_SWEET_BREAD);
+        simpleItem(MEItems.REDCURRANT_SWEET_BREAD);
+        simpleItem(MEItems.FRUIT_SWEET_BREAD);
+        simpleItem(MEItems.BILBERRY_GLAZE);
+        simpleItem(MEItems.COWBERRY_GLAZE);
+        simpleItem(MEItems.ELDERBERRY_GLAZE);
+        simpleItem(MEItems.HAWTHORNBERRY_GLAZE);
+        simpleItem(MEItems.REDCURRANT_GLAZE);
+        simpleItem(MEItems.FRUIT_GLAZE);
+        simpleItem(MEItems.BILBERRY_PIE);
+        simpleItem(MEItems.COWBERRY_PIE);
+        simpleItem(MEItems.ELDERBERRY_PIE);
+        simpleItem(MEItems.HAWTHORNBERRY_PIE);
+        simpleItem(MEItems.REDCURRANT_PIE);
+        simpleItem(MEItems.MIXEDBERRY_PIE);
     }
 
      private ItemModelBuilder simpleSpriteBlockItem(RegistryObject<Block> block) {

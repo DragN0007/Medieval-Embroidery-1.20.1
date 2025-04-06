@@ -58,7 +58,7 @@ public class MEBlocks {
     public static final RegistryObject<Block> SKYSTONE_BLOCK = registerBlock("skystone_block",
             () -> new Block(Block.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> SALT_ORE = registerBlock("salt_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COAL_ORE)));
 
     public static final RegistryObject<Block> ASSISTIVE_CRYSTAL_ORE = registerBlock("assistive_crystal_ore",
             () -> new CrystalOreBlock(255255255));
