@@ -1,14 +1,15 @@
 package com.dragn0007_evangelix.medievalembroidery.block;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
+import com.dragn0007_evangelix.medievalembroidery.block.custom.FungiRotator;
+import com.dragn0007_evangelix.medievalembroidery.block.custom.crop.bush.BilberryBush;
+import com.dragn0007_evangelix.medievalembroidery.block.custom.crop.bush.*;
+import com.dragn0007_evangelix.medievalembroidery.block.custom.crop.herb.*;
+import com.dragn0007_evangelix.medievalembroidery.block.custom.crop.mushroom.*;
 import com.dragn0007_evangelix.medievalembroidery.block.custom.crystal.CrystalOreBlock;
 import com.dragn0007_evangelix.medievalembroidery.block.custom.placedfood.PlatedFood;
-import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.*;
-import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util.PixelPlacer;
-import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util.PixelPlacerContainer;
-import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util.PixelPlacerEntity;
-import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util.PixelPlacerItem;
 import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -69,6 +70,116 @@ public class MEBlocks {
             () -> new CrystalOreBlock(602550));
     public static final RegistryObject<Block> PROTECTIVE_CRYSTAL_ORE = registerBlock("protective_crystal_ore",
             () -> new CrystalOreBlock(8854255));
+
+
+    //Plants
+    public static final RegistryObject<FungiRotator> WILD_BLEWIT = registerBlockWithoutItem("wild_blewit",
+            () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
+    public static final RegistryObject<FungiRotator> WILD_HONEY = registerBlockWithoutItem("wild_honey",
+            () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
+    public static final RegistryObject<FungiRotator> WILD_KING = registerBlockWithoutItem("wild_king",
+            () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
+    public static final RegistryObject<FungiRotator> WILD_MATSUTAKE = registerBlockWithoutItem("wild_matsutake",
+            () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
+    public static final RegistryObject<FungiRotator> WILD_OYSTER = registerBlockWithoutItem("wild_oyster",
+            () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
+    public static final RegistryObject<FungiRotator> WILD_PORCINI = registerBlockWithoutItem("wild_porcini",
+            () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
+    public static final RegistryObject<FungiRotator> WILD_YELLOWFOOT = registerBlockWithoutItem("wild_yellowfoot",
+            () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
+    public static final RegistryObject<FungiRotator> WILD_WOODS_CHICKEN = registerBlockWithoutItem("wild_woods_chicken",
+            () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
+
+    public static final RegistryObject<Block> BLEWIT = registerBlockWithoutItem("blewit",
+            () -> new BlewitCrop(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).sound(SoundType.FUNGUS).noCollission()));
+    public static final RegistryObject<Block> HONEY = registerBlockWithoutItem("honey",
+            () -> new HoneyCrop(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).sound(SoundType.FUNGUS).noCollission()));
+    public static final RegistryObject<Block> KING = registerBlockWithoutItem("king",
+            () -> new KingCrop(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).sound(SoundType.FUNGUS).noCollission()));
+    public static final RegistryObject<Block> MATSUTAKE = registerBlockWithoutItem("matsutake",
+            () -> new MatsutakeCrop(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).sound(SoundType.FUNGUS).noCollission()));
+    public static final RegistryObject<Block> OYSTER = registerBlockWithoutItem("oyster",
+            () -> new OysterCrop(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).sound(SoundType.FUNGUS).noCollission()));
+    public static final RegistryObject<Block> PORCINI = registerBlockWithoutItem("porcini",
+            () -> new PorciniCrop(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).sound(SoundType.FUNGUS).noCollission()));
+    public static final RegistryObject<Block> YELLOWFOOT = registerBlockWithoutItem("yellowfoot",
+            () -> new YellowFootCrop(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).sound(SoundType.FUNGUS).noCollission()));
+    public static final RegistryObject<Block> WOODS_CHICKEN = registerBlockWithoutItem("woods_chicken",
+            () -> new WoodsChickenCrop(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).sound(SoundType.FUNGUS).noCollission()));
+
+    public static final RegistryObject<Block> BILBERRY_BUSH = registerBlockWithoutItem("bilberry_bush",
+            () -> new BilberryBush(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
+    public static final RegistryObject<Block> COWBERRY_BUSH = registerBlockWithoutItem("cowberry_bush",
+            () -> new CowberryBush(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
+    public static final RegistryObject<Block> ELDERBERRY_BUSH = registerBlockWithoutItem("elderberry_bush",
+            () -> new ElderberryBush(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
+    public static final RegistryObject<Block> HAWTHORN_BUSH = registerBlockWithoutItem("hawthorn_bush",
+            () -> new HawthornBush(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
+    public static final RegistryObject<Block> REDCURRANT_BUSH = registerBlockWithoutItem("redcurrant_bush",
+            () -> new RedcurrantBush(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
+
+    public static final RegistryObject<Block> HENVEN = registerBlockWithoutItem("henven",
+            () -> new HenvenHerbBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).noCollission()));
+    public static final RegistryObject<FlowerBlock> WILD_HENVEN = registerBlockWithoutItem("wild_henven",
+            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
+
+    public static final RegistryObject<Block> CANNAAN = registerBlockWithoutItem("cannaan",
+            () -> new CannaanHerbBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).noCollission()));
+    public static final RegistryObject<FlowerBlock> WILD_CANNAAN = registerBlockWithoutItem("wild_cannaan",
+            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
+
+    public static final RegistryObject<Block> DRAGONEYE = registerBlockWithoutItem("dragoneye",
+            () -> new DragonEyeHerbBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).noCollission()));
+    public static final RegistryObject<FlowerBlock> WILD_DRAGONEYE = registerBlockWithoutItem("wild_dragoneye",
+            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
+
+    public static final RegistryObject<Block> SPRINNAN = registerBlockWithoutItem("sprinnan",
+            () -> new SprinnanHerbBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).noCollission()));
+    public static final RegistryObject<FlowerBlock> WILD_SPRINNAN = registerBlockWithoutItem("wild_sprinnan",
+            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
+
+    public static final RegistryObject<Block> VIRENNES = registerBlockWithoutItem("virennes",
+            () -> new VirennesHerbBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).noCollission()));
+    public static final RegistryObject<FlowerBlock> WILD_VIRENNES = registerBlockWithoutItem("wild_virennes",
+            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
+
+    public static final RegistryObject<Block> BRUTEFLOWER = registerBlockWithoutItem("bruteflower",
+            () -> new BruteFlowerHerbBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).noCollission()));
+    public static final RegistryObject<Block> WILD_BRUTEFLOWER = registerBlockWithoutItem("wild_bruteflower",
+            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
+
+    public static final RegistryObject<Block> GRANGIN = registerBlockWithoutItem("grangin",
+            () -> new GranginHerbBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).noCollission()));
+    public static final RegistryObject<Block> WILD_GRANGIN = registerBlockWithoutItem("wild_grangin",
+            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
+
+    public static final RegistryObject<Block> CACHEN = registerBlockWithoutItem("cachen",
+            () -> new CachenHerbBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).noCollission()));
+    public static final RegistryObject<Block> WILD_CACHEN = registerBlockWithoutItem("wild_cachen",
+            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
+
+    public static final RegistryObject<Block> FAIRYFLOWER = registerBlockWithoutItem("fairyflower",
+            () -> new FairyFlowerHerbBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).noCollission()));
+    public static final RegistryObject<FlowerBlock> WILD_FAIRYFLOWER = registerBlockWithoutItem("wild_fairyflower",
+            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
+
+    public static final RegistryObject<Block> LADYRIVER = registerBlockWithoutItem("ladyriver",
+            () -> new LadyriverHerbBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).noCollission()));
+    public static final RegistryObject<FlowerBlock> WILD_LADYRIVER = registerBlockWithoutItem("wild_ladyriver",
+            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
+
+    public static final RegistryObject<Block> BLUE_DRAGON = registerPlantBlock("blue_dragon",
+            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
+    public static final RegistryObject<Block> VIOLET_DRAGON = registerPlantBlock("violet_dragon",
+            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
+    public static final RegistryObject<Block> PINK_MAGE = registerPlantBlock("pink_mage",
+            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
+    public static final RegistryObject<Block> PURPLE_MAGE = registerPlantBlock("purple_mage",
+            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
+    public static final RegistryObject<Block> FIRE_DAISY = registerPlantBlock("fire_daisy",
+            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
+    public static final RegistryObject<Block> GROUND_VINE = registerPlantBlock("ground_vine",
+            () -> new FlowerBlock(MobEffects.ABSORPTION, 1, Block.Properties.copy(Blocks.POPPY).sound(SoundType.GRASS).noCollission()));
 
 
     //Food - Placed

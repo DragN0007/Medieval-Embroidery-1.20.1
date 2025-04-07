@@ -1,6 +1,8 @@
 package com.dragn0007_evangelix.medievalembroidery.datagen;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
+import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
+import com.dragn0007_evangelix.medievalembroidery.block.custom.FungiRotator;
 import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -58,6 +60,48 @@ public class MEItemModelProvider extends ItemModelProvider {
         simpleItem(MEItems.HAWTHORN_PIE);
         simpleItem(MEItems.REDCURRANT_PIE);
         simpleItem(MEItems.MIXEDBERRY_PIE);
+
+        simpleItem(MEItems.BILBERRY);
+        simpleItem(MEItems.COWBERRY);
+        simpleItem(MEItems.ELDERBERRY);
+        simpleItem(MEItems.HAWTHORNBERRY);
+        simpleItem(MEItems.REDCURRANT);
+
+        simpleItem(MEItems.HENVEN);
+        simpleItem(MEItems.CANNAAN);
+        simpleItem(MEItems.DRAGONEYE);
+        simpleItem(MEItems.SPRINNAN);
+        simpleItem(MEItems.VIRENNES);
+        simpleItem(MEItems.BRUTEFLOWER);
+        simpleItem(MEItems.GRANGIN);
+        simpleItem(MEItems.FAIRYFLOWER);
+        simpleItem(MEItems.CACHEN);
+        simpleItem(MEItems.LADYRIVER);
+
+        simpleItem(MEItems.BLEWIT);
+        simpleItem(MEItems.COOKED_BLEWIT);
+        simpleItem(MEItems.SEASONED_BLEWIT);
+        simpleItem(MEItems.HONEY);
+        simpleItem(MEItems.COOKED_HONEY);
+        simpleItem(MEItems.SEASONED_HONEY);
+        simpleItem(MEItems.KING);
+        simpleItem(MEItems.COOKED_KING);
+        simpleItem(MEItems.SEASONED_KING);
+        simpleItem(MEItems.OYSTER);
+        simpleItem(MEItems.COOKED_OYSTER);
+        simpleItem(MEItems.SEASONED_OYSTER);
+        simpleItem(MEItems.MATSUTAKE);
+        simpleItem(MEItems.COOKED_MATSUTAKE);
+        simpleItem(MEItems.SEASONED_MATSUTAKE);
+        simpleItem(MEItems.PORCINI);
+        simpleItem(MEItems.COOKED_PORCINI);
+        simpleItem(MEItems.SEASONED_PORCINI);
+        simpleItem(MEItems.YELLOWFOOT);
+        simpleItem(MEItems.COOKED_YELLOWFOOT);
+        simpleItem(MEItems.SEASONED_YELLOWFOOT);
+        simpleItem(MEItems.WOODS_CHICKEN);
+        simpleItem(MEItems.COOKED_WOODS_CHICKEN);
+        simpleItem(MEItems.SEASONED_WOODS_CHICKEN);
     }
 
      private ItemModelBuilder simpleSpriteBlockItem(RegistryObject<Block> block) {
@@ -91,6 +135,12 @@ public class MEItemModelProvider extends ItemModelProvider {
 
     public ItemModelBuilder advancedItem(RegistryObject<Item> item, String getTextureName) {
         return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(MedievalEmbroidery.MODID,"item/" + getTextureName));
+    }
+
+    public ItemModelBuilder advancedBlockItem(RegistryObject<FungiRotator> block, String getTextureName) {
+        return withExistingParent(block.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(MedievalEmbroidery.MODID,"item/" + getTextureName));
     }

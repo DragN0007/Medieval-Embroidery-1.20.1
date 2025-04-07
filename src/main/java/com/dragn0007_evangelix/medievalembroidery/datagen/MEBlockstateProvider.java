@@ -2,15 +2,23 @@ package com.dragn0007_evangelix.medievalembroidery.datagen;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
 import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
+import com.dragn0007_evangelix.medievalembroidery.block.custom.crop.MEHerbBlock;
+import com.dragn0007_evangelix.medievalembroidery.block.custom.crop.MEMushroomCropBlock;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Function;
 
 public class MEBlockstateProvider extends BlockStateProvider {
     public MEBlockstateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -33,6 +41,55 @@ public class MEBlockstateProvider extends BlockStateProvider {
         blockWithItem(MEBlocks.SKYSTONE_ORE);
         blockWithItem(MEBlocks.SKYSTONE_BLOCK);
         blockWithItem(MEBlocks.SALT_ORE);
+
+        createCrop((CropBlock) MEBlocks.BRUTEFLOWER.get(), "bruteflower_stage_", "bruteflower_stage_");
+        simpleBlock(MEBlocks.WILD_BRUTEFLOWER.get(), models().cross(MEBlocks.WILD_BRUTEFLOWER.getId().getPath(),
+                wildPlantTexture("bruteflower_stage_2")).renderType("cutout"));
+
+        createCrop((CropBlock) MEBlocks.CACHEN.get(), "cachen_stage_", "cachen_stage_");
+        simpleBlock(MEBlocks.WILD_CACHEN.get(), models().cross(MEBlocks.WILD_CACHEN.getId().getPath(),
+                wildPlantTexture("cachen_stage_2")).renderType("cutout"));
+
+        createCrop((CropBlock) MEBlocks.CANNAAN.get(), "cannaan_stage_", "cannaan_stage_");
+        simpleBlock(MEBlocks.WILD_CANNAAN.get(), models().cross(MEBlocks.WILD_CANNAAN.getId().getPath(),
+                wildPlantTexture("cannaan_stage_2")).renderType("cutout"));
+
+        createCrop((CropBlock) MEBlocks.HENVEN.get(), "henven_stage_", "henven_stage_");
+        simpleBlock(MEBlocks.WILD_HENVEN.get(), models().cross(MEBlocks.WILD_HENVEN.getId().getPath(),
+                wildPlantTexture("henven_stage_2")).renderType("cutout"));
+
+        createCrop((CropBlock) MEBlocks.DRAGONEYE.get(), "dragoneye_stage_", "dragoneye_stage_");
+        simpleBlock(MEBlocks.WILD_DRAGONEYE.get(), models().cross(MEBlocks.WILD_DRAGONEYE.getId().getPath(),
+                wildPlantTexture("dragoneye_stage_2")).renderType("cutout"));
+
+        createCrop((CropBlock) MEBlocks.FAIRYFLOWER.get(), "fairyflower_stage_", "fairyflower_stage_");
+        simpleBlock(MEBlocks.WILD_FAIRYFLOWER.get(), models().cross(MEBlocks.WILD_FAIRYFLOWER.getId().getPath(),
+                wildPlantTexture("fairyflower_stage_2")).renderType("cutout"));
+
+        createCrop((CropBlock) MEBlocks.GRANGIN.get(), "grangin_stage_", "grangin_stage_");
+        simpleBlock(MEBlocks.WILD_GRANGIN.get(), models().cross(MEBlocks.WILD_GRANGIN.getId().getPath(),
+                wildPlantTexture("grangin_stage_2")).renderType("cutout"));
+
+        createCrop((CropBlock) MEBlocks.LADYRIVER.get(), "ladyriver_stage_", "ladyriver_stage_");
+        simpleBlock(MEBlocks.WILD_LADYRIVER.get(), models().cross(MEBlocks.WILD_LADYRIVER.getId().getPath(),
+                wildPlantTexture("ladyriver_stage_2")).renderType("cutout"));
+
+        createCrop((CropBlock) MEBlocks.SPRINNAN.get(), "sprinnan_stage_", "sprinnan_stage_");
+        simpleBlock(MEBlocks.WILD_SPRINNAN.get(), models().cross(MEBlocks.WILD_SPRINNAN.getId().getPath(),
+                wildPlantTexture("sprinnan_stage_2")).renderType("cutout"));
+
+        createCrop((CropBlock) MEBlocks.VIRENNES.get(), "virennes_stage_", "virennes_stage_");
+        simpleBlock(MEBlocks.WILD_VIRENNES.get(), models().cross(MEBlocks.WILD_VIRENNES.getId().getPath(),
+                wildPlantTexture("virennes_stage_2")).renderType("cutout"));
+
+        createMushroom((CropBlock) MEBlocks.BLEWIT.get(), "blewit_stage_", "blewit_stage_");
+        createMushroom((CropBlock) MEBlocks.HONEY.get(), "honey_stage_", "honey_stage_");
+        createMushroom((CropBlock) MEBlocks.KING.get(), "king_stage_", "king_stage_");
+        createMushroom((CropBlock) MEBlocks.MATSUTAKE.get(), "matsutake_stage_", "matsutake_stage_");
+        createMushroom((CropBlock) MEBlocks.OYSTER.get(), "oyster_stage_", "oyster_stage_");
+        createMushroom((CropBlock) MEBlocks.PORCINI.get(), "porcini_stage_", "porcini_stage_");
+        createMushroom((CropBlock) MEBlocks.WOODS_CHICKEN.get(), "woods_chicken_stage_", "woods_chicken_stage_");
+        createMushroom((CropBlock) MEBlocks.YELLOWFOOT.get(), "yellowfoot_stage_", "yellowfoot_stage_");
 
         stairsBlock((StairBlock) MEBlocks.BEIGE_BRICKS_STAIRS.get(), blockTexture(MEBlocks.BEIGE_BRICKS.get()));
         simpleBlockItem(MEBlocks.BEIGE_BRICKS_STAIRS.get(), models().stairs(MEBlocks.BEIGE_BRICKS_STAIRS.getId().getPath(),
@@ -350,6 +407,41 @@ public class MEBlockstateProvider extends BlockStateProvider {
 
     public void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+
+    public void blockItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(MedievalEmbroidery.MODID +
+                ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
+    }
+
+    public void createCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> cropStates(state, block, modelName, textureName);
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    public void createMushroom(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> mushroomStates(state, block, modelName, textureName);
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    public ConfiguredModel[] cropStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((MEHerbBlock) block).getAgeProperty()),
+                new ResourceLocation(MedievalEmbroidery.MODID, "block/" + textureName + state.getValue(((MEHerbBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
+    public ConfiguredModel[] mushroomStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((MEMushroomCropBlock) block).getAgeProperty()),
+                new ResourceLocation(MedievalEmbroidery.MODID, "block/" + textureName + state.getValue(((MEMushroomCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
+    public ResourceLocation wildPlantTexture(String getTextureName) {
+        return new ResourceLocation(MedievalEmbroidery.MODID,"block/" + getTextureName);
     }
 
 }

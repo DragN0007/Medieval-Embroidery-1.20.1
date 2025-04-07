@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "medievalembroidery:block/fungi/wild_king",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "medievalembroidery:block/fungi/wild_king"
+    },
+    "facing=south": {
+      "model": "medievalembroidery:block/fungi/wild_king",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "medievalembroidery:block/fungi/wild_king",
+      "y": 270
+    }
+  }
+}

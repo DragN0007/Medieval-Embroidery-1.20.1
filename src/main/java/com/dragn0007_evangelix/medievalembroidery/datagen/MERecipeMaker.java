@@ -1,11 +1,14 @@
 package com.dragn0007_evangelix.medievalembroidery.datagen;
 
+import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
 import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
 import com.dragn0007_evangelix.medievalembroidery.block.PixelPlacementBlocks;
 import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
+import com.dragn0007_evangelix.medievalembroidery.util.METags;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -19,6 +22,106 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
 
     @Override
     public void buildRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer) {
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.SWEET_BREAD.get())
+                .define('A', Items.SUGAR)
+                .define('B', METags.Items.WHEAT)
+                .define('C', METags.Items.WATER)
+                .pattern("   ")
+                .pattern("BAB")
+                .pattern(" C ")
+                .unlockedBy("has_wheat", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WHEAT)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.SWEET_BREAD_HONEY.get())
+                .define('A', Items.SUGAR)
+                .define('B', METags.Items.WHEAT)
+                .define('C', METags.Items.WATER)
+                .define('D', Items.HONEY_BOTTLE)
+                .pattern(" D ")
+                .pattern("BAB")
+                .pattern(" C ")
+                .unlockedBy("has_wheat", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WHEAT)
+                        .build())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "sweet_bread_honey_scratch"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.SWEET_BREAD_HONEY.get())
+                .requires(Items.HONEY_BOTTLE)
+                .requires(MEItems.SWEET_BREAD.get())
+                .unlockedBy("has_sweet_bread", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.SWEET_BREAD.get())
+                        .build()))
+                .save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "sweet_bread_honey_addition"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.SWEET_BREAD_CREAM.get())
+                .define('A', Items.SUGAR)
+                .define('B', METags.Items.WHEAT)
+                .define('C', METags.Items.WATER)
+                .define('D', METags.Items.MILK)
+                .pattern(" D ")
+                .pattern("BAB")
+                .pattern(" C ")
+                .unlockedBy("has_wheat", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WHEAT)
+                        .build())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "sweet_bread_cream_scratch"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.SWEET_BREAD_HONEY.get())
+                .requires(METags.Items.MILK)
+                .requires(MEItems.SWEET_BREAD.get())
+                .unlockedBy("has_sweet_bread", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.SWEET_BREAD.get())
+                        .build()))
+                .save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "sweet_bread_cream_addition"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.BILBERRY_SWEET_BREAD_CREAM.get())
+                .requires(MEItems.BILBERRY_GLAZE.get())
+                .requires(MEItems.SWEET_BREAD_CREAM.get())
+                .unlockedBy("has_sweet_bread_cream", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.SWEET_BREAD_CREAM.get())
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.COWBERRY_SWEET_BREAD_CREAM.get())
+                .requires(MEItems.COWBERRY_GLAZE.get())
+                .requires(MEItems.SWEET_BREAD_CREAM.get())
+                .unlockedBy("has_sweet_bread_cream", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.SWEET_BREAD_CREAM.get())
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.ELDERBERRY_SWEET_BREAD_CREAM.get())
+                .requires(MEItems.ELDERBERRY_GLAZE.get())
+                .requires(MEItems.SWEET_BREAD_CREAM.get())
+                .unlockedBy("has_sweet_bread_cream", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.SWEET_BREAD_CREAM.get())
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.FRUIT_SWEET_BREAD_CREAM.get())
+                .requires(MEItems.FRUIT_GLAZE.get())
+                .requires(MEItems.SWEET_BREAD_CREAM.get())
+                .unlockedBy("has_sweet_bread_cream", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.SWEET_BREAD_CREAM.get())
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.HAWTHORN_SWEET_BREAD_CREAM.get())
+                .requires(MEItems.HAWTHORN_GLAZE.get())
+                .requires(MEItems.SWEET_BREAD_CREAM.get())
+                .unlockedBy("has_sweet_bread_cream", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.SWEET_BREAD_CREAM.get())
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.REDCURRANT_SWEET_BREAD_CREAM.get())
+                .requires(MEItems.REDCURRANT_GLAZE.get())
+                .requires(MEItems.SWEET_BREAD_CREAM.get())
+                .unlockedBy("has_sweet_bread_cream", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.SWEET_BREAD_CREAM.get())
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.ASTROSTONE_BLOCK.get())
                 .define('A', MEItems.ASTROSTONE.get())

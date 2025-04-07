@@ -170,9 +170,28 @@ public class MEItemGroup {
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> HERB_GROUP = CREATIVE_MODE_TABS.register("herbmodtab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.herbmodtab"))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.BLEWIT.get())).title(Component.translatable("itemGroup.herbmodtab"))
                     .displayItems((displayParameters, output) -> {
 
+                        output.accept(MEItems.HENVEN.get());
+                        output.accept(MEItems.CANNAAN.get());
+                        output.accept(MEItems.DRAGONEYE.get());
+                        output.accept(MEItems.SPRINNAN.get());
+                        output.accept(MEItems.VIRENNES.get());
+                        output.accept(MEItems.BRUTEFLOWER.get());
+                        output.accept(MEItems.GRANGIN.get());
+                        output.accept(MEItems.FAIRYFLOWER.get());
+                        output.accept(MEItems.CACHEN.get());
+                        output.accept(MEItems.LADYRIVER.get());
+
+                        output.accept(MEBlocks.BLEWIT.get());
+                        output.accept(MEBlocks.HONEY.get());
+                        output.accept(MEBlocks.KING.get());
+                        output.accept(MEBlocks.OYSTER.get());
+                        output.accept(MEBlocks.MATSUTAKE.get());
+                        output.accept(MEBlocks.PORCINI.get());
+                        output.accept(MEBlocks.YELLOWFOOT.get());
+                        output.accept(MEBlocks.WOODS_CHICKEN.get());
 
                     }).build());
 
@@ -203,6 +222,37 @@ public class MEItemGroup {
                         output.accept(MEItems.HAWTHORN_PIE.get());
                         output.accept(MEItems.REDCURRANT_PIE.get());
                         output.accept(MEItems.MIXEDBERRY_PIE.get());
+                        
+                        output.accept(MEItems.BLEWIT.get());
+                        output.accept(MEItems.COOKED_BLEWIT.get());
+                        output.accept(MEItems.SEASONED_BLEWIT.get());
+                        output.accept(MEItems.HONEY.get());
+                        output.accept(MEItems.COOKED_HONEY.get());
+                        output.accept(MEItems.SEASONED_HONEY.get());
+                        output.accept(MEItems.KING.get());
+                        output.accept(MEItems.COOKED_KING.get());
+                        output.accept(MEItems.SEASONED_KING.get());
+                        output.accept(MEItems.OYSTER.get());
+                        output.accept(MEItems.COOKED_OYSTER.get());
+                        output.accept(MEItems.SEASONED_OYSTER.get());
+                        output.accept(MEItems.MATSUTAKE.get());
+                        output.accept(MEItems.COOKED_MATSUTAKE.get());
+                        output.accept(MEItems.SEASONED_MATSUTAKE.get());
+                        output.accept(MEItems.PORCINI.get());
+                        output.accept(MEItems.COOKED_PORCINI.get());
+                        output.accept(MEItems.SEASONED_PORCINI.get());
+                        output.accept(MEItems.YELLOWFOOT.get());
+                        output.accept(MEItems.COOKED_YELLOWFOOT.get());
+                        output.accept(MEItems.SEASONED_YELLOWFOOT.get());
+                        output.accept(MEItems.WOODS_CHICKEN.get());
+                        output.accept(MEItems.COOKED_WOODS_CHICKEN.get());
+                        output.accept(MEItems.SEASONED_WOODS_CHICKEN.get());
+
+                        output.accept(MEItems.BILBERRY.get());
+                        output.accept(MEItems.COWBERRY.get());
+                        output.accept(MEItems.ELDERBERRY.get());
+                        output.accept(MEItems.HAWTHORNBERRY.get());
+                        output.accept(MEItems.REDCURRANT.get());
 
                     }).build());
 
@@ -224,6 +274,7 @@ public class MEItemGroup {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEItems.HEALING_CRYSTAL_SHARD.get())).title(Component.translatable("itemGroup.magicmodtab"))
                     .displayItems((displayParameters, output) -> {
 
+                        output.accept(MEItems.SALT.get());
                         output.accept(MEItems.FIRESTONE.get());
                         output.accept(MEItems.SEASTONE.get());
                         output.accept(MEItems.FROSTSTONE.get());
@@ -231,7 +282,11 @@ public class MEItemGroup {
                         output.accept(MEItems.ASTROSTONE.get());
                         output.accept(MEItems.DEPTHSTONE.get());
                         output.accept(MEItems.SKYSTONE.get());
-                        output.accept(MEItems.SALT.get());
+                        output.accept(MEItems.ASSISTIVE_CRYSTAL_SHARD.get());
+                        output.accept(MEItems.CONJURING_CRYSTAL_SHARD.get());
+                        output.accept(MEItems.DESTRUCTIVE_CRYSTAL_SHARD.get());
+                        output.accept(MEItems.HEALING_CRYSTAL_SHARD.get());
+                        output.accept(MEItems.PROTECTIVE_CRYSTAL_SHARD.get());
 
                     }).build());
 

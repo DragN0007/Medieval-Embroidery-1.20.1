@@ -2,8 +2,8 @@
 	"credit": "DragN0007",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "medievalembroidery:block/porcini",
-		"particle": "medievalembroidery:block/porcini"
+		"0": "medievalembroidery:blocks/porcini",
+		"particle": "medievalembroidery:blocks/porcini"
 	},
 	"elements": [
 		{

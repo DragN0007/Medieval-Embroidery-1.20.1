@@ -1,8 +1,6 @@
 package com.dragn0007_evangelix.medievalembroidery.block;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
-import com.dragn0007_evangelix.medievalembroidery.block.custom.crystal.CrystalOreBlock;
-import com.dragn0007_evangelix.medievalembroidery.block.custom.placedfood.PlatedFood;
 import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.*;
 import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util.PixelPlacer;
 import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util.PixelPlacerContainer;
@@ -11,7 +9,8 @@ import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util.Pix
 import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;

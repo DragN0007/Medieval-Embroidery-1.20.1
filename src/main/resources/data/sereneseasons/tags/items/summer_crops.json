@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "medievalembroidery:blewit_spores",
-    "medievalembroidery:honey_spores",
-    "medievalembroidery:king_spores",
-    "medievalembroidery:matsutake_spores",
-    "medievalembroidery:porcini_spores",
-    "medievalembroidery:yellowfoot_spores",
-    "medievalembroidery:woodschicken_spores",
+    "medievalembroidery:blewit",
+    "medievalembroidery:honey",
+    "medievalembroidery:king",
+    "medievalembroidery:matsutake",
+    "medievalembroidery:porcini",
+    "medievalembroidery:yellowfoot",
+    "medievalembroidery:woods_chicken",
 
     "medievalembroidery:henven",
     "medievalembroidery:cachen",

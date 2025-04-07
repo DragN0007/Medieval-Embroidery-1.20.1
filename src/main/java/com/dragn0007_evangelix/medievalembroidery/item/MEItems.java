@@ -99,6 +99,92 @@ public class MEItems {
     public static final RegistryObject<Item> FRUIT_SWEET_BREAD_CREAM = ITEMS.register("fruit_sweet_bread_cream",
             () -> new ItemNameBlockItem(MEBlocks.SWEET_BREAD_FRUIT.get(), (new Item.Properties().food(new FoodProperties.Builder().nutrition(10).saturationMod(1).build()))));
 
+    public static final RegistryObject<Item> ELDERBERRY = ITEMS.register("elderberry",
+            () -> new ItemNameBlockItem(MEBlocks.ELDERBERRY_BUSH.get(), (new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(1).build()))));
+    public static final RegistryObject<Item> BILBERRY = ITEMS.register("bilberry",
+            () -> new ItemNameBlockItem(MEBlocks.BILBERRY_BUSH.get(), (new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(1).build()))));
+    public static final RegistryObject<Item> COWBERRY = ITEMS.register("cowberry",
+            () -> new ItemNameBlockItem(MEBlocks.COWBERRY_BUSH.get(), (new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(1).build()))));
+    public static final RegistryObject<Item> REDCURRANT = ITEMS.register("redcurrant",
+            () -> new ItemNameBlockItem(MEBlocks.REDCURRANT_BUSH.get(), (new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(1).build()))));
+    public static final RegistryObject<Item> HAWTHORNBERRY = ITEMS.register("hawthornberry",
+            () -> new ItemNameBlockItem(MEBlocks.HAWTHORN_BUSH.get(), (new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(1).build()))));
+
+    public static final RegistryObject<Item> BLEWIT = ITEMS.register("blewit",
+            () -> new ItemNameBlockItem(MEBlocks.BLEWIT.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> HONEY = ITEMS.register("honey",
+            () -> new ItemNameBlockItem(MEBlocks.HONEY.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> KING = ITEMS.register("king",
+            () -> new ItemNameBlockItem(MEBlocks.KING.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> MATSUTAKE = ITEMS.register("matsutake",
+            () -> new ItemNameBlockItem(MEBlocks.MATSUTAKE.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> OYSTER = ITEMS.register("oyster",
+            () -> new ItemNameBlockItem(MEBlocks.OYSTER.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> PORCINI = ITEMS.register("porcini",
+            () -> new ItemNameBlockItem(MEBlocks.PORCINI.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> YELLOWFOOT = ITEMS.register("yellowfoot",
+            () -> new ItemNameBlockItem(MEBlocks.YELLOWFOOT.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> WOODS_CHICKEN = ITEMS.register("woods_chicken",
+            () -> new ItemNameBlockItem(MEBlocks.WOODS_CHICKEN.get(), (new Item.Properties())));
+
+    public static final RegistryObject<Item> COOKED_BLEWIT = ITEMS.register("cooked_blewit",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationMod(1).build())));
+    public static final RegistryObject<Item> COOKED_HONEY = ITEMS.register("cooked_honey",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationMod(1).build())));
+    public static final RegistryObject<Item> COOKED_KING = ITEMS.register("cooked_king",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationMod(1).build())));
+    public static final RegistryObject<Item> COOKED_MATSUTAKE = ITEMS.register("cooked_matsutake",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationMod(1).build())));
+    public static final RegistryObject<Item> COOKED_OYSTER = ITEMS.register("cooked_oyster",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationMod(1).build())));
+    public static final RegistryObject<Item> COOKED_PORCINI = ITEMS.register("cooked_porcini",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationMod(1).build())));
+    public static final RegistryObject<Item> COOKED_YELLOWFOOT = ITEMS.register("cooked_yellowfoot",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationMod(1).build())));
+    public static final RegistryObject<Item> COOKED_WOODS_CHICKEN = ITEMS.register("cooked_woods_chicken",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationMod(1).build())));
+
+    public static final RegistryObject<Item> SEASONED_BLEWIT = ITEMS.register("seasoned_blewit",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(7).saturationMod(1).build())));
+    public static final RegistryObject<Item> SEASONED_HONEY = ITEMS.register("seasoned_honey",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(7).saturationMod(1).build())));
+    public static final RegistryObject<Item> SEASONED_KING = ITEMS.register("seasoned_king",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(7).saturationMod(1).build())));
+    public static final RegistryObject<Item> SEASONED_MATSUTAKE = ITEMS.register("seasoned_matsutake",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(7).saturationMod(1).build())));
+    public static final RegistryObject<Item> SEASONED_OYSTER = ITEMS.register("seasoned_oyster",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(7).saturationMod(1).build())));
+    public static final RegistryObject<Item> SEASONED_PORCINI = ITEMS.register("seasoned_porcini",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(7).saturationMod(1).build())));
+    public static final RegistryObject<Item> SEASONED_YELLOWFOOT = ITEMS.register("seasoned_yellowfoot",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(7).saturationMod(1).build())));
+    public static final RegistryObject<Item> SEASONED_WOODS_CHICKEN = ITEMS.register("seasoned_woods_chicken",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(7).saturationMod(1).build())));
+
+
+    //Plants & Herbs
+    public static final RegistryObject<Item> HENVEN = ITEMS.register("henven",
+            () -> new ItemNameBlockItem(MEBlocks.HENVEN.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> CANNAAN = ITEMS.register("cannaan",
+            () -> new ItemNameBlockItem(MEBlocks.CANNAAN.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> DRAGONEYE = ITEMS.register("dragoneye",
+            () -> new ItemNameBlockItem(MEBlocks.DRAGONEYE.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> SPRINNAN = ITEMS.register("sprinnan",
+            () -> new ItemNameBlockItem(MEBlocks.SPRINNAN.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> VIRENNES = ITEMS.register("virennes",
+            () -> new ItemNameBlockItem(MEBlocks.VIRENNES.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> BRUTEFLOWER = ITEMS.register("bruteflower",
+            () -> new ItemNameBlockItem(MEBlocks.BRUTEFLOWER.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> GRANGIN = ITEMS.register("grangin",
+            () -> new ItemNameBlockItem(MEBlocks.GRANGIN.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> FAIRYFLOWER = ITEMS.register("fairyflower",
+            () -> new ItemNameBlockItem(MEBlocks.FAIRYFLOWER.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> CACHEN = ITEMS.register("cachen",
+            () -> new ItemNameBlockItem(MEBlocks.CACHEN.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> LADYRIVER = ITEMS.register("ladyriver",
+            () -> new ItemNameBlockItem(MEBlocks.LADYRIVER.get(), (new Item.Properties())));
+
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
