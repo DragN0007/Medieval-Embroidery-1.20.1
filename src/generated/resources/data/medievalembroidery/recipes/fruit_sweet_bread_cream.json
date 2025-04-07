@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "medievalembroidery:fruit_glaze"
+    },
+    {
+      "item": "medievalembroidery:sweet_bread_cream"
+    }
+  ],
+  "result": {
+    "item": "medievalembroidery:fruit_sweet_bread_cream"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:sugar"
+    },
+    "B": {
+      "tag": "forge:wheat"
+    },
+    "C": {
+      "tag": "forge:water"
+    }
+  },
+  "pattern": [
+    "   ",
+    "BAB",
+    " C "
+  ],
+  "result": {
+    "item": "medievalembroidery:sweet_bread"
+  },
+  "show_notification": true
+}

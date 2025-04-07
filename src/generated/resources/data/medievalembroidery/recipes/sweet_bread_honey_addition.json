@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "item": "medievalembroidery:sweet_bread"
+    }
+  ],
+  "result": {
+    "item": "medievalembroidery:sweet_bread_honey"
+  }
+}

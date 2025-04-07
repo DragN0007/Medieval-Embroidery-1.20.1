@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sweet_bread_cream": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "medievalembroidery:sweet_bread_cream"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "medievalembroidery:redcurrant_sweet_bread_cream"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_sweet_bread_cream",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "medievalembroidery:redcurrant_sweet_bread_cream"
+    ]
+  },
+  "sends_telemetry_event": false
+}

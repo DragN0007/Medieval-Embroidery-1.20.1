@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "medievalembroidery:block/ladyriver_stage_0"
+    },
+    "age=1": {
+      "model": "medievalembroidery:block/ladyriver_stage_1"
+    },
+    "age=2": {
+      "model": "medievalembroidery:block/ladyriver_stage_2"
+    }
+  }
+}
