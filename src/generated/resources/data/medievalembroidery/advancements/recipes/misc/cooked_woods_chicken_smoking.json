@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "medievalembroidery:cooked_woods_chicken_smoking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_woods_chicken": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "medievalembroidery:woods_chicken"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_woods_chicken",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "medievalembroidery:cooked_woods_chicken_smoking"
+    ]
+  },
+  "sends_telemetry_event": false
+}

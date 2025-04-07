@@ -2,8 +2,6 @@
   "replace": false,
   "values": [
     "minecraft:chicken",
-    "medievalembroidery:woodschicken",
-    "medievalembroidery:cornish_hen",
-    "medievalembroidery:turkey_leg"
+    "medievalembroidery:woods_chicken"
   ]
 }

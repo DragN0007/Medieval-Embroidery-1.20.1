@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "forge:water"
+    },
+    {
+      "item": "medievalembroidery:malted_grain"
+    },
+    {
+      "tag": "forge:herbs"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "medievalembroidery:herbal_mead"
+  }
+}

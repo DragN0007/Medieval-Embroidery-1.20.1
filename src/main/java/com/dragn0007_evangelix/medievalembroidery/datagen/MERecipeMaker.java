@@ -10,6 +10,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
@@ -22,6 +23,555 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
 
     @Override
     public void buildRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer) {
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.FAIRY_ALE.get())
+                .requires(METags.Items.WATER)
+                .requires(MEItems.MALTED_GRAIN.get())
+                .requires(MEItems.FAIRY_DUST.get())
+                .unlockedBy("has_water", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WATER)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.ALE.get())
+                .requires(METags.Items.WATER)
+                .requires(MEItems.MALTED_GRAIN.get())
+                .unlockedBy("has_water", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WATER)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.HERBAL_MEAD.get())
+                .requires(METags.Items.WATER)
+                .requires(MEItems.MALTED_GRAIN.get())
+                .requires(METags.Items.HERBS)
+                .requires(Items.SUGAR)
+                .unlockedBy("has_water", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WATER)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.HONEY_MEAD.get())
+                .requires(METags.Items.WATER)
+                .requires(MEItems.MALTED_GRAIN.get())
+                .requires(Items.HONEY_BOTTLE)
+                .requires(Items.SUGAR)
+                .unlockedBy("has_water", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WATER)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.REDCURRANT_MEAD.get())
+                .requires(METags.Items.WATER)
+                .requires(MEItems.MALTED_GRAIN.get())
+                .requires(MEItems.REDCURRANT_GLAZE.get())
+                .requires(Items.SUGAR)
+                .unlockedBy("has_water", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WATER)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.HAWTHORN_MEAD.get())
+                .requires(METags.Items.WATER)
+                .requires(MEItems.MALTED_GRAIN.get())
+                .requires(MEItems.HAWTHORN_GLAZE.get())
+                .requires(Items.SUGAR)
+                .unlockedBy("has_water", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WATER)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.ELDERBERRY_MEAD.get())
+                .requires(METags.Items.WATER)
+                .requires(MEItems.MALTED_GRAIN.get())
+                .requires(MEItems.ELDERBERRY_GLAZE.get())
+                .requires(Items.SUGAR)
+                .unlockedBy("has_water", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WATER)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.COWBERRY_MEAD.get())
+                .requires(METags.Items.WATER)
+                .requires(MEItems.MALTED_GRAIN.get())
+                .requires(MEItems.COWBERRY_GLAZE.get())
+                .requires(Items.SUGAR)
+                .unlockedBy("has_water", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WATER)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.BILBERRY_MEAD.get())
+                .requires(METags.Items.WATER)
+                .requires(MEItems.MALTED_GRAIN.get())
+                .requires(MEItems.BILBERRY_GLAZE.get())
+                .requires(Items.SUGAR)
+                .unlockedBy("has_water", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WATER)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.WATER.get(), 3)
+                .requires(Items.WATER_BUCKET)
+                .unlockedBy("has_water", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.WATER_BUCKET)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.APPLE_CIDER.get())
+                .requires(MEItems.APPLE_JUICE.get())
+                .requires(Items.SUGAR)
+                .requires(METags.Items.WATER)
+                .requires(METags.Items.HERBS)
+                .unlockedBy("has_water", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WATER)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.APRICOT_TEA.get())
+                .requires(MEItems.LEMON_JUICE.get())
+                .requires(Items.SUGAR)
+                .requires(METags.Items.WATER)
+                .requires(METags.Items.HERBS)
+                .unlockedBy("has_water", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WATER)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.LEMON_TEA.get())
+                .requires(MEItems.LEMON_JUICE.get())
+                .requires(Items.SUGAR)
+                .requires(METags.Items.WATER)
+                .requires(METags.Items.HERBS)
+                .unlockedBy("has_water", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WATER)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.APPLE_JUICE.get())
+                .requires(Items.APPLE)
+                .requires(Items.SUGAR)
+                .unlockedBy("has_sugar", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.SUGAR)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.APRICOT_JUICE.get())
+                .requires(MEItems.APRICOT.get())
+                .requires(Items.SUGAR)
+                .unlockedBy("has_sugar", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.SUGAR)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.LEMON_JUICE.get())
+                .requires(MEItems.LEMON.get())
+                .requires(Items.SUGAR)
+                .unlockedBy("has_sugar", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.SUGAR)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(MEItems.YAK.get()), RecipeCategory.MISC, MEItems.COOKED_YAK.get(), 0.35F, 100)
+                .unlockedBy("has_yak", has(MEItems.YAK.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_yak_smoking"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(MEItems.YAK.get()), RecipeCategory.MISC, MEItems.COOKED_YAK.get(), 0.35F, 200)
+                .unlockedBy("has_yak", has(MEItems.YAK.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_yak_smelting"));
+        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(MEItems.YAK.get()), RecipeCategory.MISC, MEItems.COOKED_YAK.get(), 0.35F, 600)
+                .unlockedBy("has_yak", has(MEItems.YAK.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_yak_campfire_cooking"));
+
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(MEItems.ELK.get()), RecipeCategory.MISC, MEItems.COOKED_ELK.get(), 0.35F, 100)
+                .unlockedBy("has_elk", has(MEItems.ELK.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_elk_smoking"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(MEItems.ELK.get()), RecipeCategory.MISC, MEItems.COOKED_ELK.get(), 0.35F, 200)
+                .unlockedBy("has_elk", has(MEItems.ELK.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_elk_smelting"));
+        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(MEItems.ELK.get()), RecipeCategory.MISC, MEItems.COOKED_ELK.get(), 0.35F, 600)
+                .unlockedBy("has_elk", has(MEItems.ELK.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_elk_campfire_cooking"));
+
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(MEItems.DIREWOLF.get()), RecipeCategory.MISC, MEItems.COOKED_DIREWOLF.get(), 0.35F, 100)
+                .unlockedBy("has_direwolf", has(MEItems.DIREWOLF.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_direwolf_smoking"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(MEItems.DIREWOLF.get()), RecipeCategory.MISC, MEItems.COOKED_DIREWOLF.get(), 0.35F, 200)
+                .unlockedBy("has_direwolf", has(MEItems.DIREWOLF.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_direwolf_smelting"));
+        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(MEItems.DIREWOLF.get()), RecipeCategory.MISC, MEItems.COOKED_DIREWOLF.get(), 0.35F, 600)
+                .unlockedBy("has_direwolf", has(MEItems.DIREWOLF.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_direwolf_campfire_cooking"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.SEASONED_YAK.get())
+                .requires(MEItems.COOKED_YAK.get())
+                .requires(MEItems.SALT.get())
+                .requires(METags.Items.HERBS)
+                .unlockedBy("has_herbs", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.HERBS)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.SEASONED_ELK.get())
+                .requires(MEItems.COOKED_ELK.get())
+                .requires(MEItems.SALT.get())
+                .requires(METags.Items.HERBS)
+                .unlockedBy("has_herbs", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.HERBS)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.SEASONED_DIREWOLF.get())
+                .requires(MEItems.COOKED_DIREWOLF.get())
+                .requires(MEItems.SALT.get())
+                .requires(METags.Items.HERBS)
+                .unlockedBy("has_herbs", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.HERBS)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.FLOUR.get())
+                .requires(MEItems.MORTAR_AND_PESTLE.get())
+                .requires(Items.WHEAT)
+                .unlockedBy("has_wheat", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WHEAT)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.MALTED_GRAIN.get())
+                .requires(METags.Items.WATER)
+                .requires(METags.Items.WHEAT)
+                .unlockedBy("has_wheat", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WHEAT)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.SALT_BRINE.get())
+                .requires(METags.Items.WATER)
+                .requires(MEItems.SALT.get())
+                .unlockedBy("has_salt", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.SALT.get())
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.PICKLED_EGG.get())
+                .requires(METags.Items.EGGS)
+                .requires(MEItems.SALT_BRINE.get())
+                .unlockedBy("has_salt", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.SALT_BRINE.get())
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.PICKLED_VEGGIES.get())
+                .requires(METags.Items.VEGETABLES)
+                .requires(METags.Items.VEGETABLES)
+                .requires(MEItems.SALT_BRINE.get())
+                .requires(METags.Items.HERBS)
+                .unlockedBy("has_salt", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.SALT_BRINE.get())
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.PICKLED_MUSHROOMS.get())
+                .requires(METags.Items.MUSHROOMS)
+                .requires(METags.Items.MUSHROOMS)
+                .requires(MEItems.SALT_BRINE.get())
+                .requires(METags.Items.HERBS)
+                .unlockedBy("has_salt", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.SALT_BRINE.get())
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.PICKLED_MEAT.get())
+                .requires(METags.Items.RAW_MEATS)
+                .requires(METags.Items.RAW_MEATS)
+                .requires(MEItems.SALT_BRINE.get())
+                .requires(METags.Items.HERBS)
+                .unlockedBy("has_salt", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.SALT_BRINE.get())
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.REDCURRANT_GLAZE.get())
+                .requires(MEItems.REDCURRANT.get())
+                .requires(MEItems.REDCURRANT.get())
+                .requires(Items.SUGAR)
+                .unlockedBy("has_berries", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.BERRIES)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.ELDERBERRY_GLAZE.get())
+                .requires(MEItems.ELDERBERRY.get())
+                .requires(MEItems.ELDERBERRY.get())
+                .requires(Items.SUGAR)
+                .unlockedBy("has_berries", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.BERRIES)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.HAWTHORN_GLAZE.get())
+                .requires(MEItems.HAWTHORNBERRY.get())
+                .requires(MEItems.HAWTHORNBERRY.get())
+                .requires(Items.SUGAR)
+                .unlockedBy("has_berries", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.BERRIES)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.COWBERRY_GLAZE.get())
+                .requires(MEItems.COWBERRY.get())
+                .requires(MEItems.COWBERRY.get())
+                .requires(Items.SUGAR)
+                .unlockedBy("has_berries", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.BERRIES)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.BILBERRY_GLAZE.get())
+                .requires(MEItems.BILBERRY.get())
+                .requires(MEItems.BILBERRY.get())
+                .requires(Items.SUGAR)
+                .unlockedBy("has_berries", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.BERRIES)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.SEASONED_BLEWIT.get())
+                .requires(MEItems.COOKED_BLEWIT.get())
+                .requires(MEItems.SALT.get())
+                .requires(METags.Items.HERBS)
+                .unlockedBy("has_herbs", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.HERBS)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.SEASONED_HONEY.get())
+                .requires(MEItems.COOKED_HONEY.get())
+                .requires(MEItems.SALT.get())
+                .requires(METags.Items.HERBS)
+                .unlockedBy("has_herbs", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.HERBS)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.SEASONED_KING.get())
+                .requires(MEItems.COOKED_KING.get())
+                .requires(MEItems.SALT.get())
+                .requires(METags.Items.HERBS)
+                .unlockedBy("has_herbs", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.HERBS)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.SEASONED_MATSUTAKE.get())
+                .requires(MEItems.COOKED_MATSUTAKE.get())
+                .requires(MEItems.SALT.get())
+                .requires(METags.Items.HERBS)
+                .unlockedBy("has_herbs", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.HERBS)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.SEASONED_OYSTER.get())
+                .requires(MEItems.COOKED_OYSTER.get())
+                .requires(MEItems.SALT.get())
+                .requires(METags.Items.HERBS)
+                .unlockedBy("has_herbs", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.HERBS)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.SEASONED_PORCINI.get())
+                .requires(MEItems.COOKED_PORCINI.get())
+                .requires(MEItems.SALT.get())
+                .requires(METags.Items.HERBS)
+                .unlockedBy("has_herbs", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.HERBS)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.SEASONED_YELLOWFOOT.get())
+                .requires(MEItems.COOKED_YELLOWFOOT.get())
+                .requires(MEItems.SALT.get())
+                .requires(METags.Items.HERBS)
+                .unlockedBy("has_herbs", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.HERBS)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.SEASONED_WOODS_CHICKEN.get())
+                .requires(MEItems.COOKED_WOODS_CHICKEN.get())
+                .requires(MEItems.SALT.get())
+                .requires(METags.Items.HERBS)
+                .unlockedBy("has_herbs", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.HERBS)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(MEItems.BLEWIT.get()), RecipeCategory.MISC, MEItems.COOKED_BLEWIT.get(), 0.35F, 100)
+                .unlockedBy("has_blewit", has(MEItems.BLEWIT.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_blewit_smoking"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(MEItems.BLEWIT.get()), RecipeCategory.MISC, MEItems.COOKED_BLEWIT.get(), 0.35F, 200)
+                .unlockedBy("has_blewit", has(MEItems.BLEWIT.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_blewit_smelting"));
+        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(MEItems.BLEWIT.get()), RecipeCategory.MISC, MEItems.COOKED_BLEWIT.get(), 0.35F, 600)
+                .unlockedBy("has_blewit", has(MEItems.BLEWIT.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_blewit_campfire_cooking"));
+
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(MEItems.HONEY.get()), RecipeCategory.MISC, MEItems.COOKED_HONEY.get(), 0.35F, 100)
+                .unlockedBy("has_honey", has(MEItems.HONEY.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_honey_smoking"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(MEItems.HONEY.get()), RecipeCategory.MISC, MEItems.COOKED_HONEY.get(), 0.35F, 200)
+                .unlockedBy("has_honey", has(MEItems.HONEY.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_honey_smelting"));
+        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(MEItems.HONEY.get()), RecipeCategory.MISC, MEItems.COOKED_HONEY.get(), 0.35F, 600)
+                .unlockedBy("has_honey", has(MEItems.HONEY.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_honey_campfire_cooking"));
+
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(MEItems.KING.get()), RecipeCategory.MISC, MEItems.COOKED_KING.get(), 0.35F, 100)
+                .unlockedBy("has_king", has(MEItems.KING.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_king_smoking"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(MEItems.KING.get()), RecipeCategory.MISC, MEItems.COOKED_KING.get(), 0.35F, 200)
+                .unlockedBy("has_king", has(MEItems.KING.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_king_smelting"));
+        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(MEItems.KING.get()), RecipeCategory.MISC, MEItems.COOKED_KING.get(), 0.35F, 600)
+                .unlockedBy("has_king", has(MEItems.KING.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_king_campfire_cooking"));
+
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(MEItems.MATSUTAKE.get()), RecipeCategory.MISC, MEItems.COOKED_MATSUTAKE.get(), 0.35F, 100)
+                .unlockedBy("has_matsutake", has(MEItems.MATSUTAKE.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_matsutake_smoking"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(MEItems.MATSUTAKE.get()), RecipeCategory.MISC, MEItems.COOKED_MATSUTAKE.get(), 0.35F, 200)
+                .unlockedBy("has_matsutake", has(MEItems.MATSUTAKE.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_matsutake_smelting"));
+        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(MEItems.MATSUTAKE.get()), RecipeCategory.MISC, MEItems.COOKED_MATSUTAKE.get(), 0.35F, 600)
+                .unlockedBy("has_matsutake", has(MEItems.MATSUTAKE.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_matsutake_campfire_cooking"));
+
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(MEItems.OYSTER.get()), RecipeCategory.MISC, MEItems.COOKED_OYSTER.get(), 0.35F, 100)
+                .unlockedBy("has_oyster", has(MEItems.OYSTER.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_oyster_smoking"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(MEItems.OYSTER.get()), RecipeCategory.MISC, MEItems.COOKED_OYSTER.get(), 0.35F, 200)
+                .unlockedBy("has_oyster", has(MEItems.OYSTER.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_oyster_smelting"));
+        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(MEItems.OYSTER.get()), RecipeCategory.MISC, MEItems.COOKED_OYSTER.get(), 0.35F, 600)
+                .unlockedBy("has_oyster", has(MEItems.OYSTER.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_oyster_campfire_cooking"));
+
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(MEItems.YELLOWFOOT.get()), RecipeCategory.MISC, MEItems.COOKED_YELLOWFOOT.get(), 0.35F, 100)
+                .unlockedBy("has_yellowfoot", has(MEItems.YELLOWFOOT.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_yellowfoot_smoking"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(MEItems.YELLOWFOOT.get()), RecipeCategory.MISC, MEItems.COOKED_YELLOWFOOT.get(), 0.35F, 200)
+                .unlockedBy("has_yellowfoot", has(MEItems.YELLOWFOOT.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_yellowfoot_smelting"));
+        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(MEItems.YELLOWFOOT.get()), RecipeCategory.MISC, MEItems.COOKED_YELLOWFOOT.get(), 0.35F, 600)
+                .unlockedBy("has_yellowfoot", has(MEItems.YELLOWFOOT.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_yellowfoot_campfire_cooking"));
+
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(MEItems.WOODS_CHICKEN.get()), RecipeCategory.MISC, MEItems.COOKED_WOODS_CHICKEN.get(), 0.35F, 100)
+                .unlockedBy("has_woods_chicken", has(MEItems.WOODS_CHICKEN.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_woods_chicken_smoking"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(MEItems.WOODS_CHICKEN.get()), RecipeCategory.MISC, MEItems.COOKED_WOODS_CHICKEN.get(), 0.35F, 200)
+                .unlockedBy("has_woods_chicken", has(MEItems.WOODS_CHICKEN.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_woods_chicken_smelting"));
+        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(MEItems.WOODS_CHICKEN.get()), RecipeCategory.MISC, MEItems.COOKED_WOODS_CHICKEN.get(), 0.35F, 600)
+                .unlockedBy("has_woods_chicken", has(MEItems.WOODS_CHICKEN.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_woods_chicken_campfire_cooking"));
+
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(MEItems.PORCINI.get()), RecipeCategory.MISC, MEItems.COOKED_PORCINI.get(), 0.35F, 100)
+                .unlockedBy("has_porcini", has(MEItems.PORCINI.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_porcini_smoking"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(MEItems.PORCINI.get()), RecipeCategory.MISC, MEItems.COOKED_PORCINI.get(), 0.35F, 200)
+                .unlockedBy("has_porcini", has(MEItems.PORCINI.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_porcini_smelting"));
+        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(MEItems.PORCINI.get()), RecipeCategory.MISC, MEItems.COOKED_PORCINI.get(), 0.35F, 600)
+                .unlockedBy("has_porcini", has(MEItems.PORCINI.get())).save(pFinishedRecipeConsumer, new ResourceLocation(MedievalEmbroidery.MODID, "cooked_porcini_campfire_cooking"));
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.APPLE_PIE.get())
+                .define('A', Items.SUGAR)
+                .define('B', METags.Items.WHEAT)
+                .define('C', METags.Items.EGGS)
+                .define('D', Items.APPLE)
+                .pattern("DDD")
+                .pattern("ACA")
+                .pattern("BBB")
+                .unlockedBy("has_wheat", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WHEAT)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.APRICOT_PIE.get())
+                .define('A', Items.SUGAR)
+                .define('B', METags.Items.WHEAT)
+                .define('C', METags.Items.EGGS)
+                .define('D', MEItems.APRICOT.get())
+                .pattern("DDD")
+                .pattern("ACA")
+                .pattern("BBB")
+                .unlockedBy("has_wheat", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WHEAT)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.LEMON_PIE.get())
+                .define('A', Items.SUGAR)
+                .define('B', METags.Items.WHEAT)
+                .define('C', METags.Items.EGGS)
+                .define('D', MEItems.LEMON.get())
+                .pattern("DDD")
+                .pattern("ACA")
+                .pattern("BBB")
+                .unlockedBy("has_wheat", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WHEAT)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.BILBERRY_PIE.get())
+                .define('A', Items.SUGAR)
+                .define('B', METags.Items.WHEAT)
+                .define('C', METags.Items.EGGS)
+                .define('D', MEItems.BILBERRY.get())
+                .pattern("DDD")
+                .pattern("ACA")
+                .pattern("BBB")
+                .unlockedBy("has_wheat", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WHEAT)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.COWBERRY_PIE.get())
+                .define('A', Items.SUGAR)
+                .define('B', METags.Items.WHEAT)
+                .define('C', METags.Items.EGGS)
+                .define('D', MEItems.COWBERRY.get())
+                .pattern("DDD")
+                .pattern("ACA")
+                .pattern("BBB")
+                .unlockedBy("has_wheat", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WHEAT)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.HAWTHORN_PIE.get())
+                .define('A', Items.SUGAR)
+                .define('B', METags.Items.WHEAT)
+                .define('C', METags.Items.EGGS)
+                .define('D', MEItems.HAWTHORNBERRY.get())
+                .pattern("DDD")
+                .pattern("ACA")
+                .pattern("BBB")
+                .unlockedBy("has_wheat", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WHEAT)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.ELDERBERRY_PIE.get())
+                .define('A', Items.SUGAR)
+                .define('B', METags.Items.WHEAT)
+                .define('C', METags.Items.EGGS)
+                .define('D', MEItems.ELDERBERRY.get())
+                .pattern("DDD")
+                .pattern("ACA")
+                .pattern("BBB")
+                .unlockedBy("has_wheat", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WHEAT)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.REDCURRANT_PIE.get())
+                .define('A', Items.SUGAR)
+                .define('B', METags.Items.WHEAT)
+                .define('C', METags.Items.EGGS)
+                .define('D', MEItems.REDCURRANT.get())
+                .pattern("DDD")
+                .pattern("ACA")
+                .pattern("BBB")
+                .unlockedBy("has_wheat", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WHEAT)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.MIXEDBERRY_PIE.get())
+                .define('A', Items.SUGAR)
+                .define('B', METags.Items.WHEAT)
+                .define('C', METags.Items.EGGS)
+                .define('D', METags.Items.BERRIES)
+                .pattern("DDD")
+                .pattern("ACA")
+                .pattern("BDB")
+                .unlockedBy("has_wheat", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.WHEAT)
+                        .build())).save(pFinishedRecipeConsumer);
+
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.SWEET_BREAD.get())
                 .define('A', Items.SUGAR)

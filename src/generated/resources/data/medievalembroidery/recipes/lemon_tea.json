@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "medievalembroidery:lemon_juice"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "tag": "forge:water"
+    },
+    {
+      "tag": "forge:herbs"
+    }
+  ],
+  "result": {
+    "item": "medievalembroidery:lemon_tea"
+  }
+}

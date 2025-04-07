@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "medievalembroidery:redcurrant"
+    },
+    {
+      "item": "medievalembroidery:redcurrant"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "medievalembroidery:redcurrant_glaze"
+  }
+}

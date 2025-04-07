@@ -7,6 +7,7 @@ import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
@@ -78,6 +79,28 @@ public class MEItemModelProvider extends ItemModelProvider {
         simpleItem(MEItems.CACHEN);
         simpleItem(MEItems.LADYRIVER);
 
+        simpleItem(MEItems.FLOUR);
+        simpleItem(MEItems.SALT_BRINE);
+        simpleItem(MEItems.MALTED_GRAIN);
+        simpleItem(MEItems.WATER);
+
+        simpleItem(MEItems.ALE);
+        simpleItem(MEItems.FAIRY_ALE);
+        simpleItem(MEItems.BILBERRY_MEAD);
+        simpleItem(MEItems.COWBERRY_MEAD);
+        simpleItem(MEItems.ELDERBERRY_MEAD);
+        simpleItem(MEItems.HAWTHORN_MEAD);
+        simpleItem(MEItems.REDCURRANT_MEAD);
+        simpleItem(MEItems.HONEY_MEAD);
+        simpleItem(MEItems.HERBAL_MEAD);
+
+        simpleItem(MEItems.PICKLED_EGG);
+        simpleItem(MEItems.PICKLED_MEAT);
+        simpleItem(MEItems.PICKLED_MUSHROOMS);
+        simpleItem(MEItems.PICKLED_VEGGIES);
+        simpleItem(MEItems.SOUP_JARRED);
+        simpleItem(MEItems.STEW_JARRED);
+
         simpleItem(MEItems.BLEWIT);
         simpleItem(MEItems.COOKED_BLEWIT);
         simpleItem(MEItems.SEASONED_BLEWIT);
@@ -102,6 +125,28 @@ public class MEItemModelProvider extends ItemModelProvider {
         simpleItem(MEItems.WOODS_CHICKEN);
         simpleItem(MEItems.COOKED_WOODS_CHICKEN);
         simpleItem(MEItems.SEASONED_WOODS_CHICKEN);
+
+        simpleItem(MEItems.ELK);
+        simpleItem(MEItems.COOKED_ELK);
+        simpleItem(MEItems.SEASONED_ELK);
+        simpleItem(MEItems.YAK);
+        simpleItem(MEItems.COOKED_YAK);
+        simpleItem(MEItems.SEASONED_YAK);
+        simpleItem(MEItems.DIREWOLF);
+        simpleItem(MEItems.COOKED_DIREWOLF);
+        simpleItem(MEItems.SEASONED_DIREWOLF);
+
+        simpleItem(MEItems.APPLE_CIDER);
+        simpleItem(MEItems.APPLE_JUICE);
+        simpleItem(MEItems.APPLE_PIE);
+        simpleItem(MEItems.APRICOT);
+        simpleItem(MEItems.APRICOT_TEA);
+        simpleItem(MEItems.APRICOT_JUICE);
+        simpleItem(MEItems.APRICOT_PIE);
+        simpleItem(MEItems.LEMON);
+        simpleItem(MEItems.LEMON_TEA);
+        simpleItem(MEItems.LEMON_JUICE);
+        simpleItem(MEItems.LEMON_PIE);
     }
 
      private ItemModelBuilder simpleSpriteBlockItem(RegistryObject<Block> block) {

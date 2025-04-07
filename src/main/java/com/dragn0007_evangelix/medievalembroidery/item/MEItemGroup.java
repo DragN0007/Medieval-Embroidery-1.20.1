@@ -7,6 +7,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -200,28 +201,79 @@ public class MEItemGroup {
                     .displayItems((displayParameters, output) -> {
                         
                         output.accept(MEItems.SALT.get());
+                        output.accept(MEItems.FLOUR.get());
+                        output.accept(MEItems.SALT_BRINE.get());
+                        output.accept(MEItems.MALTED_GRAIN.get());
+                        output.accept(MEItems.WATER.get());
+
+                        output.accept(MEItems.PICKLED_EGG.get());
+                        output.accept(MEItems.PICKLED_MEAT.get());
+                        output.accept(MEItems.PICKLED_MUSHROOMS.get());
+                        output.accept(MEItems.PICKLED_VEGGIES.get());
+                        output.accept(MEItems.SOUP_JARRED.get());
+                        output.accept(MEItems.STEW_JARRED.get());
 
                         output.accept(MEItems.SWEET_BREAD.get());
                         output.accept(MEItems.SWEET_BREAD_CREAM.get());
                         output.accept(MEItems.SWEET_BREAD_HONEY.get());
-                        output.accept(MEItems.BILBERRY_SWEET_BREAD_CREAM.get());
-                        output.accept(MEItems.COWBERRY_SWEET_BREAD_CREAM.get());
-                        output.accept(MEItems.ELDERBERRY_SWEET_BREAD_CREAM.get());
-                        output.accept(MEItems.HAWTHORN_SWEET_BREAD_CREAM.get());
-                        output.accept(MEItems.REDCURRANT_SWEET_BREAD_CREAM.get());
+
+                        output.accept(Items.APPLE);
+                        output.accept(MEItems.APPLE_CIDER.get());
+                        output.accept(MEItems.APPLE_JUICE.get());
+                        output.accept(MEItems.APPLE_PIE.get());
+                        output.accept(MEItems.APRICOT.get());
+                        output.accept(MEItems.APRICOT_TEA.get());
+                        output.accept(MEItems.APRICOT_JUICE.get());
+                        output.accept(MEItems.APRICOT_PIE.get());
+                        output.accept(MEItems.LEMON.get());
+                        output.accept(MEItems.LEMON_TEA.get());
+                        output.accept(MEItems.LEMON_JUICE.get());
+                        output.accept(MEItems.LEMON_PIE.get());
+
                         output.accept(MEItems.FRUIT_SWEET_BREAD_CREAM.get());
+                        output.accept(MEItems.FRUIT_GLAZE.get());
+
+                        output.accept(MEItems.BILBERRY.get());
+                        output.accept(MEItems.COWBERRY.get());
+                        output.accept(MEItems.ELDERBERRY.get());
+                        output.accept(MEItems.HAWTHORNBERRY.get());
+                        output.accept(MEItems.REDCURRANT.get());
                         output.accept(MEItems.BILBERRY_GLAZE.get());
                         output.accept(MEItems.COWBERRY_GLAZE.get());
                         output.accept(MEItems.ELDERBERRY_GLAZE.get());
                         output.accept(MEItems.HAWTHORN_GLAZE.get());
                         output.accept(MEItems.REDCURRANT_GLAZE.get());
-                        output.accept(MEItems.FRUIT_GLAZE.get());
+                        output.accept(MEItems.BILBERRY_SWEET_BREAD_CREAM.get());
+                        output.accept(MEItems.COWBERRY_SWEET_BREAD_CREAM.get());
+                        output.accept(MEItems.ELDERBERRY_SWEET_BREAD_CREAM.get());
+                        output.accept(MEItems.HAWTHORN_SWEET_BREAD_CREAM.get());
+                        output.accept(MEItems.REDCURRANT_SWEET_BREAD_CREAM.get());
                         output.accept(MEItems.BILBERRY_PIE.get());
                         output.accept(MEItems.COWBERRY_PIE.get());
                         output.accept(MEItems.ELDERBERRY_PIE.get());
                         output.accept(MEItems.HAWTHORN_PIE.get());
                         output.accept(MEItems.REDCURRANT_PIE.get());
                         output.accept(MEItems.MIXEDBERRY_PIE.get());
+
+                        output.accept(MEItems.ELK.get());
+                        output.accept(MEItems.COOKED_ELK.get());
+                        output.accept(MEItems.SEASONED_ELK.get());
+                        output.accept(MEItems.YAK.get());
+                        output.accept(MEItems.COOKED_YAK.get());
+                        output.accept(MEItems.SEASONED_YAK.get());
+                        output.accept(MEItems.DIREWOLF.get());
+                        output.accept(MEItems.COOKED_DIREWOLF.get());
+                        output.accept(MEItems.SEASONED_DIREWOLF.get());
+
+                        output.accept(MEItems.ALE.get());
+                        output.accept(MEItems.FAIRY_ALE.get());
+                        output.accept(MEItems.BILBERRY_MEAD.get());
+                        output.accept(MEItems.COWBERRY_MEAD.get());
+                        output.accept(MEItems.ELDERBERRY_MEAD.get());
+                        output.accept(MEItems.HAWTHORN_MEAD.get());
+                        output.accept(MEItems.REDCURRANT_MEAD.get());
+                        output.accept(MEItems.HONEY_MEAD.get());
+                        output.accept(MEItems.HERBAL_MEAD.get());
                         
                         output.accept(MEItems.BLEWIT.get());
                         output.accept(MEItems.COOKED_BLEWIT.get());
@@ -247,12 +299,6 @@ public class MEItemGroup {
                         output.accept(MEItems.WOODS_CHICKEN.get());
                         output.accept(MEItems.COOKED_WOODS_CHICKEN.get());
                         output.accept(MEItems.SEASONED_WOODS_CHICKEN.get());
-
-                        output.accept(MEItems.BILBERRY.get());
-                        output.accept(MEItems.COWBERRY.get());
-                        output.accept(MEItems.ELDERBERRY.get());
-                        output.accept(MEItems.HAWTHORNBERRY.get());
-                        output.accept(MEItems.REDCURRANT.get());
 
                     }).build());
 

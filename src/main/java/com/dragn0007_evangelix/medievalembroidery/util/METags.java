@@ -22,6 +22,8 @@ public class METags {
         public static final TagKey<Item> WATER = forgeTag("water");
         public static final TagKey<Item> HERBS = forgeTag("herbs");
         public static final TagKey<Item> LEAVES = forgeTag("leaves");
+        public static final TagKey<Item> EGGS = forgeTag("eggs");
+        public static final TagKey<Item> MUSHROOMS = forgeTag("mushrooms");
         public static final TagKey<Item> COOKED_CHICKEN = forgeTag("cooked_chicken");
         public static final TagKey<Item> RAW_CHICKEN = forgeTag("raw_chicken");
         public static final TagKey<Item> RAW_MEATS = forgeTag("raw_meats");

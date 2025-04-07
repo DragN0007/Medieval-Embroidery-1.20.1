@@ -2,8 +2,6 @@
   "replace": false,
   "values": [
     "minecraft:cooked_chicken",
-    "medievalembroidery:woodschicken",
-    "medievalembroidery:cooked_cornish_hen",
-    "medievalembroidery:cooked_turkey"
+    "medievalembroidery:woods_chicken"
   ]
 }

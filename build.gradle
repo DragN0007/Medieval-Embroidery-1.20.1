@@ -107,6 +107,7 @@ dependencies {
     implementation fg.deobf("curse.maven:xaeros-minimap-263420:6012833")
     implementation fg.deobf("curse.maven:jei-238222:6075247")
     implementation fg.deobf("curse.maven:worldedit-225608:4586218")
+    implementation fg.deobf("curse.maven:advanced-xray-256256:4840340")
 }
 
 tasks.named('processResources', ProcessResources).configure {

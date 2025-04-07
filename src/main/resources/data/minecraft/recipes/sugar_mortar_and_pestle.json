@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "medievalembroidery:mortarnpestle"
+      "item": "medievalembroidery:mortar_and_pestle"
     },
     {
       "item": "minecraft:sugar_cane"
@@ -10,6 +10,6 @@
   ],
   "result": {
     "item": "minecraft:sugar",
-    "count": 2
+    "count": 3
   }
 }

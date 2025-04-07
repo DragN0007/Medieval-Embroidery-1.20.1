@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_oyster": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "medievalembroidery:oyster"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "medievalembroidery:cooked_oyster_campfire_cooking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_oyster",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "medievalembroidery:cooked_oyster_campfire_cooking"
+    ]
+  },
+  "sends_telemetry_event": false
+}

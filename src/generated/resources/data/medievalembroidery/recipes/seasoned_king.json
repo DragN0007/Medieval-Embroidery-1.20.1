@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "medievalembroidery:cooked_king"
+    },
+    {
+      "item": "medievalembroidery:salt"
+    },
+    {
+      "tag": "forge:herbs"
+    }
+  ],
+  "result": {
+    "item": "medievalembroidery:seasoned_king"
+  }
+}

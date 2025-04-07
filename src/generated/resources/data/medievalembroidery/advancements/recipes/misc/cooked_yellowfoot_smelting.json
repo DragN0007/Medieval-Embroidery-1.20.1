@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "medievalembroidery:cooked_yellowfoot_smelting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellowfoot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "medievalembroidery:yellowfoot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_yellowfoot",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "medievalembroidery:cooked_yellowfoot_smelting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

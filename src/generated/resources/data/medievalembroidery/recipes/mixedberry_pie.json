@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:sugar"
+    },
+    "B": {
+      "tag": "forge:wheat"
+    },
+    "C": {
+      "tag": "forge:eggs"
+    },
+    "D": {
+      "tag": "forge:berries"
+    }
+  },
+  "pattern": [
+    "DDD",
+    "ACA",
+    "BDB"
+  ],
+  "result": {
+    "item": "medievalembroidery:mixedberry_pie"
+  },
+  "show_notification": true
+}
