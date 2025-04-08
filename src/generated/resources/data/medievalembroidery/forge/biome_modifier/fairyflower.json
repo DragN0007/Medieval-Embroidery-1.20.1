@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#forge:is_dense/overworld",
+  "features": "medievalembroidery:fairyflower",
+  "step": "vegetal_decoration"
+}

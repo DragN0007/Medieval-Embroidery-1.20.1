@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#forge:is_plains",
+  "features": "medievalembroidery:grangin",
+  "step": "vegetal_decoration"
+}
