@@ -7,7 +7,6 @@ import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util.Pix
 import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util.PixelPlacerEntity;
 import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util.PixelPlacerItem;
 import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -21,12 +20,14 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 
 public class PixelPlacementBlocks {
+
+    // this is *all* pixel placement blocks -dragoon
+
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, MedievalEmbroidery.MODID);
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES
             = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, MedievalEmbroidery.MODID);
 
-    // Pixel Placement
     public static final RegistryObject<HerbJar> HERB_JAR = registerPixelPlacer("herb_jar", HerbJar::new);
     public static final RegistryObject<Plate> PLATE = registerPixelPlacer("plate", Plate::new);
     public static final RegistryObject<Utensil> UTENSIL_WOODEN = registerPixelPlacer("utensil_wooden", () -> new Utensil(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
@@ -55,22 +56,10 @@ public class PixelPlacementBlocks {
             () -> BlockEntityType.Builder.of(PixelPlacerEntity::new, PIXEL_PLACER_CONTAINER.get()).build(null));
 
 
-
-
     private static <T extends PixelPlacer>RegistryObject<T> registerPixelPlacer(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         MEItems.ITEMS.register(name, () -> new PixelPlacerItem(toReturn.get(), new Item.Properties()));
         return toReturn;
-    }
-
-    protected static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        MEItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties()));
-    }
-
-    protected static <T extends Block> void registerPlantBlockItem(String name, RegistryObject<T> block) {
-        MEItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {

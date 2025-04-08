@@ -24,8 +24,8 @@ public class MEBushBlock extends BushBlock implements net.minecraftforge.common.
    public static final VoxelShape SAPLING_SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 8.0D, 13.0D);
    public static final VoxelShape MID_GROWTH_SHAPE = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
 
-   public static final int MAX_AGE = 2;
-   public static final IntegerProperty AGE = BlockStateProperties.AGE_2;
+   public static final int MAX_AGE = 3;
+   public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
 
    public MEBushBlock(Properties p_51021_) {
       super(p_51021_);

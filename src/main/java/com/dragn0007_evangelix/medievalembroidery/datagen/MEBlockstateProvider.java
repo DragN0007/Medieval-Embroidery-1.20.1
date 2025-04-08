@@ -24,6 +24,9 @@ public class MEBlockstateProvider extends BlockStateProvider {
     public MEBlockstateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, MedievalEmbroidery.MODID, exFileHelper);
     }
+
+    //you might be able to datagen with custom block models if you make a method here... take a look at the bottom -dragoon
+
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(MEBlocks.FIRESTONE_ORE);
@@ -41,6 +44,25 @@ public class MEBlockstateProvider extends BlockStateProvider {
         blockWithItem(MEBlocks.SKYSTONE_ORE);
         blockWithItem(MEBlocks.SKYSTONE_BLOCK);
         blockWithItem(MEBlocks.SALT_ORE);
+
+        simpleBlock(MEBlocks.BLUE_DRAGON.get(), models().cross(MEBlocks.BLUE_DRAGON.getId().getPath(),
+                wildPlantTexture("blue_dragon")).renderType("cutout"));
+
+        simpleBlock(MEBlocks.VIOLET_DRAGON.get(), models().cross(MEBlocks.VIOLET_DRAGON.getId().getPath(),
+                wildPlantTexture("violet_dragon")).renderType("cutout"));
+
+        simpleBlock(MEBlocks.PINK_MAGE.get(), models().cross(MEBlocks.PINK_MAGE.getId().getPath(),
+                wildPlantTexture("pink_mage")).renderType("cutout"));
+
+        simpleBlock(MEBlocks.PURPLE_MAGE.get(), models().cross(MEBlocks.PURPLE_MAGE.getId().getPath(),
+                wildPlantTexture("purple_mage")).renderType("cutout"));
+
+        simpleBlock(MEBlocks.FIRE_DAISY.get(), models().cross(MEBlocks.FIRE_DAISY.getId().getPath(),
+                wildPlantTexture("fire_daisy")).renderType("cutout"));
+
+        simpleBlock(MEBlocks.GROUND_VINE.get(), models().cross(MEBlocks.GROUND_VINE.getId().getPath(),
+                wildPlantTexture("ground_vine")).renderType("cutout"));
+
 
         createCrop((CropBlock) MEBlocks.BRUTEFLOWER.get(), "bruteflower_stage_", "bruteflower_stage_");
         simpleBlock(MEBlocks.WILD_BRUTEFLOWER.get(), models().cross(MEBlocks.WILD_BRUTEFLOWER.getId().getPath(),

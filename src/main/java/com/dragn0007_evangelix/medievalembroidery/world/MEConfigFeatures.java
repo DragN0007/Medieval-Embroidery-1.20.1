@@ -5,6 +5,7 @@ import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
 import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
@@ -13,7 +14,9 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
@@ -34,9 +37,160 @@ public class MEConfigFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> MOSSTONE = registerKey("mosstone");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SEASTONE = registerKey("seastone");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYSTONE = registerKey("skystone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BILBERRY_BUSH = registerKey("bilberry_bush");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> COWBERRY_BUSH = registerKey("cowberry_bush");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ELDERBERRY_BUSH = registerKey("elderberry_bush");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HAWTHORN_BUSH = registerKey("hawthorn_bush");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> REDCURRANT_BUSH = registerKey("redcurrant_bush");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BLUE_DRAGON = registerKey("blue_dragon");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> VIOLET_DRAGON = registerKey("violet_dragon");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PINK_MAGE = registerKey("pink_mage");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PURPLE_MAGE = registerKey("purple_mage");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FIRE_DAISY = registerKey("fire_daisy");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GROUND_VINE = registerKey("ground_vine");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BLEWIT = registerKey("blewit");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HONEY = registerKey("honey");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> KING = registerKey("king");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MATSUTAKE = registerKey("matsutake");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OYSTER = registerKey("oyster");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PORCINI = registerKey("porcini");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WOODS_CHICKEN = registerKey("woods_chicken");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> YELLOWFOOT = registerKey("yellowfoot");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HENVEN = registerKey("henven");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CACHEN = registerKey("cachen");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CAANNAN = registerKey("caannan");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DRAGONEYE = registerKey("dragoneye");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SPRINNAN = registerKey("sprinnan");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> VIRENNES = registerKey("virennes");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BRUTEFLOWER = registerKey("bruteflower");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GRANGIN = registerKey("grangin");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FAIRYFLOWER = registerKey("fairyflower");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LADYRIVER = registerKey("ladyriver");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
 
+        //Trees
+
+
+
+        //Plants
+        register(context, BILBERRY_BUSH, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 3, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.BILBERRY_BUSH.get())))));
+
+        register(context, COWBERRY_BUSH, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 3, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.COWBERRY_BUSH.get())))));
+
+        register(context, ELDERBERRY_BUSH, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 3, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.ELDERBERRY_BUSH.get())))));
+
+        register(context, HAWTHORN_BUSH, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 3, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.HAWTHORN_BUSH.get())))));
+
+        register(context, REDCURRANT_BUSH, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 3, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.REDCURRANT_BUSH.get())))));
+
+        register(context, BLUE_DRAGON, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 2, 1, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.BLUE_DRAGON.get())))));
+
+        register(context, VIOLET_DRAGON, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 2, 1, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.VIOLET_DRAGON.get())))));
+
+        register(context, PINK_MAGE, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 2, 1, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.PINK_MAGE.get())))));
+
+        register(context, PURPLE_MAGE, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 2, 1, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.PURPLE_MAGE.get())))));
+
+        register(context, FIRE_DAISY, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 2, 1, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.FIRE_DAISY.get())))));
+
+        register(context, GROUND_VINE, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 2, 1, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.GROUND_VINE.get())))));
+
+        register(context, BLEWIT, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 2, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.WILD_BLEWIT.get())))));
+
+        register(context, HONEY, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 2, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.WILD_HONEY.get())))));
+
+        register(context, KING, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 2, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.WILD_KING.get())))));
+
+        register(context, OYSTER, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 2, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.WILD_OYSTER.get())))));
+
+        register(context, MATSUTAKE, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 2, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.WILD_MATSUTAKE.get())))));
+
+        register(context, PORCINI, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 2, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.WILD_PORCINI.get())))));
+
+        register(context, WOODS_CHICKEN, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 2, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.WILD_WOODS_CHICKEN.get())))));
+
+        register(context, YELLOWFOOT, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 2, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.WILD_YELLOWFOOT.get())))));
+
+        register(context, HENVEN, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 3, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.WILD_HENVEN.get())))));
+
+        register(context, BRUTEFLOWER, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 3, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.WILD_BRUTEFLOWER.get())))));
+
+        register(context, CACHEN, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 3, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.WILD_CACHEN.get())))));
+
+        register(context, CAANNAN, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 3, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.WILD_CANNAAN.get())))));
+
+        register(context, DRAGONEYE, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 3, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.WILD_DRAGONEYE.get())))));
+
+        register(context, FAIRYFLOWER, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 3, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.WILD_FAIRYFLOWER.get())))));
+
+        register(context, GRANGIN, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 3, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.WILD_GRANGIN.get())))));
+
+        register(context, LADYRIVER, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 3, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.WILD_LADYRIVER.get())))));
+
+        register(context, SPRINNAN, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 3, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.WILD_SPRINNAN.get())))));
+
+        register(context, VIRENNES, Feature.FLOWER,
+                new RandomPatchConfiguration(10, 3, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(MEBlocks.WILD_VIRENNES.get())))));
+
+        //Ores
         RuleTest stoneReplaceabeles = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceabeles = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest netherrackReplaceabeles = new BlockMatchTest(Blocks.NETHERRACK);

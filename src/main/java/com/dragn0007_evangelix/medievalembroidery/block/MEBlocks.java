@@ -2,7 +2,6 @@ package com.dragn0007_evangelix.medievalembroidery.block;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
 import com.dragn0007_evangelix.medievalembroidery.block.custom.FungiRotator;
-import com.dragn0007_evangelix.medievalembroidery.block.custom.crop.bush.BilberryBush;
 import com.dragn0007_evangelix.medievalembroidery.block.custom.crop.bush.*;
 import com.dragn0007_evangelix.medievalembroidery.block.custom.crop.herb.*;
 import com.dragn0007_evangelix.medievalembroidery.block.custom.crop.mushroom.*;
@@ -23,6 +22,9 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 
 public class MEBlocks {
+
+    //please don't rearrange categories, i have them set up in a specific way (adhd meltdown style) -dragoon
+
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, MedievalEmbroidery.MODID);
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES
@@ -73,21 +75,21 @@ public class MEBlocks {
 
 
     //Plants
-    public static final RegistryObject<FungiRotator> WILD_BLEWIT = registerBlockWithoutItem("wild_blewit",
+    public static final RegistryObject<FungiRotator> WILD_BLEWIT = registerBlock("wild_blewit",
             () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
-    public static final RegistryObject<FungiRotator> WILD_HONEY = registerBlockWithoutItem("wild_honey",
+    public static final RegistryObject<FungiRotator> WILD_HONEY = registerBlock("wild_honey",
             () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
-    public static final RegistryObject<FungiRotator> WILD_KING = registerBlockWithoutItem("wild_king",
+    public static final RegistryObject<FungiRotator> WILD_KING = registerBlock("wild_king",
             () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
-    public static final RegistryObject<FungiRotator> WILD_MATSUTAKE = registerBlockWithoutItem("wild_matsutake",
+    public static final RegistryObject<FungiRotator> WILD_MATSUTAKE = registerBlock("wild_matsutake",
             () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
-    public static final RegistryObject<FungiRotator> WILD_OYSTER = registerBlockWithoutItem("wild_oyster",
+    public static final RegistryObject<FungiRotator> WILD_OYSTER = registerBlock("wild_oyster",
             () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
-    public static final RegistryObject<FungiRotator> WILD_PORCINI = registerBlockWithoutItem("wild_porcini",
+    public static final RegistryObject<FungiRotator> WILD_PORCINI = registerBlock("wild_porcini",
             () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
-    public static final RegistryObject<FungiRotator> WILD_YELLOWFOOT = registerBlockWithoutItem("wild_yellowfoot",
+    public static final RegistryObject<FungiRotator> WILD_YELLOWFOOT = registerBlock("wild_yellowfoot",
             () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
-    public static final RegistryObject<FungiRotator> WILD_WOODS_CHICKEN = registerBlockWithoutItem("wild_woods_chicken",
+    public static final RegistryObject<FungiRotator> WILD_WOODS_CHICKEN = registerBlock("wild_woods_chicken",
             () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
 
     public static final RegistryObject<Block> BLEWIT = registerBlockWithoutItem("blewit",

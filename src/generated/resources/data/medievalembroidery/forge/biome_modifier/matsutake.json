@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#forge:is_wet/overworld",
+  "features": "medievalembroidery:matsutake",
+  "step": "vegetal_decoration"
+}

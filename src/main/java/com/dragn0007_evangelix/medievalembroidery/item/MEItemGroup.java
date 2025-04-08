@@ -17,6 +17,8 @@ public class MEItemGroup {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MedievalEmbroidery.MODID);
 
+    //please don't rearrange categories, i have them set up in a specific way (adhd meltdown style) -dragoon
+
     public static final RegistryObject<CreativeModeTab> DECOR_GROUP = CREATIVE_MODE_TABS.register("decormodtab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.decormodtab"))
                     .displayItems((displayParameters, output) -> {
@@ -170,6 +172,13 @@ public class MEItemGroup {
 
                     }).build());
 
+//    public static final RegistryObject<CreativeModeTab> ENTITY_GROUP = CREATIVE_MODE_TABS.register("entitymodtab",
+//            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.entitymodtab"))
+//                    .displayItems((displayParameters, output) -> {
+//
+//
+//                    }).build());
+
     public static final RegistryObject<CreativeModeTab> HERB_GROUP = CREATIVE_MODE_TABS.register("herbmodtab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.BLEWIT.get())).title(Component.translatable("itemGroup.herbmodtab"))
                     .displayItems((displayParameters, output) -> {
@@ -185,14 +194,21 @@ public class MEItemGroup {
                         output.accept(MEItems.CACHEN.get());
                         output.accept(MEItems.LADYRIVER.get());
 
-                        output.accept(MEBlocks.BLEWIT.get());
-                        output.accept(MEBlocks.HONEY.get());
-                        output.accept(MEBlocks.KING.get());
-                        output.accept(MEBlocks.OYSTER.get());
-                        output.accept(MEBlocks.MATSUTAKE.get());
-                        output.accept(MEBlocks.PORCINI.get());
-                        output.accept(MEBlocks.YELLOWFOOT.get());
-                        output.accept(MEBlocks.WOODS_CHICKEN.get());
+                        output.accept(MEBlocks.WILD_BLEWIT.get());
+                        output.accept(MEBlocks.WILD_HONEY.get());
+                        output.accept(MEBlocks.WILD_KING.get());
+                        output.accept(MEBlocks.WILD_OYSTER.get());
+                        output.accept(MEBlocks.WILD_MATSUTAKE.get());
+                        output.accept(MEBlocks.WILD_PORCINI.get());
+                        output.accept(MEBlocks.WILD_YELLOWFOOT.get());
+                        output.accept(MEBlocks.WILD_WOODS_CHICKEN.get());
+
+                        output.accept(MEBlocks.BLUE_DRAGON.get());
+                        output.accept(MEBlocks.VIOLET_DRAGON.get());
+                        output.accept(MEBlocks.PINK_MAGE.get());
+                        output.accept(MEBlocks.PURPLE_MAGE.get());
+                        output.accept(MEBlocks.FIRE_DAISY.get());
+                        output.accept(MEBlocks.GROUND_VINE.get());
 
                     }).build());
 
@@ -302,20 +318,6 @@ public class MEItemGroup {
 
                     }).build());
 
-    public static final RegistryObject<CreativeModeTab> POTION_GROUP = CREATIVE_MODE_TABS.register("potionmodtab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.potionmodtab"))
-                    .displayItems((displayParameters, output) -> {
-
-
-                    }).build());
-
-    public static final RegistryObject<CreativeModeTab> ENTITY_GROUP = CREATIVE_MODE_TABS.register("entitymodtab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.entitymodtab"))
-                    .displayItems((displayParameters, output) -> {
-
-
-                    }).build());
-
     public static final RegistryObject<CreativeModeTab> MAGIC_GROUP = CREATIVE_MODE_TABS.register("magicmodtab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEItems.HEALING_CRYSTAL_SHARD.get())).title(Component.translatable("itemGroup.magicmodtab"))
                     .displayItems((displayParameters, output) -> {
@@ -336,19 +338,26 @@ public class MEItemGroup {
 
                     }).build());
 
-    public static final RegistryObject<CreativeModeTab> EQUIPMENT_GROUP = CREATIVE_MODE_TABS.register("equipmentmodtab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.equipmentmodtab"))
-                    .displayItems((displayParameters, output) -> {
-
-
-                    }).build());
-
-    public static final RegistryObject<CreativeModeTab> DRAGON_GROUP = CREATIVE_MODE_TABS.register("dragonmodtab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.dragonmodtab"))
-                    .displayItems((displayParameters, output) -> {
-
-
-                    }).build());
+//    public static final RegistryObject<CreativeModeTab> POTION_GROUP = CREATIVE_MODE_TABS.register("potionmodtab",
+//            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.potionmodtab"))
+//                    .displayItems((displayParameters, output) -> {
+//
+//
+//                    }).build());
+//
+//    public static final RegistryObject<CreativeModeTab> DRAGON_GROUP = CREATIVE_MODE_TABS.register("dragonmodtab",
+//            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.dragonmodtab"))
+//                    .displayItems((displayParameters, output) -> {
+//
+//
+//                    }).build());
+//
+//    public static final RegistryObject<CreativeModeTab> EQUIPMENT_GROUP = CREATIVE_MODE_TABS.register("equipmentmodtab",
+//            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.equipmentmodtab"))
+//                    .displayItems((displayParameters, output) -> {
+//
+//
+//                    }).build());
 
 
 

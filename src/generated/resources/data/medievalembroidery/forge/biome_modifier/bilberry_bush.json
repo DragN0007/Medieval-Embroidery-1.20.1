@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#forge:is_cold/overworld",
+  "features": "medievalembroidery:bilberry_bush",
+  "step": "vegetal_decoration"
+}

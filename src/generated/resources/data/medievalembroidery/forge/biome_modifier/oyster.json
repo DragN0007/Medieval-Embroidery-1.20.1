@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#forge:is_coniferous",
+  "features": "medievalembroidery:oyster",
+  "step": "vegetal_decoration"
+}

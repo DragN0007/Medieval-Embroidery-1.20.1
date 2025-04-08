@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#forge:is_plateau",
+  "features": "medievalembroidery:yellowfoot",
+  "step": "vegetal_decoration"
+}

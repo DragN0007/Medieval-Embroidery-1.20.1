@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": "#forge:is_wet/overworld",
+  "biomes": "#minecraft:is_ocean",
   "features": "medievalembroidery:seastone",
   "step": "underground_ores"
 }

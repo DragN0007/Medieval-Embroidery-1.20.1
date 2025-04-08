@@ -167,21 +167,21 @@
   "item.medievalembroidery.lightningbug_thorax": "Lightning Bug Thorax",
 
 
-  "block.medievalembroidery.wild_blewit": "Blewit Mushroom",
+  "block.medievalembroidery.wild_blewit": "Wild Blewit Mushroom",
   "item.medievalembroidery.blewit": "Blewit Mushroom",
-  "block.medievalembroidery.wild_honey": "Honey Mushroom",
+  "block.medievalembroidery.wild_honey": "Wild Honey Mushroom",
   "item.medievalembroidery.honey": "Honey Mushroom",
-  "block.medievalembroidery.wild_king": "King Mushroom",
+  "block.medievalembroidery.wild_king": "Wild King Mushroom",
   "item.medievalembroidery.king": "King Mushroom",
-  "block.medievalembroidery.wild_matsutake": "Matsutake Mushroom",
+  "block.medievalembroidery.wild_matsutake": "Wild Matsutake Mushroom",
   "item.medievalembroidery.matsutake": "Matsutake Mushroom",
-  "block.medievalembroidery.wild_oyster": "Oyster Mushroom",
+  "block.medievalembroidery.wild_oyster": "Wild Oyster Mushroom",
   "item.medievalembroidery.oyster": "Oyster Mushroom",
-  "block.medievalembroidery.wild_porcini": "Porcini Mushroom",
+  "block.medievalembroidery.wild_porcini": "Wild Porcini Mushroom",
   "item.medievalembroidery.porcini": "Porcini Mushroom",
-  "block.medievalembroidery.wild_woods_chicken": "Chicken of the Woods Mushroom",
+  "block.medievalembroidery.wild_woods_chicken": "Wild Chicken of the Woods Mushroom",
   "item.medievalembroidery.woods_chicken": "Chicken of the Woods Mushroom",
-  "block.medievalembroidery.wild_yellowfoot": "Yellow Foot Mushroom",
+  "block.medievalembroidery.wild_yellowfoot": "Wild Yellow Foot Mushroom",
   "item.medievalembroidery.yellowfoot": "Yellow Foot Mushroom",
 
   "block.medievalembroidery.blewit": "Blewit Mushroom",
@@ -567,6 +567,10 @@
   "item.medievalembroidery.summoning_spell_nature": "Summoning Nature Spell",
   "item.medievalembroidery.summoning_spell_depths": "Summoning Depths Spell",
   "item.medievalembroidery.summoning_spell_astro": "Summoning Astrology Spell",
-  "item.medievalembroidery.summoning_spell_weather": "Summoning Weather Spell"
+  "item.medievalembroidery.summoning_spell_weather": "Summoning Weather Spell",
+
+  "key.medievalembroidery.categories.medievalembroidery": "Medieval Embroidery",
+  "key.medievalembroidery.speed_up": "Speed Up - Mount",
+  "key.medievalembroidery.slow_down": "Slow Down - Mount"
 
 }

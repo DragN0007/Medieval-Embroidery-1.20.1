@@ -3,7 +3,10 @@ package com.dragn0007_evangelix.medievalembroidery.item;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
 import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
-import com.dragn0007_evangelix.medievalembroidery.item.custom.*;
+import com.dragn0007_evangelix.medievalembroidery.item.custom.JuiceItem;
+import com.dragn0007_evangelix.medievalembroidery.item.custom.MEAlcoholItem;
+import com.dragn0007_evangelix.medievalembroidery.item.custom.MortarAndPestleItem;
+import com.dragn0007_evangelix.medievalembroidery.item.custom.TeaItem;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -17,6 +20,8 @@ import net.minecraftforge.registries.RegistryObject;
 
 
 public class MEItems {
+
+    //please don't rearrange categories, i have them set up in a specific way (adhd meltdown style) -dragoon
 
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, MedievalEmbroidery.MODID);

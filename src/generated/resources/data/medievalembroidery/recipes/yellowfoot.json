@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "medievalembroidery:wild_yellowfoot"
+    }
+  ],
+  "result": {
+    "item": "medievalembroidery:yellowfoot"
+  }
+}

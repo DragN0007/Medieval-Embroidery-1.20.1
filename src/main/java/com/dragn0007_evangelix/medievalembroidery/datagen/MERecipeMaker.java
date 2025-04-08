@@ -24,6 +24,56 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
     @Override
     public void buildRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer) {
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.BLEWIT.get())
+                .requires(MEBlocks.WILD_BLEWIT.get())
+                .unlockedBy("has_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.MUSHROOMS)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.HONEY.get())
+                .requires(MEBlocks.WILD_HONEY.get())
+                .unlockedBy("has_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.MUSHROOMS)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.KING.get())
+                .requires(MEBlocks.WILD_KING.get())
+                .unlockedBy("has_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.MUSHROOMS)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.MATSUTAKE.get())
+                .requires(MEBlocks.WILD_MATSUTAKE.get())
+                .unlockedBy("has_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.MUSHROOMS)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.OYSTER.get())
+                .requires(MEBlocks.WILD_OYSTER.get())
+                .unlockedBy("has_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.MUSHROOMS)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.WOODS_CHICKEN.get())
+                .requires(MEBlocks.WILD_WOODS_CHICKEN.get())
+                .unlockedBy("has_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.MUSHROOMS)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.YELLOWFOOT.get())
+                .requires(MEBlocks.WILD_YELLOWFOOT.get())
+                .unlockedBy("has_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.MUSHROOMS)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.FAIRY_ALE.get())
                 .requires(METags.Items.WATER)
                 .requires(MEItems.MALTED_GRAIN.get())

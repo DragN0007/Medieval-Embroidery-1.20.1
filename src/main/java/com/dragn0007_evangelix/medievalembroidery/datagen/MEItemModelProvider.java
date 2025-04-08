@@ -2,12 +2,10 @@ package com.dragn0007_evangelix.medievalembroidery.datagen;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
 import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
-import com.dragn0007_evangelix.medievalembroidery.block.custom.FungiRotator;
 import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
@@ -78,6 +76,13 @@ public class MEItemModelProvider extends ItemModelProvider {
         simpleItem(MEItems.FAIRYFLOWER);
         simpleItem(MEItems.CACHEN);
         simpleItem(MEItems.LADYRIVER);
+
+        simpleSpriteBlockItem(MEBlocks.BLUE_DRAGON);
+        simpleSpriteBlockItem(MEBlocks.VIOLET_DRAGON);
+        simpleSpriteBlockItem(MEBlocks.PINK_MAGE);
+        simpleSpriteBlockItem(MEBlocks.PURPLE_MAGE);
+        simpleSpriteBlockItem(MEBlocks.FIRE_DAISY);
+        simpleSpriteBlockItem(MEBlocks.GROUND_VINE);
 
         simpleItem(MEItems.FLOUR);
         simpleItem(MEItems.SALT_BRINE);
@@ -167,12 +172,6 @@ public class MEItemModelProvider extends ItemModelProvider {
                 new ResourceLocation(MedievalEmbroidery.MODID,"item/" + item.getId().getPath()));
     }
 
-    public ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
-        return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(MedievalEmbroidery.MODID,"block/" + item.getId().getPath()));
-    }
-
     public ItemModelBuilder parentRotatedBlockItem(RegistryObject<RotatedPillarBlock> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation(MedievalEmbroidery.MODID,"block/" + item.getId().getPath()));
@@ -180,12 +179,6 @@ public class MEItemModelProvider extends ItemModelProvider {
 
     public ItemModelBuilder advancedItem(RegistryObject<Item> item, String getTextureName) {
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(MedievalEmbroidery.MODID,"item/" + getTextureName));
-    }
-
-    public ItemModelBuilder advancedBlockItem(RegistryObject<FungiRotator> block, String getTextureName) {
-        return withExistingParent(block.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(MedievalEmbroidery.MODID,"item/" + getTextureName));
     }
