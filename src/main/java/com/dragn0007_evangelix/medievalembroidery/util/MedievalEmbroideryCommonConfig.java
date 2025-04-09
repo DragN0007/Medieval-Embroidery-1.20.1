@@ -16,6 +16,7 @@ public class MedievalEmbroideryCommonConfig {
     public static final ForgeConfigSpec.BooleanValue ANIMALS_HERDING_ENABLED;
     public static final ForgeConfigSpec.BooleanValue GENDERS_AFFECT_BIPRODUCTS;
     public static final ForgeConfigSpec.BooleanValue GENDERS_AFFECT_BREEDING;
+    public static final ForgeConfigSpec.ConfigValue<Integer> DIREWOLF_MAX_PACK_COUNT;
 
 
     static {
@@ -38,6 +39,9 @@ public class MedievalEmbroideryCommonConfig {
 
         GROUND_TIE = BUILDER.comment("Should ME mounts \"ground tie\", or stop moving around, when saddled & dismounted?")
                 .define("Ground Tie When Dismounted", true);
+
+        DIREWOLF_MAX_PACK_COUNT = BUILDER.comment("Maximum amount of Direwolves that can pack up at once.")
+                .define("Max Direwolf Pack Count", 5);
 
 //        DRAGONS_CAN_BREED = BUILDER.comment("Should dragons be able to breed?")
 //                .define("Dragons Can Breed", true);

@@ -34,7 +34,7 @@ public class MountScreen extends AbstractContainerScreen<MountMenu> {
         int y = (this.height - this.imageHeight) / 2;
         graphics.blit(MOUNT_INVENTORY_LOCATION, x, y, 0, 0, this.imageWidth, this.imageHeight);
 
-        if (this.mount.hasChest()) {
+        if (this.mount.hasChest() && this.mount.canWearChest()) {
             graphics.blit(MOUNT_INVENTORY_LOCATION,x + 25, y + 17, 0, this.imageHeight, 144, 54);
         }
 
@@ -44,10 +44,6 @@ public class MountScreen extends AbstractContainerScreen<MountMenu> {
 
         if (this.mount.canWearArmor()) {
             graphics.blit(MOUNT_INVENTORY_LOCATION,x + 7, y + 35, 0, this.imageHeight + 54, 18, 18);
-        }
-
-        if (this.mount.canHoldBedroll()) {
-            graphics.blit(MOUNT_INVENTORY_LOCATION, x + 7, y + 35, 54, this.imageHeight + 54, 18, 18);
         }
 
         if (this.mount.canWearCarpet()) {

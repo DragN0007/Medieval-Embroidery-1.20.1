@@ -16,10 +16,8 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.*;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -33,6 +31,7 @@ import net.minecraft.world.entity.monster.Ghast;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
@@ -42,6 +41,7 @@ import net.minecraft.world.level.block.WoolCarpetBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.scores.Team;
 import net.minecraftforge.network.NetworkHooks;
 
 import javax.annotation.Nullable;
@@ -68,11 +68,14 @@ public abstract class AbstractMount extends AbstractChestedHorse {
     public static final UUID SPRINT_SPEED_MOD_UUID = UUID.fromString("c9379664-01b5-4e19-a7e9-11264453bdce");
     public static final UUID WALK_SPEED_MOD_UUID = UUID.fromString("59b55c98-e39b-45e2-846c-f91f3e9ea861");
 
-    public static final AttributeModifier SPRINT_SPEED_MOD = new AttributeModifier(SPRINT_SPEED_MOD_UUID, "Sprint speed mod", 0.0D, AttributeModifier.Operation.MULTIPLY_TOTAL);
+    public static final AttributeModifier SPRINT_SPEED_MOD = new AttributeModifier(SPRINT_SPEED_MOD_UUID, "Sprint speed mod", -0.1D, AttributeModifier.Operation.MULTIPLY_TOTAL);
     public static final AttributeModifier WALK_SPEED_MOD = new AttributeModifier(WALK_SPEED_MOD_UUID, "Walk speed mod", -0.7D, AttributeModifier.Operation.MULTIPLY_TOTAL); // KEEP THIS NEGATIVE. It is calculated by adding 1. So -0.1 actually means 0.9
 
     public static final EntityDataAccessor<Integer> DATA_CARPET_ID = SynchedEntityData.defineId(AbstractMount.class, EntityDataSerializers.INT);
     protected static final EntityDataAccessor<Optional<UUID>> DATA_OWNERUUID_ID = SynchedEntityData.defineId(AbstractMount.class, EntityDataSerializers.OPTIONAL_UUID);
+
+    protected static final EntityDataAccessor<Byte> DATA_FLAGS_ID = SynchedEntityData.defineId(AbstractMount.class, EntityDataSerializers.BYTE);
+    private boolean orderedToSit;
 
     public AbstractMount(EntityType<? extends AbstractMount> entityType, Level level) {
         super(entityType, level);
@@ -240,7 +243,7 @@ public abstract class AbstractMount extends AbstractChestedHorse {
             }
         }
 
-        if (this.isBaby() && !this.isTamed() && this.isFood(itemStack) && this.random.nextInt(5) == 0 && !net.minecraftforge.event.ForgeEventFactory.onAnimalTame(this, player)) {
+        if (!this.isTamed() && this.isFood(itemStack) && this.random.nextInt(5) == 0 && !net.minecraftforge.event.ForgeEventFactory.onAnimalTame(this, player)) {
             this.tame(player);
             return InteractionResult.SUCCESS;
         }
@@ -253,7 +256,7 @@ public abstract class AbstractMount extends AbstractChestedHorse {
         }
 
         if(!this.isBaby()) {
-            if(this.isTamed() && player.isSecondaryUseActive() && isOwnedBy(player)) {
+            if(this.isTamed() && player.isSecondaryUseActive() && isOwnedBy(player) && this.canWearChest()) {
                 this.openInventory(player);
                 return InteractionResult.sidedSuccess(this.level().isClientSide);
             }
@@ -262,7 +265,7 @@ public abstract class AbstractMount extends AbstractChestedHorse {
                 return super.mobInteract(player, hand);
             }
 
-            if(!this.hasChest() && itemStack.is(Blocks.CHEST.asItem()) && isOwnedBy(player)) {
+            if(!this.hasChest() && itemStack.is(Blocks.CHEST.asItem()) && isOwnedBy(player) && this.canWearChest()) {
                 this.setChest(true);
                 this.playChestEquipsSound();
 
@@ -294,7 +297,7 @@ public abstract class AbstractMount extends AbstractChestedHorse {
             }
         }
 
-        if(this.isBaby() || !this.isOwnedBy(player) ) {
+        if(this.isBaby() || !this.isOwnedBy(player)) {
             return super.mobInteract(player, hand);
         } else {
             this.doPlayerRide(player);
@@ -307,11 +310,11 @@ public abstract class AbstractMount extends AbstractChestedHorse {
         return true;
     }
 
-    public boolean canHoldBedroll() {
+    public boolean canWearCarpet() {
         return false;
     }
 
-    public boolean canWearCarpet() {
+    public boolean canWearChest() {
         return false;
     }
 
@@ -328,6 +331,7 @@ public abstract class AbstractMount extends AbstractChestedHorse {
         this.entityData.define(DATA_CARPET_ID, -1);
         this.entityData.define(DATA_ID_CHEST, false);
         this.entityData.define(DATA_OWNERUUID_ID, Optional.empty());
+        this.entityData.define(DATA_FLAGS_ID, (byte)0);
     }
 
     @Override
@@ -353,6 +357,8 @@ public abstract class AbstractMount extends AbstractChestedHorse {
         if (this.getOwnerUUID() != null) {
             compoundTag.putUUID("Owner", this.getOwnerUUID());
         }
+
+        compoundTag.putBoolean("Sitting", this.orderedToSit);
     }
 
     @Override
@@ -396,6 +402,23 @@ public abstract class AbstractMount extends AbstractChestedHorse {
                 this.setTamed(false);
             }
         }
+
+        this.orderedToSit = compoundTag.getBoolean("Sitting");
+        this.setInSittingPose(this.orderedToSit);
+    }
+
+    public boolean isInSittingPose() {
+        return (this.entityData.get(DATA_FLAGS_ID) & 1) != 0;
+    }
+
+    public void setInSittingPose(boolean p_21838_) {
+        byte b0 = this.entityData.get(DATA_FLAGS_ID);
+        if (p_21838_) {
+            this.entityData.set(DATA_FLAGS_ID, (byte)(b0 | 1));
+        } else {
+            this.entityData.set(DATA_FLAGS_ID, (byte)(b0 & -2));
+        }
+
     }
 
     @Nullable
@@ -429,20 +452,11 @@ public abstract class AbstractMount extends AbstractChestedHorse {
                 int protection = horseArmorItem.getProtection();
                 if (protection > 0) {
                     this.getAttribute(Attributes.ARMOR).addTransientModifier(
-                            new AttributeModifier(ARMOR_MODIFIER_UUID, "Dino armor bonus", (double) protection, AttributeModifier.Operation.ADDITION)
+                            new AttributeModifier(ARMOR_MODIFIER_UUID, "Mount armor bonus", (double) protection, AttributeModifier.Operation.ADDITION)
                     );
                 }
             }
         }
-    }
-
-    public ItemStack getBedroll() {
-        return this.getItemBySlot(EquipmentSlot.CHEST);
-    }
-
-    public void setBedroll(ItemStack itemStack) {
-        this.setItemSlot(EquipmentSlot.CHEST, itemStack);
-        this.setDropChance(EquipmentSlot.CHEST, 0f);
     }
 
     @Override
@@ -504,8 +518,8 @@ public abstract class AbstractMount extends AbstractChestedHorse {
     public boolean wantsToAttack(LivingEntity entity, LivingEntity living) {
         if (!(entity instanceof Creeper) && !(entity instanceof Ghast)) {
             if (entity instanceof AbstractMount) {
-                AbstractMount dinoMount = (AbstractMount)entity;
-                return !dinoMount.isTamed() || dinoMount.getOwner() != living;
+                AbstractMount mount = (AbstractMount)entity;
+                return !mount.isTamed() || mount.getOwner() != living;
             } else if (entity instanceof Player && living instanceof Player && !((Player)living).canHarmPlayer((Player)entity)) {
                 return false;
             } else if (entity instanceof AbstractHorse && ((AbstractHorse)entity).isTamed()) {
@@ -525,20 +539,20 @@ public abstract class AbstractMount extends AbstractChestedHorse {
     int moreCropsTicks;
 
     static class PickCropsGoal extends MoveToBlockGoal {
-        public final AbstractMount dino;
+        public final AbstractMount mount;
         public boolean wantsToPick;
         public boolean canPick;
 
-        public PickCropsGoal(AbstractMount dino) {
-            super(dino, 0.7F, 16);
-            this.dino = dino;
+        public PickCropsGoal(AbstractMount mount) {
+            super(mount, 0.7F, 16);
+            this.mount = mount;
         }
 
         public boolean canUse() {
-            if (this.dino.isTamed()) {
+            if (this.mount.isTamed()) {
                 return false;
             } else if (this.nextStartTick <= 0) {
-                if (!net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.dino.level(), this.dino)) {
+                if (!net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.mount.level(), this.mount)) {
                     return false;
                 }
 
@@ -556,14 +570,14 @@ public abstract class AbstractMount extends AbstractChestedHorse {
         public void tick() {
             super.tick();
 
-            this.dino.getLookControl().setLookAt(
+            this.mount.getLookControl().setLookAt(
                     (double)this.blockPos.getX() + 0.5D,
                     this.blockPos.getY() + 1,
                     (double)this.blockPos.getZ() + 0.5D, 10.0F,
-                    (float)this.dino.getMaxHeadXRot());
+                    (float)this.mount.getMaxHeadXRot());
 
             if (this.isReachedTarget()) {
-                Level level = this.dino.level();
+                Level level = this.mount.level();
                 BlockPos blockpos = this.blockPos.above();
                 BlockState blockstate = level.getBlockState(blockpos);
                 Block block = blockstate.getBlock();
@@ -579,8 +593,8 @@ public abstract class AbstractMount extends AbstractChestedHorse {
                     level.levelEvent(2001, blockpos, Block.getId(blockstate));
                 }
 
-                this.dino.setEating(true);
-                this.dino.moreCropsTicks = 40;
+                this.mount.setEating(true);
+                this.mount.moreCropsTicks = 40;
                 this.canPick = false;
                 this.nextStartTick = 20;
             }
@@ -599,6 +613,51 @@ public abstract class AbstractMount extends AbstractChestedHorse {
 
             return false;
         }
+    }
+
+    public Team getTeam() {
+        if (this.isTamed()) {
+            LivingEntity livingentity = this.getOwner();
+            if (livingentity != null) {
+                return livingentity.getTeam();
+            }
+        }
+
+        return super.getTeam();
+    }
+
+    public boolean isAlliedTo(Entity p_21833_) {
+        if (this.isTamed()) {
+            LivingEntity livingentity = this.getOwner();
+            if (p_21833_ == livingentity) {
+                return true;
+            }
+
+            if (livingentity != null) {
+                return livingentity.isAlliedTo(p_21833_);
+            }
+        }
+
+        return super.isAlliedTo(p_21833_);
+    }
+
+    public void die(DamageSource p_21809_) {
+        net.minecraft.network.chat.Component deathMessage = this.getCombatTracker().getDeathMessage();
+        super.die(p_21809_);
+
+        if (this.dead)
+            if (!this.level().isClientSide && this.level().getGameRules().getBoolean(GameRules.RULE_SHOWDEATHMESSAGES) && this.getOwner() instanceof ServerPlayer) {
+                this.getOwner().sendSystemMessage(deathMessage);
+            }
+
+    }
+
+    public boolean isOrderedToSit() {
+        return this.orderedToSit;
+    }
+
+    public void setOrderedToSit(boolean p_21840_) {
+        this.orderedToSit = p_21840_;
     }
 
     static final Predicate<ItemEntity> DESIRABLE_CARNIVORE_LOOT = (itemEntity) -> {

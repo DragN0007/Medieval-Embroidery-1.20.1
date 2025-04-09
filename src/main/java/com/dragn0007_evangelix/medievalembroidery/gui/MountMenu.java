@@ -53,11 +53,11 @@ public class MountMenu extends AbstractContainerMenu {
 
             @Override
             public boolean isActive() {
-                return MountMenu.this.mount.canWearArmor() || MountMenu.this.mount.canHoldBedroll();
+                return MountMenu.this.mount.canWearArmor();
             }
         });
 
-        if(this.mount.hasChest()) {
+        if(this.mount.hasChest() && this.mount.canWearChest()) {
             for(int y = 0; y < 3; y++) {
                 for(int x = 0; x < 8; x++) {
                     this.addSlot(new Slot(this.container, oMountSlots++, 26 + x * 18, 18 + y * 18));

@@ -3,6 +3,7 @@ package com.dragn0007_evangelix.medievalembroidery.item;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
 import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
+import com.dragn0007_evangelix.medievalembroidery.entity.EntityTypes;
 import com.dragn0007_evangelix.medievalembroidery.item.custom.JuiceItem;
 import com.dragn0007_evangelix.medievalembroidery.item.custom.MEAlcoholItem;
 import com.dragn0007_evangelix.medievalembroidery.item.custom.MortarAndPestleItem;
@@ -13,6 +14,7 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Items;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,10 +28,17 @@ public class MEItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, MedievalEmbroidery.MODID);
 
+    //Spawneggs
+    public static final RegistryObject<Item> DIREWOLF_SPAWN_EGG = ITEMS.register("direwolf_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityTypes.DIREWOLF_ENTITY, 0xbfbfbf, 0x848484, new Item.Properties().stacksTo(64)));
+
+
     //Crafting Ingredients
     public static final RegistryObject<Item> MORTAR_AND_PESTLE = ITEMS.register("mortar_and_pestle",
             () -> new MortarAndPestleItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> FAIRY_DUST = ITEMS.register("fairy_dust",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> DIREWOLF_EYE = ITEMS.register("direwolf_eye",
             () -> new Item(new Item.Properties()));
 
 

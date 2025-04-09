@@ -1,0 +1,52 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:pig",
+    "minecraft:chicken",
+    "minecraft:rabbit",
+    "minecraft:frog",
+    "minecraft:wolf",
+    "minecraft:cat",
+    "minecraft:fox",
+
+    {
+      "id": "dragnlivestock:o_pig",
+      "required": false
+    },
+
+    {
+      "id": "dragnlivestock:o_chicken",
+      "required": false
+    },
+
+    {
+      "id": "dragnlivestock:o_rabbit",
+      "required": false
+    },
+
+    {
+      "id": "dragnlivestock:o_frog",
+      "required": false
+    },
+
+    {
+      "id": "dragnpets:o_wolf",
+      "required": false
+    },
+
+    {
+      "id": "dragnpets:o_cat",
+      "required": false
+    },
+
+    {
+      "id": "dragnpets:o_fox",
+      "required": false
+    },
+
+    {
+      "id": "#dragnpets:dogs",
+      "required": false
+    }
+  ]
+}

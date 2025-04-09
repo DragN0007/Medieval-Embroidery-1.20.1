@@ -172,12 +172,13 @@ public class MEItemGroup {
 
                     }).build());
 
-//    public static final RegistryObject<CreativeModeTab> ENTITY_GROUP = CREATIVE_MODE_TABS.register("entitymodtab",
-//            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.entitymodtab"))
-//                    .displayItems((displayParameters, output) -> {
-//
-//
-//                    }).build());
+    public static final RegistryObject<CreativeModeTab> ENTITY_GROUP = CREATIVE_MODE_TABS.register("entitymodtab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEItems.DIREWOLF.get())).title(Component.translatable("itemGroup.entitymodtab"))
+                    .displayItems((displayParameters, output) -> {
+
+                    output.accept(MEItems.DIREWOLF_SPAWN_EGG.get());
+
+                    }).build());
 
     public static final RegistryObject<CreativeModeTab> HERB_GROUP = CREATIVE_MODE_TABS.register("herbmodtab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.BLEWIT.get())).title(Component.translatable("itemGroup.herbmodtab"))
@@ -323,6 +324,7 @@ public class MEItemGroup {
                     .displayItems((displayParameters, output) -> {
 
                         output.accept(MEItems.SALT.get());
+                        output.accept(MEItems.DIREWOLF_EYE.get());
                         output.accept(MEItems.FIRESTONE.get());
                         output.accept(MEItems.SEASTONE.get());
                         output.accept(MEItems.FROSTSTONE.get());

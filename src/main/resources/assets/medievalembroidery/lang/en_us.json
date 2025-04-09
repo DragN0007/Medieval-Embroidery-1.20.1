@@ -8,24 +8,25 @@
   "itemGroup.equipmentmodtab": "Medieval Embroidery Equipment",
   "itemGroup.dragonmodtab": "Medieval Embroidery Dragons",
 
-  "item.medievalembroidery.fangedelk_spawn_egg": "Fanged Elk Spawn Egg",
-  "entity.medievalembroidery.fangedelk_entity": "Fanged Elk",
+  "item.medievalembroidery.fanged_elk_spawn_egg": "Fanged Elk Spawn Egg",
+  "entity.medievalembroidery.fanged_elk": "Fanged Elk",
   "item.medievalembroidery.swampyak_spawn_egg": "Swamp Yak Spawn Egg",
-  "entity.medievalembroidery.swampyak_entity": "Swamp Yak",
+  "entity.medievalembroidery.swampyak": "Swamp Yak",
   "item.medievalembroidery.fairy_spawn_egg": "Fairy Spawn Egg",
-  "entity.medievalembroidery.fairy_entity": "Fairy",
+  "entity.medievalembroidery.fairy": "Fairy",
   "item.medievalembroidery.direwolf_spawn_egg": "Direwolf Spawn Egg",
-  "entity.medievalembroidery.direwolf_entity": "Direwolf",
+  "entity.medievalembroidery.direwolf": "Direwolf",
   "item.medievalembroidery.woolly_boar_spawn_egg": "Woolly Boar Spawn Egg",
-  "entity.medievalembroidery.woollyboar_entity": "Woolly Boar",
+  "entity.medievalembroidery.woolly_boar": "Woolly Boar",
   "item.medievalembroidery.raven_spawn_egg": "Raven Spawn Egg",
-  "entity.medievalembroidery.raven_entity": "Raven",
+  "entity.medievalembroidery.raven": "Raven",
   "item.medievalembroidery.mammoth_spawn_egg": "Mammoth Spawn Egg",
-  "entity.medievalembroidery.mammoth_entity": "Mammoth",
+  "entity.medievalembroidery.mammoth": "Mammoth",
 
 
   "item.medievalembroidery.mortar_and_pestle": "Mortar & Pestle",
   "item.medievalembroidery.water": "Water",
+  "item.medievalembroidery.direwolf_eye": "Eye of Direwolf",
 
 
   "block.medievalembroidery.apple_leaves": "Apple Leaves",

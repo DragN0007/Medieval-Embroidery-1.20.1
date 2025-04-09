@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:polar_bear",
+
+    {
+      "id": "#forge:medium_predator_prey",
+      "required": false
+    }
+  ]
+}

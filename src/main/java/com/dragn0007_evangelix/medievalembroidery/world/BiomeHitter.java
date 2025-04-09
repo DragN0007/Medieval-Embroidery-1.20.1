@@ -1,23 +1,29 @@
 package com.dragn0007_evangelix.medievalembroidery.world;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
+import com.dragn0007_evangelix.medievalembroidery.entity.EntityTypes;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
+import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.List;
+
 public class BiomeHitter {
 
     // this is all done with datagen now, tenks
     // preferably all entries should be done with biome tags instead of specific biomes so that it's compatible with modded biomes
     // unless you want something to only spawn in a vanilla or ME biome  -dragoon
+
+    public static final ResourceKey<BiomeModifier> DIREWOLF = registerKey("direwolf");
 
     public static final ResourceKey<BiomeModifier> ASSISTIVE_CRYSTAL = registerKey("assistive_crystal");
     public static final ResourceKey<BiomeModifier> CONJURING_CRYSTAL = registerKey("conjuring_crystal");
@@ -64,6 +70,16 @@ public class BiomeHitter {
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
+
+        //Entities
+        context.register(DIREWOLF, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_COLD_OVERWORLD),
+                List.of(new MobSpawnSettings.SpawnerData(EntityTypes.DIREWOLF_ENTITY.get(),
+                    4,
+                    2,
+                    5
+                ))));
+
 
         //Trees
 

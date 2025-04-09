@@ -1,0 +1,60 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:cow",
+    "minecraft:sheep",
+    "minecraft:horse",
+    "minecraft:mule",
+    "minecraft:donkey",
+    "minecraft:camel",
+    "minecraft:llama",
+    "minecraft:goat",
+    "minecraft:villager",
+    "minecraft:panda",
+
+    {
+      "id": "#forge:small_predator_prey",
+      "required": false
+    },
+
+    {
+      "id": "dragnlivestock:o_cow",
+      "required": false
+    },
+
+    {
+      "id": "dragnlivestock:o_sheep",
+      "required": false
+    },
+
+    {
+      "id": "dragnlivestock:o_horse",
+      "required": false
+    },
+
+    {
+      "id": "dragnlivestock:o_mule",
+      "required": false
+    },
+
+    {
+      "id": "dragnlivestock:o_donkey",
+      "required": false
+    },
+
+    {
+      "id": "dragnlivestock:o_camel",
+      "required": false
+    },
+
+    {
+      "id": "dragnlivestock:o_llama",
+      "required": false
+    },
+
+    {
+      "id": "dragnlivestock:o_goat",
+      "required": false
+    }
+  ]
+}
