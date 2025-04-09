@@ -18,7 +18,6 @@ public class MedievalEmbroideryCommonConfig {
     public static final ForgeConfigSpec.BooleanValue GENDERS_AFFECT_BREEDING;
     public static final ForgeConfigSpec.ConfigValue<Integer> DIREWOLF_MAX_PACK_COUNT;
 
-
     static {
         BUILDER.push("Common Configs");
 
