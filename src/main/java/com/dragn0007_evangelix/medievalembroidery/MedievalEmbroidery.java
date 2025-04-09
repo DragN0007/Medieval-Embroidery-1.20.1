@@ -6,6 +6,7 @@ import com.dragn0007_evangelix.medievalembroidery.entity.EntityTypes;
 import com.dragn0007_evangelix.medievalembroidery.gui.MEMenuTypes;
 import com.dragn0007_evangelix.medievalembroidery.item.MEItemGroup;
 import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
+import com.dragn0007_evangelix.medievalembroidery.util.MedievalEmbroideryClientConfig;
 import com.dragn0007_evangelix.medievalembroidery.util.MedievalEmbroideryCommonConfig;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.syncher.EntityDataSerializer;
@@ -36,7 +37,7 @@ public class MedievalEmbroidery
         MEMenuTypes.register(eventBus);
 
         GeckoLib.initialize();
-//        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, MedievalEmbroideryClientEvent.SPEC, "medieval-embroidery-client.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, MedievalEmbroideryClientConfig.SPEC, "medieval-embroidery-client.toml");
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MedievalEmbroideryCommonConfig.SPEC, "medieval-embroidery-common.toml");
 
         MinecraftForge.EVENT_BUS.register(this);

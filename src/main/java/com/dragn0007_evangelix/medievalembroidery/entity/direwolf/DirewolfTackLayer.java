@@ -1,6 +1,7 @@
 package com.dragn0007_evangelix.medievalembroidery.entity.direwolf;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
+import com.dragn0007_evangelix.medievalembroidery.util.MedievalEmbroideryClientConfig;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -24,7 +25,7 @@ public class DirewolfTackLayer extends GeoRenderLayer<Direwolf> {
 
         ResourceLocation resourceLocation = null;
 
-        if (animatable.isSaddled()) {
+        if (animatable.isSaddled() && MedievalEmbroideryClientConfig.DIREWOLF_SADDLES.get()) {
             resourceLocation = new ResourceLocation(MedievalEmbroidery.MODID, "textures/entity/direwolf/tack/direwolf_saddle.png");
         } else {
             return;
