@@ -24,6 +24,7 @@ public class BiomeHitter {
     // unless you want something to only spawn in a vanilla or ME biome  -dragoon
 
     public static final ResourceKey<BiomeModifier> DIREWOLF = registerKey("direwolf");
+    public static final ResourceKey<BiomeModifier> FAIRY = registerKey("fairy");
 
     public static final ResourceKey<BiomeModifier> ASSISTIVE_CRYSTAL = registerKey("assistive_crystal");
     public static final ResourceKey<BiomeModifier> CONJURING_CRYSTAL = registerKey("conjuring_crystal");
@@ -75,9 +76,17 @@ public class BiomeHitter {
         context.register(DIREWOLF, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
                 biomes.getOrThrow(Tags.Biomes.IS_COLD_OVERWORLD),
                 List.of(new MobSpawnSettings.SpawnerData(EntityTypes.DIREWOLF_ENTITY.get(),
-                    4,
-                    2,
-                    5
+                        4,
+                        2,
+                        5
+                ))));
+
+        context.register(FAIRY, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_FOREST),
+                List.of(new MobSpawnSettings.SpawnerData(EntityTypes.FAIRY_ENTITY.get(),
+                        4,
+                        1,
+                        4
                 ))));
 
 

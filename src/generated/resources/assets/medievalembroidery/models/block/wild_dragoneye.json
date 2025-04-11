@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cross",
   "render_type": "minecraft:cutout",
   "textures": {
-    "cross": "medievalembroidery:block/dragoneye_stage_2"
+    "cross": "medievalembroidery:block/dragoneye_stage_3"
   }
 }

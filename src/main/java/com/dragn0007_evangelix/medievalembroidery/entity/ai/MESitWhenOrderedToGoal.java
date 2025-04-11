@@ -1,11 +1,10 @@
 package com.dragn0007_evangelix.medievalembroidery.entity.ai;
 
-import java.util.EnumSet;
-
 import com.dragn0007_evangelix.medievalembroidery.entity.util.AbstractMount;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.ai.goal.Goal;
+
+import java.util.EnumSet;
 
 public class MESitWhenOrderedToGoal extends Goal {
    private final AbstractMount mob;

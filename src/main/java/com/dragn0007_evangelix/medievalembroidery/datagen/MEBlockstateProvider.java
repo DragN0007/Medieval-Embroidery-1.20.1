@@ -82,7 +82,7 @@ public class MEBlockstateProvider extends BlockStateProvider {
 
         createCrop((CropBlock) MEBlocks.DRAGONEYE.get(), "dragoneye_stage_", "dragoneye_stage_");
         simpleBlock(MEBlocks.WILD_DRAGONEYE.get(), models().cross(MEBlocks.WILD_DRAGONEYE.getId().getPath(),
-                wildPlantTexture("dragoneye_stage_2")).renderType("cutout"));
+                wildPlantTexture("dragoneye_stage_3")).renderType("cutout"));
 
         createCrop((CropBlock) MEBlocks.FAIRYFLOWER.get(), "fairyflower_stage_", "fairyflower_stage_");
         simpleBlock(MEBlocks.WILD_FAIRYFLOWER.get(), models().cross(MEBlocks.WILD_FAIRYFLOWER.getId().getPath(),

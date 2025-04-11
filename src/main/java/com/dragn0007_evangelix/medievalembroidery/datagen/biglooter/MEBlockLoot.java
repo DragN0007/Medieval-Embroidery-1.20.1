@@ -48,6 +48,8 @@ public class MEBlockLoot extends BlockLootSubProvider {
         add(MEBlocks.HEALING_CRYSTAL_ORE.get(), block -> createOreDrop(MEBlocks.HEALING_CRYSTAL_ORE.get(), MEItems.HEALING_CRYSTAL_SHARD.get()));
         add(MEBlocks.PROTECTIVE_CRYSTAL_ORE.get(), block -> createOreDrop(MEBlocks.PROTECTIVE_CRYSTAL_ORE.get(), MEItems.PROTECTIVE_CRYSTAL_SHARD.get()));
 
+        dropSelf(MEBlocks.CONJURING_CRYSTAL_BALL.get());
+
         dropOther(MEBlocks.SWEET_BREAD.get(), MEItems.SWEET_BREAD.get());
         dropOther(MEBlocks.SWEET_BREAD_CREAM.get(), MEItems.SWEET_BREAD_CREAM.get());
         dropOther(MEBlocks.SWEET_BREAD_HONEY.get(), MEItems.SWEET_BREAD_HONEY.get());
@@ -85,7 +87,7 @@ public class MEBlockLoot extends BlockLootSubProvider {
         this.dropOther(MEBlocks.WILD_DRAGONEYE.get(), MEItems.DRAGONEYE.get());
         LootItemCondition.Builder lootitemcondition$builder4 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
                 (MEBlocks.DRAGONEYE.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
-                (MEHerbBlock.AGE, 2));
+                (MEHerbBlock.AGE, 3));
         this.add(MEBlocks.DRAGONEYE.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
                 (MEItems.DRAGONEYE.get()))).withPool(LootPool.lootPool().when(lootitemcondition$builder4).add(LootItem.lootTableItem
                 (MEItems.DRAGONEYE.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));

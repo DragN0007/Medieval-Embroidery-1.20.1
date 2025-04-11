@@ -23,6 +23,8 @@ public class MEItemGroup {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.decormodtab"))
                     .displayItems((displayParameters, output) -> {
 
+                        output.accept(MEBlocks.CONJURING_CRYSTAL_BALL.get());
+
                         output.accept(MEBlocks.ASSISTIVE_CRYSTAL_ORE.get());
                         output.accept(MEBlocks.CONJURING_CRYSTAL_ORE.get());
                         output.accept(MEBlocks.DESTRUCTIVE_CRYSTAL_ORE.get());
@@ -176,7 +178,8 @@ public class MEItemGroup {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEItems.DIREWOLF.get())).title(Component.translatable("itemGroup.entitymodtab"))
                     .displayItems((displayParameters, output) -> {
 
-                    output.accept(MEItems.DIREWOLF_SPAWN_EGG.get());
+                        output.accept(MEItems.DIREWOLF_SPAWN_EGG.get());
+                        output.accept(MEItems.FAIRY_SPAWN_EGG.get());
 
                     }).build());
 

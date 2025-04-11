@@ -33,12 +33,15 @@ public class MEItemModelProvider extends ItemModelProvider {
         simpleItem(MEItems.CRYSTAL_DUST);
 
         simpleItem(MEItems.DIREWOLF_EYE);
+        simpleItem(MEItems.FAIRY_DUST);
 
         simpleItem(MEItems.ASSISTIVE_CRYSTAL_SHARD);
         simpleItem(MEItems.CONJURING_CRYSTAL_SHARD);
         simpleItem(MEItems.DESTRUCTIVE_CRYSTAL_SHARD);
         simpleItem(MEItems.HEALING_CRYSTAL_SHARD);
         simpleItem(MEItems.PROTECTIVE_CRYSTAL_SHARD);
+
+        simpleSpriteBlockItem(MEBlocks.CONJURING_CRYSTAL_BALL);
 
         simpleItem(MEItems.SWEET_BREAD);
         simpleItem(MEItems.SWEET_BREAD_CREAM);
@@ -79,12 +82,12 @@ public class MEItemModelProvider extends ItemModelProvider {
         simpleItem(MEItems.CACHEN);
         simpleItem(MEItems.LADYRIVER);
 
-        simpleSpriteBlockItem(MEBlocks.BLUE_DRAGON);
-        simpleSpriteBlockItem(MEBlocks.VIOLET_DRAGON);
-        simpleSpriteBlockItem(MEBlocks.PINK_MAGE);
-        simpleSpriteBlockItem(MEBlocks.PURPLE_MAGE);
-        simpleSpriteBlockItem(MEBlocks.FIRE_DAISY);
-        simpleSpriteBlockItem(MEBlocks.GROUND_VINE);
+        simpleSpriteBlock(MEBlocks.BLUE_DRAGON);
+        simpleSpriteBlock(MEBlocks.VIOLET_DRAGON);
+        simpleSpriteBlock(MEBlocks.PINK_MAGE);
+        simpleSpriteBlock(MEBlocks.PURPLE_MAGE);
+        simpleSpriteBlock(MEBlocks.FIRE_DAISY);
+        simpleSpriteBlock(MEBlocks.GROUND_VINE);
 
         simpleItem(MEItems.FLOUR);
         simpleItem(MEItems.SALT_BRINE);
@@ -156,7 +159,13 @@ public class MEItemModelProvider extends ItemModelProvider {
         simpleItem(MEItems.LEMON_PIE);
     }
 
-     private ItemModelBuilder simpleSpriteBlockItem(RegistryObject<Block> block) {
+    private ItemModelBuilder simpleSpriteBlockItem(RegistryObject<Block> block) {
+        return withExistingParent(block.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(MedievalEmbroidery.MODID,"item/" + block.getId().getPath()));
+    }
+
+    private ItemModelBuilder simpleSpriteBlock(RegistryObject<Block> block) {
         return withExistingParent(block.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(MedievalEmbroidery.MODID,"block/" + block.getId().getPath()));

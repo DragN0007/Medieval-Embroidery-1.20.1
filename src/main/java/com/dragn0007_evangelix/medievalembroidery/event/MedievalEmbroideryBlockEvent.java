@@ -1,7 +1,9 @@
 package com.dragn0007_evangelix.medievalembroidery.event;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
+import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
 import com.dragn0007_evangelix.medievalembroidery.block.PixelPlacementBlocks;
+import com.dragn0007_evangelix.medievalembroidery.block.custom.crystal_ball.ConjuringCrystalBallRenderer;
 import com.dragn0007_evangelix.medievalembroidery.block.pixel_placement.util.PixelPlacerEntityRenderer;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -19,12 +21,14 @@ public class MedievalEmbroideryBlockEvent {
     @SubscribeEvent
     public static void entityRendererEvent(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(PixelPlacementBlocks.PIXEL_PLACER_ENTITY.get(), PixelPlacerEntityRenderer::new);
+        event.registerBlockEntityRenderer(MEBlocks.CONJURING_CRYSTAL_BALL_ENTITY.get(), context -> new ConjuringCrystalBallRenderer());
     }
 
     @SubscribeEvent
     public static void clientSetupEvent(FMLClientSetupEvent event) {
         ResourceLocation resourceLocation = new ResourceLocation(MedievalEmbroidery.MODID, "null");
         ItemBlockRenderTypes.setRenderLayer(PixelPlacementBlocks.PIXEL_PLACER_CONTAINER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(MEBlocks.CONJURING_CRYSTAL_BALL.get(), RenderType.translucent());
     }
 
 }

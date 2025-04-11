@@ -24,6 +24,18 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
     @Override
     public void buildRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer) {
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.CONJURING_CRYSTAL_BALL.get())
+                .define('A', MEItems.CONJURING_CRYSTAL_SHARD.get())
+                .define('B', Items.GOLD_INGOT)
+                .define('C', Items.GOLD_NUGGET)
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("C C")
+                .unlockedBy("has_gold", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.GOLD_INGOT)
+                        .build())).save(pFinishedRecipeConsumer);
+
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.BLEWIT.get())
                 .requires(MEBlocks.WILD_BLEWIT.get())
                 .unlockedBy("has_mushroom", inventoryTrigger(ItemPredicate.Builder.item()

@@ -6,6 +6,8 @@ import com.dragn0007_evangelix.medievalembroidery.block.custom.crop.bush.*;
 import com.dragn0007_evangelix.medievalembroidery.block.custom.crop.herb.*;
 import com.dragn0007_evangelix.medievalembroidery.block.custom.crop.mushroom.*;
 import com.dragn0007_evangelix.medievalembroidery.block.custom.crystal.CrystalOreBlock;
+import com.dragn0007_evangelix.medievalembroidery.block.custom.crystal_ball.ConjuringCrystalBall;
+import com.dragn0007_evangelix.medievalembroidery.block.custom.crystal_ball.ConjuringCrystalBallEntity;
 import com.dragn0007_evangelix.medievalembroidery.block.custom.placedfood.PlatedFood;
 import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
 import net.minecraft.world.effect.MobEffects;
@@ -14,6 +16,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -29,6 +33,13 @@ public class MEBlocks {
             = DeferredRegister.create(ForgeRegistries.BLOCKS, MedievalEmbroidery.MODID);
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES
             = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, MedievalEmbroidery.MODID);
+
+    //Decor
+    public static final RegistryObject<Block> CONJURING_CRYSTAL_BALL = registerBlock("conjuring_crystal_ball", ConjuringCrystalBall::new);
+    public static final RegistryObject<BlockEntityType<ConjuringCrystalBallEntity>> CONJURING_CRYSTAL_BALL_ENTITY = BLOCK_ENTITIES
+            .register("conjuring_crystal_ball", () -> BlockEntityType.Builder
+                    .of(ConjuringCrystalBallEntity::new, MEBlocks.CONJURING_CRYSTAL_BALL.get()).build(null));
+
 
     //Ores & Ore Blocks
     public static final RegistryObject<Block> FIRESTONE_ORE = registerBlock("firestone_ore",
