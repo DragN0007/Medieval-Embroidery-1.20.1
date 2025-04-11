@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "medievalembroidery:obsidian_shard"
+    },
+    "B": {
+      "item": "medievalembroidery:crying_obsidian_shard"
+    },
+    "C": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "AA ",
+    " B ",
+    " C "
+  ],
+  "result": {
+    "item": "medievalembroidery:obsidian_hoe"
+  },
+  "show_notification": true
+}

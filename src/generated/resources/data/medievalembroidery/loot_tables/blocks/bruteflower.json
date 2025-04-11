@@ -18,7 +18,7 @@
           "block": "medievalembroidery:bruteflower",
           "condition": "minecraft:block_state_property",
           "properties": {
-            "age": "2"
+            "age": "3"
           }
         }
       ],

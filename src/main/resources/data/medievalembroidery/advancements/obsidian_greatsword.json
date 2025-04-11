@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "medievalembroidery:obsidian_greatsword"
+    },
+    "title": "Only The Sharpest",
+    "description": "Obtain an Obsidian Greatsword.",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["medievalembroidery:obsidian_greatsword"]
+          }
+        ]
+      }
+    }
+  }
+}

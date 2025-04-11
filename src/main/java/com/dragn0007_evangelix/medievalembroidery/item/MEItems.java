@@ -4,16 +4,11 @@ package com.dragn0007_evangelix.medievalembroidery.item;
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
 import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
 import com.dragn0007_evangelix.medievalembroidery.entity.EntityTypes;
-import com.dragn0007_evangelix.medievalembroidery.item.custom.JuiceItem;
-import com.dragn0007_evangelix.medievalembroidery.item.custom.MEAlcoholItem;
-import com.dragn0007_evangelix.medievalembroidery.item.custom.MortarAndPestleItem;
-import com.dragn0007_evangelix.medievalembroidery.item.custom.TeaItem;
+import com.dragn0007_evangelix.medievalembroidery.item.custom.*;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -39,6 +34,10 @@ public class MEItems {
     public static final RegistryObject<Item> MORTAR_AND_PESTLE = ITEMS.register("mortar_and_pestle",
             () -> new MortarAndPestleItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> FAIRY_DUST = ITEMS.register("fairy_dust",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_SHARD = ITEMS.register("obsidian_shard",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CRYING_OBSIDIAN_SHARD = ITEMS.register("crying_obsidian_shard",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> DIREWOLF_EYE = ITEMS.register("direwolf_eye",
             () -> new Item(new Item.Properties()));
@@ -345,6 +344,160 @@ public class MEItems {
             () -> new ItemNameBlockItem(MEBlocks.CACHEN.get(), (new Item.Properties())));
     public static final RegistryObject<Item> LADYRIVER = ITEMS.register("ladyriver",
             () -> new ItemNameBlockItem(MEBlocks.LADYRIVER.get(), (new Item.Properties())));
+
+
+    //Tools & Weapons
+    public static final RegistryObject<Item> OBSIDIAN_SWORD = ITEMS.register("obsidian_sword",
+            () -> new SwordItem(METoolTiers.OBSIDIAN, 3, -2.4F, new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_PICKAXE = ITEMS.register("obsidian_pickaxe",
+            () -> new PickaxeItem(METoolTiers.OBSIDIAN, 1, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_SHOVEL = ITEMS.register("obsidian_shovel",
+            () -> new ShovelItem(METoolTiers.OBSIDIAN, 1.5F, -3.0F, new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_AXE = ITEMS.register("obsidian_axe",
+            () -> new AxeItem(METoolTiers.OBSIDIAN, 6, -3.1F, new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_HOE = ITEMS.register("obsidian_hoe",
+            () -> new HoeItem(METoolTiers.OBSIDIAN, -2, -1.0F, new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_DAGGER = ITEMS.register("obsidian_dagger",
+            () -> new SwordItem(METoolTiers.OBSIDIAN, 1, -1.4F, new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_GREATSWORD = ITEMS.register("obsidian_greatsword",
+            () -> new SwordItem(METoolTiers.OBSIDIAN, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_BATTLEAXE = ITEMS.register("obsidian_battleaxe",
+            () -> new AxeItem(METoolTiers.OBSIDIAN, 7, -3.3F, new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_WARHAMMER = ITEMS.register("obsidian_warhammer",
+            () -> new SwordItem(METoolTiers.OBSIDIAN, 9, -3.5F, new Item.Properties()));
+
+    public static final RegistryObject<Item> ASTROSTONE_SWORD = ITEMS.register("astrostone_sword",
+            () -> new AstrostoneSwordItem(METoolTiers.ASTROSTONE, 3, -2.4F, new Item.Properties()));
+    public static final RegistryObject<Item> ASTROSTONE_PICKAXE = ITEMS.register("astrostone_pickaxe",
+            () -> new PickaxeItem(METoolTiers.ASTROSTONE, 1, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> ASTROSTONE_SHOVEL = ITEMS.register("astrostone_shovel",
+            () -> new ShovelItem(METoolTiers.ASTROSTONE, 1.5F, -3.0F, new Item.Properties()));
+    public static final RegistryObject<Item> ASTROSTONE_AXE = ITEMS.register("astrostone_axe",
+            () -> new AstrostoneAxeItem(METoolTiers.ASTROSTONE, 6, -3.1F, new Item.Properties()));
+    public static final RegistryObject<Item> ASTROSTONE_HOE = ITEMS.register("astrostone_hoe",
+            () -> new HoeItem(METoolTiers.ASTROSTONE, -2, -1.0F, new Item.Properties()));
+    public static final RegistryObject<Item> ASTROSTONE_DAGGER = ITEMS.register("astrostone_dagger",
+            () -> new AstrostoneSwordItem(METoolTiers.ASTROSTONE, 1, -1.4F, new Item.Properties()));
+    public static final RegistryObject<Item> ASTROSTONE_GREATSWORD = ITEMS.register("astrostone_greatsword",
+            () -> new AstrostoneSwordItem(METoolTiers.ASTROSTONE, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> ASTROSTONE_BATTLEAXE = ITEMS.register("astrostone_battleaxe",
+            () -> new AstrostoneAxeItem(METoolTiers.ASTROSTONE, 7, -3.3F, new Item.Properties()));
+    public static final RegistryObject<Item> ASTROSTONE_WARHAMMER = ITEMS.register("astrostone_warhammer",
+            () -> new AstrostoneSwordItem(METoolTiers.ASTROSTONE, 9, -3.5F, new Item.Properties()));
+
+    public static final RegistryObject<Item> DEPTHSTONE_SWORD = ITEMS.register("depthstone_sword",
+            () -> new DepthstoneSwordItem(METoolTiers.DEPTHSTONE, 3, -2.4F, new Item.Properties()));
+    public static final RegistryObject<Item> DEPTHSTONE_PICKAXE = ITEMS.register("depthstone_pickaxe",
+            () -> new PickaxeItem(METoolTiers.DEPTHSTONE, 1, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> DEPTHSTONE_SHOVEL = ITEMS.register("depthstone_shovel",
+            () -> new ShovelItem(METoolTiers.DEPTHSTONE, 1.5F, -3.0F, new Item.Properties()));
+    public static final RegistryObject<Item> DEPTHSTONE_AXE = ITEMS.register("depthstone_axe",
+            () -> new DepthstoneAxeItem(METoolTiers.DEPTHSTONE, 6, -3.1F, new Item.Properties()));
+    public static final RegistryObject<Item> DEPTHSTONE_HOE = ITEMS.register("depthstone_hoe",
+            () -> new HoeItem(METoolTiers.DEPTHSTONE, -2, -1.0F, new Item.Properties()));
+    public static final RegistryObject<Item> DEPTHSTONE_DAGGER = ITEMS.register("depthstone_dagger",
+            () -> new DepthstoneSwordItem(METoolTiers.DEPTHSTONE, 1, -1.4F, new Item.Properties()));
+    public static final RegistryObject<Item> DEPTHSTONE_GREATSWORD = ITEMS.register("depthstone_greatsword",
+            () -> new DepthstoneSwordItem(METoolTiers.DEPTHSTONE, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> DEPTHSTONE_BATTLEAXE = ITEMS.register("depthstone_battleaxe",
+            () -> new DepthstoneAxeItem(METoolTiers.DEPTHSTONE, 7, -3.3F, new Item.Properties()));
+    public static final RegistryObject<Item> DEPTHSTONE_WARHAMMER = ITEMS.register("depthstone_warhammer",
+            () -> new DepthstoneSwordItem(METoolTiers.DEPTHSTONE, 9, -3.5F, new Item.Properties()));
+
+    public static final RegistryObject<Item> FIRESTONE_SWORD = ITEMS.register("firestone_sword",
+            () -> new FirestoneSwordItem(METoolTiers.FIRESTONE, 3, -2.4F, new Item.Properties()));
+    public static final RegistryObject<Item> FIRESTONE_PICKAXE = ITEMS.register("firestone_pickaxe",
+            () -> new PickaxeItem(METoolTiers.FIRESTONE, 1, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> FIRESTONE_SHOVEL = ITEMS.register("firestone_shovel",
+            () -> new ShovelItem(METoolTiers.FIRESTONE, 1.5F, -3.0F, new Item.Properties()));
+    public static final RegistryObject<Item> FIRESTONE_AXE = ITEMS.register("firestone_axe",
+            () -> new FirestoneAxeItem(METoolTiers.FIRESTONE, 6, -3.1F, new Item.Properties()));
+    public static final RegistryObject<Item> FIRESTONE_HOE = ITEMS.register("firestone_hoe",
+            () -> new HoeItem(METoolTiers.FIRESTONE, -2, -1.0F, new Item.Properties()));
+    public static final RegistryObject<Item> FIRESTONE_DAGGER = ITEMS.register("firestone_dagger",
+            () -> new FirestoneSwordItem(METoolTiers.FIRESTONE, 1, -1.4F, new Item.Properties()));
+    public static final RegistryObject<Item> FIRESTONE_GREATSWORD = ITEMS.register("firestone_greatsword",
+            () -> new FirestoneSwordItem(METoolTiers.FIRESTONE, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> FIRESTONE_BATTLEAXE = ITEMS.register("firestone_battleaxe",
+            () -> new FirestoneAxeItem(METoolTiers.FIRESTONE, 7, -3.3F, new Item.Properties()));
+    public static final RegistryObject<Item> FIRESTONE_WARHAMMER = ITEMS.register("firestone_warhammer",
+            () -> new FirestoneSwordItem(METoolTiers.FIRESTONE, 9, -3.5F, new Item.Properties()));
+
+    public static final RegistryObject<Item> FROSTSTONE_SWORD = ITEMS.register("froststone_sword",
+            () -> new FroststoneSwordItem(METoolTiers.FROSTSTONE, 3, -2.4F, new Item.Properties()));
+    public static final RegistryObject<Item> FROSTSTONE_PICKAXE = ITEMS.register("froststone_pickaxe",
+            () -> new PickaxeItem(METoolTiers.FROSTSTONE, 1, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> FROSTSTONE_SHOVEL = ITEMS.register("froststone_shovel",
+            () -> new ShovelItem(METoolTiers.FROSTSTONE, 1.5F, -3.0F, new Item.Properties()));
+    public static final RegistryObject<Item> FROSTSTONE_AXE = ITEMS.register("froststone_axe",
+            () -> new FroststoneAxeItem(METoolTiers.FROSTSTONE, 6, -3.1F, new Item.Properties()));
+    public static final RegistryObject<Item> FROSTSTONE_HOE = ITEMS.register("froststone_hoe",
+            () -> new HoeItem(METoolTiers.FROSTSTONE, -2, -1.0F, new Item.Properties()));
+    public static final RegistryObject<Item> FROSTSTONE_DAGGER = ITEMS.register("froststone_dagger",
+            () -> new FroststoneSwordItem(METoolTiers.FROSTSTONE, 1, -1.4F, new Item.Properties()));
+    public static final RegistryObject<Item> FROSTSTONE_GREATSWORD = ITEMS.register("froststone_greatsword",
+            () -> new FroststoneSwordItem(METoolTiers.FROSTSTONE, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> FROSTSTONE_BATTLEAXE = ITEMS.register("froststone_battleaxe",
+            () -> new FroststoneAxeItem(METoolTiers.FROSTSTONE, 7, -3.3F, new Item.Properties()));
+    public static final RegistryObject<Item> FROSTSTONE_WARHAMMER = ITEMS.register("froststone_warhammer",
+            () -> new FroststoneSwordItem(METoolTiers.FROSTSTONE, 9, -3.5F, new Item.Properties()));
+
+    public static final RegistryObject<Item> MOSSTONE_SWORD = ITEMS.register("mosstone_sword",
+            () -> new MosstoneSwordItem(METoolTiers.MOSSTONE, 3, -2.4F, new Item.Properties()));
+    public static final RegistryObject<Item> MOSSTONE_PICKAXE = ITEMS.register("mosstone_pickaxe",
+            () -> new PickaxeItem(METoolTiers.MOSSTONE, 1, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> MOSSTONE_SHOVEL = ITEMS.register("mosstone_shovel",
+            () -> new ShovelItem(METoolTiers.MOSSTONE, 1.5F, -3.0F, new Item.Properties()));
+    public static final RegistryObject<Item> MOSSTONE_AXE = ITEMS.register("mosstone_axe",
+            () -> new MosstoneAxeItem(METoolTiers.MOSSTONE, 6, -3.1F, new Item.Properties()));
+    public static final RegistryObject<Item> MOSSTONE_HOE = ITEMS.register("mosstone_hoe",
+            () -> new HoeItem(METoolTiers.MOSSTONE, -2, -1.0F, new Item.Properties()));
+    public static final RegistryObject<Item> MOSSTONE_DAGGER = ITEMS.register("mosstone_dagger",
+            () -> new MosstoneSwordItem(METoolTiers.MOSSTONE, 1, -1.4F, new Item.Properties()));
+    public static final RegistryObject<Item> MOSSTONE_GREATSWORD = ITEMS.register("mosstone_greatsword",
+            () -> new MosstoneSwordItem(METoolTiers.MOSSTONE, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> MOSSTONE_BATTLEAXE = ITEMS.register("mosstone_battleaxe",
+            () -> new MosstoneAxeItem(METoolTiers.MOSSTONE, 7, -3.3F, new Item.Properties()));
+    public static final RegistryObject<Item> MOSSTONE_WARHAMMER = ITEMS.register("mosstone_warhammer",
+            () -> new MosstoneSwordItem(METoolTiers.MOSSTONE, 9, -3.5F, new Item.Properties()));
+
+    public static final RegistryObject<Item> SEASTONE_SWORD = ITEMS.register("seastone_sword",
+            () -> new SeastoneSwordItem(METoolTiers.SEASTONE, 3, -2.4F, new Item.Properties()));
+    public static final RegistryObject<Item> SEASTONE_PICKAXE = ITEMS.register("seastone_pickaxe",
+            () -> new PickaxeItem(METoolTiers.SEASTONE, 1, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> SEASTONE_SHOVEL = ITEMS.register("seastone_shovel",
+            () -> new ShovelItem(METoolTiers.SEASTONE, 1.5F, -3.0F, new Item.Properties()));
+    public static final RegistryObject<Item> SEASTONE_AXE = ITEMS.register("seastone_axe",
+            () -> new SeastoneAxeItem(METoolTiers.SEASTONE, 6, -3.1F, new Item.Properties()));
+    public static final RegistryObject<Item> SEASTONE_HOE = ITEMS.register("seastone_hoe",
+            () -> new HoeItem(METoolTiers.SEASTONE, -2, -1.0F, new Item.Properties()));
+    public static final RegistryObject<Item> SEASTONE_DAGGER = ITEMS.register("seastone_dagger",
+            () -> new SeastoneSwordItem(METoolTiers.SEASTONE, 1, -1.4F, new Item.Properties()));
+    public static final RegistryObject<Item> SEASTONE_GREATSWORD = ITEMS.register("seastone_greatsword",
+            () -> new SeastoneSwordItem(METoolTiers.SEASTONE, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> SEASTONE_BATTLEAXE = ITEMS.register("seastone_battleaxe",
+            () -> new SeastoneAxeItem(METoolTiers.SEASTONE, 7, -3.3F, new Item.Properties()));
+    public static final RegistryObject<Item> SEASTONE_WARHAMMER = ITEMS.register("seastone_warhammer",
+            () -> new SeastoneSwordItem(METoolTiers.SEASTONE, 9, -3.5F, new Item.Properties()));
+
+    public static final RegistryObject<Item> SKYSTONE_SWORD = ITEMS.register("skystone_sword",
+            () -> new SkystoneSwordItem(METoolTiers.SKYSTONE, 3, -2.4F, new Item.Properties()));
+    public static final RegistryObject<Item> SKYSTONE_PICKAXE = ITEMS.register("skystone_pickaxe",
+            () -> new PickaxeItem(METoolTiers.SKYSTONE, 1, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> SKYSTONE_SHOVEL = ITEMS.register("skystone_shovel",
+            () -> new ShovelItem(METoolTiers.SKYSTONE, 1.5F, -3.0F, new Item.Properties()));
+    public static final RegistryObject<Item> SKYSTONE_AXE = ITEMS.register("skystone_axe",
+            () -> new SkystoneAxeItem(METoolTiers.SKYSTONE, 6, -3.1F, new Item.Properties()));
+    public static final RegistryObject<Item> SKYSTONE_HOE = ITEMS.register("skystone_hoe",
+            () -> new HoeItem(METoolTiers.SKYSTONE, -2, -1.0F, new Item.Properties()));
+    public static final RegistryObject<Item> SKYSTONE_DAGGER = ITEMS.register("skystone_dagger",
+            () -> new SkystoneSwordItem(METoolTiers.SKYSTONE, 1, -1.4F, new Item.Properties()));
+    public static final RegistryObject<Item> SKYSTONE_GREATSWORD = ITEMS.register("skystone_greatsword",
+            () -> new SkystoneSwordItem(METoolTiers.SKYSTONE, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> SKYSTONE_BATTLEAXE = ITEMS.register("skystone_battleaxe",
+            () -> new SkystoneAxeItem(METoolTiers.SKYSTONE, 7, -3.3F, new Item.Properties()));
+    public static final RegistryObject<Item> SKYSTONE_WARHAMMER = ITEMS.register("skystone_warhammer",
+            () -> new SkystoneSwordItem(METoolTiers.SKYSTONE, 9, -3.5F, new Item.Properties()));
 
 
 

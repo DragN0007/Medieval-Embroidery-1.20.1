@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "medievalembroidery:obsidian_shard"
+    },
+    "B": {
+      "item": "medievalembroidery:crying_obsidian_shard"
+    },
+    "C": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "ACA",
+    "BCB"
+  ],
+  "result": {
+    "item": "medievalembroidery:obsidian_battleaxe"
+  },
+  "show_notification": true
+}

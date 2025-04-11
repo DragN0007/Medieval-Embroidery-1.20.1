@@ -34,6 +34,8 @@ public class MEItemModelProvider extends ItemModelProvider {
 
         simpleItem(MEItems.DIREWOLF_EYE);
         simpleItem(MEItems.FAIRY_DUST);
+        simpleItem(MEItems.OBSIDIAN_SHARD);
+        simpleItem(MEItems.CRYING_OBSIDIAN_SHARD);
 
         simpleItem(MEItems.ASSISTIVE_CRYSTAL_SHARD);
         simpleItem(MEItems.CONJURING_CRYSTAL_SHARD);
@@ -157,6 +159,62 @@ public class MEItemModelProvider extends ItemModelProvider {
         simpleItem(MEItems.LEMON_TEA);
         simpleItem(MEItems.LEMON_JUICE);
         simpleItem(MEItems.LEMON_PIE);
+
+        handheldItem(MEItems.OBSIDIAN_SWORD);
+        handheldItem(MEItems.OBSIDIAN_PICKAXE);
+        handheldItem(MEItems.OBSIDIAN_SHOVEL);
+        handheldItem(MEItems.OBSIDIAN_AXE);
+        handheldItem(MEItems.OBSIDIAN_HOE);
+        handheldItem(MEItems.OBSIDIAN_DAGGER);
+
+        handheldItem(MEItems.ASTROSTONE_SWORD);
+        handheldItem(MEItems.ASTROSTONE_PICKAXE);
+        handheldItem(MEItems.ASTROSTONE_SHOVEL);
+        handheldItem(MEItems.ASTROSTONE_AXE);
+        handheldItem(MEItems.ASTROSTONE_HOE);
+        handheldItem(MEItems.ASTROSTONE_DAGGER);
+
+        handheldItem(MEItems.DEPTHSTONE_SWORD);
+        handheldItem(MEItems.DEPTHSTONE_PICKAXE);
+        handheldItem(MEItems.DEPTHSTONE_SHOVEL);
+        handheldItem(MEItems.DEPTHSTONE_AXE);
+        handheldItem(MEItems.DEPTHSTONE_HOE);
+        handheldItem(MEItems.DEPTHSTONE_DAGGER);
+
+        handheldItem(MEItems.FIRESTONE_SWORD);
+        handheldItem(MEItems.FIRESTONE_PICKAXE);
+        handheldItem(MEItems.FIRESTONE_SHOVEL);
+        handheldItem(MEItems.FIRESTONE_AXE);
+        handheldItem(MEItems.FIRESTONE_HOE);
+        handheldItem(MEItems.FIRESTONE_DAGGER);
+
+        handheldItem(MEItems.FROSTSTONE_SWORD);
+        handheldItem(MEItems.FROSTSTONE_PICKAXE);
+        handheldItem(MEItems.FROSTSTONE_SHOVEL);
+        handheldItem(MEItems.FROSTSTONE_AXE);
+        handheldItem(MEItems.FROSTSTONE_HOE);
+        handheldItem(MEItems.FROSTSTONE_DAGGER);
+
+        handheldItem(MEItems.MOSSTONE_SWORD);
+        handheldItem(MEItems.MOSSTONE_PICKAXE);
+        handheldItem(MEItems.MOSSTONE_SHOVEL);
+        handheldItem(MEItems.MOSSTONE_AXE);
+        handheldItem(MEItems.MOSSTONE_HOE);
+        handheldItem(MEItems.MOSSTONE_DAGGER);
+
+        handheldItem(MEItems.SEASTONE_SWORD);
+        handheldItem(MEItems.SEASTONE_PICKAXE);
+        handheldItem(MEItems.SEASTONE_SHOVEL);
+        handheldItem(MEItems.SEASTONE_AXE);
+        handheldItem(MEItems.SEASTONE_HOE);
+        handheldItem(MEItems.SEASTONE_DAGGER);
+
+        handheldItem(MEItems.SKYSTONE_SWORD);
+        handheldItem(MEItems.SKYSTONE_PICKAXE);
+        handheldItem(MEItems.SKYSTONE_SHOVEL);
+        handheldItem(MEItems.SKYSTONE_AXE);
+        handheldItem(MEItems.SKYSTONE_HOE);
+        handheldItem(MEItems.SKYSTONE_DAGGER);
     }
 
     private ItemModelBuilder simpleSpriteBlockItem(RegistryObject<Block> block) {
@@ -174,7 +232,7 @@ public class MEItemModelProvider extends ItemModelProvider {
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/handheld")).texture("layer0",
-                new ResourceLocation(MedievalEmbroidery.MODID,"items/" + item.getId().getPath()));
+                new ResourceLocation(MedievalEmbroidery.MODID,"item/" + item.getId().getPath()));
     }
 
     public ItemModelBuilder simpleItem(RegistryObject<Item> item) {

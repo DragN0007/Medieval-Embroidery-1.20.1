@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "medievalembroidery:astrostone"
+    },
+    "B": {
+      "item": "medievalembroidery:depthstone"
+    },
+    "C": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " A ",
+    " B ",
+    " C "
+  ],
+  "result": {
+    "item": "medievalembroidery:astrostone_shovel"
+  },
+  "show_notification": true
+}

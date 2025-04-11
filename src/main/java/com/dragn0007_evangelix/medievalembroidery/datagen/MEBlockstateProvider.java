@@ -66,19 +66,19 @@ public class MEBlockstateProvider extends BlockStateProvider {
 
         createCrop((CropBlock) MEBlocks.BRUTEFLOWER.get(), "bruteflower_stage_", "bruteflower_stage_");
         simpleBlock(MEBlocks.WILD_BRUTEFLOWER.get(), models().cross(MEBlocks.WILD_BRUTEFLOWER.getId().getPath(),
-                wildPlantTexture("bruteflower_stage_2")).renderType("cutout"));
+                wildPlantTexture("bruteflower_stage_3")).renderType("cutout"));
 
         createCrop((CropBlock) MEBlocks.CACHEN.get(), "cachen_stage_", "cachen_stage_");
         simpleBlock(MEBlocks.WILD_CACHEN.get(), models().cross(MEBlocks.WILD_CACHEN.getId().getPath(),
-                wildPlantTexture("cachen_stage_2")).renderType("cutout"));
+                wildPlantTexture("cachen_stage_3")).renderType("cutout"));
 
         createCrop((CropBlock) MEBlocks.CANNAAN.get(), "cannaan_stage_", "cannaan_stage_");
         simpleBlock(MEBlocks.WILD_CANNAAN.get(), models().cross(MEBlocks.WILD_CANNAAN.getId().getPath(),
-                wildPlantTexture("cannaan_stage_2")).renderType("cutout"));
+                wildPlantTexture("cannaan_stage_3")).renderType("cutout"));
 
         createCrop((CropBlock) MEBlocks.HENVEN.get(), "henven_stage_", "henven_stage_");
         simpleBlock(MEBlocks.WILD_HENVEN.get(), models().cross(MEBlocks.WILD_HENVEN.getId().getPath(),
-                wildPlantTexture("henven_stage_2")).renderType("cutout"));
+                wildPlantTexture("henven_stage_3")).renderType("cutout"));
 
         createCrop((CropBlock) MEBlocks.DRAGONEYE.get(), "dragoneye_stage_", "dragoneye_stage_");
         simpleBlock(MEBlocks.WILD_DRAGONEYE.get(), models().cross(MEBlocks.WILD_DRAGONEYE.getId().getPath(),
@@ -86,23 +86,23 @@ public class MEBlockstateProvider extends BlockStateProvider {
 
         createCrop((CropBlock) MEBlocks.FAIRYFLOWER.get(), "fairyflower_stage_", "fairyflower_stage_");
         simpleBlock(MEBlocks.WILD_FAIRYFLOWER.get(), models().cross(MEBlocks.WILD_FAIRYFLOWER.getId().getPath(),
-                wildPlantTexture("fairyflower_stage_2")).renderType("cutout"));
+                wildPlantTexture("fairyflower_stage_3")).renderType("cutout"));
 
         createCrop((CropBlock) MEBlocks.GRANGIN.get(), "grangin_stage_", "grangin_stage_");
         simpleBlock(MEBlocks.WILD_GRANGIN.get(), models().cross(MEBlocks.WILD_GRANGIN.getId().getPath(),
-                wildPlantTexture("grangin_stage_2")).renderType("cutout"));
+                wildPlantTexture("grangin_stage_3")).renderType("cutout"));
 
         createCrop((CropBlock) MEBlocks.LADYRIVER.get(), "ladyriver_stage_", "ladyriver_stage_");
         simpleBlock(MEBlocks.WILD_LADYRIVER.get(), models().cross(MEBlocks.WILD_LADYRIVER.getId().getPath(),
-                wildPlantTexture("ladyriver_stage_2")).renderType("cutout"));
+                wildPlantTexture("ladyriver_stage_3")).renderType("cutout"));
 
         createCrop((CropBlock) MEBlocks.SPRINNAN.get(), "sprinnan_stage_", "sprinnan_stage_");
         simpleBlock(MEBlocks.WILD_SPRINNAN.get(), models().cross(MEBlocks.WILD_SPRINNAN.getId().getPath(),
-                wildPlantTexture("sprinnan_stage_2")).renderType("cutout"));
+                wildPlantTexture("sprinnan_stage_3")).renderType("cutout"));
 
         createCrop((CropBlock) MEBlocks.VIRENNES.get(), "virennes_stage_", "virennes_stage_");
         simpleBlock(MEBlocks.WILD_VIRENNES.get(), models().cross(MEBlocks.WILD_VIRENNES.getId().getPath(),
-                wildPlantTexture("virennes_stage_2")).renderType("cutout"));
+                wildPlantTexture("virennes_stage_3")).renderType("cutout"));
 
         createMushroom((CropBlock) MEBlocks.BLEWIT.get(), "blewit_stage_", "blewit_stage_");
         createMushroom((CropBlock) MEBlocks.HONEY.get(), "honey_stage_", "honey_stage_");

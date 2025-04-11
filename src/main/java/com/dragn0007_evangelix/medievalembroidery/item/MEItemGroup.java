@@ -357,12 +357,91 @@ public class MEItemGroup {
 //
 //                    }).build());
 //
-//    public static final RegistryObject<CreativeModeTab> EQUIPMENT_GROUP = CREATIVE_MODE_TABS.register("equipmentmodtab",
-//            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.equipmentmodtab"))
-//                    .displayItems((displayParameters, output) -> {
-//
-//
-//                    }).build());
+    public static final RegistryObject<CreativeModeTab> EQUIPMENT_GROUP = CREATIVE_MODE_TABS.register("equipmentmodtab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(PixelPlacementBlocks.IRON_GROUNDED_SWORD.get())).title(Component.translatable("itemGroup.equipmentmodtab"))
+                    .displayItems((displayParameters, output) -> {
+
+                        output.accept(MEItems.OBSIDIAN_SWORD.get());
+                        output.accept(MEItems.OBSIDIAN_PICKAXE.get());
+                        output.accept(MEItems.OBSIDIAN_SHOVEL.get());
+                        output.accept(MEItems.OBSIDIAN_AXE.get());
+                        output.accept(MEItems.OBSIDIAN_HOE.get());
+                        output.accept(MEItems.OBSIDIAN_DAGGER.get());
+                        output.accept(MEItems.OBSIDIAN_GREATSWORD.get());
+                        output.accept(MEItems.OBSIDIAN_BATTLEAXE.get());
+                        output.accept(MEItems.OBSIDIAN_WARHAMMER.get());
+
+                        output.accept(MEItems.ASTROSTONE_SWORD.get());
+                        output.accept(MEItems.ASTROSTONE_PICKAXE.get());
+                        output.accept(MEItems.ASTROSTONE_SHOVEL.get());
+                        output.accept(MEItems.ASTROSTONE_AXE.get());
+                        output.accept(MEItems.ASTROSTONE_HOE.get());
+                        output.accept(MEItems.ASTROSTONE_DAGGER.get());
+                        output.accept(MEItems.ASTROSTONE_GREATSWORD.get());
+                        output.accept(MEItems.ASTROSTONE_BATTLEAXE.get());
+                        output.accept(MEItems.ASTROSTONE_WARHAMMER.get());
+
+                        output.accept(MEItems.DEPTHSTONE_SWORD.get());
+                        output.accept(MEItems.DEPTHSTONE_PICKAXE.get());
+                        output.accept(MEItems.DEPTHSTONE_SHOVEL.get());
+                        output.accept(MEItems.DEPTHSTONE_AXE.get());
+                        output.accept(MEItems.DEPTHSTONE_HOE.get());
+                        output.accept(MEItems.DEPTHSTONE_DAGGER.get());
+                        output.accept(MEItems.DEPTHSTONE_GREATSWORD.get());
+                        output.accept(MEItems.DEPTHSTONE_BATTLEAXE.get());
+                        output.accept(MEItems.DEPTHSTONE_WARHAMMER.get());
+
+                        output.accept(MEItems.FIRESTONE_SWORD.get());
+                        output.accept(MEItems.FIRESTONE_PICKAXE.get());
+                        output.accept(MEItems.FIRESTONE_SHOVEL.get());
+                        output.accept(MEItems.FIRESTONE_AXE.get());
+                        output.accept(MEItems.FIRESTONE_HOE.get());
+                        output.accept(MEItems.FIRESTONE_DAGGER.get());
+                        output.accept(MEItems.FIRESTONE_GREATSWORD.get());
+                        output.accept(MEItems.FIRESTONE_BATTLEAXE.get());
+                        output.accept(MEItems.FIRESTONE_WARHAMMER.get());
+
+                        output.accept(MEItems.FROSTSTONE_SWORD.get());
+                        output.accept(MEItems.FROSTSTONE_PICKAXE.get());
+                        output.accept(MEItems.FROSTSTONE_SHOVEL.get());
+                        output.accept(MEItems.FROSTSTONE_AXE.get());
+                        output.accept(MEItems.FROSTSTONE_HOE.get());
+                        output.accept(MEItems.FROSTSTONE_DAGGER.get());
+                        output.accept(MEItems.FROSTSTONE_GREATSWORD.get());
+                        output.accept(MEItems.FROSTSTONE_BATTLEAXE.get());
+                        output.accept(MEItems.FROSTSTONE_WARHAMMER.get());
+
+                        output.accept(MEItems.MOSSTONE_SWORD.get());
+                        output.accept(MEItems.MOSSTONE_PICKAXE.get());
+                        output.accept(MEItems.MOSSTONE_SHOVEL.get());
+                        output.accept(MEItems.MOSSTONE_AXE.get());
+                        output.accept(MEItems.MOSSTONE_HOE.get());
+                        output.accept(MEItems.MOSSTONE_DAGGER.get());
+                        output.accept(MEItems.MOSSTONE_GREATSWORD.get());
+                        output.accept(MEItems.MOSSTONE_BATTLEAXE.get());
+                        output.accept(MEItems.MOSSTONE_WARHAMMER.get());
+
+                        output.accept(MEItems.SEASTONE_SWORD.get());
+                        output.accept(MEItems.SEASTONE_PICKAXE.get());
+                        output.accept(MEItems.SEASTONE_SHOVEL.get());
+                        output.accept(MEItems.SEASTONE_AXE.get());
+                        output.accept(MEItems.SEASTONE_HOE.get());
+                        output.accept(MEItems.SEASTONE_DAGGER.get());
+                        output.accept(MEItems.SEASTONE_GREATSWORD.get());
+                        output.accept(MEItems.SEASTONE_BATTLEAXE.get());
+                        output.accept(MEItems.SEASTONE_WARHAMMER.get());
+
+                        output.accept(MEItems.SKYSTONE_SWORD.get());
+                        output.accept(MEItems.SKYSTONE_PICKAXE.get());
+                        output.accept(MEItems.SKYSTONE_SHOVEL.get());
+                        output.accept(MEItems.SKYSTONE_AXE.get());
+                        output.accept(MEItems.SKYSTONE_HOE.get());
+                        output.accept(MEItems.SKYSTONE_DAGGER.get());
+                        output.accept(MEItems.SKYSTONE_GREATSWORD.get());
+                        output.accept(MEItems.SKYSTONE_BATTLEAXE.get());
+                        output.accept(MEItems.SKYSTONE_WARHAMMER.get());
+
+                    }).build());
 
 
 

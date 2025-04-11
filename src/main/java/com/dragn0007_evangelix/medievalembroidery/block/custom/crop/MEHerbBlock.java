@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 public class MEHerbBlock extends CropBlock {
-    public static final IntegerProperty AGE = BlockStateProperties.AGE_2;
+    public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
 
     public MEHerbBlock(Properties properties) {
         super(properties);
@@ -20,7 +20,7 @@ public class MEHerbBlock extends CropBlock {
 
     @Override
     public int getMaxAge() {
-        return 2;
+        return 3;
     }
 
     @Override
@@ -33,7 +33,7 @@ public class MEHerbBlock extends CropBlock {
     }
 
     public int getBonemealAgeIncrease(Level level) {
-        return super.getBonemealAgeIncrease(level) / 4;
+        return super.getBonemealAgeIncrease(level) / 3;
     }
 
     @Override

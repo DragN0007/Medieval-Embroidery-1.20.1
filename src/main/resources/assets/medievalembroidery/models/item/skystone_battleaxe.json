@@ -1,0 +1,6 @@
+{
+	"parent": "medievalembroidery:item/parent/battleaxe",
+	"textures": {
+		"battleaxe": "medievalembroidery:item/skystone_battleaxe"
+	}
+}

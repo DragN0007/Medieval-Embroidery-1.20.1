@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "medievalembroidery:mosstone"
+    },
+    "B": {
+      "item": "medievalembroidery:depthstone"
+    },
+    "C": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "AA ",
+    " B ",
+    " C "
+  ],
+  "result": {
+    "item": "medievalembroidery:mosstone_hoe"
+  },
+  "show_notification": true
+}

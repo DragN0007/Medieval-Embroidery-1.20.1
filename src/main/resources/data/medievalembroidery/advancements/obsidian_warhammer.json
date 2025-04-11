@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "medievalembroidery:obsidian_warhammer"
+    },
+    "title": "Hit Like A Giant",
+    "description": "Obtain an Obsidian Warhammer.",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["medievalembroidery:obsidian_warhammer"]
+          }
+        ]
+      }
+    }
+  }
+}

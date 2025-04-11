@@ -18,7 +18,7 @@
           "block": "medievalembroidery:cannaan",
           "condition": "minecraft:block_state_property",
           "properties": {
-            "age": "2"
+            "age": "3"
           }
         }
       ],

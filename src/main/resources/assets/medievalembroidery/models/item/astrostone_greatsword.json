@@ -1,0 +1,6 @@
+{
+	"parent": "medievalembroidery:item/parent/greatsword",
+	"textures": {
+		"greatsword": "medievalembroidery:item/astrostone_greatsword"
+	}
+}

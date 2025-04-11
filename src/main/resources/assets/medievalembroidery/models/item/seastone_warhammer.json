@@ -1,0 +1,6 @@
+{
+	"parent": "medievalembroidery:item/parent/warhammer",
+	"textures": {
+		"warhammer": "medievalembroidery:item/seastone_warhammer"
+	}
+}

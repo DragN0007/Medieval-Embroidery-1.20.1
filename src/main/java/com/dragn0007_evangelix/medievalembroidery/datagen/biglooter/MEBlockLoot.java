@@ -63,7 +63,7 @@ public class MEBlockLoot extends BlockLootSubProvider {
         this.dropOther(MEBlocks.WILD_BRUTEFLOWER.get(), MEItems.BRUTEFLOWER.get());
         LootItemCondition.Builder lootitemcondition$builder1 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
                 (MEBlocks.BRUTEFLOWER.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
-                (MEHerbBlock.AGE, 2));
+                (MEHerbBlock.AGE, 3));
         this.add(MEBlocks.BRUTEFLOWER.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
                 (MEItems.BRUTEFLOWER.get()))).withPool(LootPool.lootPool().when(lootitemcondition$builder1).add(LootItem.lootTableItem
                 (MEItems.BRUTEFLOWER.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));
@@ -71,7 +71,7 @@ public class MEBlockLoot extends BlockLootSubProvider {
         this.dropOther(MEBlocks.WILD_CACHEN.get(), MEItems.CACHEN.get());
         LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
                 (MEBlocks.CACHEN.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
-                (MEHerbBlock.AGE, 2));
+                (MEHerbBlock.AGE, 3));
         this.add(MEBlocks.CACHEN.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
                 (MEItems.CACHEN.get()))).withPool(LootPool.lootPool().when(lootitemcondition$builder2).add(LootItem.lootTableItem
                 (MEItems.CACHEN.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));
@@ -79,7 +79,7 @@ public class MEBlockLoot extends BlockLootSubProvider {
         this.dropOther(MEBlocks.WILD_CANNAAN.get(), MEItems.CANNAAN.get());
         LootItemCondition.Builder lootitemcondition$builder3 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
                 (MEBlocks.CANNAAN.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
-                (MEHerbBlock.AGE, 2));
+                (MEHerbBlock.AGE, 3));
         this.add(MEBlocks.CANNAAN.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
                 (MEItems.CANNAAN.get()))).withPool(LootPool.lootPool().when(lootitemcondition$builder3).add(LootItem.lootTableItem
                 (MEItems.CANNAAN.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));
@@ -95,7 +95,7 @@ public class MEBlockLoot extends BlockLootSubProvider {
         this.dropOther(MEBlocks.WILD_SPRINNAN.get(), MEItems.SPRINNAN.get());
         LootItemCondition.Builder lootitemcondition$builder5 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
                 (MEBlocks.SPRINNAN.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
-                (MEHerbBlock.AGE, 2));
+                (MEHerbBlock.AGE, 3));
         this.add(MEBlocks.SPRINNAN.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
                 (MEItems.SPRINNAN.get()))).withPool(LootPool.lootPool().when(lootitemcondition$builder5).add(LootItem.lootTableItem
                 (MEItems.SPRINNAN.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));
@@ -103,7 +103,7 @@ public class MEBlockLoot extends BlockLootSubProvider {
         this.dropOther(MEBlocks.WILD_SPRINNAN.get(), MEItems.SPRINNAN.get());
         LootItemCondition.Builder lootitemcondition$builder6 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
                 (MEBlocks.SPRINNAN.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
-                (MEHerbBlock.AGE, 2));
+                (MEHerbBlock.AGE, 3));
         this.add(MEBlocks.SPRINNAN.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
                 (MEItems.SPRINNAN.get()))).withPool(LootPool.lootPool().when(lootitemcondition$builder6).add(LootItem.lootTableItem
                 (MEItems.SPRINNAN.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));
@@ -111,7 +111,7 @@ public class MEBlockLoot extends BlockLootSubProvider {
         this.dropOther(MEBlocks.WILD_GRANGIN.get(), MEItems.GRANGIN.get());
         LootItemCondition.Builder lootitemcondition$builder7 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
                 (MEBlocks.GRANGIN.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
-                (MEHerbBlock.AGE, 2));
+                (MEHerbBlock.AGE, 3));
         this.add(MEBlocks.GRANGIN.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
                 (MEItems.GRANGIN.get()))).withPool(LootPool.lootPool().when(lootitemcondition$builder7).add(LootItem.lootTableItem
                 (MEItems.GRANGIN.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));
@@ -119,7 +119,7 @@ public class MEBlockLoot extends BlockLootSubProvider {
         this.dropOther(MEBlocks.WILD_FAIRYFLOWER.get(), MEItems.FAIRYFLOWER.get());
         LootItemCondition.Builder lootitemcondition$builder8 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
                 (MEBlocks.FAIRYFLOWER.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
-                (MEHerbBlock.AGE, 2));
+                (MEHerbBlock.AGE, 3));
         this.add(MEBlocks.FAIRYFLOWER.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
                 (MEItems.FAIRYFLOWER.get()))).withPool(LootPool.lootPool().when(lootitemcondition$builder8).add(LootItem.lootTableItem
                 (MEItems.FAIRYFLOWER.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));
@@ -127,7 +127,7 @@ public class MEBlockLoot extends BlockLootSubProvider {
         this.dropOther(MEBlocks.WILD_LADYRIVER.get(), MEItems.LADYRIVER.get());
         LootItemCondition.Builder lootitemcondition$builder9 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
                 (MEBlocks.LADYRIVER.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
-                (MEHerbBlock.AGE, 2));
+                (MEHerbBlock.AGE, 3));
         this.add(MEBlocks.LADYRIVER.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
                 (MEItems.LADYRIVER.get()))).withPool(LootPool.lootPool().when(lootitemcondition$builder9).add(LootItem.lootTableItem
                 (MEItems.LADYRIVER.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));
@@ -135,7 +135,7 @@ public class MEBlockLoot extends BlockLootSubProvider {
         this.dropOther(MEBlocks.WILD_HENVEN.get(), MEItems.HENVEN.get());
         LootItemCondition.Builder lootitemcondition$builder23 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
                 (MEBlocks.HENVEN.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
-                (MEHerbBlock.AGE, 2));
+                (MEHerbBlock.AGE, 3));
         this.add(MEBlocks.HENVEN.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
                 (MEItems.HENVEN.get()))).withPool(LootPool.lootPool().when(lootitemcondition$builder23).add(LootItem.lootTableItem
                 (MEItems.HENVEN.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));
@@ -143,42 +143,42 @@ public class MEBlockLoot extends BlockLootSubProvider {
         this.dropOther(MEBlocks.WILD_VIRENNES.get(), MEItems.VIRENNES.get());
         LootItemCondition.Builder lootitemcondition$builder24 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
                 (MEBlocks.VIRENNES.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
-                (MEHerbBlock.AGE, 2));
+                (MEHerbBlock.AGE, 3));
         this.add(MEBlocks.VIRENNES.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
                 (MEItems.VIRENNES.get()))).withPool(LootPool.lootPool().when(lootitemcondition$builder24).add(LootItem.lootTableItem
                 (MEItems.VIRENNES.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));
 
         LootItemCondition.Builder lootitemcondition$builder10 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
                 (MEBlocks.BILBERRY_BUSH.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
-                (MEHerbBlock.AGE, 2));
+                (MEHerbBlock.AGE, 3));
         this.add(MEBlocks.BILBERRY_BUSH.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
                 (MEItems.BILBERRY.get()))).withPool(LootPool.lootPool().when(lootitemcondition$builder10).add(LootItem.lootTableItem
                 (MEItems.BILBERRY.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));
 
         LootItemCondition.Builder lootitemcondition$builder11 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
                 (MEBlocks.COWBERRY_BUSH.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
-                (MEHerbBlock.AGE, 2));
+                (MEHerbBlock.AGE, 3));
         this.add(MEBlocks.COWBERRY_BUSH.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
                 (MEItems.COWBERRY.get()))).withPool(LootPool.lootPool().when(lootitemcondition$builder11).add(LootItem.lootTableItem
                 (MEItems.COWBERRY.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));
 
         LootItemCondition.Builder lootitemcondition$builder12 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
                 (MEBlocks.ELDERBERRY_BUSH.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
-                (MEHerbBlock.AGE, 2));
+                (MEHerbBlock.AGE, 3));
         this.add(MEBlocks.ELDERBERRY_BUSH.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
                 (MEItems.ELDERBERRY.get()))).withPool(LootPool.lootPool().when(lootitemcondition$builder12).add(LootItem.lootTableItem
                 (MEItems.ELDERBERRY.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));
 
         LootItemCondition.Builder lootitemcondition$builder13 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
                 (MEBlocks.HAWTHORN_BUSH.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
-                (MEHerbBlock.AGE, 2));
+                (MEHerbBlock.AGE, 3));
         this.add(MEBlocks.HAWTHORN_BUSH.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
                 (MEItems.HAWTHORNBERRY.get()))).withPool(LootPool.lootPool().when(lootitemcondition$builder13).add(LootItem.lootTableItem
                 (MEItems.HAWTHORNBERRY.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));
 
         LootItemCondition.Builder lootitemcondition$builder14 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
                 (MEBlocks.REDCURRANT_BUSH.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
-                (MEHerbBlock.AGE, 2));
+                (MEHerbBlock.AGE, 3));
         this.add(MEBlocks.REDCURRANT_BUSH.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
                 (MEItems.REDCURRANT.get()))).withPool(LootPool.lootPool().when(lootitemcondition$builder14).add(LootItem.lootTableItem
                 (MEItems.REDCURRANT.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));
