@@ -1,23 +1,23 @@
 {
-  "name": "Acrocanthosaurus",
-  "icon": "deadlydinos:large_carnivore_skull",
-  "category": "deadlydinos:animals_category",
+  "name": "Direwolf",
+  "icon": "medievalembroidery:direwolf_eye",
+  "category": "medievalembroidery:animals_category",
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(l)Category:$() Large Carnivore $(br)$(l)Tamable:$() False $(br)$(l)Aggression:$() Aggressive $(br)$(l)Type:$() Apex $(br)$(l)Found In:$() Grasslands"
+      "text": "$(l)Category:$() Medium Carnivore $(br)$(l)Tamable:$() True $(br)$(l)Aggression:$() Aggressive $(br)$(l)Found In:$() Cold Biomes $(br2)$(l)Gender Dimorphism:$() $(br)Bigger Males"
     },
     {
       "type": "patchouli:spotlight",
       "item": {
-        "item": "deadlydinos:acrocanthosaurus_trophy"
+        "item": "medievalembroidery:direwolf_eye"
       },
-      "text": "The Acrocanthosaurus is a large-sized, swift carnivore. Upon hitting 33% health or less, it'll go into a panic mode and gain Speed and Strength."
+      "text": "The Direwolf is a medium-sized, swift, pack-hunting carnivore. Direwolves can be tamed with raw meats or eggs, and can be saddled and ridden. While they don't follow their owner, they can be sat down. They come in many different color-marking combinations."
     },
     {
       "type": "patchouli:entity",
-      "entity": "deadlydinos:acrocanthosaurus{Variant:0}",
-      "name": "The Acrocanthosaurus",
+      "entity": "medievalembroidery:direwolf{Variant:0}",
+      "name": "The Direwolf",
       "default_rotation": 45,
       "scale": 0.8,
       "rotate": "false"

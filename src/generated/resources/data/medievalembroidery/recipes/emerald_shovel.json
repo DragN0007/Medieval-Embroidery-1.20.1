@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:emerald"
+    },
+    "C": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "A",
+    "C",
+    "C"
+  ],
+  "result": {
+    "item": "medievalembroidery:emerald_shovel"
+  },
+  "show_notification": true
+}

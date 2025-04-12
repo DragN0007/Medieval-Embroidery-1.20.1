@@ -11,6 +11,12 @@
     "minecraft:melon_slice",
 
     {
+      "id": "#forge:mushrooms",
+      "required": false
+    },
+
+
+    {
       "id": "#forge:vegetables",
       "required": false
     },

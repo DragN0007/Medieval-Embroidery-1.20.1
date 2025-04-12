@@ -32,7 +32,7 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
                         .build()))
                 .save(pFinishedRecipeConsumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.CRYING_OBSIDIAN_SHARD.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.CRYING_OBSIDIAN_SHARD.get(), 3)
                 .requires(MEItems.MORTAR_AND_PESTLE.get())
                 .requires(Items.CRYING_OBSIDIAN)
                 .unlockedBy("has_crying_obsidian", inventoryTrigger(ItemPredicate.Builder.item()
@@ -128,6 +128,109 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
                         .of(Items.STICK)
                         .build())).save(pFinishedRecipeConsumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.OBSIDIAN_WARHAMMER.get())
+                .define('A', MEItems.OBSIDIAN_SHARD.get())
+                .define('B', MEItems.CRYING_OBSIDIAN_SHARD.get())
+                .define('C', Items.STICK)
+                .pattern("AAA")
+                .pattern("AC ")
+                .pattern("BCB")
+                .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.STICK)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.EMERALD_SWORD.get())
+                .define('A', Items.EMERALD)
+                .define('C', Items.STICK)
+                .pattern("A")
+                .pattern("A")
+                .pattern("C")
+                .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.STICK)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.EMERALD_PICKAXE.get())
+                .define('A', Items.EMERALD)
+                .define('C', Items.STICK)
+                .pattern("AAA")
+                .pattern(" C ")
+                .pattern(" C ")
+                .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.STICK)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.EMERALD_SHOVEL.get())
+                .define('A', Items.EMERALD)
+                .define('C', Items.STICK)
+                .pattern("A")
+                .pattern("C")
+                .pattern("C")
+                .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.STICK)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.EMERALD_AXE.get())
+                .define('A', Items.EMERALD)
+                .define('C', Items.STICK)
+                .pattern("AA")
+                .pattern("AC")
+                .pattern(" C")
+                .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.STICK)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.EMERALD_HOE.get())
+                .define('A', Items.EMERALD)
+                .define('C', Items.STICK)
+                .pattern("AA")
+                .pattern(" C")
+                .pattern(" C")
+                .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.STICK)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.EMERALD_DAGGER.get())
+                .define('A', Items.EMERALD)
+                .define('C', Items.STICK)
+                .pattern("A")
+                .pattern("C")
+                .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.STICK)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.EMERALD_GREATSWORD.get())
+                .define('A', Items.EMERALD)
+                .define('B', MEItems.DEPTHSTONE.get())
+                .define('C', Items.STICK)
+                .pattern(" A ")
+                .pattern("AAA")
+                .pattern("BCB")
+                .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.STICK)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.EMERALD_BATTLEAXE.get())
+                .define('A', Items.EMERALD)
+                .define('B', MEItems.DEPTHSTONE.get())
+                .define('C', Items.STICK)
+                .pattern("AAA")
+                .pattern("ACA")
+                .pattern("BCB")
+                .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.STICK)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.EMERALD_WARHAMMER.get())
+                .define('A', Items.EMERALD)
+                .define('B', MEItems.DEPTHSTONE.get())
+                .define('C', Items.STICK)
+                .pattern("AAA")
+                .pattern("AC ")
+                .pattern("BCB")
+                .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.STICK)
+                        .build())).save(pFinishedRecipeConsumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.ASTROSTONE_SWORD.get())
                 .define('A', MEItems.ASTROSTONE.get())
                 .define('B', MEItems.DEPTHSTONE.get())
@@ -210,6 +313,17 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
                 .define('C', Items.STICK)
                 .pattern("AAA")
                 .pattern("ACA")
+                .pattern("BCB")
+                .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.STICK)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.ASTROSTONE_WARHAMMER.get())
+                .define('A', MEItems.ASTROSTONE.get())
+                .define('B', MEItems.DEPTHSTONE.get())
+                .define('C', Items.STICK)
+                .pattern("AAA")
+                .pattern("AC ")
                 .pattern("BCB")
                 .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.STICK)
@@ -302,6 +416,17 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
                         .of(Items.STICK)
                         .build())).save(pFinishedRecipeConsumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.DEPTHSTONE_WARHAMMER.get())
+                .define('A', MEItems.DEPTHSTONE.get())
+                .define('B', MEItems.DEPTHSTONE.get())
+                .define('C', Items.STICK)
+                .pattern("AAA")
+                .pattern("AC ")
+                .pattern("BCB")
+                .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.STICK)
+                        .build())).save(pFinishedRecipeConsumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.FIRESTONE_SWORD.get())
                 .define('A', MEItems.FIRESTONE.get())
                 .define('B', MEItems.DEPTHSTONE.get())
@@ -384,6 +509,17 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
                 .define('C', Items.STICK)
                 .pattern("AAA")
                 .pattern("ACA")
+                .pattern("BCB")
+                .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.STICK)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.FIRESTONE_WARHAMMER.get())
+                .define('A', MEItems.FIRESTONE.get())
+                .define('B', MEItems.DEPTHSTONE.get())
+                .define('C', Items.STICK)
+                .pattern("AAA")
+                .pattern("AC ")
                 .pattern("BCB")
                 .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.STICK)
@@ -476,6 +612,17 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
                         .of(Items.STICK)
                         .build())).save(pFinishedRecipeConsumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.FROSTSTONE_WARHAMMER.get())
+                .define('A', MEItems.FROSTSTONE.get())
+                .define('B', MEItems.DEPTHSTONE.get())
+                .define('C', Items.STICK)
+                .pattern("AAA")
+                .pattern("AC ")
+                .pattern("BCB")
+                .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.STICK)
+                        .build())).save(pFinishedRecipeConsumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.MOSSTONE_SWORD.get())
                 .define('A', MEItems.MOSSTONE.get())
                 .define('B', MEItems.DEPTHSTONE.get())
@@ -558,6 +705,17 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
                 .define('C', Items.STICK)
                 .pattern("AAA")
                 .pattern("ACA")
+                .pattern("BCB")
+                .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.STICK)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.MOSSTONE_WARHAMMER.get())
+                .define('A', MEItems.MOSSTONE.get())
+                .define('B', MEItems.DEPTHSTONE.get())
+                .define('C', Items.STICK)
+                .pattern("AAA")
+                .pattern("AC ")
                 .pattern("BCB")
                 .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.STICK)
@@ -650,6 +808,17 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
                         .of(Items.STICK)
                         .build())).save(pFinishedRecipeConsumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.SEASTONE_WARHAMMER.get())
+                .define('A', MEItems.SEASTONE.get())
+                .define('B', MEItems.DEPTHSTONE.get())
+                .define('C', Items.STICK)
+                .pattern("AAA")
+                .pattern("AC ")
+                .pattern("BCB")
+                .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.STICK)
+                        .build())).save(pFinishedRecipeConsumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.SKYSTONE_SWORD.get())
                 .define('A', MEItems.SKYSTONE.get())
                 .define('B', MEItems.DEPTHSTONE.get())
@@ -732,6 +901,17 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
                 .define('C', Items.STICK)
                 .pattern("AAA")
                 .pattern("ACA")
+                .pattern("BCB")
+                .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.STICK)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.SKYSTONE_WARHAMMER.get())
+                .define('A', MEItems.SKYSTONE.get())
+                .define('B', MEItems.DEPTHSTONE.get())
+                .define('C', Items.STICK)
+                .pattern("AAA")
+                .pattern("AC ")
                 .pattern("BCB")
                 .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.STICK)
@@ -1666,12 +1846,12 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
                 .save(pFinishedRecipeConsumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, PixelPlacementBlocks.CUP_CLAY.get())
-                .define('A', Items.CLAY)
+                .define('A', Items.CLAY_BALL)
                 .pattern("   ")
                 .pattern("A A")
                 .pattern("AAA")
                 .unlockedBy("has_cup_clay", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.CLAY).build()))
+                        .of(Items.CLAY_BALL).build()))
                 .save(pFinishedRecipeConsumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, PixelPlacementBlocks.CUP_METAL.get())

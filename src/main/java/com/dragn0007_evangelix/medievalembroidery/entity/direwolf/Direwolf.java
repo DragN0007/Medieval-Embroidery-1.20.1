@@ -345,7 +345,7 @@ public class Direwolf extends AbstractMount implements GeoEntity {
 
 		AnimationController<T> controller = tAnimationState.getController();
 
-		if (tAnimationState.isMoving()) {
+		if (isMoving) {
 			if (hasSpeedEffect()) {
 				controller.setAnimation(RawAnimation.begin().then("run", Animation.LoopType.LOOP));
 				controller.setAnimationSpeed(1.6);

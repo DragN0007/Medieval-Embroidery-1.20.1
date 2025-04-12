@@ -328,6 +328,9 @@ public class MEItemGroup {
 
                         output.accept(MEItems.SALT.get());
                         output.accept(MEItems.DIREWOLF_EYE.get());
+                        output.accept(MEItems.FAIRY_DUST.get());
+                        output.accept(MEItems.OBSIDIAN_SHARD.get());
+                        output.accept(MEItems.CRYING_OBSIDIAN_SHARD.get());
                         output.accept(MEItems.FIRESTONE.get());
                         output.accept(MEItems.SEASTONE.get());
                         output.accept(MEItems.FROSTSTONE.get());
@@ -370,6 +373,16 @@ public class MEItemGroup {
                         output.accept(MEItems.OBSIDIAN_GREATSWORD.get());
                         output.accept(MEItems.OBSIDIAN_BATTLEAXE.get());
                         output.accept(MEItems.OBSIDIAN_WARHAMMER.get());
+
+                        output.accept(MEItems.EMERALD_SWORD.get());
+                        output.accept(MEItems.EMERALD_PICKAXE.get());
+                        output.accept(MEItems.EMERALD_SHOVEL.get());
+                        output.accept(MEItems.EMERALD_AXE.get());
+                        output.accept(MEItems.EMERALD_HOE.get());
+                        output.accept(MEItems.EMERALD_DAGGER.get());
+                        output.accept(MEItems.EMERALD_GREATSWORD.get());
+                        output.accept(MEItems.EMERALD_BATTLEAXE.get());
+                        output.accept(MEItems.EMERALD_WARHAMMER.get());
 
                         output.accept(MEItems.ASTROSTONE_SWORD.get());
                         output.accept(MEItems.ASTROSTONE_PICKAXE.get());
@@ -440,6 +453,11 @@ public class MEItemGroup {
                         output.accept(MEItems.SKYSTONE_GREATSWORD.get());
                         output.accept(MEItems.SKYSTONE_BATTLEAXE.get());
                         output.accept(MEItems.SKYSTONE_WARHAMMER.get());
+
+                        output.accept(MEItems.ASTROSTONE_HELMET.get());
+                        output.accept(MEItems.ASTROSTONE_CHESTPLATE.get());
+                        output.accept(MEItems.ASTROSTONE_LEGGING.get());
+                        output.accept(MEItems.ASTROSTONE_BOOTS.get());
 
                     }).build());
 

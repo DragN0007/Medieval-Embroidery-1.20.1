@@ -1,0 +1,18 @@
+{
+  "name": "Cachen",
+  "icon": "medievalembroidery:cachen",
+  "category": "medievalembroidery:plants_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Category:$() Herb $(br)$(l)Found In:$() Hot Boimes  $(br)$(l)Pronunciation:$() \"CATCH-EN\""
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:cachen"
+      },
+      "text": "Cachen is a greenish, strange-looking, U-shaped herb often found in hot areas. [Placeholder]"
+    }
+  ]
+}

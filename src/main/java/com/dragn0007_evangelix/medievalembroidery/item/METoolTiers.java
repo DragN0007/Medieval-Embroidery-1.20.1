@@ -3,6 +3,7 @@ package com.dragn0007_evangelix.medievalembroidery.item;
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -18,6 +19,11 @@ public class METoolTiers {
             new ForgeTier(4, 2500, 8.0F, 5.0F, 15,
                     BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(MEItems.OBSIDIAN_SHARD.get())),
             new ResourceLocation(MedievalEmbroidery.MODID, "obsidian"), List.of(Tiers.NETHERITE), List.of());
+
+    public static final Tier EMERALD = TierSortingRegistry.registerTier(
+            new ForgeTier(3, 1200, 7.5F, 2.5F, 10,
+                    BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.EMERALD)),
+            new ResourceLocation(MedievalEmbroidery.MODID, "emerald"), List.of(Tiers.DIAMOND), List.of());
 
     public static final Tier ASTROSTONE = TierSortingRegistry.registerTier(
             new ForgeTier(2, 600, 7.0F, 2.5F, 10,

@@ -5,6 +5,8 @@ import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
 import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
 import com.dragn0007_evangelix.medievalembroidery.entity.EntityTypes;
 import com.dragn0007_evangelix.medievalembroidery.item.custom.*;
+import com.dragn0007_evangelix.medievalembroidery.item.custom.armor.AstrostoneArmorItem;
+import com.dragn0007_evangelix.medievalembroidery.item.custom.weapon.*;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -366,6 +368,25 @@ public class MEItems {
     public static final RegistryObject<Item> OBSIDIAN_WARHAMMER = ITEMS.register("obsidian_warhammer",
             () -> new SwordItem(METoolTiers.OBSIDIAN, 9, -3.5F, new Item.Properties()));
 
+    public static final RegistryObject<Item> EMERALD_SWORD = ITEMS.register("emerald_sword",
+            () -> new SwordItem(METoolTiers.EMERALD, 3, -2.4F, new Item.Properties()));
+    public static final RegistryObject<Item> EMERALD_PICKAXE = ITEMS.register("emerald_pickaxe",
+            () -> new PickaxeItem(METoolTiers.EMERALD, 1, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> EMERALD_SHOVEL = ITEMS.register("emerald_shovel",
+            () -> new ShovelItem(METoolTiers.EMERALD, 1.5F, -3.0F, new Item.Properties()));
+    public static final RegistryObject<Item> EMERALD_AXE = ITEMS.register("emerald_axe",
+            () -> new AxeItem(METoolTiers.EMERALD, 6, -3.1F, new Item.Properties()));
+    public static final RegistryObject<Item> EMERALD_HOE = ITEMS.register("emerald_hoe",
+            () -> new HoeItem(METoolTiers.EMERALD, -2, -1.0F, new Item.Properties()));
+    public static final RegistryObject<Item> EMERALD_DAGGER = ITEMS.register("emerald_dagger",
+            () -> new SwordItem(METoolTiers.EMERALD, 1, -1.4F, new Item.Properties()));
+    public static final RegistryObject<Item> EMERALD_GREATSWORD = ITEMS.register("emerald_greatsword",
+            () -> new SwordItem(METoolTiers.EMERALD, 4, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> EMERALD_BATTLEAXE = ITEMS.register("emerald_battleaxe",
+            () -> new AxeItem(METoolTiers.EMERALD, 7, -3.3F, new Item.Properties()));
+    public static final RegistryObject<Item> EMERALD_WARHAMMER = ITEMS.register("emerald_warhammer",
+            () -> new SwordItem(METoolTiers.EMERALD, 9, -3.5F, new Item.Properties()));
+
     public static final RegistryObject<Item> ASTROSTONE_SWORD = ITEMS.register("astrostone_sword",
             () -> new AstrostoneSwordItem(METoolTiers.ASTROSTONE, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> ASTROSTONE_PICKAXE = ITEMS.register("astrostone_pickaxe",
@@ -384,6 +405,14 @@ public class MEItems {
             () -> new AstrostoneAxeItem(METoolTiers.ASTROSTONE, 7, -3.3F, new Item.Properties()));
     public static final RegistryObject<Item> ASTROSTONE_WARHAMMER = ITEMS.register("astrostone_warhammer",
             () -> new AstrostoneSwordItem(METoolTiers.ASTROSTONE, 9, -3.5F, new Item.Properties()));
+    public static final RegistryObject<Item> ASTROSTONE_HELMET = ITEMS.register("astrostone_helmet",
+            () -> new AstrostoneArmorItem(MEArmorMaterials.ASTROSTONE, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> ASTROSTONE_CHESTPLATE = ITEMS.register("astrostone_chestplate",
+            () -> new AstrostoneArmorItem(MEArmorMaterials.ASTROSTONE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> ASTROSTONE_LEGGING = ITEMS.register("astrostone_leggings",
+            () -> new AstrostoneArmorItem(MEArmorMaterials.ASTROSTONE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> ASTROSTONE_BOOTS = ITEMS.register("astrostone_boots",
+            () -> new AstrostoneArmorItem(MEArmorMaterials.ASTROSTONE, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static final RegistryObject<Item> DEPTHSTONE_SWORD = ITEMS.register("depthstone_sword",
             () -> new DepthstoneSwordItem(METoolTiers.DEPTHSTONE, 3, -2.4F, new Item.Properties()));

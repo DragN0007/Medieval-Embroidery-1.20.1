@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:emerald"
+    },
+    "C": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "A",
+    "C"
+  ],
+  "result": {
+    "item": "medievalembroidery:emerald_dagger"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Henven",
+  "icon": "medievalembroidery:henven",
+  "category": "medievalembroidery:plants_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Category:$() Herb $(br)$(l)Found In:$() Grasslands $(br)$(l)Pronunciation:$() \"HEN-VIN\""
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:henven"
+      },
+      "text": "Henven is a blue herb with pink tops, often found in open grasslands. [Placeholder]"
+    }
+  ]
+}

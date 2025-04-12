@@ -30,12 +30,12 @@ public class MEItemModelProvider extends ItemModelProvider {
         simpleItem(MEItems.DEPTHSTONE);
         simpleItem(MEItems.SKYSTONE);
         simpleItem(MEItems.SALT);
-        simpleItem(MEItems.CRYSTAL_DUST);
 
         simpleItem(MEItems.DIREWOLF_EYE);
         simpleItem(MEItems.FAIRY_DUST);
         simpleItem(MEItems.OBSIDIAN_SHARD);
         simpleItem(MEItems.CRYING_OBSIDIAN_SHARD);
+        simpleItem(MEItems.CRYSTAL_DUST);
 
         simpleItem(MEItems.ASSISTIVE_CRYSTAL_SHARD);
         simpleItem(MEItems.CONJURING_CRYSTAL_SHARD);
@@ -167,12 +167,23 @@ public class MEItemModelProvider extends ItemModelProvider {
         handheldItem(MEItems.OBSIDIAN_HOE);
         handheldItem(MEItems.OBSIDIAN_DAGGER);
 
+        handheldItem(MEItems.EMERALD_SWORD);
+        handheldItem(MEItems.EMERALD_PICKAXE);
+        handheldItem(MEItems.EMERALD_SHOVEL);
+        handheldItem(MEItems.EMERALD_AXE);
+        handheldItem(MEItems.EMERALD_HOE);
+        handheldItem(MEItems.EMERALD_DAGGER);
+
         handheldItem(MEItems.ASTROSTONE_SWORD);
         handheldItem(MEItems.ASTROSTONE_PICKAXE);
         handheldItem(MEItems.ASTROSTONE_SHOVEL);
         handheldItem(MEItems.ASTROSTONE_AXE);
         handheldItem(MEItems.ASTROSTONE_HOE);
         handheldItem(MEItems.ASTROSTONE_DAGGER);
+        handheldItem(MEItems.ASTROSTONE_HELMET);
+        handheldItem(MEItems.ASTROSTONE_CHESTPLATE);
+        handheldItem(MEItems.ASTROSTONE_LEGGING);
+        handheldItem(MEItems.ASTROSTONE_BOOTS);
 
         handheldItem(MEItems.DEPTHSTONE_SWORD);
         handheldItem(MEItems.DEPTHSTONE_PICKAXE);
