@@ -173,6 +173,10 @@ public class MEItemModelProvider extends ItemModelProvider {
         handheldItem(MEItems.OBSIDIAN_AXE);
         handheldItem(MEItems.OBSIDIAN_HOE);
         handheldItem(MEItems.OBSIDIAN_DAGGER);
+        handheldItem(MEItems.OBSIDIAN_HELMET);
+        handheldItem(MEItems.OBSIDIAN_CHESTPLATE);
+        handheldItem(MEItems.OBSIDIAN_LEGGING);
+        handheldItem(MEItems.OBSIDIAN_BOOTS);
 
         handheldItem(MEItems.EMERALD_SWORD);
         handheldItem(MEItems.EMERALD_PICKAXE);
@@ -180,6 +184,10 @@ public class MEItemModelProvider extends ItemModelProvider {
         handheldItem(MEItems.EMERALD_AXE);
         handheldItem(MEItems.EMERALD_HOE);
         handheldItem(MEItems.EMERALD_DAGGER);
+        handheldItem(MEItems.EMERALD_HELMET);
+        handheldItem(MEItems.EMERALD_CHESTPLATE);
+        handheldItem(MEItems.EMERALD_LEGGING);
+        handheldItem(MEItems.EMERALD_BOOTS);
 
         handheldItem(MEItems.ASTROSTONE_SWORD);
         handheldItem(MEItems.ASTROSTONE_PICKAXE);

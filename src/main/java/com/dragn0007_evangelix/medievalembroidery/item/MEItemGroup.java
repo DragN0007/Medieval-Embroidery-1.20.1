@@ -464,30 +464,46 @@ public class MEItemGroup {
                         output.accept(MEItems.SKYSTONE_BATTLEAXE.get());
                         output.accept(MEItems.SKYSTONE_WARHAMMER.get());
 
+                        output.accept(MEItems.OBSIDIAN_HELMET.get());
+                        output.accept(MEItems.OBSIDIAN_CHESTPLATE.get());
+                        output.accept(MEItems.OBSIDIAN_LEGGING.get());
+                        output.accept(MEItems.OBSIDIAN_BOOTS.get());
+
+                        output.accept(MEItems.EMERALD_HELMET.get());
+                        output.accept(MEItems.EMERALD_CHESTPLATE.get());
+                        output.accept(MEItems.EMERALD_LEGGING.get());
+                        output.accept(MEItems.EMERALD_BOOTS.get());
+
                         output.accept(MEItems.ASTROSTONE_HELMET.get());
                         output.accept(MEItems.ASTROSTONE_CHESTPLATE.get());
                         output.accept(MEItems.ASTROSTONE_LEGGING.get());
                         output.accept(MEItems.ASTROSTONE_BOOTS.get());
+
                         output.accept(MEItems.DEPTHSTONE_HELMET.get());
                         output.accept(MEItems.DEPTHSTONE_CHESTPLATE.get());
                         output.accept(MEItems.DEPTHSTONE_LEGGING.get());
                         output.accept(MEItems.DEPTHSTONE_BOOTS.get());
+
                         output.accept(MEItems.FIRESTONE_HELMET.get());
                         output.accept(MEItems.FIRESTONE_CHESTPLATE.get());
                         output.accept(MEItems.FIRESTONE_LEGGING.get());
                         output.accept(MEItems.FIRESTONE_BOOTS.get());
+
                         output.accept(MEItems.FROSTSTONE_HELMET.get());
                         output.accept(MEItems.FROSTSTONE_CHESTPLATE.get());
                         output.accept(MEItems.FROSTSTONE_LEGGING.get());
                         output.accept(MEItems.FROSTSTONE_BOOTS.get());
+
                         output.accept(MEItems.MOSSTONE_HELMET.get());
                         output.accept(MEItems.MOSSTONE_CHESTPLATE.get());
                         output.accept(MEItems.MOSSTONE_LEGGING.get());
                         output.accept(MEItems.MOSSTONE_BOOTS.get());
+
                         output.accept(MEItems.SEASTONE_HELMET.get());
                         output.accept(MEItems.SEASTONE_CHESTPLATE.get());
                         output.accept(MEItems.SEASTONE_LEGGING.get());
                         output.accept(MEItems.SEASTONE_BOOTS.get());
+
                         output.accept(MEItems.SKYSTONE_HELMET.get());
                         output.accept(MEItems.SKYSTONE_CHESTPLATE.get());
                         output.accept(MEItems.SKYSTONE_LEGGING.get());

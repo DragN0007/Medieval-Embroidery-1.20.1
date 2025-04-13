@@ -39,6 +39,7 @@ public class BiomeHitter {
     public static final ResourceKey<BiomeModifier> MOSSTONE = registerKey("mosstone");
     public static final ResourceKey<BiomeModifier> SEASTONE = registerKey("seastone");
     public static final ResourceKey<BiomeModifier> SKYSTONE = registerKey("skystone");
+    public static final ResourceKey<BiomeModifier> SALT = registerKey("salt");
     public static final ResourceKey<BiomeModifier> LEMON = registerKey("lemon");
     public static final ResourceKey<BiomeModifier> APRICOT = registerKey("apricot");
     public static final ResourceKey<BiomeModifier> APPLE = registerKey("apple");
@@ -325,6 +326,11 @@ public class BiomeHitter {
         context.register(SKYSTONE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(Tags.Biomes.IS_MOUNTAIN),
                 HolderSet.direct(placedFeatures.getOrThrow(MEPlacedFeatures.SKYSTONE)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(SALT, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(MEPlacedFeatures.SALT)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
     }
 

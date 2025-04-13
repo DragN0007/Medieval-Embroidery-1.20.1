@@ -8,6 +8,7 @@ import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorMaterials;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.EnumMap;
@@ -15,53 +16,67 @@ import java.util.function.Supplier;
 
 public enum MEArmorMaterials implements ArmorMaterial {
 
-    ASTROSTONE("astrostone", 17, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266654_) -> {
-        p_266654_.put(ArmorItem.Type.BOOTS, 3);
-        p_266654_.put(ArmorItem.Type.LEGGINGS, 4);
-        p_266654_.put(ArmorItem.Type.CHESTPLATE, 5);
-        p_266654_.put(ArmorItem.Type.HELMET, 4);
+    OBSIDIAN("obsidian", 40, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 4);
+        map.put(ArmorItem.Type.LEGGINGS, 8);
+        map.put(ArmorItem.Type.CHESTPLATE, 10);
+        map.put(ArmorItem.Type.HELMET, 5);
+    }), 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.5F, () -> Ingredient.of(MEItems.OBSIDIAN_SHARD.get())),
+
+    EMERALD("emerald", 30, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 2);
+        map.put(ArmorItem.Type.LEGGINGS, 5);
+        map.put(ArmorItem.Type.CHESTPLATE, 8);
+        map.put(ArmorItem.Type.HELMET, 3);
+    }), 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> Ingredient.of(Items.EMERALD)),
+
+    ASTROSTONE("astrostone", 17, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 3);
+        map.put(ArmorItem.Type.LEGGINGS, 4);
+        map.put(ArmorItem.Type.CHESTPLATE, 5);
+        map.put(ArmorItem.Type.HELMET, 4);
     }), 15, SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, 0.3F, () -> Ingredient.of(MEItems.ASTROSTONE.get())),
 
-    DEPTHSTONE("depthstone", 17, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266654_) -> {
-        p_266654_.put(ArmorItem.Type.BOOTS, 3);
-        p_266654_.put(ArmorItem.Type.LEGGINGS, 4);
-        p_266654_.put(ArmorItem.Type.CHESTPLATE, 5);
-        p_266654_.put(ArmorItem.Type.HELMET, 4);
+    DEPTHSTONE("depthstone", 17, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 3);
+        map.put(ArmorItem.Type.LEGGINGS, 4);
+        map.put(ArmorItem.Type.CHESTPLATE, 5);
+        map.put(ArmorItem.Type.HELMET, 4);
     }), 15, SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, 0.3F, () -> Ingredient.of(MEItems.DEPTHSTONE.get())),
 
-    FIRESTONE("firestone", 17, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266654_) -> {
-        p_266654_.put(ArmorItem.Type.BOOTS, 3);
-        p_266654_.put(ArmorItem.Type.LEGGINGS, 4);
-        p_266654_.put(ArmorItem.Type.CHESTPLATE, 5);
-        p_266654_.put(ArmorItem.Type.HELMET, 4);
+    FIRESTONE("firestone", 17, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 3);
+        map.put(ArmorItem.Type.LEGGINGS, 4);
+        map.put(ArmorItem.Type.CHESTPLATE, 5);
+        map.put(ArmorItem.Type.HELMET, 4);
     }), 15, SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, 0.3F, () -> Ingredient.of(MEItems.FIRESTONE.get())),
 
-    FROSTSTONE("froststone", 17, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266654_) -> {
-        p_266654_.put(ArmorItem.Type.BOOTS, 3);
-        p_266654_.put(ArmorItem.Type.LEGGINGS, 4);
-        p_266654_.put(ArmorItem.Type.CHESTPLATE, 5);
-        p_266654_.put(ArmorItem.Type.HELMET, 4);
+    FROSTSTONE("froststone", 17, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 3);
+        map.put(ArmorItem.Type.LEGGINGS, 4);
+        map.put(ArmorItem.Type.CHESTPLATE, 5);
+        map.put(ArmorItem.Type.HELMET, 4);
     }), 15, SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, 0.3F, () -> Ingredient.of(MEItems.FROSTSTONE.get())),
 
-    MOSSTONE("mosstone", 17, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266654_) -> {
-        p_266654_.put(ArmorItem.Type.BOOTS, 3);
-        p_266654_.put(ArmorItem.Type.LEGGINGS, 4);
-        p_266654_.put(ArmorItem.Type.CHESTPLATE, 5);
-        p_266654_.put(ArmorItem.Type.HELMET, 4);
+    MOSSTONE("mosstone", 17, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 3);
+        map.put(ArmorItem.Type.LEGGINGS, 4);
+        map.put(ArmorItem.Type.CHESTPLATE, 5);
+        map.put(ArmorItem.Type.HELMET, 4);
     }), 15, SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, 0.3F, () -> Ingredient.of(MEItems.MOSSTONE.get())),
 
-    SEASTONE("seastone", 17, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266654_) -> {
-        p_266654_.put(ArmorItem.Type.BOOTS, 3);
-        p_266654_.put(ArmorItem.Type.LEGGINGS, 4);
-        p_266654_.put(ArmorItem.Type.CHESTPLATE, 5);
-        p_266654_.put(ArmorItem.Type.HELMET, 4);
+    SEASTONE("seastone", 17, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 3);
+        map.put(ArmorItem.Type.LEGGINGS, 4);
+        map.put(ArmorItem.Type.CHESTPLATE, 5);
+        map.put(ArmorItem.Type.HELMET, 4);
     }), 15, SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, 0.3F, () -> Ingredient.of(MEItems.SEASTONE.get())),
 
-    SKYSTONE("skystone", 17, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266654_) -> {
-        p_266654_.put(ArmorItem.Type.BOOTS, 3);
-        p_266654_.put(ArmorItem.Type.LEGGINGS, 4);
-        p_266654_.put(ArmorItem.Type.CHESTPLATE, 5);
-        p_266654_.put(ArmorItem.Type.HELMET, 4);
+    SKYSTONE("skystone", 17, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 3);
+        map.put(ArmorItem.Type.LEGGINGS, 4);
+        map.put(ArmorItem.Type.CHESTPLATE, 5);
+        map.put(ArmorItem.Type.HELMET, 4);
     }), 15, SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, 0.3F, () -> Ingredient.of(MEItems.SKYSTONE.get()));
 
     public static final StringRepresentable.EnumCodec<ArmorMaterials> CODEC = StringRepresentable.fromEnum(ArmorMaterials::values);

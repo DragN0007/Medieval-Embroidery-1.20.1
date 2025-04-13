@@ -38,6 +38,7 @@ public class MEConfigFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> MOSSTONE = registerKey("mosstone");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SEASTONE = registerKey("seastone");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYSTONE = registerKey("skystone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SALT = registerKey("salt");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LEMON = registerKey("lemon");
     public static final ResourceKey<ConfiguredFeature<?, ?>> APRICOT = registerKey("apricot");
     public static final ResourceKey<ConfiguredFeature<?, ?>> APPLE = registerKey("apple");
@@ -278,6 +279,11 @@ public class MEConfigFeatures {
                         MEBlocks.SKYSTONE_ORE.get().defaultBlockState()),
                 OreConfiguration.target(stoneReplaceabeles, MEBlocks.SKYSTONE_ORE.get().defaultBlockState()));
         register(context, SKYSTONE, Feature.ORE, new OreConfiguration(skystone, 5));
+
+        List<OreConfiguration.TargetBlockState> salt = List.of(OreConfiguration.target(stoneReplaceabeles,
+                        MEBlocks.SALT_ORE.get().defaultBlockState()),
+                OreConfiguration.target(stoneReplaceabeles, MEBlocks.SALT_ORE.get().defaultBlockState()));
+        register(context, SALT, Feature.ORE, new OreConfiguration(salt, 7));
 
     }
     

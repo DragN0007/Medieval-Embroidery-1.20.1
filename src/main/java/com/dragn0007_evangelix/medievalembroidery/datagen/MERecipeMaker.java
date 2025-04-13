@@ -12,6 +12,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.client.event.ModelEvent;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.function.Consumer;
@@ -23,6 +24,335 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
 
     @Override
     public void buildRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer) {
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.MORTAR_AND_PESTLE.get())
+                .define('A', Items.COBBLESTONE)
+                .define('B', Items.STICK)
+                .pattern("ABA")
+                .pattern(" A ")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.OBSIDIAN_HELMET.get())
+                .define('A', MEItems.OBSIDIAN_SHARD.get())
+                .define('B', MEItems.CRYING_OBSIDIAN_SHARD.get())
+                .pattern("ABA")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.OBSIDIAN_CHESTPLATE.get())
+                .define('A', MEItems.OBSIDIAN_SHARD.get())
+                .define('B', MEItems.CRYING_OBSIDIAN_SHARD.get())
+                .pattern("A A")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.OBSIDIAN_LEGGING.get())
+                .define('A', MEItems.OBSIDIAN_SHARD.get())
+                .define('B', MEItems.CRYING_OBSIDIAN_SHARD.get())
+                .pattern("BAB")
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.OBSIDIAN_BOOTS.get())
+                .define('A', MEItems.OBSIDIAN_SHARD.get())
+                .define('B', MEItems.CRYING_OBSIDIAN_SHARD.get())
+                .pattern("A A")
+                .pattern("B B")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.EMERALD_HELMET.get())
+                .define('A', Items.EMERALD)
+                .pattern("AAA")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.EMERALD_CHESTPLATE.get())
+                .define('A', Items.EMERALD)
+                .pattern("A A")
+                .pattern("AAA")
+                .pattern("AAA")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.EMERALD_LEGGING.get())
+                .define('A', Items.EMERALD)
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.EMERALD_BOOTS.get())
+                .define('A', Items.EMERALD)
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.ASTROSTONE_HELMET.get())
+                .define('A', MEItems.ASTROSTONE.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.ASTROSTONE_CHESTPLATE.get())
+                .define('A', MEItems.ASTROSTONE.get())
+                .pattern("A A")
+                .pattern("AAA")
+                .pattern("AAA")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.ASTROSTONE_LEGGING.get())
+                .define('A', MEItems.ASTROSTONE.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.ASTROSTONE_BOOTS.get())
+                .define('A', MEItems.ASTROSTONE.get())
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.DEPTHSTONE_HELMET.get())
+                .define('A', MEItems.DEPTHSTONE.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.DEPTHSTONE_CHESTPLATE.get())
+                .define('A', MEItems.DEPTHSTONE.get())
+                .pattern("A A")
+                .pattern("AAA")
+                .pattern("AAA")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.DEPTHSTONE_LEGGING.get())
+                .define('A', MEItems.DEPTHSTONE.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.DEPTHSTONE_BOOTS.get())
+                .define('A', MEItems.DEPTHSTONE.get())
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.FIRESTONE_HELMET.get())
+                .define('A', MEItems.FIRESTONE.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.FIRESTONE_CHESTPLATE.get())
+                .define('A', MEItems.FIRESTONE.get())
+                .pattern("A A")
+                .pattern("AAA")
+                .pattern("AAA")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.FIRESTONE_LEGGING.get())
+                .define('A', MEItems.FIRESTONE.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.FIRESTONE_BOOTS.get())
+                .define('A', MEItems.FIRESTONE.get())
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.FROSTSTONE_HELMET.get())
+                .define('A', MEItems.FROSTSTONE.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.FROSTSTONE_CHESTPLATE.get())
+                .define('A', MEItems.FROSTSTONE.get())
+                .pattern("A A")
+                .pattern("AAA")
+                .pattern("AAA")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.FROSTSTONE_LEGGING.get())
+                .define('A', MEItems.FROSTSTONE.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.FROSTSTONE_BOOTS.get())
+                .define('A', MEItems.FROSTSTONE.get())
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.MOSSTONE_HELMET.get())
+                .define('A', MEItems.MOSSTONE.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.MOSSTONE_CHESTPLATE.get())
+                .define('A', MEItems.MOSSTONE.get())
+                .pattern("A A")
+                .pattern("AAA")
+                .pattern("AAA")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.MOSSTONE_LEGGING.get())
+                .define('A', MEItems.MOSSTONE.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.MOSSTONE_BOOTS.get())
+                .define('A', MEItems.MOSSTONE.get())
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.SEASTONE_HELMET.get())
+                .define('A', MEItems.SEASTONE.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.SEASTONE_CHESTPLATE.get())
+                .define('A', MEItems.SEASTONE.get())
+                .pattern("A A")
+                .pattern("AAA")
+                .pattern("AAA")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.SEASTONE_LEGGING.get())
+                .define('A', MEItems.SEASTONE.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.SEASTONE_BOOTS.get())
+                .define('A', MEItems.SEASTONE.get())
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.SKYSTONE_HELMET.get())
+                .define('A', MEItems.SKYSTONE.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.SKYSTONE_CHESTPLATE.get())
+                .define('A', MEItems.SKYSTONE.get())
+                .pattern("A A")
+                .pattern("AAA")
+                .pattern("AAA")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.SKYSTONE_LEGGING.get())
+                .define('A', MEItems.SKYSTONE.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEItems.SKYSTONE_BOOTS.get())
+                .define('A', MEItems.SKYSTONE.get())
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build())).save(pFinishedRecipeConsumer);
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.LEMON_SEED.get())
                 .requires(MEItems.LEMON.get())
@@ -1602,7 +1932,6 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
                 .define('A', Items.SUGAR)
                 .define('B', METags.Items.WHEAT)
                 .define('C', METags.Items.WATER)
-                .pattern("   ")
                 .pattern("BAB")
                 .pattern(" C ")
                 .unlockedBy("has_wheat", inventoryTrigger(ItemPredicate.Builder.item()
@@ -1760,6 +2089,74 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
                 .unlockedBy("has_gem", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(MEItems.SEASTONE.get())
                         .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.SALT_ORE.get())
+                .define('A', MEItems.SALT.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .unlockedBy("has_salt", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.SALT.get())
+                        .build())).save(pFinishedRecipeConsumer);
+
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.ASTROSTONE.get(), 9)
+                .requires(MEBlocks.ASTROSTONE_BLOCK.get())
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.DEPTHSTONE.get(), 9)
+                .requires(MEBlocks.DEPTHSTONE_BLOCK.get())
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.FIRESTONE.get(), 9)
+                .requires(MEBlocks.FIRESTONE_BLOCK.get())
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.FROSTSTONE.get(), 9)
+                .requires(MEBlocks.FROSTSTONE_BLOCK.get())
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.MOSSTONE.get(), 9)
+                .requires(MEBlocks.MOSSTONE_BLOCK.get())
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.SEASTONE.get(), 9)
+                .requires(MEBlocks.SEASTONE_BLOCK.get())
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.SKYSTONE.get(), 9)
+                .requires(MEBlocks.SKYSTONE_BLOCK.get())
+                .unlockedBy("", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of()
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.SALT.get(), 9)
+                .requires(MEBlocks.SALT_ORE.get())
+                .unlockedBy("has_salt_ore", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEBlocks.SALT_ORE.get())
+                        .build()))
+                .save(pFinishedRecipeConsumer);
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, PixelPlacementBlocks.IRON_GROUNDED_SWORD.get())

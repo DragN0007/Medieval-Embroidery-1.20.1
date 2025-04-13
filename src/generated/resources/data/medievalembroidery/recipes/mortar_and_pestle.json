@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:cobblestone"
+    },
+    "B": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "ABA",
+    " A "
+  ],
+  "result": {
+    "item": "medievalembroidery:mortar_and_pestle"
+  },
+  "show_notification": true
+}

@@ -372,6 +372,14 @@ public class MEItems {
             () -> new AxeItem(METoolTiers.OBSIDIAN, 7, -3.3F, new Item.Properties()));
     public static final RegistryObject<Item> OBSIDIAN_WARHAMMER = ITEMS.register("obsidian_warhammer",
             () -> new SwordItem(METoolTiers.OBSIDIAN, 9, -3.5F, new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_HELMET = ITEMS.register("obsidian_helmet",
+            () -> new ObsidianArmorItem(MEArmorMaterials.OBSIDIAN, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_CHESTPLATE = ITEMS.register("obsidian_chestplate",
+            () -> new ObsidianArmorItem(MEArmorMaterials.OBSIDIAN, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_LEGGING = ITEMS.register("obsidian_leggings",
+            () -> new ObsidianArmorItem(MEArmorMaterials.OBSIDIAN, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_BOOTS = ITEMS.register("obsidian_boots",
+            () -> new ObsidianArmorItem(MEArmorMaterials.OBSIDIAN, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static final RegistryObject<Item> EMERALD_SWORD = ITEMS.register("emerald_sword",
             () -> new SwordItem(METoolTiers.EMERALD, 3, -2.4F, new Item.Properties()));
@@ -391,6 +399,14 @@ public class MEItems {
             () -> new AxeItem(METoolTiers.EMERALD, 7, -3.3F, new Item.Properties()));
     public static final RegistryObject<Item> EMERALD_WARHAMMER = ITEMS.register("emerald_warhammer",
             () -> new SwordItem(METoolTiers.EMERALD, 9, -3.5F, new Item.Properties()));
+    public static final RegistryObject<Item> EMERALD_HELMET = ITEMS.register("emerald_helmet",
+            () -> new EmeraldArmorItem(MEArmorMaterials.EMERALD, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate",
+            () -> new EmeraldArmorItem(MEArmorMaterials.EMERALD, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> EMERALD_LEGGING = ITEMS.register("emerald_leggings",
+            () -> new EmeraldArmorItem(MEArmorMaterials.EMERALD, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> EMERALD_BOOTS = ITEMS.register("emerald_boots",
+            () -> new EmeraldArmorItem(MEArmorMaterials.EMERALD, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static final RegistryObject<Item> ASTROSTONE_SWORD = ITEMS.register("astrostone_sword",
             () -> new AstrostoneSwordItem(METoolTiers.ASTROSTONE, 3, -2.4F, new Item.Properties()));

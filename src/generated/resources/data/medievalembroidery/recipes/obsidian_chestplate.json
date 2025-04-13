@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "medievalembroidery:obsidian_shard"
+    },
+    "B": {
+      "item": "medievalembroidery:crying_obsidian_shard"
+    }
+  },
+  "pattern": [
+    "A A",
+    "ABA",
+    "AAA"
+  ],
+  "result": {
+    "item": "medievalembroidery:obsidian_chestplate"
+  },
+  "show_notification": true
+}

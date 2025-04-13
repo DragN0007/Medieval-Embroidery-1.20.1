@@ -30,6 +30,7 @@ public class MEPlacedFeatures {
     public static final ResourceKey<PlacedFeature> MOSSTONE = registerKey("mosstone");
     public static final ResourceKey<PlacedFeature> SEASTONE = registerKey("seastone");
     public static final ResourceKey<PlacedFeature> SKYSTONE = registerKey("skystone");
+    public static final ResourceKey<PlacedFeature> SALT = registerKey("salt");
     public static final ResourceKey<PlacedFeature> LEMON = registerKey("lemon");
     public static final ResourceKey<PlacedFeature> APRICOT = registerKey("apricot");
     public static final ResourceKey<PlacedFeature> APPLE = registerKey("apple");
@@ -247,6 +248,10 @@ public class MEPlacedFeatures {
         register(context, SKYSTONE, configuredFeatures.getOrThrow(MEConfigFeatures.SKYSTONE),
                 OrePlacement.commonOrePlacement(2,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(30), VerticalAnchor.absolute(90))));
+
+        register(context, SALT, configuredFeatures.getOrThrow(MEConfigFeatures.SKYSTONE),
+                OrePlacement.commonOrePlacement(4,
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(40), VerticalAnchor.absolute(120))));
 
     }
 
