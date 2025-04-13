@@ -22,7 +22,7 @@ public class DirewolfFollowPackLeaderGoal extends Goal {
    }
 
    public boolean canUse() {
-      if (this.mob.hasFollowers() || this.mob.isInSittingPose()) {
+      if (this.mob.hasFollowers() || this.mob.isInSittingPose() || this.mob.isOrderedToSit()) {
          return false;
       } else if (this.mob.isFollower()) {
          return true;

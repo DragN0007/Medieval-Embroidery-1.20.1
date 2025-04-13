@@ -15,18 +15,18 @@ public class GroundTieGoal extends Goal {
     }
 
     public boolean canContinueToUse() {
-        return this.mob.isSaddled() && !this.mob.isVehicle() && (Boolean) MedievalEmbroideryCommonConfig.GROUND_TIE.get() || this.mob.isLeashed();
+        return this.mob.isSaddled() && !this.mob.isVehicle() && MedievalEmbroideryCommonConfig.GROUND_TIE.get() || this.mob.isLeashed();
     }
 
     public boolean canUse() {
-        if (!(Boolean)MedievalEmbroideryCommonConfig.GROUND_TIE.get()) {
+        if (!MedievalEmbroideryCommonConfig.GROUND_TIE.get()) {
             return false;
         } else if (this.mob.isInWaterOrBubble()) {
             return false;
         } else if (!this.mob.onGround()) {
             return false;
         } else {
-            return this.mob.isSaddled() && !this.mob.isVehicle() && (Boolean)MedievalEmbroideryCommonConfig.GROUND_TIE.get() || this.mob.isLeashed();
+            return this.mob.isSaddled() && !this.mob.isVehicle() && MedievalEmbroideryCommonConfig.GROUND_TIE.get() || this.mob.isLeashed();
         }
     }
 
