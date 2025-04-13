@@ -180,6 +180,7 @@ public class MEItemGroup {
 
                         output.accept(MEItems.DIREWOLF_SPAWN_EGG.get());
                         output.accept(MEItems.FAIRY_SPAWN_EGG.get());
+                        output.accept(MEItems.FANGED_ELK_SPAWN_EGG.get());
 
                     }).build());
 

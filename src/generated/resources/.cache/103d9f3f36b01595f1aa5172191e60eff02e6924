@@ -1,4 +1,4 @@
-// 1.20.1	2025-04-12T23:20:14.6451174	Registries
+// 1.20.1	2025-04-12T23:45:53.5433511	Registries
 f291e2037b839c1ececccb4519ccaabf7ea3b392 data/medievalembroidery/forge/biome_modifier/apple.json
 8e06c5cbeabd3e39e800a98e6ca33136d5d41a08 data/medievalembroidery/forge/biome_modifier/apricot.json
 fcd9704130c10b9158815bc8bed5550de77f3aee data/medievalembroidery/forge/biome_modifier/assistive_crystal.json
@@ -18,6 +18,7 @@ d2eedd3816037c73357e2cb8ae37b58fcf969b97 data/medievalembroidery/forge/biome_mod
 5c5583e70fce01ddeaecb588f452186fb2f0cba1 data/medievalembroidery/forge/biome_modifier/elderberry_bush.json
 8022101fbf4b0e56c58f6b66ef9cf284029ab510 data/medievalembroidery/forge/biome_modifier/fairy.json
 e09a9138faa69e36a955c54910c457a9ec3213c7 data/medievalembroidery/forge/biome_modifier/fairyflower.json
+3813e8e612f68a1541ccd758b83da43e10732d3e data/medievalembroidery/forge/biome_modifier/fanged_elk.json
 1177eb2a912e69959cf5d001b8e115a755ba885f data/medievalembroidery/forge/biome_modifier/firestone.json
 c9c78e358ce868ed5006ac512fc4624104a96adb data/medievalembroidery/forge/biome_modifier/fire_daisy.json
 5a8c897c4215071e1c028adf7d44e66ce28ee0e2 data/medievalembroidery/forge/biome_modifier/froststone.json

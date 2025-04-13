@@ -33,6 +33,8 @@ public class MEItems {
             () -> new ForgeSpawnEggItem(EntityTypes.DIREWOLF_ENTITY, 0xbfbfbf, 0x848484, new Item.Properties().stacksTo(64)));
     public static final RegistryObject<Item> FAIRY_SPAWN_EGG = ITEMS.register("fairy_spawn_egg",
             () -> new ForgeSpawnEggItem(EntityTypes.FAIRY_ENTITY, 0x775f70, 0x524256, new Item.Properties().stacksTo(64)));
+    public static final RegistryObject<Item> FANGED_ELK_SPAWN_EGG = ITEMS.register("fanged_elk_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityTypes.FANGED_ELK_ENTITY, 0x7b3213, 0x2f1202, new Item.Properties().stacksTo(64)));
 
 
     //Crafting Ingredients

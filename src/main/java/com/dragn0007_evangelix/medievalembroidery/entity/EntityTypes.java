@@ -2,6 +2,7 @@ package com.dragn0007_evangelix.medievalembroidery.entity;
 
 import com.dragn0007_evangelix.medievalembroidery.entity.direwolf.Direwolf;
 import com.dragn0007_evangelix.medievalembroidery.entity.fairy.Fairy;
+import com.dragn0007_evangelix.medievalembroidery.entity.fanged_elk.FangedElk;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -16,18 +17,18 @@ public class EntityTypes {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MODID);
 
 
-//    public static final RegistryObject<EntityType<FangedElk>> FANGEDELK_ENTITY = ENTITY_TYPES.register("fangedelk",
-//            () -> EntityType.Builder.of(FangedElk::new,
-//                            MobCategory.CREATURE)
-//                    .sized(1f,2.8f)
-//                    .build(new ResourceLocation(MODID,"fangedelk").toString()));
-//
+    public static final RegistryObject<EntityType<FangedElk>> FANGED_ELK_ENTITY = ENTITY_TYPES.register("fanged_elk",
+            () -> EntityType.Builder.of(FangedElk::new,
+                            MobCategory.CREATURE)
+                    .sized(1f,2.8f)
+                    .build(new ResourceLocation(MODID,"fanged_elk").toString()));
+
 //    public static final RegistryObject<EntityType<SwampYak>> SWAMPYAK_ENTITY = ENTITY_TYPES.register("swampyak",
 //            () -> EntityType.Builder.of(SwampYak::new,
 //                            MobCategory.CREATURE)
 //                    .sized(1.4f,3.1f)
 //                    .build(new ResourceLocation(MODID,"swampyak").toString()));
-//
+
     public static final RegistryObject<EntityType<Fairy>> FAIRY_ENTITY = ENTITY_TYPES.register("fairy",
             () -> EntityType.Builder.of(Fairy::new,
                             MobCategory.CREATURE)

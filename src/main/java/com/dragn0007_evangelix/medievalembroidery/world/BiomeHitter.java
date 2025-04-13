@@ -10,7 +10,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.GenerationStep;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
@@ -26,6 +25,7 @@ public class BiomeHitter {
 
     public static final ResourceKey<BiomeModifier> DIREWOLF = registerKey("direwolf");
     public static final ResourceKey<BiomeModifier> FAIRY = registerKey("fairy");
+    public static final ResourceKey<BiomeModifier> FANGED_ELK = registerKey("fanged_elk");
 
     public static final ResourceKey<BiomeModifier> ASSISTIVE_CRYSTAL = registerKey("assistive_crystal");
     public static final ResourceKey<BiomeModifier> CONJURING_CRYSTAL = registerKey("conjuring_crystal");
@@ -91,6 +91,14 @@ public class BiomeHitter {
                         4,
                         1,
                         4
+                ))));
+
+        context.register(FANGED_ELK, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_COLD_OVERWORLD),
+                List.of(new MobSpawnSettings.SpawnerData(EntityTypes.FANGED_ELK_ENTITY.get(),
+                        5,
+                        1,
+                        3
                 ))));
 
 

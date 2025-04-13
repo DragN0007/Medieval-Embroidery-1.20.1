@@ -10,11 +10,18 @@
     "minecraft:potato",
     "minecraft:melon_slice",
 
+    "medievalembroidery:lemon",
+    "medievalembroidery:apricot",
+
+    {
+      "id": "#forge:herbs",
+      "required": false
+    },
+
     {
       "id": "#forge:mushrooms",
       "required": false
     },
-
 
     {
       "id": "#forge:vegetables",

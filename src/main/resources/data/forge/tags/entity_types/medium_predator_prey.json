@@ -12,6 +12,8 @@
     "minecraft:villager",
     "minecraft:panda",
 
+    "medievalembroidery:fanged_elk",
+
     {
       "id": "#forge:small_predator_prey",
       "required": false

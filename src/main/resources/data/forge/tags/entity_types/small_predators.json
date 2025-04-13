@@ -1,5 +1,15 @@
 {
   "replace": false,
   "values": [
+
+    {
+      "id": "#dragnlivestock:wolves",
+      "required": false
+    },
+
+    {
+      "id": "#dragnlivestock:hunting_dogs",
+      "required": false
+    }
   ]
 }

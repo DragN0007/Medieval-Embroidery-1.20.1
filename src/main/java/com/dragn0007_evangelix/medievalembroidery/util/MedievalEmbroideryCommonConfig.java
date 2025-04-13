@@ -17,6 +17,7 @@ public class MedievalEmbroideryCommonConfig {
     public static final ForgeConfigSpec.BooleanValue GENDERS_AFFECT_BIPRODUCTS;
     public static final ForgeConfigSpec.BooleanValue GENDERS_AFFECT_BREEDING;
     public static final ForgeConfigSpec.ConfigValue<Integer> DIREWOLF_MAX_PACK_COUNT;
+    public static final ForgeConfigSpec.ConfigValue<Integer> ELK_MAX_HERD_COUNT;
 
     static {
         BUILDER.push("Common Configs");
@@ -41,6 +42,9 @@ public class MedievalEmbroideryCommonConfig {
 
         DIREWOLF_MAX_PACK_COUNT = BUILDER.comment("Maximum amount of Direwolves that can pack up at once.")
                 .define("Max Direwolf Pack Count", 5);
+
+        ELK_MAX_HERD_COUNT = BUILDER.comment("Maximum amount of Fanged Elk that can herd up at once.")
+                .define("Max Fanged Elk Herd Count", 3);
 
 //        DRAGONS_CAN_BREED = BUILDER.comment("Should dragons be able to breed?")
 //                .define("Dragons Can Breed", true);
