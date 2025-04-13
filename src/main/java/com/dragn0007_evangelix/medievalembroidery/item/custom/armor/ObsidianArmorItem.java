@@ -1,6 +1,5 @@
 package com.dragn0007_evangelix.medievalembroidery.item.custom.armor;
 
-import com.dragn0007_evangelix.medievalembroidery.armor.AstrostoneArmorRenderer;
 import com.dragn0007_evangelix.medievalembroidery.armor.ObsidianArmorRenderer;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.world.entity.Entity;

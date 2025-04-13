@@ -2,7 +2,6 @@ package com.dragn0007_evangelix.medievalembroidery.armor;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
 import com.dragn0007_evangelix.medievalembroidery.item.custom.armor.EmeraldArmorItem;
-import com.dragn0007_evangelix.medievalembroidery.item.custom.armor.ObsidianArmorItem;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.GeoModel;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
