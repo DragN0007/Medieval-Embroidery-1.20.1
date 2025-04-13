@@ -1,0 +1,26 @@
+{
+  "name": "Fanged Elk",
+  "icon": "medievalembroidery:elk",
+  "category": "medievalembroidery:animals_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Category:$() Medium Herbivore $(br)$(l)Tamable:$() True $(br)$(l)Aggression:$() Neutral $(br)$(l)Found In:$() Cold Biomes $(br2)$(l)Gender Dimorphism:$() $(br)Antler & Fang Variation (Females have no antlers and short, dull fangs.)"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:elk"
+      },
+      "text": "The Fanged Elk are a medium-sized, hard-hitting herbivore. Fanged Elk can be tamed with fruits, vegetables, or herbs, and can be saddled, chested and ridden. They automatically ground-tie themselves when dismounted. They come in many different color-marking combinations."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "medievalembroidery:fanged_elk{Variant:0}",
+      "name": "The Fanged Elk",
+      "default_rotation": 45,
+      "scale": 0.8,
+      "rotate": "false"
+    }
+  ]
+}

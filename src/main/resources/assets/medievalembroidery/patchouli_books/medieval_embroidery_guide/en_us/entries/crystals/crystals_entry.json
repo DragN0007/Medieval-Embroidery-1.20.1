@@ -1,0 +1,60 @@
+{
+  "name": "Crystals",
+  "icon": "medievalembroidery:assistive_crystal_shard",
+  "category": "medievalembroidery:recipes_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Crystals are a somewhat common mining-sight in Medieval Embroidery. They can be crafted into Crystal Balls and magic items (Coming Soon).$(br2)Crystals tend to be found anywhere between Y20 and Y60."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:assistive_crystal_shard"
+      },
+      "text": "Assistive Crystal (Placeholder)"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:conjuring_crystal_shard"
+      },
+      "text": "Conjuring Crystal (Placeholder)"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:destructive_crystal_shard"
+      },
+      "text": "Destructive Crystal (Placeholder)"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:healing_crystal_shard"
+      },
+      "text": "Healing Crystal (Placeholder)"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:protective_crystal_shard"
+      },
+      "text": "Protective Crystal (Placeholder)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "medievalembroidery:assistive_crystal_ball",
+      "recipe2": "medievalembroidery:conjuring_crystal_ball"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "medievalembroidery:destructive_crystal_ball",
+      "recipe2": "medievalembroidery:healing_crystal_ball"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "medievalembroidery:protective_crystal_ball"
+    }
+  ]
+}

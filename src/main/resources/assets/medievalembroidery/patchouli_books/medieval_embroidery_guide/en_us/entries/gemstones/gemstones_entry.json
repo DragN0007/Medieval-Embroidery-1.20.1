@@ -1,0 +1,99 @@
+{
+  "name": "Gemstones",
+  "icon": "medievalembroidery:skystone",
+  "category": "medievalembroidery:recipes_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Gemstones are a common mining-sight in Medieval Embroidery. They can be crafted into tools, weapons, and armor. Gemstone equipment tends to offer slightly better stats to Iron Tier equipment. $(br2)Gemstones tend to be found anywhere between Y30 and Y90."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:astrostone"
+      },
+      "text": "Astrostones represent Astrology, and can be found anywhere in the Overworld."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:depthstone"
+      },
+      "text": "Depthstones represent Death and the Underground, and can be found anywhere in the Overworld."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:firestone"
+      },
+      "text": "Firestones represent Fire, and can be found Hot Biomes."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:froststone"
+      },
+      "text": "Froststones represent Frost & Ice, and can be found Cold Biomes."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:mosstone"
+      },
+      "text": "Mosstones represent Nature & Toxins, and can be found in Lush Biomes."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:seastone"
+      },
+      "text": "Seastones represent Water and Fluids, and can be found in Oceans."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:skystone"
+      },
+      "text": "Skystones represent the Air and Sky, and can be found in and under Mountains."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "medievalembroidery:skystone_sword",
+      "recipe2": "medievalembroidery:skystone_axe"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "medievalembroidery:skystone_pickaxe",
+      "recipe2": "medievalembroidery:skystone_shovel"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "medievalembroidery:skystone_hoe",
+      "recipe2": "medievalembroidery:skystone_dagger"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "medievalembroidery:skystone_greatsword",
+      "recipe2": "medievalembroidery:skystone_battleaxe"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "medievalembroidery:skystone_warhammer",
+      "recipe2": "medievalembroidery:skystone_helmet"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "medievalembroidery:skystone_chestplate",
+      "recipe2": "medievalembroidery:skystone_leggings"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "medievalembroidery:skystone_boots",
+      "recipe2": "medievalembroidery:skystone"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "medievalembroidery:skystone_block"
+    }
+  ]
+}

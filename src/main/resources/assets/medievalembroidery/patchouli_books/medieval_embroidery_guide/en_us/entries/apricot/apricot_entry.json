@@ -1,0 +1,27 @@
+{
+  "name": "Apricot Tree",
+  "icon": "medievalembroidery:apricot",
+  "category": "medievalembroidery:plants_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Category:$() Fruit Tree $(br)$(l)Found In:$() Hot Biomes"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:apricot"
+      },
+      "text": "Apricot Trees are small fruit trees that bear apricots, often found in hot, open areas. Apricots can be used to make Tea, Pie, and Juice."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "medievalembroidery:apricot_tea",
+      "recipe2": "medievalembroidery:apricot_pie"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "medievalembroidery:apricot_juice"
+    }
+  ]
+}

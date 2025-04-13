@@ -1,0 +1,26 @@
+{
+  "name": "Fairy",
+  "icon": "medievalembroidery:fairy_dust",
+  "category": "medievalembroidery:animals_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Category:$() Small Herbivore $(br)$(l)Tamable:$() False $(br)$(l)Aggression:$() Peaceful $(br)$(l)Found In:$() Forests $(br2)$(l)Gender Dimorphism:$() $(br) N/A"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:fairy_dust"
+      },
+      "text": "Fairies are small, insect-like, flying creatures that hover around trees and forests. They glow in the dark, come in multiple colors, and drop Fairy Dust when killed."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "medievalembroidery:fairy{Variant:0}",
+      "name": "The Fairy",
+      "default_rotation": 45,
+      "scale": 0.8,
+      "rotate": "false"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Brute Flower",
+  "icon": "medievalembroidery:bruteflower",
+  "category": "medievalembroidery:plants_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Category:$() Herb $(br)$(l)Found In:$() Forests  $(br)$(l)Pronunciation:$() \"BRUTE FLOWER\""
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:bruteflower"
+      },
+      "text": "Brute Flowers are large flowers that bloom purple petals, often found in forests. [Placeholder]"
+    }
+  ]
+}

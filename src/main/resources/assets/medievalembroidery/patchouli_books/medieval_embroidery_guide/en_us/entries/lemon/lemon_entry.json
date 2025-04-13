@@ -1,0 +1,27 @@
+{
+  "name": "Lemon Tree",
+  "icon": "medievalembroidery:lemon",
+  "category": "medievalembroidery:plants_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Category:$() Fruit Tree $(br)$(l)Found In:$() Forests"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:lemon"
+      },
+      "text": "Lemon Trees are small fruit trees that bear lemons, often found in forests. Lemons can be used to make Tea, Pie, and Juice."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "medievalembroidery:lemon_tea",
+      "recipe2": "medievalembroidery:lemon_pie"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "medievalembroidery:lemon_juice"
+    }
+  ]
+}

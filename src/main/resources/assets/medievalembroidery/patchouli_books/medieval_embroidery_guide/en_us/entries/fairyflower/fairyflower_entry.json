@@ -1,0 +1,18 @@
+{
+  "name": "Fairy Flower",
+  "icon": "medievalembroidery:fairyflower",
+  "category": "medievalembroidery:plants_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Category:$() Herb $(br)$(l)Found In:$() Dense Biomes  $(br)$(l)Pronunciation:$() \"FAIRY FLOWER\""
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:fairyflower"
+      },
+      "text": "Fairy Flowers are large flowers that bloom pink petals, often found in dense areas. [Placeholder]"
+    }
+  ]
+}

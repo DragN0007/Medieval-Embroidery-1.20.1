@@ -1,0 +1,18 @@
+{
+  "name": "Virennes",
+  "icon": "medievalembroidery:virennes",
+  "category": "medievalembroidery:plants_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Category:$() Herb $(br)$(l)Found In:$() Cold Boimes  $(br)$(l)Pronunciation:$() \"VY-REN-EZZ\""
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:virennes"
+      },
+      "text": "Virennes is a black and yellow-orange, V-shaped herb often found in cold areas. [Placeholder]"
+    }
+  ]
+}

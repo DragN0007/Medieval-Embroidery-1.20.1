@@ -1,0 +1,27 @@
+{
+  "name": "Apple Tree",
+  "icon": "minecraft:apple",
+  "category": "medievalembroidery:plants_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Category:$() Fruit Tree $(br)$(l)Found In:$() Grasslands"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "minecraft:apple"
+      },
+      "text": "Apple Trees are small fruit trees that bear apples, often found in open plains. Apples can be used to make Cider, Pie, and Juice."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "medievalembroidery:apple_cider",
+      "recipe2": "medievalembroidery:apple_pie"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "medievalembroidery:apple_juice"
+    }
+  ]
+}

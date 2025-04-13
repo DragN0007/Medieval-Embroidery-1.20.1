@@ -71,7 +71,7 @@ public class FangedElk extends AbstractMount implements GeoEntity {
 				.add(Attributes.JUMP_STRENGTH)
 				.add(Attributes.MAX_HEALTH, 55.0D)
 				.add(Attributes.MOVEMENT_SPEED, 0.255F)
-				.add(Attributes.ATTACK_DAMAGE, 1D);
+				.add(Attributes.ATTACK_DAMAGE, 4D);
 	}
 
 	public void randomizeAttributes() {
