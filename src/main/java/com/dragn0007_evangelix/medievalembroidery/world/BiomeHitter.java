@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
@@ -38,6 +39,9 @@ public class BiomeHitter {
     public static final ResourceKey<BiomeModifier> MOSSTONE = registerKey("mosstone");
     public static final ResourceKey<BiomeModifier> SEASTONE = registerKey("seastone");
     public static final ResourceKey<BiomeModifier> SKYSTONE = registerKey("skystone");
+    public static final ResourceKey<BiomeModifier> LEMON = registerKey("lemon");
+    public static final ResourceKey<BiomeModifier> APRICOT = registerKey("apricot");
+    public static final ResourceKey<BiomeModifier> APPLE = registerKey("apple");
     public static final ResourceKey<BiomeModifier> BILBERRY_BUSH = registerKey("bilberry_bush");
     public static final ResourceKey<BiomeModifier> COWBERRY_BUSH = registerKey("cowberry_bush");
     public static final ResourceKey<BiomeModifier> ELDERBERRY_BUSH = registerKey("elderberry_bush");
@@ -91,7 +95,20 @@ public class BiomeHitter {
 
 
         //Trees
+        context.register(LEMON, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_FOREST),
+                HolderSet.direct(placedFeatures.getOrThrow(MEPlacedFeatures.LEMON)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
 
+        context.register(APRICOT, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_HOT_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(MEPlacedFeatures.APRICOT)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(APPLE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
+                HolderSet.direct(placedFeatures.getOrThrow(MEPlacedFeatures.APPLE)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
 
 
         //Plants

@@ -187,6 +187,10 @@ public class MEItemGroup {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.BLEWIT.get())).title(Component.translatable("itemGroup.herbmodtab"))
                     .displayItems((displayParameters, output) -> {
 
+                        output.accept(MEItems.LEMON_SEED.get());
+                        output.accept(MEItems.APRICOT_PIT.get());
+                        output.accept(MEItems.APPLE_SEED.get());
+
                         output.accept(MEItems.HENVEN.get());
                         output.accept(MEItems.CANNAAN.get());
                         output.accept(MEItems.DRAGONEYE.get());
@@ -458,6 +462,30 @@ public class MEItemGroup {
                         output.accept(MEItems.ASTROSTONE_CHESTPLATE.get());
                         output.accept(MEItems.ASTROSTONE_LEGGING.get());
                         output.accept(MEItems.ASTROSTONE_BOOTS.get());
+                        output.accept(MEItems.DEPTHSTONE_HELMET.get());
+                        output.accept(MEItems.DEPTHSTONE_CHESTPLATE.get());
+                        output.accept(MEItems.DEPTHSTONE_LEGGING.get());
+                        output.accept(MEItems.DEPTHSTONE_BOOTS.get());
+                        output.accept(MEItems.FIRESTONE_HELMET.get());
+                        output.accept(MEItems.FIRESTONE_CHESTPLATE.get());
+                        output.accept(MEItems.FIRESTONE_LEGGING.get());
+                        output.accept(MEItems.FIRESTONE_BOOTS.get());
+                        output.accept(MEItems.FROSTSTONE_HELMET.get());
+                        output.accept(MEItems.FROSTSTONE_CHESTPLATE.get());
+                        output.accept(MEItems.FROSTSTONE_LEGGING.get());
+                        output.accept(MEItems.FROSTSTONE_BOOTS.get());
+                        output.accept(MEItems.MOSSTONE_HELMET.get());
+                        output.accept(MEItems.MOSSTONE_CHESTPLATE.get());
+                        output.accept(MEItems.MOSSTONE_LEGGING.get());
+                        output.accept(MEItems.MOSSTONE_BOOTS.get());
+                        output.accept(MEItems.SEASTONE_HELMET.get());
+                        output.accept(MEItems.SEASTONE_CHESTPLATE.get());
+                        output.accept(MEItems.SEASTONE_LEGGING.get());
+                        output.accept(MEItems.SEASTONE_BOOTS.get());
+                        output.accept(MEItems.SKYSTONE_HELMET.get());
+                        output.accept(MEItems.SKYSTONE_CHESTPLATE.get());
+                        output.accept(MEItems.SKYSTONE_LEGGING.get());
+                        output.accept(MEItems.SKYSTONE_BOOTS.get());
 
                     }).build());
 

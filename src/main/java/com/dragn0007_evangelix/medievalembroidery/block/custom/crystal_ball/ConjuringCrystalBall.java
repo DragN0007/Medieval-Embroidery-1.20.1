@@ -1,7 +1,6 @@
 package com.dragn0007_evangelix.medievalembroidery.block.custom.crystal_ball;
 
 import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
-import com.google.common.collect.ImmutableMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
@@ -19,7 +18,6 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
-import java.util.function.Function;
 
 public class ConjuringCrystalBall extends BaseEntityBlock implements EntityBlock {
     public ConjuringCrystalBall() {

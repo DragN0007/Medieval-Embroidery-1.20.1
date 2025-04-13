@@ -90,6 +90,9 @@ public class MEItemModelProvider extends ItemModelProvider {
         simpleSpriteBlock(MEBlocks.PURPLE_MAGE);
         simpleSpriteBlock(MEBlocks.FIRE_DAISY);
         simpleSpriteBlock(MEBlocks.GROUND_VINE);
+        simpleItem(MEItems.LEMON_SEED);
+        simpleItem(MEItems.APRICOT_PIT);
+        simpleItem(MEItems.APPLE_SEED);
 
         simpleItem(MEItems.FLOUR);
         simpleItem(MEItems.SALT_BRINE);
@@ -191,6 +194,10 @@ public class MEItemModelProvider extends ItemModelProvider {
         handheldItem(MEItems.DEPTHSTONE_AXE);
         handheldItem(MEItems.DEPTHSTONE_HOE);
         handheldItem(MEItems.DEPTHSTONE_DAGGER);
+        handheldItem(MEItems.DEPTHSTONE_HELMET);
+        handheldItem(MEItems.DEPTHSTONE_CHESTPLATE);
+        handheldItem(MEItems.DEPTHSTONE_LEGGING);
+        handheldItem(MEItems.DEPTHSTONE_BOOTS);
 
         handheldItem(MEItems.FIRESTONE_SWORD);
         handheldItem(MEItems.FIRESTONE_PICKAXE);
@@ -198,6 +205,10 @@ public class MEItemModelProvider extends ItemModelProvider {
         handheldItem(MEItems.FIRESTONE_AXE);
         handheldItem(MEItems.FIRESTONE_HOE);
         handheldItem(MEItems.FIRESTONE_DAGGER);
+        handheldItem(MEItems.FIRESTONE_HELMET);
+        handheldItem(MEItems.FIRESTONE_CHESTPLATE);
+        handheldItem(MEItems.FIRESTONE_LEGGING);
+        handheldItem(MEItems.FIRESTONE_BOOTS);
 
         handheldItem(MEItems.FROSTSTONE_SWORD);
         handheldItem(MEItems.FROSTSTONE_PICKAXE);
@@ -205,6 +216,10 @@ public class MEItemModelProvider extends ItemModelProvider {
         handheldItem(MEItems.FROSTSTONE_AXE);
         handheldItem(MEItems.FROSTSTONE_HOE);
         handheldItem(MEItems.FROSTSTONE_DAGGER);
+        handheldItem(MEItems.FROSTSTONE_HELMET);
+        handheldItem(MEItems.FROSTSTONE_CHESTPLATE);
+        handheldItem(MEItems.FROSTSTONE_LEGGING);
+        handheldItem(MEItems.FROSTSTONE_BOOTS);
 
         handheldItem(MEItems.MOSSTONE_SWORD);
         handheldItem(MEItems.MOSSTONE_PICKAXE);
@@ -212,6 +227,10 @@ public class MEItemModelProvider extends ItemModelProvider {
         handheldItem(MEItems.MOSSTONE_AXE);
         handheldItem(MEItems.MOSSTONE_HOE);
         handheldItem(MEItems.MOSSTONE_DAGGER);
+        handheldItem(MEItems.MOSSTONE_HELMET);
+        handheldItem(MEItems.MOSSTONE_CHESTPLATE);
+        handheldItem(MEItems.MOSSTONE_LEGGING);
+        handheldItem(MEItems.MOSSTONE_BOOTS);
 
         handheldItem(MEItems.SEASTONE_SWORD);
         handheldItem(MEItems.SEASTONE_PICKAXE);
@@ -219,6 +238,10 @@ public class MEItemModelProvider extends ItemModelProvider {
         handheldItem(MEItems.SEASTONE_AXE);
         handheldItem(MEItems.SEASTONE_HOE);
         handheldItem(MEItems.SEASTONE_DAGGER);
+        handheldItem(MEItems.SEASTONE_HELMET);
+        handheldItem(MEItems.SEASTONE_CHESTPLATE);
+        handheldItem(MEItems.SEASTONE_LEGGING);
+        handheldItem(MEItems.SEASTONE_BOOTS);
 
         handheldItem(MEItems.SKYSTONE_SWORD);
         handheldItem(MEItems.SKYSTONE_PICKAXE);
@@ -226,6 +249,10 @@ public class MEItemModelProvider extends ItemModelProvider {
         handheldItem(MEItems.SKYSTONE_AXE);
         handheldItem(MEItems.SKYSTONE_HOE);
         handheldItem(MEItems.SKYSTONE_DAGGER);
+        handheldItem(MEItems.SKYSTONE_HELMET);
+        handheldItem(MEItems.SKYSTONE_CHESTPLATE);
+        handheldItem(MEItems.SKYSTONE_LEGGING);
+        handheldItem(MEItems.SKYSTONE_BOOTS);
     }
 
     private ItemModelBuilder simpleSpriteBlockItem(RegistryObject<Block> block) {

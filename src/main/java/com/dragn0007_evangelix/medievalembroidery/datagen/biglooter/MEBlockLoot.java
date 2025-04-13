@@ -6,6 +6,7 @@ import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
@@ -190,6 +191,10 @@ public class MEBlockLoot extends BlockLootSubProvider {
         dropSelf(MEBlocks.FIRE_DAISY.get());
         dropSelf(MEBlocks.GROUND_VINE.get());
 
+        dropOther(MEBlocks.LEMON_SAPLING.get(), MEItems.LEMON_SEED.get());
+        dropOther(MEBlocks.APRICOT_SAPLING.get(), MEItems.APRICOT_PIT.get());
+        dropOther(MEBlocks.APPLE_SAPLING.get(), MEItems.APPLE_SEED.get());
+
         this.dropSelf(MEBlocks.WILD_BLEWIT.get());
         LootItemCondition.Builder lootitemcondition$builder15 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
                 (MEBlocks.BLEWIT.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
@@ -254,6 +259,27 @@ public class MEBlockLoot extends BlockLootSubProvider {
         this.add(MEBlocks.WOODS_CHICKEN.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
                 (MEItems.WOODS_CHICKEN.get()))).withPool(LootPool.lootPool().when(lootitemcondition$builder22).add(LootItem.lootTableItem
                 (MEItems.WOODS_CHICKEN.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));
+
+        LootItemCondition.Builder lootitemcondition$builder25 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
+                (MEBlocks.LEMON_LEAVES.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
+                (MEHerbBlock.AGE, 3));
+        this.add(MEBlocks.LEMON_LEAVES.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
+                (MEItems.LEMON.get()))).withPool(LootPool.lootPool().when(lootitemcondition$builder25).add(LootItem.lootTableItem
+                (MEItems.LEMON.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));
+
+        LootItemCondition.Builder lootitemcondition$builder26 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
+                (MEBlocks.APRICOT_LEAVES.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
+                (MEHerbBlock.AGE, 3));
+        this.add(MEBlocks.APRICOT_LEAVES.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
+                (MEItems.APRICOT.get()))).withPool(LootPool.lootPool().when(lootitemcondition$builder26).add(LootItem.lootTableItem
+                (MEItems.APRICOT.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));
+
+        LootItemCondition.Builder lootitemcondition$builder27 = LootItemBlockStatePropertyCondition.hasBlockStateProperties
+                (MEBlocks.APPLE_LEAVES.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty
+                (MEHerbBlock.AGE, 3));
+        this.add(MEBlocks.APPLE_LEAVES.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem
+                (Items.APPLE))).withPool(LootPool.lootPool().when(lootitemcondition$builder27).add(LootItem.lootTableItem
+                (Items.APPLE).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 2)))));
 
         dropSelf(MEBlocks.BEIGE_BRICKS.get());
         dropSelf(MEBlocks.BLACK_BRICKS.get());

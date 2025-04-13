@@ -1,11 +1,13 @@
 package com.dragn0007_evangelix.medievalembroidery.world;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
+import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -28,6 +30,9 @@ public class MEPlacedFeatures {
     public static final ResourceKey<PlacedFeature> MOSSTONE = registerKey("mosstone");
     public static final ResourceKey<PlacedFeature> SEASTONE = registerKey("seastone");
     public static final ResourceKey<PlacedFeature> SKYSTONE = registerKey("skystone");
+    public static final ResourceKey<PlacedFeature> LEMON = registerKey("lemon");
+    public static final ResourceKey<PlacedFeature> APRICOT = registerKey("apricot");
+    public static final ResourceKey<PlacedFeature> APPLE = registerKey("apple");
     public static final ResourceKey<PlacedFeature> BILBERRY_BUSH = registerKey("bilberry_bush");
     public static final ResourceKey<PlacedFeature> COWBERRY_BUSH = registerKey("cowberry_bush");
     public static final ResourceKey<PlacedFeature> ELDERBERRY_BUSH = registerKey("elderberry_bush");
@@ -63,7 +68,17 @@ public class MEPlacedFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
         
         //Trees
-        
+        register(context, LEMON, configuredFeatures.getOrThrow(MEConfigFeatures.LEMON),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.01f, 1),
+                        MEBlocks.LEMON_SAPLING.get()));
+
+        register(context, APRICOT, configuredFeatures.getOrThrow(MEConfigFeatures.APRICOT),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.01f, 1),
+                        MEBlocks.APRICOT_SAPLING.get()));
+
+        register(context, APPLE, configuredFeatures.getOrThrow(MEConfigFeatures.APPLE),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.01f, 1),
+                        MEBlocks.APPLE_SAPLING.get()));
 
         
         //Plants

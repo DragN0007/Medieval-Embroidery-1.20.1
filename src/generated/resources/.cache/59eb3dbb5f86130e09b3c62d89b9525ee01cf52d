@@ -1,4 +1,8 @@
-// 1.20.1	2025-04-11T00:12:55.8745505	Loot Tables
+// 1.20.1	2025-04-12T23:09:26.2834847	Loot Tables
+96c6e71df19b2f7c02a7f3406d829722914612b2 data/medievalembroidery/loot_tables/blocks/apple_leaves.json
+7831d21d148f334cfe1b0911f3034add5b27c0ea data/medievalembroidery/loot_tables/blocks/apple_sapling.json
+f636d71e8f640630b40e1d5e042f67c7dfcd477b data/medievalembroidery/loot_tables/blocks/apricot_leaves.json
+8e4d4170a87870c8c2ad096f92b55c04c842b472 data/medievalembroidery/loot_tables/blocks/apricot_sapling.json
 93cf8ff14ae0e63a2581cdd0e1d74e06395bd675 data/medievalembroidery/loot_tables/blocks/assistive_crystal_ore.json
 94f337afe0c918403febb00d819d688a0575bce6 data/medievalembroidery/loot_tables/blocks/astrostone_block.json
 132ba4c5b5ff87d061710e1dd46eb2e0f6ef15d2 data/medievalembroidery/loot_tables/blocks/astrostone_ore.json
@@ -72,6 +76,8 @@ d24c64cf18cac3a330141d64fd9336ffa33a0ac1 data/medievalembroidery/loot_tables/blo
 9d470ef732288683fae4ce663f65b09d17282c2a data/medievalembroidery/loot_tables/blocks/honey.json
 5d9440ad275903b40b6361883fff421572ef7983 data/medievalembroidery/loot_tables/blocks/king.json
 eec7a629fee1146ff722cf0d82b3118d1947a443 data/medievalembroidery/loot_tables/blocks/ladyriver.json
+61d8ee4e73d344530410d2198164a4dc1cd595fe data/medievalembroidery/loot_tables/blocks/lemon_leaves.json
+3d96bd474dca3e1b9af95c07a6d22ec58f66211e data/medievalembroidery/loot_tables/blocks/lemon_sapling.json
 e208955ed5510128ca7f6b8aa6dde864e887b721 data/medievalembroidery/loot_tables/blocks/maroon_bricks.json
 8938303ad2ecf22832d28ed655a6244c778c9305 data/medievalembroidery/loot_tables/blocks/maroon_bricks_mossy.json
 110e82406cdd3f7a8ea88e37f5c332feaad0548b data/medievalembroidery/loot_tables/blocks/maroon_bricks_slab.json

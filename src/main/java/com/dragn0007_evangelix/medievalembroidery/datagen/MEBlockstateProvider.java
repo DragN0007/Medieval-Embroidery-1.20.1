@@ -45,6 +45,15 @@ public class MEBlockstateProvider extends BlockStateProvider {
         blockWithItem(MEBlocks.SKYSTONE_BLOCK);
         blockWithItem(MEBlocks.SALT_ORE);
 
+        simpleBlock(MEBlocks.LEMON_SAPLING.get(), models().cross(MEBlocks.LEMON_SAPLING.getId().getPath(),
+                blockTexture(MEBlocks.LEMON_SAPLING.get())).renderType("cutout"));
+
+        simpleBlock(MEBlocks.APRICOT_SAPLING.get(), models().cross(MEBlocks.APRICOT_SAPLING.getId().getPath(),
+                blockTexture(MEBlocks.APRICOT_SAPLING.get())).renderType("cutout"));
+
+        simpleBlock(MEBlocks.APPLE_SAPLING.get(), models().cross(MEBlocks.APPLE_SAPLING.getId().getPath(),
+                blockTexture(MEBlocks.APPLE_SAPLING.get())).renderType("cutout"));
+
         simpleBlock(MEBlocks.BLUE_DRAGON.get(), models().cross(MEBlocks.BLUE_DRAGON.getId().getPath(),
                 wildPlantTexture("blue_dragon")).renderType("cutout"));
 

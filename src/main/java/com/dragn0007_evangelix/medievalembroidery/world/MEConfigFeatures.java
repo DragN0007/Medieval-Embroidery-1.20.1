@@ -9,14 +9,15 @@ import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.*;
+import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
@@ -37,6 +38,9 @@ public class MEConfigFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> MOSSTONE = registerKey("mosstone");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SEASTONE = registerKey("seastone");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYSTONE = registerKey("skystone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LEMON = registerKey("lemon");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> APRICOT = registerKey("apricot");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> APPLE = registerKey("apple");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BILBERRY_BUSH = registerKey("bilberry_bush");
     public static final ResourceKey<ConfiguredFeature<?, ?>> COWBERRY_BUSH = registerKey("cowberry_bush");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ELDERBERRY_BUSH = registerKey("elderberry_bush");
@@ -70,7 +74,26 @@ public class MEConfigFeatures {
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
 
         //Trees
+        register(context, LEMON, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(Blocks.SPRUCE_LOG),
+                new StraightTrunkPlacer(2, 0, 2),
+                BlockStateProvider.simple(MEBlocks.LEMON_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 1),
+                new TwoLayersFeatureSize(1, 0, 2)).ignoreVines().build());
 
+        register(context, APRICOT, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(Blocks.DARK_OAK_LOG),
+                new StraightTrunkPlacer(2, 0, 2),
+                BlockStateProvider.simple(MEBlocks.APRICOT_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 1),
+                new TwoLayersFeatureSize(1, 0, 2)).ignoreVines().build());
+
+        register(context, APPLE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(Blocks.OAK_LOG),
+                new StraightTrunkPlacer(2, 0, 2),
+                BlockStateProvider.simple(MEBlocks.APPLE_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 1),
+                new TwoLayersFeatureSize(1, 0, 2)).ignoreVines().build());
 
 
         //Plants

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "medievalembroidery:apricot"
+    }
+  ],
+  "result": {
+    "item": "medievalembroidery:apricot_pit"
+  }
+}

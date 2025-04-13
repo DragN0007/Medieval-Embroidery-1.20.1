@@ -9,15 +9,19 @@ import com.dragn0007_evangelix.medievalembroidery.block.custom.crystal.CrystalOr
 import com.dragn0007_evangelix.medievalembroidery.block.custom.crystal_ball.ConjuringCrystalBall;
 import com.dragn0007_evangelix.medievalembroidery.block.custom.crystal_ball.ConjuringCrystalBallEntity;
 import com.dragn0007_evangelix.medievalembroidery.block.custom.placedfood.PlatedFood;
+import com.dragn0007_evangelix.medievalembroidery.block.leaves.AppleLeaves;
+import com.dragn0007_evangelix.medievalembroidery.block.leaves.ApricotLeaves;
+import com.dragn0007_evangelix.medievalembroidery.block.leaves.LemonLeaves;
 import com.dragn0007_evangelix.medievalembroidery.item.MEItems;
+import com.dragn0007_evangelix.medievalembroidery.world.tree.AppleTreeGrower;
+import com.dragn0007_evangelix.medievalembroidery.world.tree.ApricotTreeGrower;
+import com.dragn0007_evangelix.medievalembroidery.world.tree.LemonTreeGrower;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -86,6 +90,21 @@ public class MEBlocks {
 
 
     //Plants
+    public static final RegistryObject<Block> APPLE_LEAVES = registerPlantBlock("apple_leaves",
+            () -> new AppleLeaves(Block.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> APRICOT_LEAVES = registerPlantBlock("apricot_leaves",
+            () -> new ApricotLeaves(Block.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> LEMON_LEAVES = registerPlantBlock("lemon_leaves",
+            () -> new LemonLeaves(Block.Properties.copy(Blocks.OAK_LEAVES)));
+
+    public static final RegistryObject<Block> APPLE_SAPLING = registerBlockWithoutItem("apple_sapling",
+            () -> new SaplingBlock(new AppleTreeGrower(), Block.Properties.copy(Blocks.POPPY).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> APRICOT_SAPLING = registerBlockWithoutItem("apricot_sapling",
+            () -> new SaplingBlock(new ApricotTreeGrower(), Block.Properties.copy(Blocks.POPPY).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> LEMON_SAPLING = registerBlockWithoutItem("lemon_sapling",
+            () -> new SaplingBlock(new LemonTreeGrower(), Block.Properties.copy(Blocks.POPPY).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
+
+
     public static final RegistryObject<FungiRotator> WILD_BLEWIT = registerBlock("wild_blewit",
             () -> new FungiRotator(Block.Properties.copy(Blocks.POPPY).sound(SoundType.FUNGUS).noCollission()));
     public static final RegistryObject<FungiRotator> WILD_HONEY = registerBlock("wild_honey",

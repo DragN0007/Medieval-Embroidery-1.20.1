@@ -24,6 +24,29 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
     @Override
     public void buildRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer) {
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.LEMON_SEED.get())
+                .requires(MEItems.LEMON.get())
+                .unlockedBy("has_lemon", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.LEMON.get())
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.APRICOT_PIT.get())
+                .requires(MEItems.APRICOT.get())
+                .unlockedBy("has_apricot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(MEItems.APRICOT.get())
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.APPLE_SEED.get())
+                .requires(Items.APPLE)
+                .unlockedBy("has_apple", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.APPLE)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
+
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.OBSIDIAN_SHARD.get(), 3)
                 .requires(MEItems.MORTAR_AND_PESTLE.get())
                 .requires(Items.OBSIDIAN)

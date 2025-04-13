@@ -4,8 +4,11 @@ package com.dragn0007_evangelix.medievalembroidery.item;
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
 import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
 import com.dragn0007_evangelix.medievalembroidery.entity.EntityTypes;
-import com.dragn0007_evangelix.medievalembroidery.item.custom.*;
-import com.dragn0007_evangelix.medievalembroidery.item.custom.armor.AstrostoneArmorItem;
+import com.dragn0007_evangelix.medievalembroidery.item.custom.JuiceItem;
+import com.dragn0007_evangelix.medievalembroidery.item.custom.MEAlcoholItem;
+import com.dragn0007_evangelix.medievalembroidery.item.custom.MortarAndPestleItem;
+import com.dragn0007_evangelix.medievalembroidery.item.custom.TeaItem;
+import com.dragn0007_evangelix.medievalembroidery.item.custom.armor.*;
 import com.dragn0007_evangelix.medievalembroidery.item.custom.weapon.*;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -176,12 +179,12 @@ public class MEItems {
     public static final RegistryObject<Item> LEMON = ITEMS.register("lemon",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationMod(1).build())));
 
-//    public static final RegistryObject<Item> APPLE_SEED = ITEMS.register("apple_seed",
-//            () -> new ItemNameBlockItem(MEBlocks.APPLE_SAPLING.get(), (new Item.Properties())));
-//    public static final RegistryObject<Item> APRICOT_PIT = ITEMS.register("apricot_pit",
-//            () -> new ItemNameBlockItem(MEBlocks.APRICOT_SAPLING.get(), (new Item.Properties())));
-//    public static final RegistryObject<Item> LEMON_SEED = ITEMS.register("lemon_seed",
-//            () -> new ItemNameBlockItem(MEBlocks.LEMON_SAPLING.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> APPLE_SEED = ITEMS.register("apple_seed",
+            () -> new ItemNameBlockItem(MEBlocks.APPLE_SAPLING.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> APRICOT_PIT = ITEMS.register("apricot_pit",
+            () -> new ItemNameBlockItem(MEBlocks.APRICOT_SAPLING.get(), (new Item.Properties())));
+    public static final RegistryObject<Item> LEMON_SEED = ITEMS.register("lemon_seed",
+            () -> new ItemNameBlockItem(MEBlocks.LEMON_SAPLING.get(), (new Item.Properties())));
 
     public static final RegistryObject<Item> APPLE_PIE = ITEMS.register("apple_pie",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(18).saturationMod(1).build())));
@@ -432,6 +435,14 @@ public class MEItems {
             () -> new DepthstoneAxeItem(METoolTiers.DEPTHSTONE, 7, -3.3F, new Item.Properties()));
     public static final RegistryObject<Item> DEPTHSTONE_WARHAMMER = ITEMS.register("depthstone_warhammer",
             () -> new DepthstoneSwordItem(METoolTiers.DEPTHSTONE, 9, -3.5F, new Item.Properties()));
+    public static final RegistryObject<Item> DEPTHSTONE_HELMET = ITEMS.register("depthstone_helmet",
+            () -> new DepthstoneArmorItem(MEArmorMaterials.DEPTHSTONE, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> DEPTHSTONE_CHESTPLATE = ITEMS.register("depthstone_chestplate",
+            () -> new DepthstoneArmorItem(MEArmorMaterials.DEPTHSTONE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> DEPTHSTONE_LEGGING = ITEMS.register("depthstone_leggings",
+            () -> new DepthstoneArmorItem(MEArmorMaterials.DEPTHSTONE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> DEPTHSTONE_BOOTS = ITEMS.register("depthstone_boots",
+            () -> new DepthstoneArmorItem(MEArmorMaterials.DEPTHSTONE, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static final RegistryObject<Item> FIRESTONE_SWORD = ITEMS.register("firestone_sword",
             () -> new FirestoneSwordItem(METoolTiers.FIRESTONE, 3, -2.4F, new Item.Properties()));
@@ -451,6 +462,14 @@ public class MEItems {
             () -> new FirestoneAxeItem(METoolTiers.FIRESTONE, 7, -3.3F, new Item.Properties()));
     public static final RegistryObject<Item> FIRESTONE_WARHAMMER = ITEMS.register("firestone_warhammer",
             () -> new FirestoneSwordItem(METoolTiers.FIRESTONE, 9, -3.5F, new Item.Properties()));
+    public static final RegistryObject<Item> FIRESTONE_HELMET = ITEMS.register("firestone_helmet",
+            () -> new FirestoneArmorItem(MEArmorMaterials.FIRESTONE, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> FIRESTONE_CHESTPLATE = ITEMS.register("firestone_chestplate",
+            () -> new FirestoneArmorItem(MEArmorMaterials.FIRESTONE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> FIRESTONE_LEGGING = ITEMS.register("firestone_leggings",
+            () -> new FirestoneArmorItem(MEArmorMaterials.FIRESTONE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> FIRESTONE_BOOTS = ITEMS.register("firestone_boots",
+            () -> new FirestoneArmorItem(MEArmorMaterials.FIRESTONE, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static final RegistryObject<Item> FROSTSTONE_SWORD = ITEMS.register("froststone_sword",
             () -> new FroststoneSwordItem(METoolTiers.FROSTSTONE, 3, -2.4F, new Item.Properties()));
@@ -470,6 +489,14 @@ public class MEItems {
             () -> new FroststoneAxeItem(METoolTiers.FROSTSTONE, 7, -3.3F, new Item.Properties()));
     public static final RegistryObject<Item> FROSTSTONE_WARHAMMER = ITEMS.register("froststone_warhammer",
             () -> new FroststoneSwordItem(METoolTiers.FROSTSTONE, 9, -3.5F, new Item.Properties()));
+    public static final RegistryObject<Item> FROSTSTONE_HELMET = ITEMS.register("froststone_helmet",
+            () -> new FroststoneArmorItem(MEArmorMaterials.FROSTSTONE, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> FROSTSTONE_CHESTPLATE = ITEMS.register("froststone_chestplate",
+            () -> new FroststoneArmorItem(MEArmorMaterials.FROSTSTONE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> FROSTSTONE_LEGGING = ITEMS.register("froststone_leggings",
+            () -> new FroststoneArmorItem(MEArmorMaterials.FROSTSTONE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> FROSTSTONE_BOOTS = ITEMS.register("froststone_boots",
+            () -> new FroststoneArmorItem(MEArmorMaterials.FROSTSTONE, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static final RegistryObject<Item> MOSSTONE_SWORD = ITEMS.register("mosstone_sword",
             () -> new MosstoneSwordItem(METoolTiers.MOSSTONE, 3, -2.4F, new Item.Properties()));
@@ -489,6 +516,14 @@ public class MEItems {
             () -> new MosstoneAxeItem(METoolTiers.MOSSTONE, 7, -3.3F, new Item.Properties()));
     public static final RegistryObject<Item> MOSSTONE_WARHAMMER = ITEMS.register("mosstone_warhammer",
             () -> new MosstoneSwordItem(METoolTiers.MOSSTONE, 9, -3.5F, new Item.Properties()));
+    public static final RegistryObject<Item> MOSSTONE_HELMET = ITEMS.register("mosstone_helmet",
+            () -> new MosstoneArmorItem(MEArmorMaterials.MOSSTONE, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> MOSSTONE_CHESTPLATE = ITEMS.register("mosstone_chestplate",
+            () -> new MosstoneArmorItem(MEArmorMaterials.MOSSTONE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> MOSSTONE_LEGGING = ITEMS.register("mosstone_leggings",
+            () -> new MosstoneArmorItem(MEArmorMaterials.MOSSTONE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> MOSSTONE_BOOTS = ITEMS.register("mosstone_boots",
+            () -> new MosstoneArmorItem(MEArmorMaterials.MOSSTONE, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static final RegistryObject<Item> SEASTONE_SWORD = ITEMS.register("seastone_sword",
             () -> new SeastoneSwordItem(METoolTiers.SEASTONE, 3, -2.4F, new Item.Properties()));
@@ -508,6 +543,14 @@ public class MEItems {
             () -> new SeastoneAxeItem(METoolTiers.SEASTONE, 7, -3.3F, new Item.Properties()));
     public static final RegistryObject<Item> SEASTONE_WARHAMMER = ITEMS.register("seastone_warhammer",
             () -> new SeastoneSwordItem(METoolTiers.SEASTONE, 9, -3.5F, new Item.Properties()));
+    public static final RegistryObject<Item> SEASTONE_HELMET = ITEMS.register("seastone_helmet",
+            () -> new SeastoneArmorItem(MEArmorMaterials.SEASTONE, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> SEASTONE_CHESTPLATE = ITEMS.register("seastone_chestplate",
+            () -> new SeastoneArmorItem(MEArmorMaterials.SEASTONE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> SEASTONE_LEGGING = ITEMS.register("seastone_leggings",
+            () -> new SeastoneArmorItem(MEArmorMaterials.SEASTONE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> SEASTONE_BOOTS = ITEMS.register("seastone_boots",
+            () -> new SeastoneArmorItem(MEArmorMaterials.SEASTONE, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static final RegistryObject<Item> SKYSTONE_SWORD = ITEMS.register("skystone_sword",
             () -> new SkystoneSwordItem(METoolTiers.SKYSTONE, 3, -2.4F, new Item.Properties()));
@@ -527,6 +570,14 @@ public class MEItems {
             () -> new SkystoneAxeItem(METoolTiers.SKYSTONE, 7, -3.3F, new Item.Properties()));
     public static final RegistryObject<Item> SKYSTONE_WARHAMMER = ITEMS.register("skystone_warhammer",
             () -> new SkystoneSwordItem(METoolTiers.SKYSTONE, 9, -3.5F, new Item.Properties()));
+    public static final RegistryObject<Item> SKYSTONE_HELMET = ITEMS.register("skystone_helmet",
+            () -> new SkystoneArmorItem(MEArmorMaterials.SKYSTONE, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> SKYSTONE_CHESTPLATE = ITEMS.register("skystone_chestplate",
+            () -> new SkystoneArmorItem(MEArmorMaterials.SKYSTONE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> SKYSTONE_LEGGING = ITEMS.register("skystone_leggings",
+            () -> new SkystoneArmorItem(MEArmorMaterials.SKYSTONE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> SKYSTONE_BOOTS = ITEMS.register("skystone_boots",
+            () -> new SkystoneArmorItem(MEArmorMaterials.SKYSTONE, ArmorItem.Type.BOOTS, new Item.Properties()));
 
 
 
