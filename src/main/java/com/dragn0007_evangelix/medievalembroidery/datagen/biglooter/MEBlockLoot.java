@@ -49,7 +49,11 @@ public class MEBlockLoot extends BlockLootSubProvider {
         add(MEBlocks.HEALING_CRYSTAL_ORE.get(), block -> createOreDrop(MEBlocks.HEALING_CRYSTAL_ORE.get(), MEItems.HEALING_CRYSTAL_SHARD.get()));
         add(MEBlocks.PROTECTIVE_CRYSTAL_ORE.get(), block -> createOreDrop(MEBlocks.PROTECTIVE_CRYSTAL_ORE.get(), MEItems.PROTECTIVE_CRYSTAL_SHARD.get()));
 
+        dropSelf(MEBlocks.ASSISTIVE_CRYSTAL_BALL.get());
         dropSelf(MEBlocks.CONJURING_CRYSTAL_BALL.get());
+        dropSelf(MEBlocks.DESTRUCTIVE_CRYSTAL_BALL.get());
+        dropSelf(MEBlocks.HEALING_CRYSTAL_BALL.get());
+        dropSelf(MEBlocks.PROTECTIVE_CRYSTAL_BALL.get());
 
         dropOther(MEBlocks.SWEET_BREAD.get(), MEItems.SWEET_BREAD.get());
         dropOther(MEBlocks.SWEET_BREAD_CREAM.get(), MEItems.SWEET_BREAD_CREAM.get());

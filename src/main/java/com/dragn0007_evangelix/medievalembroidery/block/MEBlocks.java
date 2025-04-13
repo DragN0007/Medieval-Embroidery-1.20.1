@@ -6,8 +6,7 @@ import com.dragn0007_evangelix.medievalembroidery.block.custom.crop.bush.*;
 import com.dragn0007_evangelix.medievalembroidery.block.custom.crop.herb.*;
 import com.dragn0007_evangelix.medievalembroidery.block.custom.crop.mushroom.*;
 import com.dragn0007_evangelix.medievalembroidery.block.custom.crystal.CrystalOreBlock;
-import com.dragn0007_evangelix.medievalembroidery.block.custom.crystal_ball.ConjuringCrystalBall;
-import com.dragn0007_evangelix.medievalembroidery.block.custom.crystal_ball.ConjuringCrystalBallEntity;
+import com.dragn0007_evangelix.medievalembroidery.block.custom.crystal_ball.*;
 import com.dragn0007_evangelix.medievalembroidery.block.custom.placedfood.PlatedFood;
 import com.dragn0007_evangelix.medievalembroidery.block.leaves.AppleLeaves;
 import com.dragn0007_evangelix.medievalembroidery.block.leaves.ApricotLeaves;
@@ -39,10 +38,30 @@ public class MEBlocks {
             = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, MedievalEmbroidery.MODID);
 
     //Decor
+    public static final RegistryObject<Block> ASSISTIVE_CRYSTAL_BALL = registerBlock("assistive_crystal_ball", AssistiveCrystalBall::new);
+    public static final RegistryObject<BlockEntityType<AssistiveCrystalBallEntity>> ASSISTIVE_CRYSTAL_BALL_ENTITY = BLOCK_ENTITIES
+            .register("assistive_crystal_ball", () -> BlockEntityType.Builder
+                    .of(AssistiveCrystalBallEntity::new, MEBlocks.ASSISTIVE_CRYSTAL_BALL.get()).build(null));
+
     public static final RegistryObject<Block> CONJURING_CRYSTAL_BALL = registerBlock("conjuring_crystal_ball", ConjuringCrystalBall::new);
     public static final RegistryObject<BlockEntityType<ConjuringCrystalBallEntity>> CONJURING_CRYSTAL_BALL_ENTITY = BLOCK_ENTITIES
             .register("conjuring_crystal_ball", () -> BlockEntityType.Builder
                     .of(ConjuringCrystalBallEntity::new, MEBlocks.CONJURING_CRYSTAL_BALL.get()).build(null));
+
+    public static final RegistryObject<Block> DESTRUCTIVE_CRYSTAL_BALL = registerBlock("destructive_crystal_ball", DestructiveCrystalBall::new);
+    public static final RegistryObject<BlockEntityType<DestructiveCrystalBallEntity>> DESTRUCTIVE_CRYSTAL_BALL_ENTITY = BLOCK_ENTITIES
+            .register("destructive_crystal_ball", () -> BlockEntityType.Builder
+                    .of(DestructiveCrystalBallEntity::new, MEBlocks.DESTRUCTIVE_CRYSTAL_BALL.get()).build(null));
+
+    public static final RegistryObject<Block> HEALING_CRYSTAL_BALL = registerBlock("healing_crystal_ball", HealingCrystalBall::new);
+    public static final RegistryObject<BlockEntityType<HealingCrystalBallEntity>> HEALING_CRYSTAL_BALL_ENTITY = BLOCK_ENTITIES
+            .register("healing_crystal_ball", () -> BlockEntityType.Builder
+                    .of(HealingCrystalBallEntity::new, MEBlocks.HEALING_CRYSTAL_BALL.get()).build(null));
+
+    public static final RegistryObject<Block> PROTECTIVE_CRYSTAL_BALL = registerBlock("protective_crystal_ball", ProtectiveCrystalBall::new);
+    public static final RegistryObject<BlockEntityType<ProtectiveCrystalBallEntity>> PROTECTIVE_CRYSTAL_BALL_ENTITY = BLOCK_ENTITIES
+            .register("protective_crystal_ball", () -> BlockEntityType.Builder
+                    .of(ProtectiveCrystalBallEntity::new, MEBlocks.PROTECTIVE_CRYSTAL_BALL.get()).build(null));
 
 
     //Ores & Ore Blocks

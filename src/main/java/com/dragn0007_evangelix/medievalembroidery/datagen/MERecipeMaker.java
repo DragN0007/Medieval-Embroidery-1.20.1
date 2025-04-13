@@ -942,6 +942,17 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
 
 
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.ASSISTIVE_CRYSTAL_BALL.get())
+                .define('A', MEItems.ASSISTIVE_CRYSTAL_SHARD.get())
+                .define('B', Items.GOLD_INGOT)
+                .define('C', Items.GOLD_NUGGET)
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("C C")
+                .unlockedBy("has_gold", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.GOLD_INGOT)
+                        .build())).save(pFinishedRecipeConsumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.CONJURING_CRYSTAL_BALL.get())
                 .define('A', MEItems.CONJURING_CRYSTAL_SHARD.get())
                 .define('B', Items.GOLD_INGOT)
@@ -952,6 +963,40 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
                 .unlockedBy("has_gold", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.GOLD_INGOT)
                         .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.DESTRUCTIVE_CRYSTAL_BALL.get())
+                .define('A', MEItems.DESTRUCTIVE_CRYSTAL_SHARD.get())
+                .define('B', Items.GOLD_INGOT)
+                .define('C', Items.GOLD_NUGGET)
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("C C")
+                .unlockedBy("has_gold", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.GOLD_INGOT)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.HEALING_CRYSTAL_BALL.get())
+                .define('A', MEItems.HEALING_CRYSTAL_SHARD.get())
+                .define('B', Items.GOLD_INGOT)
+                .define('C', Items.GOLD_NUGGET)
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("C C")
+                .unlockedBy("has_gold", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.GOLD_INGOT)
+                        .build())).save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MEBlocks.PROTECTIVE_CRYSTAL_BALL.get())
+                .define('A', MEItems.PROTECTIVE_CRYSTAL_SHARD.get())
+                .define('B', Items.GOLD_INGOT)
+                .define('C', Items.GOLD_NUGGET)
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("C C")
+                .unlockedBy("has_gold", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.GOLD_INGOT)
+                        .build())).save(pFinishedRecipeConsumer);
+
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.BLEWIT.get())

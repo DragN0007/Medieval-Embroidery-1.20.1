@@ -43,7 +43,11 @@ public class MEItemModelProvider extends ItemModelProvider {
         simpleItem(MEItems.HEALING_CRYSTAL_SHARD);
         simpleItem(MEItems.PROTECTIVE_CRYSTAL_SHARD);
 
+        simpleSpriteBlockItem(MEBlocks.ASSISTIVE_CRYSTAL_BALL);
         simpleSpriteBlockItem(MEBlocks.CONJURING_CRYSTAL_BALL);
+        simpleSpriteBlockItem(MEBlocks.DESTRUCTIVE_CRYSTAL_BALL);
+        simpleSpriteBlockItem(MEBlocks.HEALING_CRYSTAL_BALL);
+        simpleSpriteBlockItem(MEBlocks.PROTECTIVE_CRYSTAL_BALL);
 
         simpleItem(MEItems.SWEET_BREAD);
         simpleItem(MEItems.SWEET_BREAD_CREAM);

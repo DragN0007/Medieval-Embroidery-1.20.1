@@ -1,4 +1,4 @@
-// 1.20.1	2025-04-12T23:09:26.293457	Item Models: medievalembroidery
+// 1.20.1	2025-04-13T00:21:19.1167007	Item Models: medievalembroidery
 914d3c6f0bac17fb83f631a89a8eb3d63b8d8a2d assets/medievalembroidery/models/item/ale.json
 79e3b0e56f03ffdee15ae335160e281d4fc65c35 assets/medievalembroidery/models/item/apple_cider.json
 1a9d712f1291338ad00c9daa0d5aa0d6c6ea7572 assets/medievalembroidery/models/item/apple_juice.json
@@ -9,6 +9,7 @@
 1f641fcb38a46fab0221bae00f50133196b4ece8 assets/medievalembroidery/models/item/apricot_pie.json
 afc93650b79427db36321e28a3edc4aecdf442f2 assets/medievalembroidery/models/item/apricot_pit.json
 0cdf85f5c33bcdccb0a48a60720ac4c360dcc108 assets/medievalembroidery/models/item/apricot_tea.json
+72570c90e840b69b0ab43d92c38a1c72a39fa2e8 assets/medievalembroidery/models/item/assistive_crystal_ball.json
 ccd375747f4fc0dd6bac6c5a33be5fb738f61061 assets/medievalembroidery/models/item/assistive_crystal_shard.json
 b9bd0c5e136b55902ef3cca90c7717fa66d30372 assets/medievalembroidery/models/item/astrostone.json
 3782323aad5020e468e75c12afe729192c4ade0d assets/medievalembroidery/models/item/astrostone_axe.json
@@ -62,6 +63,7 @@ ab9a732d7c598ee8fc83563e5adf3aec71afe158 assets/medievalembroidery/models/item/d
 c83ae057a4e4a8e04b5a6852ade330ccafbc5ea0 assets/medievalembroidery/models/item/depthstone_pickaxe.json
 07a0510425ba50811ccc130b01d118bd9da8783a assets/medievalembroidery/models/item/depthstone_shovel.json
 000554dd025490514447182a3405230dce1ccdf5 assets/medievalembroidery/models/item/depthstone_sword.json
+20d917e5ffec431b83dff72a76fa8c1fd46a0bb6 assets/medievalembroidery/models/item/destructive_crystal_ball.json
 9a449fa393166187ac0f277ec2cae42cab3899fc assets/medievalembroidery/models/item/destructive_crystal_shard.json
 b9b749352747ff9da14086e057d5f33630d80bcf assets/medievalembroidery/models/item/direwolf.json
 33534715864c2e5e34b88e94ca37e2c75ba3f1dc assets/medievalembroidery/models/item/direwolf_eye.json
@@ -114,6 +116,7 @@ c4079dce422946e72f8047e7b7d4af1d2b5b2233 assets/medievalembroidery/models/item/g
 225b8541f7370f907cd842fc4c48174500ee5852 assets/medievalembroidery/models/item/hawthorn_mead.json
 fdb883ee788c03068c45ab5b0caa901da38e056f assets/medievalembroidery/models/item/hawthorn_pie.json
 aa4966e772bdb03c11c2f2dae32234760d64c6ae assets/medievalembroidery/models/item/hawthorn_sweet_bread_cream.json
+dce0a5f67d4c1013261055ccfe21ab4f4f2db67b assets/medievalembroidery/models/item/healing_crystal_ball.json
 91e1f6f241cc9de358925d8629bcb7f342b4c3df assets/medievalembroidery/models/item/healing_crystal_shard.json
 7de22965325794482a1f8202c6d6fabf36a2e354 assets/medievalembroidery/models/item/henven.json
 b836b8751d1a636f5e8fbb5f330489aab8960409 assets/medievalembroidery/models/item/herbal_mead.json
@@ -155,6 +158,7 @@ c59f161568afc6966830a27b6d54845351a58b73 assets/medievalembroidery/models/item/o
 cd7bf2fa8fb8c7ba3832c1365ad1586cbd661540 assets/medievalembroidery/models/item/pickled_veggies.json
 f3df351f28ca86385f4fc9c0c3f310593783a313 assets/medievalembroidery/models/item/pink_mage.json
 5008912588dd6ecf70c0951d0cf2d0de3b7a76d0 assets/medievalembroidery/models/item/porcini.json
+7032c51bfb614e2b4d936591fbfd9d8c3802ce8d assets/medievalembroidery/models/item/protective_crystal_ball.json
 f1c044d1089b0b353da629405217a872374a4c78 assets/medievalembroidery/models/item/protective_crystal_shard.json
 91dd292f8846e8420c6e95e446cc3c41109f4080 assets/medievalembroidery/models/item/purple_mage.json
 6e57d3c80e3d9346006e39824edfbc0bc6eae487 assets/medievalembroidery/models/item/redcurrant.json

@@ -23,7 +23,12 @@ public class MEItemGroup {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEBlocks.CONJURING_CRYSTAL_ORE.get())).title(Component.translatable("itemGroup.decormodtab"))
                     .displayItems((displayParameters, output) -> {
 
+
+                        output.accept(MEBlocks.ASSISTIVE_CRYSTAL_BALL.get());
                         output.accept(MEBlocks.CONJURING_CRYSTAL_BALL.get());
+                        output.accept(MEBlocks.DESTRUCTIVE_CRYSTAL_BALL.get());
+                        output.accept(MEBlocks.HEALING_CRYSTAL_BALL.get());
+                        output.accept(MEBlocks.PROTECTIVE_CRYSTAL_BALL.get());
 
                         output.accept(MEBlocks.ASSISTIVE_CRYSTAL_ORE.get());
                         output.accept(MEBlocks.CONJURING_CRYSTAL_ORE.get());
