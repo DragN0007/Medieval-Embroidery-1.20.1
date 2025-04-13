@@ -48,6 +48,8 @@ public class MEItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> DIREWOLF_EYE = ITEMS.register("direwolf_eye",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> FIRE_DRAGON_EYE = ITEMS.register("fire_dragon_eye",
+            () -> new Item(new Item.Properties()));
 
 
     //Crystals & Ores

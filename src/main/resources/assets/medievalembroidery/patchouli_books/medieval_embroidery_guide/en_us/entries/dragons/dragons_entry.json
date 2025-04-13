@@ -1,0 +1,18 @@
+{
+  "name": "Dragons",
+  "icon": "medievalembroidery:fire_dragon_eye",
+  "category": "medievalembroidery:dragons_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Coming Soon (You've gone too far into the future, mage...)"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:fire_dragon_eye"
+      },
+      "text": "WIP"
+    }
+  ]
+}

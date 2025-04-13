@@ -32,6 +32,7 @@ public class MEItemModelProvider extends ItemModelProvider {
         simpleItem(MEItems.SALT);
 
         simpleItem(MEItems.DIREWOLF_EYE);
+        simpleItem(MEItems.FIRE_DRAGON_EYE);
         simpleItem(MEItems.FAIRY_DUST);
         simpleItem(MEItems.OBSIDIAN_SHARD);
         simpleItem(MEItems.CRYING_OBSIDIAN_SHARD);

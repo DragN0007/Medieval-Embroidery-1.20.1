@@ -1,4 +1,4 @@
-// 1.20.1	2025-04-13T01:53:11.0306488	Item Models: medievalembroidery
+// 1.20.1	2025-04-13T18:01:34.5249297	Item Models: medievalembroidery
 914d3c6f0bac17fb83f631a89a8eb3d63b8d8a2d assets/medievalembroidery/models/item/ale.json
 79e3b0e56f03ffdee15ae335160e281d4fc65c35 assets/medievalembroidery/models/item/apple_cider.json
 1a9d712f1291338ad00c9daa0d5aa0d6c6ea7572 assets/medievalembroidery/models/item/apple_juice.json
@@ -99,6 +99,7 @@ b6d98485cbde4c1dc7fd280ea70b81ac8a778dfe assets/medievalembroidery/models/item/f
 43a339b2b73d3d1ca02810c3ce096d829e49eb0b assets/medievalembroidery/models/item/firestone_shovel.json
 85ace75e920554a25ea8e56145a0a6a5ebb1a9ba assets/medievalembroidery/models/item/firestone_sword.json
 178f211e8568c0cd542f0187342aebf7d0248d22 assets/medievalembroidery/models/item/fire_daisy.json
+8cd799950e350c2db47396cfd9811a05e94d78b4 assets/medievalembroidery/models/item/fire_dragon_eye.json
 ce29db9ce5cf8aef0fc31a3f38c6bca3fa87f8a0 assets/medievalembroidery/models/item/flour.json
 d2c591946441598758022ba4096889f10e859364 assets/medievalembroidery/models/item/froststone.json
 135163070dc9e90ce747122adefd7efd1b45e805 assets/medievalembroidery/models/item/froststone_axe.json

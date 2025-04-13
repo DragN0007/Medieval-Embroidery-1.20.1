@@ -1,0 +1,18 @@
+{
+  "name": "Magic",
+  "icon": "medievalembroidery:assistive_crystal_shard",
+  "category": "medievalembroidery:magic_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Coming Soon (You've gone too far into the future, mage...)"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "medievalembroidery:assistive_crystal_shard"
+      },
+      "text": "WIP"
+    }
+  ]
+}
