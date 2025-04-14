@@ -4,12 +4,12 @@ license="All Rights Reserved, DragN0007"
 #issueTrackerURL="https://discord.gg/2WznNTtVac"
 [[mods]]
 modId="medievalembroidery"
-version="${1.0}"
+version="${0.7}"
 displayName="Medieval Embroidery"
 logoFile="medievalembroidery_banner.png"
 authors="DragN0007, Evangelix"
 description='''
-A mod that adds spells, potions, medieval decor, and more!
+A mod that adds fantastical creatures, food, medieval decor, equipment and more!
 '''
 [[dependencies.medievalembroidery]]
 modId = "forge"
