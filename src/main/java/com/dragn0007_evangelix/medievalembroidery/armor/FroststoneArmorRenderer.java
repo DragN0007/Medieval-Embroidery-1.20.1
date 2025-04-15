@@ -19,7 +19,7 @@ public final class FroststoneArmorRenderer extends GeoArmorRenderer<FroststoneAr
 
 			@Override
 			public ResourceLocation getTextureResource(FroststoneArmorItem animatable) {
-				return new ResourceLocation(MedievalEmbroidery.MODID, "textures/armor/depthstone_armor_heart.png");
+				return new ResourceLocation(MedievalEmbroidery.MODID, "textures/armor/froststone_armor_heart.png");
 			}
 
 			@Override

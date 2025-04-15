@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
+    "medievalembroidery:healing_crystal_ball",
+    "medievalembroidery:conjuring_crystal_ball",
+    "medievalembroidery:destructive_crystal_ball",
+    "medievalembroidery:assistive_crystal_ball",
+    "medievalembroidery:protective_crystal_ball",
     "medievalembroidery:healing_crystal_ore",
     "medievalembroidery:conjuring_crystal_ore",
     "medievalembroidery:destructive_crystal_ore",

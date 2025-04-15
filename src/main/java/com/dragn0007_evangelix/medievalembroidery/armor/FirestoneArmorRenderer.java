@@ -19,7 +19,7 @@ public final class FirestoneArmorRenderer extends GeoArmorRenderer<FirestoneArmo
 
 			@Override
 			public ResourceLocation getTextureResource(FirestoneArmorItem animatable) {
-				return new ResourceLocation(MedievalEmbroidery.MODID, "textures/armor/depthstone_armor_heart.png");
+				return new ResourceLocation(MedievalEmbroidery.MODID, "textures/armor/firestone_armor_heart.png");
 			}
 
 			@Override

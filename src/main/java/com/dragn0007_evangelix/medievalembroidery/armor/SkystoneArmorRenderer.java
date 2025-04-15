@@ -19,7 +19,7 @@ public final class SkystoneArmorRenderer extends GeoArmorRenderer<SkystoneArmorI
 
 			@Override
 			public ResourceLocation getTextureResource(SkystoneArmorItem animatable) {
-				return new ResourceLocation(MedievalEmbroidery.MODID, "textures/armor/depthstone_armor_heart.png");
+				return new ResourceLocation(MedievalEmbroidery.MODID, "textures/armor/seastone_armor_heart.png");
 			}
 
 			@Override

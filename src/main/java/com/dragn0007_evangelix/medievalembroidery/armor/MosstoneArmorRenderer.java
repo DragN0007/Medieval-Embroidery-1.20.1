@@ -19,7 +19,7 @@ public final class MosstoneArmorRenderer extends GeoArmorRenderer<MosstoneArmorI
 
 			@Override
 			public ResourceLocation getTextureResource(MosstoneArmorItem animatable) {
-				return new ResourceLocation(MedievalEmbroidery.MODID, "textures/armor/depthstone_armor_heart.png");
+				return new ResourceLocation(MedievalEmbroidery.MODID, "textures/armor/mosstone_armor_heart.png");
 			}
 
 			@Override

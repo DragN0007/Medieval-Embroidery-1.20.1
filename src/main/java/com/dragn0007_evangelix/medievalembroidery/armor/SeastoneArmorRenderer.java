@@ -19,7 +19,7 @@ public final class SeastoneArmorRenderer extends GeoArmorRenderer<SeastoneArmorI
 
 			@Override
 			public ResourceLocation getTextureResource(SeastoneArmorItem animatable) {
-				return new ResourceLocation(MedievalEmbroidery.MODID, "textures/armor/depthstone_armor_heart.png");
+				return new ResourceLocation(MedievalEmbroidery.MODID, "textures/armor/seastone_armor_heart.png");
 			}
 
 			@Override

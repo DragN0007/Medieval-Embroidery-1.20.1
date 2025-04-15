@@ -21,6 +21,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -66,35 +68,35 @@ public class MEBlocks {
 
     //Ores & Ore Blocks
     public static final RegistryObject<Block> FIRESTONE_ORE = registerBlock("firestone_ore",
-            () -> new DropExperienceBlock(Block.Properties.copy(Blocks.IRON_ORE)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0F, 3.0F).sound(SoundType.STONE)));
     public static final RegistryObject<Block> FIRESTONE_BLOCK = registerBlock("firestone_block",
-            () -> new Block(Block.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
     public static final RegistryObject<Block> SEASTONE_ORE = registerBlock("seastone_ore",
-            () -> new DropExperienceBlock(Block.Properties.copy(Blocks.IRON_ORE)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0F, 3.0F).sound(SoundType.STONE)));
     public static final RegistryObject<Block> SEASTONE_BLOCK = registerBlock("seastone_block",
-            () -> new Block(Block.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
     public static final RegistryObject<Block> FROSTSTONE_ORE = registerBlock("froststone_ore",
-            () -> new DropExperienceBlock(Block.Properties.copy(Blocks.IRON_ORE)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0F, 3.0F).sound(SoundType.STONE)));
     public static final RegistryObject<Block> FROSTSTONE_BLOCK = registerBlock("froststone_block",
-            () -> new Block(Block.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
     public static final RegistryObject<Block> MOSSTONE_ORE = registerBlock("mosstone_ore",
-            () -> new DropExperienceBlock(Block.Properties.copy(Blocks.IRON_ORE)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0F, 3.0F).sound(SoundType.STONE)));
     public static final RegistryObject<Block> MOSSTONE_BLOCK = registerBlock("mosstone_block",
-            () -> new Block(Block.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
     public static final RegistryObject<Block> ASTROSTONE_ORE = registerBlock("astrostone_ore",
-            () -> new DropExperienceBlock(Block.Properties.copy(Blocks.IRON_ORE)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0F, 3.0F).sound(SoundType.STONE)));
     public static final RegistryObject<Block> ASTROSTONE_BLOCK = registerBlock("astrostone_block",
-            () -> new Block(Block.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
     public static final RegistryObject<Block> DEPTHSTONE_ORE = registerBlock("depthstone_ore",
-            () -> new DropExperienceBlock(Block.Properties.copy(Blocks.IRON_ORE)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0F, 3.0F).sound(SoundType.STONE)));
     public static final RegistryObject<Block> DEPTHSTONE_BLOCK = registerBlock("depthstone_block",
-            () -> new Block(Block.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
     public static final RegistryObject<Block> SKYSTONE_ORE = registerBlock("skystone_ore",
-            () -> new DropExperienceBlock(Block.Properties.copy(Blocks.IRON_ORE)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0F, 3.0F).sound(SoundType.STONE)));
     public static final RegistryObject<Block> SKYSTONE_BLOCK = registerBlock("skystone_block",
-            () -> new Block(Block.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
     public static final RegistryObject<Block> SALT_ORE = registerBlock("salt_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.COAL_ORE)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0F, 3.0F).sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> ASSISTIVE_CRYSTAL_ORE = registerBlock("assistive_crystal_ore",
             () -> new CrystalOreBlock(255255255));

@@ -4,7 +4,7 @@ license="All Rights Reserved, DragN0007"
 #issueTrackerURL="https://discord.gg/2WznNTtVac"
 [[mods]]
 modId="medievalembroidery"
-version="${0.7}"
+version="${0.7.1}"
 displayName="Medieval Embroidery"
 logoFile="medievalembroidery_banner.png"
 authors="DragN0007, Evangelix"

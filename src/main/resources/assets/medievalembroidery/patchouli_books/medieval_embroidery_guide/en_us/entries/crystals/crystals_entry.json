@@ -5,7 +5,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Crystals are a somewhat common mining-sight in Medieval Embroidery. They can be crafted into Crystal Balls and magic items (Coming Soon).$(br2)Crystals tend to be found anywhere between Y20 and Y60."
+      "text": "Crystals are a somewhat common mining-sight in Medieval Embroidery. They can be crafted into Crystal Balls.$(br2)Crystals tend to be found anywhere between Y20 and Y60."
     },
     {
       "type": "patchouli:spotlight",
