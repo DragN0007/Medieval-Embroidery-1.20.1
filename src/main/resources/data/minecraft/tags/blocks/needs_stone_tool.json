@@ -1,6 +1,32 @@
 {
   "replace": false,
   "values": [
+    "medievalembroidery:destructive_crystal_ore",
+    "medievalembroidery:conjuring_crystal_ore",
+    "medievalembroidery:assistive_crystal_ore",
+    "medievalembroidery:protective_crystal_ore",
+    "medievalembroidery:healing_crystal_ore",
+    "medievalembroidery:destructive_crystal_ball",
+    "medievalembroidery:conjuring_crystal_ball",
+    "medievalembroidery:assistive_crystal_ball",
+    "medievalembroidery:protective_crystal_ball",
+    "medievalembroidery:healing_crystal_ball",
+
+    "medievalembroidery:firestone_ore",
+    "medievalembroidery:froststone_ore",
+    "medievalembroidery:seastone_ore",
+    "medievalembroidery:mosstone_ore",
+    "medievalembroidery:skystone_ore",
+    "medievalembroidery:depthstone_ore",
+    "medievalembroidery:astrostone_ore",
+    "medievalembroidery:firestone_block",
+    "medievalembroidery:froststone_block",
+    "medievalembroidery:seastone_block",
+    "medievalembroidery:mosstone_block",
+    "medievalembroidery:skystone_block",
+    "medievalembroidery:depthstone_block",
+    "medievalembroidery:astrostone_block",
+
     "medievalembroidery:salt_ore"
   ]
 }

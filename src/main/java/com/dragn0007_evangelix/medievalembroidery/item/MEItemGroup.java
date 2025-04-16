@@ -336,6 +336,7 @@ public class MEItemGroup {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(MEItems.HEALING_CRYSTAL_SHARD.get())).title(Component.translatable("itemGroup.magicmodtab"))
                     .displayItems((displayParameters, output) -> {
 
+                        output.accept(MEItems.MORTAR_AND_PESTLE.get());
                         output.accept(MEItems.SALT.get());
                         output.accept(MEItems.DIREWOLF_EYE.get());
                         output.accept(MEItems.FAIRY_DUST.get());

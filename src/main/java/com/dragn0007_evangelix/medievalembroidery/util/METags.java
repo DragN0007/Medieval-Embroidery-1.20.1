@@ -67,6 +67,9 @@ public class METags {
         public static final TagKey<Block> SMALL_DRAGON_DESTROYS = forgeTag("small_dragon_destroys");
         public static final TagKey<Block> SAND = forgeTag("sand");
         public static final TagKey<Block> DESERT_ANIMALS_SPAWNABLE_ON = tag("desert_animals_spawnable_on");
+        public static final TagKey<Block> NEEDS_OBSIDIAN_TOOL = tag("needs_obsidian_tool");
+        public static final TagKey<Block> NEEDS_EMERALD_TOOL = tag("needs_emerald_tool");
+        public static final TagKey<Block> NEEDS_GEMSTONE_TOOL = tag("needs_gemstone_tool");
 
         public static TagKey<net.minecraft.world.level.block.Block> forgeTag (String name) {
             return BlockTags.create(new ResourceLocation("forge", name));
