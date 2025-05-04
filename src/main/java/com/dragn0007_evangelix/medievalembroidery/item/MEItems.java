@@ -2,8 +2,6 @@ package com.dragn0007_evangelix.medievalembroidery.item;
 
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
-import com.dragn0007_evangelix.medievalembroidery.item.dev.NBTenksItem;
-import net.minecraft.world.item.Item;
 import com.dragn0007_evangelix.medievalembroidery.block.MEBlocks;
 import com.dragn0007_evangelix.medievalembroidery.entity.EntityTypes;
 import com.dragn0007_evangelix.medievalembroidery.item.custom.JuiceItem;
@@ -30,7 +28,6 @@ public class MEItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, MedievalEmbroidery.MODID);
 
-    public static RegistryObject<NBTenksItem> NBTENKS_ITEM = ITEMS.register("nbtenks_item", NBTenksItem::new);
     //Spawneggs
     public static final RegistryObject<Item> DIREWOLF_SPAWN_EGG = ITEMS.register("direwolf_spawn_egg",
             () -> new ForgeSpawnEggItem(EntityTypes.DIREWOLF_ENTITY, 0xbfbfbf, 0x848484, new Item.Properties().stacksTo(64)));
