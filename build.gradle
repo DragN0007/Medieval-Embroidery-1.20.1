@@ -21,7 +21,7 @@ plugins {
 apply plugin: 'org.spongepowered.mixin'
 
 
-version = '1.20.1-0.7.1'
+version = '1.20.1-0.7.2'
 group = mod_group_id
 
 base {
@@ -110,7 +110,7 @@ dependencies {
 //    implementation fg.deobf("curse.maven:leawind-third-person-930880:5961735")
 //    implementation fg.deobf("curse.maven:architectury-api-419699:5137938")
 //    implementation fg.deobf("curse.maven:advanced-xray-256256:4840340") //this causes an error if you try to datagen with it installed. comment out first
-    implementation fg.deobf("curse.maven:nbtenks-1255827:6482486")
+    implementation fg.deobf("curse.maven:nbtenks-1255827:6514118")
 }
 
 tasks.named('processResources', ProcessResources).configure {

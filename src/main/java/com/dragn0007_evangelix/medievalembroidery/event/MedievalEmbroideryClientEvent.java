@@ -18,9 +18,15 @@ public class MedievalEmbroideryClientEvent {
     public static final KeyMapping SWIM_UP = new KeyMapping("key.medievalembroidery.swim_up", InputConstants.KEY_SPACE, "key.medievalembroidery.categories.medievalembroidery");
     public static final KeyMapping SWIM_DOWN = new KeyMapping("key.medievalembroidery.swim_down", InputConstants.KEY_LCONTROL, "key.medievalembroidery.categories.medievalembroidery");
 
+    public static final KeyMapping FLY_UP = new KeyMapping("key.medievalembroidery.fly_up", InputConstants.KEY_S, "key.medievalembroidery.categories.medievalembroidery");
+    public static final KeyMapping FLY_DOWN = new KeyMapping("key.medievalembroidery.fly_down", InputConstants.KEY_W, "key.medievalembroidery.categories.medievalembroidery");
+    public static final KeyMapping STRAFE_LEFT = new KeyMapping("key.medievalembroidery.strafe_left", InputConstants.KEY_A, "key.medievalembroidery.categories.medievalembroidery");
+    public static final KeyMapping STRAFE_RIGHT = new KeyMapping("key.medievalembroidery.strafe_right", InputConstants.KEY_D, "key.medievalembroidery.categories.medievalembroidery");
+    public static final KeyMapping TAKE_OFF = new KeyMapping("key.medievalembroidery.take_off", InputConstants.KEY_SPACE, "key.medievalembroidery.categories.medievalembroidery");
+
     @SubscribeEvent
     public static void registerKeyBindings(RegisterKeyMappingsEvent event) {
-        KeyMapping[] keyMappings = {MOUNT_SPEED_UP, MOUNT_SLOW_DOWN, SWIM_UP, SWIM_DOWN};
+        KeyMapping[] keyMappings = {MOUNT_SPEED_UP, MOUNT_SLOW_DOWN, SWIM_UP, SWIM_DOWN, FLY_UP, FLY_DOWN, STRAFE_LEFT, STRAFE_RIGHT, TAKE_OFF};
         for (KeyMapping keyMapping : keyMappings) {
             event.register(keyMapping);
         }
