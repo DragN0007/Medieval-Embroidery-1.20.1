@@ -724,6 +724,8 @@
 
   "key.medievalembroidery.categories.medievalembroidery": "Medieval Embroidery",
   "key.medievalembroidery.speed_up": "Speed Up - Mount",
-  "key.medievalembroidery.slow_down": "Slow Down - Mount"
-
+  "key.medievalembroidery.slow_down": "Slow Down - Mount",
+  "key.medievalembroidery.fly_up": "Fly Up - Mount",
+  "key.medievalembroidery.fly_down": "Fly Down - Mount",
+  "key.medievalembroidery.takeoff": "Take Off - Mount"
 }

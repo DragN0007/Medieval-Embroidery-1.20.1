@@ -27,7 +27,7 @@ public class EntityTypes {
     public static final RegistryObject<EntityType<Griffin>> GRIFFIN_ENTITY = ENTITY_TYPES.register("griffin",
             () -> EntityType.Builder.of(Griffin::new,
                             MobCategory.CREATURE)
-                    .sized(1f,2f)
+                    .sized(2f,2f)
                     .build(new ResourceLocation(MODID,"griffin").toString()));
 
 //    public static final RegistryObject<EntityType<SwampYak>> SWAMPYAK_ENTITY = ENTITY_TYPES.register("swampyak",

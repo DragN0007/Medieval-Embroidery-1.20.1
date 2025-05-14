@@ -5,9 +5,14 @@ import com.dragn0007_evangelix.medievalembroidery.entity.ai.MEOwnerHurtByTargetG
 import com.dragn0007_evangelix.medievalembroidery.entity.ai.MEOwnerHurtTargetGoal;
 import com.dragn0007_evangelix.medievalembroidery.entity.ai.MESitWhenOrderedToGoal;
 import com.dragn0007_evangelix.medievalembroidery.entity.util.AbstractMount;
+import com.dragn0007_evangelix.medievalembroidery.event.ForgeClientEvents;
 import com.dragn0007_evangelix.medievalembroidery.event.MedievalEmbroideryClientEvent;
+import com.dragn0007_evangelix.medievalembroidery.util.MENetwork;
 import com.dragn0007_evangelix.medievalembroidery.util.METags;
 import com.dragn0007_evangelix.medievalembroidery.util.MedievalEmbroideryCommonConfig;
+import com.mojang.blaze3d.platform.InputConstants;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
@@ -18,6 +23,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.Mth;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -42,6 +48,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.GeoAnimatable;
@@ -58,7 +65,7 @@ public class Griffin extends AbstractMount implements GeoEntity {
 
 	public Griffin(EntityType<? extends Griffin> type, Level level) {
 		super(type, level);
-		this.moveControl = new FlyingMoveControl(this, 10, false);
+//		this.moveControl = new FlyingMoveControl(this, 10, false);
 	}
 
 	@Override
@@ -89,13 +96,13 @@ public class Griffin extends AbstractMount implements GeoEntity {
 				.add(Attributes.FLYING_SPEED, 0.26F);
 	}
 
-	protected PathNavigation createNavigation(Level p_29417_) {
-		FlyingPathNavigation flyingpathnavigation = new FlyingPathNavigation(this, p_29417_);
-		flyingpathnavigation.setCanOpenDoors(false);
-		flyingpathnavigation.setCanFloat(true);
-		flyingpathnavigation.setCanPassDoors(true);
-		return flyingpathnavigation;
-	}
+//	protected PathNavigation createNavigation(Level level) {
+//		FlyingPathNavigation flyingpathnavigation = new FlyingPathNavigation(this, level);
+//		flyingpathnavigation.setCanOpenDoors(false);
+//		flyingpathnavigation.setCanFloat(true);
+//		flyingpathnavigation.setCanPassDoors(true);
+//		return flyingpathnavigation;
+//	}
 
 	public static final Ingredient FOOD_ITEMS = Ingredient.of(METags.Items.CARNIVORE_EATS);
 	public boolean isFood(ItemStack itemStack) {
@@ -108,7 +115,7 @@ public class Griffin extends AbstractMount implements GeoEntity {
 		this.goalSelector.addGoal(1, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(4, new BreedGoal(this, 1.0D));
 		this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0D));
-		this.goalSelector.addGoal(5, new WaterAvoidingRandomFlyingGoal(this, 1.0D));
+//		this.goalSelector.addGoal(5, new WaterAvoidingRandomFlyingGoal(this, 1.0D));
 		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 2.0D, true));
 		this.goalSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Monster.class, false));
 
@@ -133,8 +140,18 @@ public class Griffin extends AbstractMount implements GeoEntity {
 				entity -> entity.getType().is(METags.Entity_Types.HERBIVORES) && !this.isBaby() && !this.isTamed()));
 	}
 
+	protected void tickRidden(Player p_278233_, Vec3 p_275693_) {
+		super.tickRidden(p_278233_, p_275693_);
+		Vec2 vec2 = this.getRiddenRotation(p_278233_);
+		this.setRot(vec2.y, vec2.x);
+	}
+
+	protected Vec2 getRiddenRotation(LivingEntity p_275502_) {
+		return new Vec2(p_275502_.getXRot() * 0.5F, p_275502_.getYRot());
+	}
+
 	//TODO; Flying stuff
-	public void travel(Vec3 vec) {
+	public void travel(Vec3 vec3) {
 		if (this.isVehicle() && this.hasControllingPassenger()) {
 			LivingEntity livingentity = (LivingEntity) this.getControllingPassenger();
 			this.setYRot(livingentity.getYRot());
@@ -145,44 +162,73 @@ public class Griffin extends AbstractMount implements GeoEntity {
 			this.yHeadRot = this.yBodyRot;
 			float strafeSpeed = livingentity.xxa * 0.5F;
 			float forwardSpeed = livingentity.zza;
-			double verticalMovement = vec.y;
+			double verticalMovement = vec3.y;
 			double maxVerticalMovement = verticalMovement * MedievalEmbroideryCommonConfig.MAX_GRIFFIN_SPEED_MULTIPLIER.get();
 
-			//tenks you can edit this if you want, this is just amateur unfinished code (i have no idea what im doing)
-
 			if (MedievalEmbroideryClientEvent.TAKE_OFF.isDown() && !this.isFlying()) {
-				verticalMovement = 0.5D;
+				verticalMovement = 0.4D;
 			}
 
-			if (diveTime < diveTime) {
-				if (diveTime == 100) {
-					forwardSpeed = forwardSpeed * 1.3F;
-					verticalMovement = verticalMovement * -1.3D;
-				} else if (diveTime == 200) {
-					forwardSpeed = forwardSpeed * 1.4F;
-					verticalMovement = verticalMovement * -1.4D;
-				} else if (diveTime == 300) {
-					forwardSpeed = forwardSpeed * 1.5F;
-					verticalMovement = verticalMovement * -1.5D;
-				} else if (diveTime == 400) {
-					forwardSpeed = forwardSpeed * 1.6F;
-					verticalMovement = verticalMovement * -1.6D;
-				} else if (diveTime == 500) {
-					forwardSpeed = forwardSpeed * 1.7F;
-					verticalMovement = verticalMovement * -1.7D;
-				} else if (diveTime == 600) {
-					forwardSpeed = forwardSpeed * 1.8F;
-					verticalMovement = verticalMovement * -1.8D;
-				} else if (diveTime == 700) {
-					forwardSpeed = forwardSpeed * 1.9F;
-					verticalMovement = verticalMovement * -1.9D;
-				} else if (diveTime == 800) {
-					forwardSpeed = forwardSpeed * 2.0F;
-					verticalMovement = verticalMovement * -2.0D;
+			if (this.isFlying() && this.isVehicle()) {
+				if (MedievalEmbroideryClientEvent.FLY_DOWN.isDown()) {
+					if (diveTime == 20) {
+						forwardSpeed = forwardSpeed * 1.3F;
+						verticalMovement = verticalMovement * -1.3D;
+					} else if (diveTime == 40) {
+						forwardSpeed = forwardSpeed * 1.4F;
+						verticalMovement = verticalMovement * -1.4D;
+					} else if (diveTime == 60) {
+						forwardSpeed = forwardSpeed * 1.5F;
+						verticalMovement = verticalMovement * -1.5D;
+					} else if (diveTime == 80) {
+						forwardSpeed = forwardSpeed * 1.6F;
+						verticalMovement = verticalMovement * -1.6D;
+					} else if (diveTime == 100) {
+						forwardSpeed = forwardSpeed * 1.7F;
+						verticalMovement = verticalMovement * -1.7D;
+					} else if (diveTime == 120) {
+						forwardSpeed = forwardSpeed * 1.8F;
+						verticalMovement = verticalMovement * -1.8D;
+					} else if (diveTime == 140) {
+						forwardSpeed = forwardSpeed * 1.9F;
+						verticalMovement = verticalMovement * -1.9D;
+					} else if (diveTime == 160) {
+						forwardSpeed = forwardSpeed * 2.0F;
+						verticalMovement = verticalMovement * -2.0D;
+					}
+				}
+
+				if (MedievalEmbroideryClientEvent.FLY_UP.isDown()) {
+					if (diveTime == 20) {
+						forwardSpeed = forwardSpeed * 1.3F;
+						verticalMovement = verticalMovement * 0.5D;
+					} else if (diveTime == 40) {
+						forwardSpeed = forwardSpeed * 1.4F;
+						verticalMovement = verticalMovement * 0.6D;
+					} else if (diveTime == 60) {
+						forwardSpeed = forwardSpeed * 1.5F;
+						verticalMovement = verticalMovement * 0.7D;
+					} else if (diveTime == 80) {
+						forwardSpeed = forwardSpeed * 1.6F;
+						verticalMovement = verticalMovement * 0.8D;
+					} else if (diveTime == 100) {
+						forwardSpeed = forwardSpeed * 1.7F;
+						verticalMovement = verticalMovement * 0.9D;
+					} else if (diveTime == 120) {
+						forwardSpeed = forwardSpeed * 1.8F;
+						verticalMovement = verticalMovement * 1.0D;
+					} else if (diveTime == 140) {
+						forwardSpeed = forwardSpeed * 1.9F;
+						verticalMovement = verticalMovement * 1.1D;
+					} else if (diveTime == 160) {
+						forwardSpeed = forwardSpeed * 0.4F;
+						verticalMovement = verticalMovement * 1.2D;
+					}
 				}
 			}
 
 		}
+		super.travel(vec3);
 	}
 
 	private boolean diving = false;
@@ -209,12 +255,20 @@ public class Griffin extends AbstractMount implements GeoEntity {
 		this.soarFlapping = soarFlap;
 	}
 
+	private boolean flying = false;
 	public boolean isFlying() {
-		return !this.onGround();
+		return this.flying;
+	}
+	public void setFlying(boolean fly) {
+		this.flying = fly;
 	}
 
+	private boolean soaring = false;
 	public boolean isSoaring() {
-		return this.isFlying() && !this.isFlapping();
+		return this.soaring;
+	}
+	public void setSoaring(boolean soar) {
+		this.soaring = soar;
 	}
 
 	public void openInventory(Player player) {
@@ -298,11 +352,14 @@ public class Griffin extends AbstractMount implements GeoEntity {
 
 	public int flapCounter = this.random.nextInt(1600) + 1600;
 	public int regenHealthCounter = 0;
-	public int diveTime = 800;
+	public int diveTime = 160;
 
 	//TODO; Flying stuff
 	public void tick() {
 		super.tick();
+
+		setFlying(!this.onGround());
+		setSoaring(this.isFlying() && !this.isFlapping());
 
 		regenHealthCounter++;
 
@@ -328,7 +385,7 @@ public class Griffin extends AbstractMount implements GeoEntity {
 
 			setFlapping(MedievalEmbroideryClientEvent.FLY_UP.isDown());
 
-			if (MedievalEmbroideryClientEvent.FLY_DOWN.isDown() && diveTime < 800) {
+			if (MedievalEmbroideryClientEvent.FLY_DOWN.isDown() && diveTime < 161) {
 				diveTime++;
 			} else if (!MedievalEmbroideryClientEvent.FLY_DOWN.isDown() && diveTime > 0) {
 				diveTime--;
@@ -363,24 +420,24 @@ public class Griffin extends AbstractMount implements GeoEntity {
 
 		AnimationController<T> controller = tAnimationState.getController();
 
-		if (!isFlying()) {
+		if (!this.isFlying()) {
 			if (isMoving) {
 				if ((currentSpeed > speedThreshold) || (this.isVehicle() && this.getAttribute(Attributes.MOVEMENT_SPEED).hasModifier(SPRINT_SPEED_MOD))) {
 					controller.setAnimation(RawAnimation.begin().then("run", Animation.LoopType.LOOP));
-					controller.setAnimationSpeed(2.2);
+					controller.setAnimationSpeed(2.0);
 				} else if (this.isVehicle() && this.getAttribute(Attributes.MOVEMENT_SPEED).hasModifier(WALK_SPEED_MOD)) {
 					controller.setAnimation(RawAnimation.begin().then("walk", Animation.LoopType.LOOP));
-					controller.setAnimationSpeed(1.6);
+					controller.setAnimationSpeed(2.4);
 				} else {
 					controller.setAnimation(RawAnimation.begin().then("walk", Animation.LoopType.LOOP));
 					controller.setAnimationSpeed(1.5);
 				}
 			} else if (this.isInSittingPose()) {
 				controller.setAnimation(RawAnimation.begin().then("idle_sit", Animation.LoopType.LOOP));
-				controller.setAnimationSpeed(0.8);
+				controller.setAnimationSpeed(1.0);
 			} else {
 				controller.setAnimation(RawAnimation.begin().then("idle", Animation.LoopType.LOOP));
-				controller.setAnimationSpeed(0.8);
+				controller.setAnimationSpeed(1.0);
 			}
 		}
 
@@ -389,21 +446,18 @@ public class Griffin extends AbstractMount implements GeoEntity {
 
 	//TODO; Flying stuff
 	public <T extends GeoAnimatable> PlayState flyingPredicate(AnimationState<T> tAnimationState) {
-		double currentSpeed = this.getDeltaMovement().lengthSqr();
-		double speedThreshold = 0.02;
-
 		double strafeMovementSpeed = this.getX() - this.xo;
 		double forwardMovementSpeed = this.getZ() - this.zo;
 		boolean isMoving = (strafeMovementSpeed * strafeMovementSpeed + forwardMovementSpeed * forwardMovementSpeed) > 0.0001;
 
 		AnimationController<T> controller = tAnimationState.getController();
 
-		if (isFlying()) {
+		if (this.isFlying()) {
 			if (isMoving) {
-				if (this.isVehicle() && this.getAttribute(Attributes.MOVEMENT_SPEED).hasModifier(SPRINT_SPEED_MOD)) {
+				if ((this.isVehicle() && this.getAttribute(Attributes.MOVEMENT_SPEED).hasModifier(SPRINT_SPEED_MOD)) || this.isFlapping()) {
 					controller.setAnimation(RawAnimation.begin().then("flap", Animation.LoopType.LOOP));
 					controller.setAnimationSpeed(1.0);
-				} else if (this.isVehicle() && this.getAttribute(Attributes.MOVEMENT_SPEED).hasModifier(WALK_SPEED_MOD)) {
+				} else if ((this.isVehicle() && this.getAttribute(Attributes.MOVEMENT_SPEED).hasModifier(WALK_SPEED_MOD)) || this.isSoaring()) {
 					controller.setAnimation(RawAnimation.begin().then("soar", Animation.LoopType.LOOP));
 					controller.setAnimationSpeed(1.0);
 				} else {
@@ -456,8 +510,8 @@ public class Griffin extends AbstractMount implements GeoEntity {
 	public void positionRider(Entity entity, MoveFunction moveFunction) {
 		if (this.hasPassenger(entity)) {
 			double offsetX = 0.0;
-			double offsetY = 1.7;
-			double offsetZ = -0.1;
+			double offsetY = 1.15;
+			double offsetZ = 0.01;
 
 			double radYaw = Math.toRadians(this.getYRot());
 
