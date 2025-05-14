@@ -1,17 +1,14 @@
 package com.dragn0007_evangelix.medievalembroidery.entity.griffin;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
-import com.dragn0007_evangelix.medievalembroidery.event.MedievalEmbroideryClientEvent;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
-import net.minecraft.world.entity.player.Player;
 import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.core.animatable.model.CoreGeoBone;
 import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.model.DefaultedEntityGeoModel;
-import software.bernie.geckolib.model.GeoModel;
 import software.bernie.geckolib.model.data.EntityModelData;
 
 public class GriffinModel extends DefaultedEntityGeoModel<Griffin> {
@@ -57,7 +54,7 @@ public class GriffinModel extends DefaultedEntityGeoModel<Griffin> {
         if (Minecraft.getInstance().player != null &&
                 Minecraft.getInstance().player.getVehicle() == animatable) {
 
-            if (animatable.getControllingPassenger() instanceof LocalPlayer player) {
+            if (animatable.getControllingPassenger() instanceof LocalPlayer player && animatable.isFlying()) {
                 if (player.input.left) {
                     body.setRotZ(25 * (Mth.DEG_TO_RAD));
                 } else if (player.input.right) {

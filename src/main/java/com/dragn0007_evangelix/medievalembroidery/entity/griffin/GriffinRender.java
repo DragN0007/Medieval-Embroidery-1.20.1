@@ -1,6 +1,5 @@
 package com.dragn0007_evangelix.medievalembroidery.entity.griffin;
 
-import com.dragn0007_evangelix.medievalembroidery.event.MedievalEmbroideryClientEvent;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.renderer.MultiBufferSource;

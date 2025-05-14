@@ -1,12 +1,10 @@
 package com.dragn0007_evangelix.medievalembroidery.util;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
-import com.dragn0007_evangelix.medievalembroidery.entity.griffin.Griffin;
 import com.dragn0007_evangelix.medievalembroidery.entity.util.AbstractMount;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
