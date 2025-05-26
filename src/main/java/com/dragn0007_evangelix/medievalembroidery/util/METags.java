@@ -19,6 +19,7 @@ public class METags {
         public static final TagKey<Item> GLAZES = forgeTag("glazes");
         public static final TagKey<Item> FRUITS = forgeTag("fruits");
         public static final TagKey<Item> WHEAT = forgeTag("wheat");
+        public static final TagKey<Item> FLOUR = forgeTag("flour");
         public static final TagKey<Item> WATER = forgeTag("water");
         public static final TagKey<Item> HERBS = forgeTag("herbs");
         public static final TagKey<Item> LEAVES = forgeTag("leaves");
