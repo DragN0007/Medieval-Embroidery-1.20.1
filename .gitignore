@@ -21,6 +21,7 @@ build
 eclipse
 run
 run-data
+src/main/resources/assets/dragon_chats.txt
 
 # Files from Forge MDK
 forge*changelog.txt

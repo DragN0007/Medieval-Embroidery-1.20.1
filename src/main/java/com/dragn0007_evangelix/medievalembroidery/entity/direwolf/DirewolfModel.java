@@ -2,9 +2,40 @@ package com.dragn0007_evangelix.medievalembroidery.entity.direwolf;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
+import software.bernie.geckolib.constant.DataTickets;
+import software.bernie.geckolib.core.animatable.model.CoreGeoBone;
+import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.model.DefaultedEntityGeoModel;
 import software.bernie.geckolib.model.GeoModel;
+import software.bernie.geckolib.model.data.EntityModelData;
 
-public class DirewolfModel extends GeoModel<Direwolf> {
+public class DirewolfModel extends DefaultedEntityGeoModel<Direwolf> {
+
+    public DirewolfModel() {
+        super(new ResourceLocation(MedievalEmbroidery.MODID, "direwolf"), true);
+    }
+
+    @Override
+    public void setCustomAnimations(Direwolf animatable, long instanceId, AnimationState<Direwolf> animationState) {
+
+        CoreGeoBone neck = getAnimationProcessor().getBone("neck");
+        CoreGeoBone head = getAnimationProcessor().getBone("head");
+
+        if (neck != null) {
+            EntityModelData entityData = animationState.getData(DataTickets.ENTITY_MODEL_DATA);
+            neck.setRotX(neck.getRotX() + (entityData.headPitch() * Mth.DEG_TO_RAD));
+            float maxYaw = Mth.clamp(entityData.netHeadYaw(), -25.0f, 25.0f);
+            neck.setRotY(neck.getRotY() + (maxYaw * Mth.DEG_TO_RAD));
+        }
+
+        if (head != null) {
+            EntityModelData entityData = animationState.getData(DataTickets.ENTITY_MODEL_DATA);
+            head.setRotX(head.getRotX() + (entityData.headPitch() * Mth.DEG_TO_RAD));
+            float maxYaw = Mth.clamp(entityData.netHeadYaw(), -25.0f, 25.0f);
+            head.setRotY(head.getRotY() + (maxYaw * Mth.DEG_TO_RAD));
+        }
+    }
 
     public enum Variant {
         BLUE(new ResourceLocation(MedievalEmbroidery.MODID, "textures/entity/direwolf/direwolf_blue.png")),

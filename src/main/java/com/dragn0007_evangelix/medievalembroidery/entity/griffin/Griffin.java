@@ -18,6 +18,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.Mth;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -131,12 +132,6 @@ public class Griffin extends AbstractMount implements GeoEntity {
 				entity -> entity.getType().is(METags.Entity_Types.HERBIVORES) && !this.isBaby() && !this.isTamed()));
 	}
 
-	protected void tickRidden(Player p_278233_, Vec3 p_275693_) {
-		super.tickRidden(p_278233_, p_275693_);
-		Vec2 vec2 = this.getRiddenRotation(p_278233_);
-		this.setRot(vec2.y, vec2.x);
-	}
-
 	protected Vec2 getRiddenRotation(LivingEntity p_275502_) {
 		return new Vec2(p_275502_.getXRot() * 0.5F, p_275502_.getYRot());
 	}
@@ -150,7 +145,6 @@ public class Griffin extends AbstractMount implements GeoEntity {
 			this.setXRot(livingentity.getXRot() * 0.5F);
 			this.setRot(this.getYRot(), this.getXRot());
 			this.yBodyRot = this.getYRot();
-			this.yHeadRot = this.yBodyRot;
 			float strafeSpeed = livingentity.xxa * 0.5F;
 			float forwardSpeed = livingentity.zza;
 			double verticalMovement = vec3.y;
@@ -385,6 +379,14 @@ public class Griffin extends AbstractMount implements GeoEntity {
 
 	}
 
+	public void aiStep() {
+		super.aiStep();
+		Vec3 vec3 = this.getDeltaMovement();
+		if (!this.onGround() && vec3.y < 0.0D) {
+			this.setDeltaMovement(vec3.multiply(1.0D, 0.6D, 1.0D));
+		}
+	}
+
 	public boolean hurt(DamageSource source, float v) {
 		super.hurt(source, v);
 		Entity entity = source.getDirectEntity();
@@ -425,25 +427,16 @@ public class Griffin extends AbstractMount implements GeoEntity {
 				}
 			} else if (this.isInSittingPose()) {
 				controller.setAnimation(RawAnimation.begin().then("idle_sit", Animation.LoopType.LOOP));
-				controller.setAnimationSpeed(1.0);
+				controller.setAnimationSpeed(0.8);
 			} else {
 				controller.setAnimation(RawAnimation.begin().then("idle", Animation.LoopType.LOOP));
-				controller.setAnimationSpeed(1.0);
+				controller.setAnimationSpeed(0.8);
 			}
 		}
 
-		return PlayState.CONTINUE;
-	}
+		//TODO; Flying Stuff
 
-	//TODO; Flying stuff
-	public <T extends GeoAnimatable> PlayState flyingPredicate(AnimationState<T> tAnimationState) {
-		double strafeMovementSpeed = this.getX() - this.xo;
-		double forwardMovementSpeed = this.getZ() - this.zo;
-		boolean isMoving = (strafeMovementSpeed * strafeMovementSpeed + forwardMovementSpeed * forwardMovementSpeed) > 0.0001;
-
-		AnimationController<T> controller = tAnimationState.getController();
-
-		if (this.isFlying()) {
+		else if (this.isFlying()) {
 			if (isMoving) {
 				if ((this.isVehicle() && this.getAttribute(Attributes.MOVEMENT_SPEED).hasModifier(SPRINT_SPEED_MOD)) || this.isFlapping()) {
 					controller.setAnimation(RawAnimation.begin().then("flap", Animation.LoopType.LOOP));
@@ -470,7 +463,6 @@ public class Griffin extends AbstractMount implements GeoEntity {
 	@Override
 	public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
 		controllers.add(new AnimationController<>(this, "controller", 2, this::predicate));
-		controllers.add(new AnimationController<>(this, "flyingController", 2, this::flyingPredicate));
 	}
 
 	@Override

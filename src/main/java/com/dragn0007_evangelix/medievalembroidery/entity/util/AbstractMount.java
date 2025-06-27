@@ -15,6 +15,7 @@ import net.minecraft.server.players.OldUsersConverter;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.util.Mth;
 import net.minecraft.world.*;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
@@ -40,6 +41,7 @@ import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.WoolCarpetBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.scores.Team;
 import net.minecraftforge.network.NetworkHooks;
@@ -128,6 +130,40 @@ public abstract class AbstractMount extends AbstractChestedHorse {
         this.inventory.addListener(this);
         this.updateContainerEquipment();
         this.itemHandler = net.minecraftforge.common.util.LazyOptional.of(() -> new net.minecraftforge.items.wrapper.InvWrapper(this.inventory));
+    }
+
+    protected void tickRidden(Player player, Vec3 vec3) {
+        Vec2 vec2 = this.getRiddenRotation(player);
+
+        float degrees = Mth.wrapDegrees(vec2.y - this.getYRot());
+        float playerXRot = vec2.x;
+        this.setXRot(vec2.x);
+        this.xRotO = this.getXRot();
+        float yRot = this.getYRot();
+        float maxHeadYRot = 25.0f;
+        this.yHeadRot = yRot + Mth.clamp(degrees, -maxHeadYRot, maxHeadYRot);
+        this.setXRot(playerXRot);
+        this.xRotO = this.getXRot();
+
+        if (Math.abs(degrees) > maxHeadYRot) {
+            float turnSpeed = 8.0f;
+            float yaw = yRot + Mth.clamp(degrees, -turnSpeed, turnSpeed);
+            this.setYRot(yaw);
+            this.yRotO = yaw;
+            this.yBodyRot = yaw;
+        }
+
+        if (this.isControlledByLocalInstance()) {
+
+            if (this.onGround()) {
+                this.setIsJumping(false);
+                if (this.playerJumpPendingScale > 0.0F && !this.isJumping()) {
+                    this.executeRidersJump(this.playerJumpPendingScale, vec3);
+                }
+
+                this.playerJumpPendingScale = 0.0F;
+            }
+        }
     }
 
     @Override

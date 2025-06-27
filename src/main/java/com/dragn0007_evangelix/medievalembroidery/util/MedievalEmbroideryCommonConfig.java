@@ -7,6 +7,8 @@ public class MedievalEmbroideryCommonConfig {
     public static final ForgeConfigSpec SPEC;
 
 //    public static final ForgeConfigSpec.BooleanValue DRAGONS_CAN_BREED;
+//    public static final ForgeConfigSpec.BooleanValue DRAGON_SPEAK;
+//    public static final ForgeConfigSpec.BooleanValue DRAGON_PERSONALITIES;
 //    public static final ForgeConfigSpec.ConfigValue<Float> DRAGON_SPEED;
 //    public static final ForgeConfigSpec.ConfigValue<Integer> MAX_DRAGON_EGGS;
 //    public static final ForgeConfigSpec.ConfigValue<Integer> MAX_DRAGONS_OWNED;
@@ -50,13 +52,20 @@ public class MedievalEmbroideryCommonConfig {
         MAX_GRIFFIN_SPEED_MULTIPLIER = BUILDER.comment("Maximum Griffin speed multiplier. Default is 2.0D.")
                 .define("Max Griffin Flying Speed Multiplier", 2.0D);
 
+
 //        DRAGONS_CAN_BREED = BUILDER.comment("Should dragons be able to breed?")
 //                .define("Dragons Can Breed", true);
+//
+//        DRAGON_SPEAK = BUILDER.comment("Disable dragon chats?")
+//                .define("Lobotomize Dragons", false);
+//
+//        DRAGON_PERSONALITIES = BUILDER.comment("Disable dragon personalities?")
+//                .define("Dragons Are Beasts", false);
 //
 //        DRAGON_SPEED = BUILDER.comment("Base dragon speed. Default is 0.26F. Lower values may relieve server lag when flying.")
 //                .define("Dragon Speed", 0.26F);
 //
-//        MAX_DRAGONS_OWNED = BUILDER.comment("Maximum amount of eggs dragons can lay in their life. Default is 3.")
+//        MAX_DRAGON_EGGS = BUILDER.comment("Maximum amount of eggs dragons can lay in their life. Default is 3.")
 //                .define("Max Dragon Eggs Per Female", 3);
 //
 //        MAX_DRAGONS_OWNED = BUILDER.comment("Maximum amount of dragons players can own. Default is 3. Also applies to OPs/ Admins.")
