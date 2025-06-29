@@ -151,10 +151,11 @@ public abstract class AbstractMount extends AbstractChestedHorse {
             this.setYRot(yaw);
             this.yRotO = yaw;
             this.yBodyRot = yaw;
+        } else {
+            this.yBodyRot = yRot;
         }
 
         if (this.isControlledByLocalInstance()) {
-
             if (this.onGround()) {
                 this.setIsJumping(false);
                 if (this.playerJumpPendingScale > 0.0F && !this.isJumping()) {
