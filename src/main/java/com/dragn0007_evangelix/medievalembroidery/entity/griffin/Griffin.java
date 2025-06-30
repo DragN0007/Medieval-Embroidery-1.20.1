@@ -1,6 +1,7 @@
 package com.dragn0007_evangelix.medievalembroidery.entity.griffin;
 
 import com.dragn0007_evangelix.medievalembroidery.entity.EntityTypes;
+import com.dragn0007_evangelix.medievalembroidery.entity.ai.FollowMountOwnerGoal;
 import com.dragn0007_evangelix.medievalembroidery.entity.ai.MEOwnerHurtByTargetGoal;
 import com.dragn0007_evangelix.medievalembroidery.entity.ai.MEOwnerHurtTargetGoal;
 import com.dragn0007_evangelix.medievalembroidery.entity.ai.MESitWhenOrderedToGoal;
@@ -8,11 +9,13 @@ import com.dragn0007_evangelix.medievalembroidery.entity.util.AbstractMount;
 import com.dragn0007_evangelix.medievalembroidery.event.MedievalEmbroideryClientEvent;
 import com.dragn0007_evangelix.medievalembroidery.util.METags;
 import com.dragn0007_evangelix.medievalembroidery.util.MedievalEmbroideryCommonConfig;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -31,10 +34,12 @@ import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
+import net.minecraft.world.entity.ai.control.MoveControl;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
+import net.minecraft.world.entity.ai.navigation.GroundPathNavigation;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Monster;
@@ -90,18 +95,18 @@ public class Griffin extends AbstractMount implements GeoEntity {
 				.add(Attributes.ATTACK_DAMAGE, 4D)
 				.add(Attributes.KNOCKBACK_RESISTANCE, 0.8F)
 				.add(Attributes.ARMOR_TOUGHNESS, 3D)
-				.add(Attributes.ARMOR, 1D)
+				.add(Attributes.ARMOR, 3D)
 				.add(Attributes.MOVEMENT_SPEED, 0.26F)
 				.add(Attributes.FLYING_SPEED, 0.32F)
 				.add(Attributes.JUMP_STRENGTH, 0.8F);
 	}
 
 	protected PathNavigation createNavigation(Level level) {
-		FlyingPathNavigation flyingpathnavigation = new FlyingPathNavigation(this, level);
-		flyingpathnavigation.setCanOpenDoors(false);
-		flyingpathnavigation.setCanFloat(true);
-		flyingpathnavigation.setCanPassDoors(true);
-		return flyingpathnavigation;
+		FlyingPathNavigation flyingPathNavigation = new FlyingPathNavigation(this, level);
+		flyingPathNavigation.setCanOpenDoors(false);
+		flyingPathNavigation.setCanFloat(true);
+		flyingPathNavigation.setCanPassDoors(true);
+		return flyingPathNavigation;
 	}
 
 	public static final Ingredient FOOD_ITEMS = Ingredient.of(METags.Items.CARNIVORE_EATS);
@@ -113,15 +118,16 @@ public class Griffin extends AbstractMount implements GeoEntity {
 		this.goalSelector.addGoal(0, new FloatGoal(this));
 		this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.1D));
 		this.goalSelector.addGoal(1, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(4, new BreedGoal(this, 1.0D));
-		this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0D));
-//		this.goalSelector.addGoal(5, new WaterAvoidingRandomFlyingGoal(this, 1.0D));
+		this.goalSelector.addGoal(2, new BreedGoal(this, 1.0D));
+		this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
+		this.goalSelector.addGoal(5, new WaterAvoidingRandomFlyingGoal(this, 1.5D));
 		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 2.0D, true));
 		this.goalSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Monster.class, false));
 
 		this.goalSelector.addGoal(0, new MESitWhenOrderedToGoal(this));
 		this.goalSelector.addGoal(1, new MEOwnerHurtByTargetGoal(this));
 		this.goalSelector.addGoal(1, new MEOwnerHurtTargetGoal(this));
+		this.goalSelector.addGoal(3, new FollowMountOwnerGoal(this, 2.0D, 20.0F, 8.0F, true));
 		this.goalSelector.addGoal(3, new SearchForCarnivoreFoodGoal());
 
 		this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, Player.class, 15.0F, 1.8F, 1.8F,
@@ -397,9 +403,29 @@ public class Griffin extends AbstractMount implements GeoEntity {
 	public boolean hurt(DamageSource source, float v) {
 		super.hurt(source, v);
 		Entity entity = source.getDirectEntity();
+
 		if (entity instanceof AbstractArrow || source.is(DamageTypes.FALL)) {
 			return false;
 		}
+
+		if (source.getEntity() instanceof Player player) {
+			if (!this.level().isClientSide && this.isTamed() && !this.wasToldToWander()) {
+				if (this.isOwnedBy(player) && player.isShiftKeyDown()) {
+					this.setToldToWander(true);
+					player.displayClientMessage(Component.translatable("tooltip.medievalembroidery.wandering.tooltip").withStyle(ChatFormatting.GOLD), true);
+				}
+				return false;
+			}
+
+			if (!this.level().isClientSide && this.isTamed() && this.wasToldToWander()) {
+				if (this.isOwnedBy(player) && player.isShiftKeyDown()) {
+					this.setToldToWander(false);
+					player.displayClientMessage(Component.translatable("tooltip.medievalembroidery.following.tooltip").withStyle(ChatFormatting.GOLD), true);
+				}
+				return false;
+			}
+		}
+
 		return true;
 	}
 
@@ -432,7 +458,7 @@ public class Griffin extends AbstractMount implements GeoEntity {
 					controller.setAnimation(RawAnimation.begin().then("walk", Animation.LoopType.LOOP));
 					controller.setAnimationSpeed(1.5);
 				}
-			} else if (this.isInSittingPose()) {
+			} else if (this.isInSittingPose() && !this.isVehicle()) {
 				controller.setAnimation(RawAnimation.begin().then("idle_sit", Animation.LoopType.LOOP));
 				controller.setAnimationSpeed(0.8);
 			} else {
@@ -526,60 +552,48 @@ public class Griffin extends AbstractMount implements GeoEntity {
 	}
 
 	// Generates the base texture
+	public static final EntityDataAccessor<Integer> VARIANT = SynchedEntityData.defineId(Griffin.class, EntityDataSerializers.INT);
+	public int getVariant() {
+		return this.entityData.get(VARIANT);
+	}
+	public void setVariant(int variant) {
+		this.entityData.set(VARIANT, variant);
+	}
 	public ResourceLocation getTextureLocation() {
 		return GriffinModel.Variant.variantFromOrdinal(getVariant()).resourceLocation;
 	}
 
+	public static final EntityDataAccessor<Integer> OVERLAY = SynchedEntityData.defineId(Griffin.class, EntityDataSerializers.INT);
+	public int getOverlayVariant() {
+		return this.entityData.get(OVERLAY);
+	}
+	public void setOverlayVariant(int variant) {
+		this.entityData.set(OVERLAY, variant);
+	}
 	public ResourceLocation getOverlayLocation() {
 		return GriffinMarkingLayer.Overlay.overlayFromOrdinal(getOverlayVariant()).resourceLocation;
 	}
 
+	public static final EntityDataAccessor<Integer> FEATHERING = SynchedEntityData.defineId(Griffin.class, EntityDataSerializers.INT);
+	public int getFeatherVariant() {
+		return this.entityData.get(FEATHERING);
+	}
+	public void setFeatherVariant(int variant) {
+		this.entityData.set(FEATHERING, variant);
+	}
 	public ResourceLocation getFeatheringLocation() {
 		return GriffinFeatheringLayer.Overlay.overlayFromOrdinal(getFeatherVariant()).resourceLocation;
 	}
 
-	public ResourceLocation getBeakLocation() {
-		return GriffinBeakLayer.Overlay.overlayFromOrdinal(getBeakVariant()).resourceLocation;
-	}
-
-	public static final EntityDataAccessor<Integer> VARIANT = SynchedEntityData.defineId(Griffin.class, EntityDataSerializers.INT);
-
-	public int getVariant() {
-		return this.entityData.get(VARIANT);
-	}
-
-	public void setVariant(int variant) {
-		this.entityData.set(VARIANT, variant);
-	}
-
-	public static final EntityDataAccessor<Integer> OVERLAY = SynchedEntityData.defineId(Griffin.class, EntityDataSerializers.INT);
-
-	public int getOverlayVariant() {
-		return this.entityData.get(OVERLAY);
-	}
-
-	public void setOverlayVariant(int variant) {
-		this.entityData.set(OVERLAY, variant);
-	}
-
-	public static final EntityDataAccessor<Integer> FEATHERING = SynchedEntityData.defineId(Griffin.class, EntityDataSerializers.INT);
-
-	public int getFeatherVariant() {
-		return this.entityData.get(FEATHERING);
-	}
-
-	public void setFeatherVariant(int variant) {
-		this.entityData.set(FEATHERING, variant);
-	}
-
 	public static final EntityDataAccessor<Integer> BEAK = SynchedEntityData.defineId(Griffin.class, EntityDataSerializers.INT);
-
 	public int getBeakVariant() {
 		return this.entityData.get(BEAK);
 	}
-
 	public void setBeakVariant(int variant) {
 		this.entityData.set(BEAK, variant);
+	}
+	public ResourceLocation getBeakLocation() {
+		return GriffinBeakLayer.Overlay.overlayFromOrdinal(getBeakVariant()).resourceLocation;
 	}
 
 	@Override
@@ -605,6 +619,10 @@ public class Griffin extends AbstractMount implements GeoEntity {
 		if (tag.contains("Gender")) {
 			setGender(tag.getInt("Gender"));
 		}
+
+		if (tag.contains("Wandering")) {
+			this.setToldToWander(tag.getBoolean("Wandering"));
+		}
 	}
 
 	@Override
@@ -615,6 +633,7 @@ public class Griffin extends AbstractMount implements GeoEntity {
 		tag.putInt("Feathering", getFeatherVariant());
 		tag.putInt("Beak", getBeakVariant());
 		tag.putInt("Gender", getGender());
+		tag.putBoolean("Wandering", this.getToldToWander());
 	}
 
 	@Override

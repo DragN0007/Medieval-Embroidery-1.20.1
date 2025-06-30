@@ -16,6 +16,8 @@
   "tooltip.medievalembroidery.mosstone_weapon.tooltip": "Poisons enemies.",
   "tooltip.medievalembroidery.seastone_weapon.tooltip": "Weakens enemies.",
   "tooltip.medievalembroidery.skystone_weapon.tooltip": "Causes enemies to float.",
+  "tooltip.medievalembroidery.wandering.tooltip": "Your Companion is Wandering",
+  "tooltip.medievalembroidery.following.tooltip": "Your Companion is Following",
 
   "item.medievalembroidery.fanged_elk_spawn_egg": "Fanged Elk Spawn Egg",
   "entity.medievalembroidery.fanged_elk": "Fanged Elk",

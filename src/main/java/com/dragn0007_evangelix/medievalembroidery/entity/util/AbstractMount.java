@@ -360,6 +360,17 @@ public abstract class AbstractMount extends AbstractChestedHorse {
         return false;
     }
 
+    public boolean toldToWander = false;
+    public boolean wasToldToWander() {
+        return this.toldToWander;
+    }
+    public boolean getToldToWander() {
+        return this.toldToWander;
+    }
+    public void setToldToWander(boolean toldToWander) {
+        this.toldToWander = toldToWander;
+    }
+
     private static final EntityDataAccessor<Boolean> DATA_ID_CHEST = SynchedEntityData.defineId(AbstractMount.class, EntityDataSerializers.BOOLEAN);
 
     @Override
