@@ -1,10 +1,14 @@
 package com.dragn0007_evangelix.medievalembroidery.event;
 
 import com.dragn0007_evangelix.medievalembroidery.MedievalEmbroidery;
+import com.dragn0007_evangelix.medievalembroidery.magic.GrimoireModel;
+import com.dragn0007_evangelix.medievalembroidery.magic.MagicRenderer;
+import com.dragn0007_evangelix.medievalembroidery.magic.spells.FireballModel;
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.client.event.RegisterClientReloadListenersEvent;
 import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -37,6 +41,16 @@ public class MedievalEmbroideryClientEvent {
 
     }
 
+    @SubscribeEvent
+    public static void registerLayerDefinitionsEvent(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(MagicRenderer.GRIMOIRE, GrimoireModel::createLayer);
+        event.registerLayerDefinition(MagicRenderer.FIREBALL, FireballModel::createLayer);
+    }
+
+    @SubscribeEvent
+    public static void registerReloadableEvent(RegisterClientReloadListenersEvent event) {
+        event.registerReloadListener(MagicRenderer.INSTANCE);
+    }
 }
 
 

@@ -10,6 +10,7 @@ import com.dragn0007_evangelix.medievalembroidery.item.custom.MortarAndPestleIte
 import com.dragn0007_evangelix.medievalembroidery.item.custom.TeaItem;
 import com.dragn0007_evangelix.medievalembroidery.item.custom.armor.*;
 import com.dragn0007_evangelix.medievalembroidery.item.custom.weapon.*;
+import com.dragn0007_evangelix.medievalembroidery.magic.Grimoire;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -27,6 +28,8 @@ public class MEItems {
 
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, MedievalEmbroidery.MODID);
+
+    public static final RegistryObject<Item> GRIMOIRE = ITEMS.register("grimoire", Grimoire::new);
 
     //Spawneggs
     public static final RegistryObject<Item> DIREWOLF_SPAWN_EGG = ITEMS.register("direwolf_spawn_egg",
