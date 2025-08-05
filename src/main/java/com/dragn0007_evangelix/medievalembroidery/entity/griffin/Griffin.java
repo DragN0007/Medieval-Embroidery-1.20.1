@@ -678,50 +678,50 @@ public class Griffin extends AbstractMount implements GeoEntity {
 	@Override
 	public AgeableMob getBreedOffspring(ServerLevel serverLevel, AgeableMob ageableMob) {
 		Griffin ageableMob1 = (Griffin) ageableMob;
-
-		if (ageableMob instanceof Griffin) {
-			Griffin mob = (Griffin) ageableMob;
-			ageableMob1 = EntityTypes.GRIFFIN_ENTITY.get().create(serverLevel);
-
-			int i = this.random.nextInt(9);
-			int variant;
-			if (i < 4) {
-				variant = this.getVariant();
-			} else if (i < 8) {
-				variant = mob.getVariant();
-			} else {
-				variant = this.random.nextInt(GriffinModel.Variant.values().length);
-			}
-
-			int j = this.random.nextInt(5);
-			int overlay;
-			if (j < 2) {
-				overlay = this.getOverlayVariant();
-			} else if (j < 4) {
-				overlay = mob.getOverlayVariant();
-			} else {
-				overlay = this.random.nextInt(GriffinMarkingLayer.Overlay.values().length);
-			}
-
-			int k = this.random.nextInt(5);
-			int eyes;
-			if (k < 2) {
-				eyes = this.getFeatherVariant();
-			} else if (k < 4) {
-				eyes = mob.getFeatherVariant();
-			} else {
-				eyes = this.random.nextInt(GriffinFeatheringLayer.Overlay.values().length);
-			}
-
-			int gender;
-			gender = this.random.nextInt(Gender.values().length);
-
-			ageableMob1.setVariant(variant);
-			ageableMob1.setOverlayVariant(overlay);
-			ageableMob1.setFeatherVariant(eyes);
-			ageableMob1.setGender(gender);
-		}
-
+//
+//		if (ageableMob instanceof Griffin) {
+//			Griffin mob = (Griffin) ageableMob;
+//			ageableMob1 = EntityTypes.GRIFFIN_ENTITY.get().create(serverLevel);
+//
+//			int i = this.random.nextInt(9);
+//			int variant;
+//			if (i < 4) {
+//				variant = this.getVariant();
+//			} else if (i < 8) {
+//				variant = mob.getVariant();
+//			} else {
+//				variant = this.random.nextInt(GriffinModel.Variant.values().length);
+//			}
+//
+//			int j = this.random.nextInt(5);
+//			int overlay;
+//			if (j < 2) {
+//				overlay = this.getOverlayVariant();
+//			} else if (j < 4) {
+//				overlay = mob.getOverlayVariant();
+//			} else {
+//				overlay = this.random.nextInt(GriffinMarkingLayer.Overlay.values().length);
+//			}
+//
+//			int k = this.random.nextInt(5);
+//			int eyes;
+//			if (k < 2) {
+//				eyes = this.getFeatherVariant();
+//			} else if (k < 4) {
+//				eyes = mob.getFeatherVariant();
+//			} else {
+//				eyes = this.random.nextInt(GriffinFeatheringLayer.Overlay.values().length);
+//			}
+//
+//			int gender;
+//			gender = this.random.nextInt(Gender.values().length);
+//
+//			ageableMob1.setVariant(variant);
+//			ageableMob1.setOverlayVariant(overlay);
+//			ageableMob1.setFeatherVariant(eyes);
+//			ageableMob1.setGender(gender);
+//		}
+//
 		return ageableMob1;
 	}
 

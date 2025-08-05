@@ -32,7 +32,7 @@ public class MedievalEmbroideryEntityEvents {
         event.put(EntityTypes.DIREWOLF_ENTITY.get(), Direwolf.createAttributes().build());
         event.put(EntityTypes.FAIRY_ENTITY.get(), Fairy.createAttributes().build());
         event.put(EntityTypes.FANGED_ELK_ENTITY.get(), FangedElk.createBaseHorseAttributes().build());
-        event.put(EntityTypes.GRIFFIN_ENTITY.get(), Griffin.createAttributes().build());
+//        event.put(EntityTypes.GRIFFIN_ENTITY.get(), Griffin.createAttributes().build());
     }
 
     @SubscribeEvent
@@ -40,7 +40,7 @@ public class MedievalEmbroideryEntityEvents {
         EntityRenderers.register(EntityTypes.DIREWOLF_ENTITY.get(), DirewolfRender::new);
         EntityRenderers.register(EntityTypes.FAIRY_ENTITY.get(), FairyRender::new);
         EntityRenderers.register(EntityTypes.FANGED_ELK_ENTITY.get(), FangedElkRender::new);
-        EntityRenderers.register(EntityTypes.GRIFFIN_ENTITY.get(), GriffinRender::new);
+//        EntityRenderers.register(EntityTypes.GRIFFIN_ENTITY.get(), GriffinRender::new);
 
         MenuScreens.register(MEMenuTypes.MOUNT_MENU.get(), MountScreen::new);
     }
@@ -50,7 +50,7 @@ public class MedievalEmbroideryEntityEvents {
         event.register(EntityTypes.DIREWOLF_ENTITY.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.AND);
         event.register(EntityTypes.FAIRY_ENTITY.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.AND);
         event.register(EntityTypes.FANGED_ELK_ENTITY.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.AND);
-        event.register(EntityTypes.GRIFFIN_ENTITY.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.AND);
+//        event.register(EntityTypes.GRIFFIN_ENTITY.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.AND);
     }
 }
 

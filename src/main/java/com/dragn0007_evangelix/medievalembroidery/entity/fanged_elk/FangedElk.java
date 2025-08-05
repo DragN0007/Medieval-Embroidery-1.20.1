@@ -131,6 +131,11 @@ public class FangedElk extends AbstractMount implements GeoEntity {
 	}
 
 	@Override
+	public boolean canWearChest() {
+		return true;
+	}
+
+	@Override
 	public void positionRider(Entity entity, MoveFunction moveFunction) {
 		if (this.hasPassenger(entity)) {
 

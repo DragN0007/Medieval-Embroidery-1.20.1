@@ -41,19 +41,20 @@ public class FangedElkRender extends GeoEntityRenderer<FangedElk> {
             model.getBone("AntlersRight").ifPresent(b -> b.setHidden(true));
             model.getBone("AntlersLeft").ifPresent(b -> b.setHidden(true));
             model.getBone("fangs").ifPresent(b -> b.setHidden(true));
+            model.getBone("fangs2").ifPresent(b -> b.setHidden(true));
             poseStack.scale(0.6F, 0.6F, 0.6F);
-        }
-
-        if (entity.isFemale()) {
+        } else if (!entity.isBaby() && entity.isFemale()) {
             model.getBone("AntlersRight").ifPresent(b -> b.setHidden(true));
             model.getBone("AntlersLeft").ifPresent(b -> b.setHidden(true));
+            model.getBone("fangs").ifPresent(b -> b.setHidden(false));
             model.getBone("fangs2").ifPresent(b -> b.setHidden(true));
-        }
-
-        if (entity.isMale()) {
+            poseStack.scale(1.0F, 1.0F, 1.0F);
+        } else if (!entity.isBaby() && entity.isMale()) {
             model.getBone("AntlersRight").ifPresent(b -> b.setHidden(false));
             model.getBone("AntlersLeft").ifPresent(b -> b.setHidden(false));
+            model.getBone("fangs").ifPresent(b -> b.setHidden(false));
             model.getBone("fangs2").ifPresent(b -> b.setHidden(false));
+            poseStack.scale(1.0F, 1.0F, 1.0F);
         }
 
         super.preRender(poseStack, animatable, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, red, green, blue, alpha);

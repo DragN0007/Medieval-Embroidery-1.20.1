@@ -1,32 +1,32 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "medievalembroidery:sweet_bread_cream_scratch"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_wheat": {
+    "has_mushroom": {
       "conditions": {
         "items": [
           {
-            "tag": "forge:flour"
+            "tag": "forge:mushrooms"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "medievalembroidery:porcini"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_wheat",
+      "has_mushroom",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "medievalembroidery:sweet_bread_cream_scratch"
+      "medievalembroidery:porcini"
     ]
   },
   "sends_telemetry_event": false

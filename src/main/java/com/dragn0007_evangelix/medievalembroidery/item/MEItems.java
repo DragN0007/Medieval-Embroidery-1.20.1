@@ -38,8 +38,8 @@ public class MEItems {
             () -> new ForgeSpawnEggItem(EntityTypes.FAIRY_ENTITY, 0x775f70, 0x524256, new Item.Properties().stacksTo(64)));
     public static final RegistryObject<Item> FANGED_ELK_SPAWN_EGG = ITEMS.register("fanged_elk_spawn_egg",
             () -> new ForgeSpawnEggItem(EntityTypes.FANGED_ELK_ENTITY, 0x7b3213, 0x2f1202, new Item.Properties().stacksTo(64)));
-    public static final RegistryObject<Item> GRIFFIN_SPAWN_EGG = ITEMS.register("griffin_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityTypes.GRIFFIN_ENTITY, 0x705a4c, 0xada294, new Item.Properties().stacksTo(64)));
+//    public static final RegistryObject<Item> GRIFFIN_SPAWN_EGG = ITEMS.register("griffin_spawn_egg",
+//            () -> new ForgeSpawnEggItem(EntityTypes.GRIFFIN_ENTITY, 0x705a4c, 0xada294, new Item.Properties().stacksTo(64)));
 
 
 

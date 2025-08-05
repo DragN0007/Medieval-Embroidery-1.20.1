@@ -19,6 +19,10 @@ public class FangedElkMarkingLayer extends GeoRenderLayer<FangedElk> {
     @Override
     public void render(PoseStack poseStack, FangedElk animatable, BakedGeoModel bakedModel, RenderType renderType, MultiBufferSource bufferSource, VertexConsumer buffer, float partialTick, int packedLight, int packedOverlay) {
 
+        if (animatable.isBaby()) {
+            return;
+        }
+
         RenderType renderMarkingType = RenderType.entityCutout(((FangedElk)animatable).getOverlayLocation());
         poseStack.pushPose();
         poseStack.scale(1.0f, 1.0f, 1.0f);

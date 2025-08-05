@@ -1372,6 +1372,13 @@ public class MERecipeMaker extends RecipeProvider implements IConditionBuilder {
                         .build()))
                 .save(pFinishedRecipeConsumer);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.PORCINI.get())
+                .requires(MEBlocks.WILD_PORCINI.get())
+                .unlockedBy("has_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(METags.Items.MUSHROOMS)
+                        .build()))
+                .save(pFinishedRecipeConsumer);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MEItems.YELLOWFOOT.get())
                 .requires(MEBlocks.WILD_YELLOWFOOT.get())
                 .unlockedBy("has_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
