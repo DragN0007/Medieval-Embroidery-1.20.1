@@ -57,10 +57,10 @@ public class MountMenu extends AbstractContainerMenu {
             }
         });
 
-        if(this.mount.hasChest() && this.mount.canWearChest()) {
+        if(this.mount.hasChest()) {
             for(int y = 0; y < 3; y++) {
-                for(int x = 0; x < 8; x++) {
-                    this.addSlot(new Slot(this.container, oMountSlots++, 26 + x * 18, 18 + y * 18));
+                for(int x = 0; x < 5; x++) {
+                    this.addSlot(new Slot(this.container, oMountSlots++, 80 + x * 18, 18 + y * 18));
                 }
             }
         }

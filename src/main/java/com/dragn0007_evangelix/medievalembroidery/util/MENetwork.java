@@ -47,36 +47,6 @@ public class MENetwork {
         }
     }
 
-    public static class HandleTakeoffRequest {
-        private double verticleMod;
-
-        public HandleTakeoffRequest(double verticalMod) {
-            this.verticleMod = verticalMod;
-        }
-
-        public static void encode(HandleTakeoffRequest msg, FriendlyByteBuf buffer) {
-            buffer.writeDouble(msg.verticleMod);
-        }
-
-        public static HandleTakeoffRequest decode(FriendlyByteBuf buffer) {
-            return new HandleTakeoffRequest(buffer.readInt());
-        }
-
-        public static void handle(HandleTakeoffRequest msg, Supplier<NetworkEvent.Context> context) {
-            NetworkEvent.Context ctx = context.get();
-            ctx.enqueueWork(() -> {
-                ServerPlayer player = ctx.getSender();
-                if(player != null) {
-                    if(player.getVehicle() instanceof AbstractMount mount) {
-
-                        System.out.println("[Medieval Embroidery]: " + mount.getName() + "> Takeoff Requested By Player UUID: " + Objects.requireNonNull(mount.getControllingPassenger()).getUUID());
-                    }
-                }
-            });
-            ctx.setPacketHandled(true);
-        }
-    }
-
     public static final String PROTOCOL_VERSION = "1";
     public static final SimpleChannel INSTANCE = NetworkRegistry.newSimpleChannel(
             new ResourceLocation(MedievalEmbroidery.MODID, "me_network"), //this needs to be a unique name, else it may clash with other mod networks that may not be uniquely named -dragoon
@@ -89,7 +59,6 @@ public class MENetwork {
     public static void commonSetupEvent(FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             INSTANCE.registerMessage(0, HandleSpeedRequest.class, HandleSpeedRequest::encode, HandleSpeedRequest::decode, HandleSpeedRequest::handle);
-            INSTANCE.registerMessage(1, HandleTakeoffRequest.class, HandleTakeoffRequest::encode, HandleTakeoffRequest::decode, HandleTakeoffRequest::handle);
         });
     }
 }

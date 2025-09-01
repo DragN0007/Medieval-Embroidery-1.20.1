@@ -5,6 +5,7 @@ import com.dragn0007_evangelix.medievalembroidery.entity.util.AbstractMount;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -12,7 +13,7 @@ import net.minecraft.world.entity.player.Inventory;
 
 public class MountScreen extends AbstractContainerScreen<MountMenu> {
 
-    public static final ResourceLocation MOUNT_INVENTORY_LOCATION = new ResourceLocation(MedievalEmbroidery.MODID, "textures/gui/mount.png");
+    public static final ResourceLocation MOUNT_INVENTORY_LOCATION = new ResourceLocation(MedievalEmbroidery.MODID, "textures/gui/o_mount.png");
     public final AbstractMount mount;
 
     public MountScreen(MountMenu oMountMenu, Inventory inventory, Component component) {
@@ -34,16 +35,17 @@ public class MountScreen extends AbstractContainerScreen<MountMenu> {
         int y = (this.height - this.imageHeight) / 2;
         graphics.blit(MOUNT_INVENTORY_LOCATION, x, y, 0, 0, this.imageWidth, this.imageHeight);
 
-        if (this.mount.hasChest() && this.mount.canWearChest()) {
-            graphics.blit(MOUNT_INVENTORY_LOCATION,x + 25, y + 17, 0, this.imageHeight, 144, 54);
-        }
-
         if (this.mount.isSaddleable()) {
-            graphics.blit(MOUNT_INVENTORY_LOCATION,x + 7, y + 17, 18, this.imageHeight + 54, 18, 18);
+            graphics.blit(MOUNT_INVENTORY_LOCATION, x + 7, y + 17, 18, this.imageHeight + 54, 18, 18);
         }
 
         if (this.mount.canWearArmor()) {
-            graphics.blit(MOUNT_INVENTORY_LOCATION,x + 7, y + 35, 0, this.imageHeight + 54, 18, 18);
+            graphics.blit(MOUNT_INVENTORY_LOCATION, x + 7, y + 35, 0, this.imageHeight + 54, 18, 18);
+            graphics.blit(MOUNT_INVENTORY_LOCATION, x + 7, y + 53, 36, this.imageHeight + 54, 18, 18);
+        }
+
+        if (this.mount.hasChest()) {
+            graphics.blit(MOUNT_INVENTORY_LOCATION, x + 79, y + 17, 0, this.imageHeight, 90, 54);
         }
 
         if (this.mount.canWearCarpet()) {
@@ -61,6 +63,7 @@ public class MountScreen extends AbstractContainerScreen<MountMenu> {
             graphics.blit(MOUNT_INVENTORY_LOCATION, x + 161, y + 9, 98, this.imageHeight + 54, 8, 8);
         }
 
+        InventoryScreen.renderEntityInInventoryFollowsMouse(graphics, x + 51, y + 60, 17, (float)(x + 51), (float)(y + 75 - 50), this.mount);
     }
 
     @Override

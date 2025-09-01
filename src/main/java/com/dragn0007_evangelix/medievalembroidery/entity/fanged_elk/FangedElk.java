@@ -124,10 +124,7 @@ public class FangedElk extends AbstractMount implements GeoEntity {
 	}
 
 	protected int getInventorySize() {
-		if (this.hasChest()) {
-			return 17;
-		}
-		return super.getInventorySize();
+		return 17;
 	}
 
 	@Override

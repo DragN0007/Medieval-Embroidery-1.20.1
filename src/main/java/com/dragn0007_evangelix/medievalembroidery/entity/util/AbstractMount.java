@@ -397,9 +397,20 @@ public abstract class AbstractMount extends AbstractChestedHorse {
             compoundTag.put("SaddleItem", this.inventory.getItem(0).save(new CompoundTag()));
         }
 
-        compoundTag.putBoolean("Chested", this.hasChest());
         if (this.hasChest()) {
             ListTag listtag = new ListTag();
+
+            for(int i = 2; i < this.inventory.getContainerSize(); i++) {
+                ItemStack itemstack = this.inventory.getItem(i);
+                if (!itemstack.isEmpty()) {
+                    CompoundTag compoundtag = new CompoundTag();
+                    compoundtag.putByte("Slot", (byte)i);
+                    itemstack.save(compoundtag);
+                    listtag.add(compoundtag);
+                }
+            }
+
+            compoundTag.put("Items", listtag);
         }
 
         if (this.getOwnerUUID() != null) {
@@ -430,7 +441,17 @@ public abstract class AbstractMount extends AbstractChestedHorse {
             }
         }
 
-        this.setChest(compoundTag.getBoolean("Chested"));
+        if (this.hasChest()) {
+            ListTag listtag = compoundTag.getList("Items", 10);
+
+            for(int i = 0; i < listtag.size(); ++i) {
+                CompoundTag compoundtag = listtag.getCompound(i);
+                int j = compoundtag.getByte("Slot") & 255;
+                if (j >= 2 && j < this.inventory.getContainerSize()) {
+                    this.inventory.setItem(j, ItemStack.of(compoundtag));
+                }
+            }
+        }
 
         this.updateContainerEquipment();
 

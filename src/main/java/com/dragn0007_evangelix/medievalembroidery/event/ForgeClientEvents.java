@@ -24,9 +24,5 @@ public class ForgeClientEvents {
         if (event.getAction() == InputConstants.RELEASE && event.getKey() == MedievalEmbroideryClientEvent.MOUNT_SLOW_DOWN.getKey().getValue()) {
             MENetwork.INSTANCE.sendToServer(new MENetwork.HandleSpeedRequest(-1));
         }
-
-        if (event.getAction() == InputConstants.RELEASE && event.getKey() == MedievalEmbroideryClientEvent.TAKE_OFF.getKey().getValue()) {
-            MENetwork.INSTANCE.sendToServer(new MENetwork.HandleTakeoffRequest(0.4D));
-        }
     }
 }
