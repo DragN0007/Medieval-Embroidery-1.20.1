@@ -482,16 +482,16 @@ public class FangedElk extends AbstractMount implements GeoEntity {
 		return false;
 	}
 
-	public static final EntityDataAccessor<ResourceLocation> VARIANT_TEXTURE = SynchedEntityData.defineId(FangedElk.class, MedievalEmbroidery.RESOURCE_LOCATION);
-	public static final EntityDataAccessor<ResourceLocation> OVERLAY_TEXTURE = SynchedEntityData.defineId(FangedElk.class, MedievalEmbroidery.RESOURCE_LOCATION);
+	public static final EntityDataAccessor<String> VARIANT_TEXTURE = SynchedEntityData.defineId(FangedElk.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<String> OVERLAY_TEXTURE = SynchedEntityData.defineId(FangedElk.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<Integer> VARIANT = SynchedEntityData.defineId(FangedElk.class, EntityDataSerializers.INT);
 	public static final EntityDataAccessor<Integer> OVERLAY = SynchedEntityData.defineId(FangedElk.class, EntityDataSerializers.INT);
 
-	public ResourceLocation getTextureResource() {
+	public String getTextureResource() {
 		return this.entityData.get(VARIANT_TEXTURE);
 	}
 
-	public ResourceLocation getOverlayLocation() {
+	public String getOverlayLocation() {
 		return this.entityData.get(OVERLAY_TEXTURE);
 	}
 
@@ -505,29 +505,21 @@ public class FangedElk extends AbstractMount implements GeoEntity {
 	}
 
 	public void setVariant(int variant) {
-		this.entityData.set(VARIANT_TEXTURE, FangedElkModel.Variant.variantFromOrdinal(variant).resourceLocation);
+		this.entityData.set(VARIANT_TEXTURE, FangedElkModel.Variant.variantFromOrdinal(variant).resourceLocation.toString());
 		this.entityData.set(VARIANT, variant);
 	}
 
 	public void setOverlayVariant(int variant) {
-		this.entityData.set(OVERLAY_TEXTURE, FangedElkMarkingLayer.Overlay.overlayFromOrdinal(variant).resourceLocation);
+		this.entityData.set(OVERLAY_TEXTURE, FangedElkMarkingLayer.Overlay.overlayFromOrdinal(variant).resourceLocation.toString());
 		this.entityData.set(OVERLAY, variant);
 	}
 
 	public void setVariantTexture(String variant) {
-		ResourceLocation resourceLocation = ResourceLocation.tryParse(variant);
-		if (resourceLocation == null) {
-			resourceLocation = FangedElkModel.Variant.BLACK.resourceLocation;
-		}
-		this.entityData.set(VARIANT_TEXTURE, resourceLocation);
+		this.entityData.set(VARIANT_TEXTURE, variant);
 	}
 
 	public void setOverlayVariantTexture(String variant) {
-		ResourceLocation resourceLocation = ResourceLocation.tryParse(variant);
-		if (resourceLocation == null) {
-			resourceLocation = FangedElkMarkingLayer.Overlay.NONE.resourceLocation;
-		}
-		this.entityData.set(OVERLAY_TEXTURE, resourceLocation);
+		this.entityData.set(OVERLAY_TEXTURE, variant);
 	}
 
 	@Override
@@ -587,8 +579,8 @@ public class FangedElk extends AbstractMount implements GeoEntity {
 		this.entityData.define(VARIANT, 0);
 		this.entityData.define(OVERLAY, 0);
 		this.entityData.define(GENDER, 0);
-		this.entityData.define(VARIANT_TEXTURE, FangedElkModel.Variant.BLACK.resourceLocation);
-		this.entityData.define(OVERLAY_TEXTURE, FangedElkMarkingLayer.Overlay.NONE.resourceLocation);
+		this.entityData.define(VARIANT_TEXTURE, FangedElkModel.Variant.BLACK.resourceLocation.toString());
+		this.entityData.define(OVERLAY_TEXTURE, FangedElkMarkingLayer.Overlay.NONE.resourceLocation.toString());
 	}
 
 	@Override
@@ -607,13 +599,6 @@ public class FangedElk extends AbstractMount implements GeoEntity {
 			} else {
 				FangedElk partner = (FangedElk) animal;
 				if (this.canParent() && partner.canParent() && this.getGender() != partner.getGender()) {
-					return true;
-				}
-
-				boolean partnerIsFemale = partner.isFemale();
-				boolean partnerIsMale = partner.isMale();
-				if (MedievalEmbroideryCommonConfig.GENDERS_AFFECT_BREEDING.get() && this.canParent() && partner.canParent()
-						&& ((isFemale() && partnerIsMale) || (isMale() && partnerIsFemale))) {
 					return isFemale();
 				}
 			}

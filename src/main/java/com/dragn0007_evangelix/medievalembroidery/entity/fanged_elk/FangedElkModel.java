@@ -11,6 +11,9 @@ import software.bernie.geckolib.model.DefaultedEntityGeoModel;
 import software.bernie.geckolib.model.GeoModel;
 import software.bernie.geckolib.model.data.EntityModelData;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class FangedElkModel extends DefaultedEntityGeoModel<FangedElk> {
 
     public FangedElkModel() {
@@ -54,9 +57,11 @@ public class FangedElkModel extends DefaultedEntityGeoModel<FangedElk> {
         return MODEL;
     }
 
+    public static final Map<String, ResourceLocation> TEXTURE_CACHE = new HashMap<>();
+
     @Override
     public ResourceLocation getTextureResource(FangedElk object) {
-        return object.getTextureResource();
+        return TEXTURE_CACHE.computeIfAbsent(object.getTextureResource(), ResourceLocation::tryParse);
     }
 
     @Override

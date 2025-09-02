@@ -11,9 +11,17 @@ import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.renderer.GeoRenderer;
 import software.bernie.geckolib.renderer.layer.GeoRenderLayer;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class FangedElkMarkingLayer extends GeoRenderLayer<FangedElk> {
     public FangedElkMarkingLayer(GeoRenderer entityRendererIn) {
         super(entityRendererIn);
+    }
+
+    public static final Map<String, ResourceLocation> TEXTURE_CACHE = new HashMap<>();
+    public ResourceLocation getTexture(FangedElk animatable) {
+        return TEXTURE_CACHE.computeIfAbsent(animatable.getOverlayLocation(), ResourceLocation::tryParse);
     }
 
     @Override
@@ -23,7 +31,7 @@ public class FangedElkMarkingLayer extends GeoRenderLayer<FangedElk> {
             return;
         }
 
-        RenderType renderMarkingType = RenderType.entityCutout(((FangedElk)animatable).getOverlayLocation());
+        RenderType renderMarkingType = RenderType.entityCutout(this.getTexture(animatable));
         poseStack.pushPose();
         poseStack.scale(1.0f, 1.0f, 1.0f);
         poseStack.translate(0.0d, 0.0d, 0.0d);
